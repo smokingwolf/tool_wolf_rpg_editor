@@ -46,6 +46,8 @@ iframe {
   border: none;
 }
 </style>
+
+
 </HEAD>
 <BODY>
 <!-- 左：メニュー(?tmpは別URLと思わせるためのもの) -->
@@ -68,10 +70,17 @@ iframe {
 　解説の作成や説明の際などには、本説明書の文章を自由に引用できます。<BR>
 <br>
 <table border="0"><TR>
-    <td style="width : 117px;">マニュアル内検索→ </td>
-    <td style="width : 392px;"><script async src="https://cse.google.com/cse.js?cx=613fca8688d3a4077">
-</script><div class="gcse-searchbox-only"></div></td>
+    <td style="width : 100px; text-align:right; padding-right:5px;">マニュアル内<BR>　検索　→ </td>
+    <td style="width : 392px;">
+    
+<!--JavaScriptで検索窓がサーバー別に置換表示される-->
+<div id="search-area"></div>
+
+</td>
   </TR></TABLE>
+
+
+
 
 <br>
 <b>【旧マニュアル】</b> <font class="fmmg">昔のを見たい場合や手元で見たい場合はこちらからDLしてください(Zipﾌｧｲﾙ)</font><br>
@@ -299,8 +308,37 @@ iframe {
 <HR>
 　　Copyright(C)　SmokingWOLF　All rights reserved<BR>
 　　
-　　
+
+
+<script>
+const hostname = location.hostname;
+const container = document.getElementById("search-area");
+
+function insertGCSE(cxValue) {
+  // scriptタグの追加
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://cse.google.com/cse.js?cx=" + cxValue;
+  document.head.appendChild(script);
+
+  // 検索ボックスのdivを追加
+  const div = document.createElement("div");
+  div.className = "gcse-searchbox-only";
+  container.appendChild(div);
+}
+
+if (hostname.includes("silversecond.com")) {
+  insertGCSE("613fca8688d3a4077"); // silversecond.com用
+} else if (hostname.includes("github.io")) {
+  insertGCSE("a3adb8a1bf71a4c49"); // github.io用
+} else {
+  container.innerHTML = `<span style='color:gray; border:1px solid #ccf; display:block;padding:4px;'>検索機能は現在使用できません(JavaScriptがオフか、使用可能なサーバー上ではありません)</span>`;
+}
+</script>
+
+
 </div>
+
 
 </BODY>
 </html>
