@@ -1,0 +1,3698 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+
+<TITLE>WOLF RPGエディター バージョンアップ履歴</TITLE>
+
+<script src="./smoothscroll.js" type="text/javascript"></script> 
+
+<style TYPE="text/css">
+<!--
+BODY{margin: -10px -0px 0px 0pt;}
+TABLE{line-height:115%;}
+BODY{background-color : #fdfdff;
+font-family : "Meiryo UI","MS PGothic" ;
+  font-size : 10pt;
+  color : #434395;
+  margin: 0px 0px 0px 0px;
+	line-height: 130%;
+  
+}
+
+A:LINK,A:VISITED{color:#d6385c;text-decoration : underline;}
+A:HOVER,A:ACTIVE{color : #f6688c;text-decoration : underline;}
+
+A.red:LINK,A.red:VISITED{color:#c6385c;}
+A.red:HOVER,A.red:ACTIVE{color : #f6688c;text-decoration : underline;}
+
+A.blue:LINK,A.blue:VISITED{color:#5658a6;}
+A.blue:HOVER,A.blue:ACTIVE{color : #9698e6;text-decoration : underline;}
+
+A.siro:LINK,A.siro:VISITED{color:#ffffff;}
+A.siro:HOVER,A.siro:ACTIVE{color : #bbbbcf;text-decoration : underline;}
+
+
+A.green:LINK,A.green:VISITED{color:#38b68c;}
+A.green:HOVER,A.green:ACTIVE{color : #68d6ac;text-decoration : underline;}
+
+A.bl2:LINK,A.bl2:VISITED{color:#8888aa;}
+A.bl2:HOVER,A.bl2:ACTIVE{color : #aaaabb;text-decoration : underline;}
+
+
+A.glink:LINK,A.glink:VISITED{color:#ccccdf;}
+A.glink:HOVER,A.glink:ACTIVE{color : #dfdfff;text-decoration : underline;}
+
+
+A.dl:LINK,A.dl:VISITED,A.dl:HOVER,A.dl:ACTIVE{text-decoration : underline overline;}
+
+A{text-decoration : none;}
+
+a img:hover{
+  opacity:0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)"; 
+  -moz-opacity:0.7;
+  -khtml-opacity: 0.7; 
+  zoom:1;
+}
+
+/*--ﾃｰﾌﾞﾙ--*/
+TABLE{
+  font-size : 10pt;
+	line-height: 130%;
+}
+.close{
+  font-size : 10pt;
+	line-height: 105%;
+}
+
+SMALL.mini{
+	line-height: 100%;
+}
+
+
+SMALL.xmini{
+	line-height: 80%;
+}
+
+
+.black{background-color:#000000;}
+.gray{background:#434395;}
+.white{background:#fdfdff;}
+.mwhite{background:#fefeff;}
+.veryusui{background:#f0f0fa;}
+.mgray{background:#6363b5;}
+.mmgray{background:#8383d5;}
+.mbgray{background:#7373f5;}
+.mmmgray{background:#b3b3d5;}
+.fullwhite{background:#ffffff;}
+
+
+/*---FONT---*/
+.fb{color:#000000;}
+.fw{color:#ffffff;}
+.fmw{color:#d2d2dd;}
+.fg{color:#434395;}
+.fmg{color:#8383a5;}
+.flink{color:#737385;}
+.fmmg{color:#a3a3e5;}
+.fmbg{color:#7373a5;}
+.fred{color:#ee4444;}
+.flred{color:#f6a8ac;}
+.f_toplink{color:#fdfdff;font-size : 1pt;}
+
+.newstx1{
+color:#474760;line-height: 100%;font-size:8pt;
+}
+.newstx2{color:#a7a7e0;line-height: 10pt;font-size:8pt;
+	/*float:left;*/
+	/*display: block;*/
+	margin-top:2px;
+	margin-left:5px;
+	padding-bottom:0px;}
+.newstx3{color:#9797c0;font-size:7pt;}
+
+A.newstxA:LINK,A.newstxA:VISITED{color:#d6385c;text-decoration : underline; font-size:10pt;line-height: 15pt;}
+A.newstxA:HOVER,A.newstxA:ACTIVE{color : #f6688c;text-decoration : underline; font-size:10pt;line-height: 15pt;}
+
+
+.ten{font-size:10pt;}
+.tenp{font-size:11pt;}
+.elev{font-size:12pt;}
+.plus{font-size:14pt;}
+
+/*--線色--*/
+.line{color:#8383a5;}
+.dline{color:#60609b;}
+
+
+-->
+</STYLE>
+
+</HEAD><BODY>
+<p> </p>
+<CENTER><BR>
+　
+<TABLE width=620>
+<TBODY class=ten>
+<TR>
+<TD colspan="3">
+<TABLE height="25" cellspacing="1" cellpadding="3" width="100%">
+<TBODY class=ten>
+<TR>
+<TD class="gray"><font class="fw"><B><a id="top"></a></B>　 WOLF RPGエディター　バージョンアップ履歴　　Ver3.00～3.282まで（修正点　<b>684</b>点）</font></TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+<div align=center><A href="../" target="_self">トップに戻る</A><BR>
+        <br>
+      <a href="../ReleaseLog.html">最新の更新履歴に戻る</a><br>
+        <HR size="1" noshade>
+      </div>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<table>
+  <TBODY class=ten>
+    <TR>
+      <TD width="630"><br>
+      （2022/11/22(3.00)～2024/02/21） &nbsp;<B><FONT size="+1">Ver3.00～3.282</FONT></B>　大規模アップデート!<br>
+      　　　　　　演出もデバッグも速度も全強化!!　　<b><a href="https://silversecond.booth.pm/items/4302198" target="_blank">プロ版</a></b>も販売開始しましたが、こちらは上級者の方向けです。<BR>
+      <br>
+      　　　　最初は注意書きが多いです。 <b><a href="#3.00new" class="green">【すぐ新機能を見たい人はここをクリック！】</a></b><br>
+      <br>
+      　　　　その他を見たい人は → <a href="#game300_kaizen" class="green">【ゲーム改善・仕様変更】</a> <a href="#editor300_kaizen" class="green">【エディタ改善・仕様変更】</a>  <a href="#pro300" class="green">【プロ版の新機能】</a><BR>
+      　　　　 　　　　　　　　　　　　 <a href="#ver300_addbug" class="green">【Ver3.02～3.282の追加の修正(<b>位置エラーを出さない裏技</b>も追加！)】</a> 
+      <br>
+      　　　　　　　　　　　　　　　　　　　　　→ <a href="#ver300_addbug" class="green">Gameの追加修正</a>　<a href="#ver300_addbugEditor" class="green">Editorの追加修正</a> 　<a href="#ver300_BaseSystem" class="green">基本システムの追加修正</a><br>
+      <br>
+      <br>
+      <b><span style="font-size : 120%;color : #ff0000;">【とても重要なＱ＆Ａ】</span></b><br>
+      <br>
+      <b>Q. コンバートしたけどVer2までと全然違う挙動をします！</b><br>
+　マップチップが変！　「位置」指定の画面外エラーが出る！　文字が斜めになってる！　など！<br>
+<br>
+      A. まずはEditor.exeから「<b>ゲーム基本設定</b>」の「<b>Game.exe　動作バージョン調整</b>」を<br>
+      　<b><span style="color : #ff0000;">「旧Ver2.29時点の挙動で動作」</span></b>に切り替えてゲームを実行してみてください。<br>
+      　それらの点に関しては、その変更をすることでおおよそ前の通りに動作します。<br>
+      <br>
+      <br>
+      　<br>
+      <table class="gray" cellpadding="3" cellspacing="1">
+        <tbody>
+          <tr>
+            <td class="white" style="width : 560px;">&nbsp;<br>
+      <b><span style="font-size : 120%;">【重要　Ver2.29系で開発されていた方への注意点】</span></b>　<br>
+<br>
+            　<b><span style="color : #ff0000;">Game.exeをVer2.29系からVer3.00以降のバージョンに差し替えると、以下の挙動が変わります！</span></b><br>
+            　前の挙動に戻したい場合は、Editor.exeから「ゲーム基本設定」の「Game.exe　動作バージョン調整」を「旧Ver2.29時点の挙動で動作」に切り替えてください。<br>
+            　<br>
+            　<br>
+            <table border="0" cellpadding="5" style="width : 560px;">
+        <tbody>
+          <tr>
+                  <td style="width : 560px;"><span style="font-size : 90%;"><b>◆ </b></span><span style="font-size : 90%;
+	color : #CC0000;
+"><b>【チップ処理】</b>「単体チップ設定を変更」と「マップチップの上書き」で</span><b><span style="color : #CC0000;"><span style="font-size : 90%;
+">指定すべきチップ番号が16ずれます</span><span style="font-size : 90%;">。</span><br>
+                  </span></b><span style="font-size : 90%;
+	color : #CC0000;
+">　　　そのため、自動生成マップなどを実装されている場合、<b>マップが従来通りに作られなくなってしまいます</b>。</span><br>
+            <span style="font-size : 90%;">　→　オートタイルが0-15番から0-31番に増えるため、Ver2で「変数」で16番以降のタイル指定をしていると16個分ずれてしまいます</span><span style="font-size : 90%;">（変数でなく「数値」でチップ番号を指定している場合は自動で補正されるため問題ありません）。</span><br>
+            <br>
+                  <span style="font-size : 90%;">　「旧Ver2.29時点の挙動で動作」にすればこのズレを補正して、以前のオートタイル15個時点と同じ挙動を行うようになりますが、その場合、16番から基本タイルが始まりますので、「チップ処理」コマンドでオートタイル16～31番は使えません。</span><br>
+            <br>
+            <br>
+                  <b><span style="font-size : 90%;">◆ </span></b><span style="color : #CC0000;"><b><span style="font-size : 90%;">【変数操作+】 </span></b></span><span style="font-size : 90%;
+	color : #CC0000;
+">上と同じ理由で、<b>「位置」指定で得られる「チップ番号」の16番以降が従来と違う</b>ものになってしまうため、ゲームが前の通りに動かない可能性があります。</span><br>
+            <span style="font-size : 90%;">　→　「旧Ver2.29時点の挙動で動作」にすればオートタイル15個時点と同じ、以前の通りのチップ番号を返すようになります（通常32番から基本チップになるところが、16番が基本チップの1番目になる）。</span><br>
+                  <br>
+                  <br>
+                  <b><span style="font-size : 90%;">◆</span></b><span style="color : #CC0000;"><b><span style="font-size : 90%;"> 【変数操作+】</span></b></span><span style="font-size : 90%;
+	color : #CC0000;
+">Ver2.29以前は「位置」で画面外を指定してもエラーが出ないバグがあったため、<b>Ver3.00以降だけ画面外を「位置」指定したというエラーが表示される場合があります。</b></span><br>
+            <span style="font-size : 90%;">　→　「旧Ver2.29時点の挙動で動作」にすれば「位置」指定で画面外を指定したときのエラーが出なくなります。</span><br>
+            <span style="font-size : 90%;">　　</span><br>
+                  <br>
+                  <b><span style="font-size : 90%;">◆ </span></b><span style="color : #CC0000;"><b><span style="font-size : 90%;">【選択肢ウィンドウ】</span></b></span><span style="font-size : 90%;
+	color : #CC0000;
+"><b>「選択肢ウィンドウ」の「余白」サイズ</b>が少し変わります。</span><br>
+            <span style="font-size : 90%;">　→　従来は「チップサイズ」に応じて自動で余白が設定されていたのが、今後はSys26、27「選択肢ウィンドウ X/Y余白」で縦横の余白設定が可能です。</span><br>
+                  <br>
+                  <br>
+                  <b><span style="font-size : 90%;">◆ </span><span style="font-size : 90%;
+	color : #CC0000;
+">【</span></b><span style="color : #CC0000;"><b><span style="font-size : 90%;">ピクチャ】</span></b></span><span style="font-size : 90%;
+	color : #CC0000;
+">ピクチャの<b>「角度」を0以外にしたとき、異なる縦横の拡大率が反映</b>されるようになりました。</span><br>
+            <span style="font-size : 90%;">　→　「旧Ver2.29時点の挙動で動作」にすると従来通り、「角度」を0以外にしたときに強制的に「縦横同じ拡大率」になります。</span><br>
+                  <br>
+                  <br>
+                  <b><span style="font-size : 90%;">◆ </span></b><span style="color : #CC0000;"><b><span style="font-size : 90%;">【文字列ピクチャ】</span></b></span><span style="font-size : 90%;
+	color : #CC0000;
+">文字列ピクチャの「角度」が反映されるようになったため、<b>文字列の角度に何か入力していた場合は見た目が狂う</b>場合があります。</span><br>
+            <span style="font-size : 90%;">　→　「旧Ver2.29時点の挙動で動作」にすると文字列ピクチャが回転できなくなります。</span><br>
+                  <br>
+                  <br>
+                  <b><span style="font-size : 90%;">◆ </span><span style="font-size : 90%;
+	color : #CC0000;
+">【</span></b><span style="color : #CC0000;"><b><span style="font-size : 90%;">文字列操作】</span></b></span><span style="font-size : 90%;
+	color : #CC0000;
+">キーボード入力時、内部文字コードがUTF-8になった影響で<b>日本語の全角文字が「2バイト」から「3バイト」相当に変わります</b>。</span><br>
+            <span style="font-size : 90%;">　→　日本語入力が必要なクイズなどがある場合、入力文字数が足りなくなってしまう場合がございます。</span><br>
+                  <span style="font-size : 90%;">　　なので、「Ver3にコンバートしていないゲームデータ」あるいはゲーム基本設定で「旧Ver2.29時点の挙動で動作」にした場合は、自動で<b>【キーボード入力文字数を1.5倍に補正】</b>する処理を行います。【旧ゲームデータが入力文字数不足でクリア不能になる】のを避けるためです。<br>
+                  </span><br>
+                  <br>
+                  <span style="font-size : 90%;"><b>◆ </b></span><span style="font-size : 90%;
+	color : #CC0000;
+"><b>【イベント制御】「キャラ動作指定」において、入力された「変数」は「動作指定開始時点の値」が使用</b>されるようになります。</span><br>
+            <span style="font-size : 90%;">　→　従来は動作指定中の<b>「各動作時」に変数の値を読みに行く</b>仕様で、その影響でコモンセルフ変数なども使用できませんでしたが、これからはコモンセルフも使用可能となります。</span><br>
+                  <span style="font-size : 90%;">　　　もし挙動がおかしくなった場合は「旧Ver2.29時点の挙動で動作」に変更してください。<br>
+                  　→　Ver3.250から、動作指定内の</span><span style="font-size : 90%;
+	color : #cc0000;
+"><b>「マップセルフ変数」と「通常変数」だけはリアルタイムの値が使われる</b></span><span style="font-size : 90%;">よう修正。<br>
+                  　　　動作指定内で値を変えてそのまま動作指定内で使っても値が反映されていないのが直感的ではなかったためです。</span><br>
+                  <br>
+                  <br>
+                  <b><span style="font-size : 90%;">◆ 【変数操作+】</span></b><span style="font-size : 90%;"> イベントが存在していない(全ページの起動条件を満たしていない)とき、従来は「イベント」の「起動条件」の値が0を返していたのが、「-1」を返すようになります。</span><br>
+                  <br>
+                  <span style="font-size : 90%;"><b>◆ 【文章の表示・文字列ピクチャ】</b> ルビの特殊文字\r[XX,YY]のXX部分が文字速度にかかわらず一瞬で表示されていたのが、文字速度に応じて1文字ずつ表示されるようになります。</span><br>
+                  <br>
+                  <br>
+                  <b><span style="font-size : 90%;">◆【プレイヤーの画面座標・スクロール座標】 </span></b><span style="font-size : 90%;">プレイヤーの画面座標の更新タイミングが変わり、</span><span style="font-size : 90%;
+">「イベントコマンドで取得したプレイヤー座標・スクロール座標」が「正確に」</span><span style="font-size : 90%;">なっています。</span><br>
+                  　→<span style="font-size : 90%;">　従来は1フレーム分だけずれていたので、その前提で残像を描画する処理などを作っていた場合、期待した通りに表示されなくなる場合がございます。</span><br>
+                  　　　<span style="font-size : 90%;">また、プレイヤーの移動し始めが従来より1フレーム遅れるため、1フレームしか猶予のない逃走ゲームなどではクリア不能になる場合がございます。</span><br>
+                  <br>
+                  <br>
+                  <b>◆ 【エフェクト】</b>　「マップ」エフェクトの「ズーム」の拡大率の最低値が「1以上」になりました。<br>
+                  　　　　　　0以下を指定していた演出では、従来通りの挙動をしなくなります。<br>
+                  　　　　（この点は今のところ挙動の再現ができません。今後、似た表現ができる機能の搭載を検討しています）<br>
+                  <br>
+                  ◆<b>【並列処理内でのロード】</b>並列実行イベント中にロードするとその後の「場所移動」時に低確率で<br>
+                  　　　クラッシュするバグがあったため、並列実行中にロードするとエラーで止まるよう修正されました(Ver3.108より)。<br>
+                  　　　（もともとマニュアルでは並列処理中のセーブロードはしないようにと記述されていましたが、<br>
+                  　　　　　技術的な都合でGame.exe側で止める処理が作られていませんでした）<br>
+                  <br>
+                  <b>◆ 【フレームスキップ】</b>誤爆の方が多いのでゲーム中のF5フレームスキップ機能がオフにされました(Ver3.158より)<br>
+                  　　　　スキップ機能を使いたい場合はConfig.exeから変更可能であることをユーザに教えたり、システム変数の<br>
+                  　　　　「Sys33：ﾌﾚｰﾑｽｷｯﾌﾟﾚﾍﾞﾙ(0～2)」を利用して自作F5キー処理を作るなどしてみてください。<br>
+                  <br>
+                  <br>
+                  <b>◆ 【マップイベント】</b>マップイベントのページが切り替わっても方向が変わらないバグが修正されたため、<br>
+                  　　　　　　　　　　　　挙動が変わる可能性があります(Ver3.161より)。<br>
+                  　　　→　「マップEvのページが変わった場合」は、とにかく一度「エディタで設定された初期方向」を向くようになります。<br>
+                  　　　　　<span style="font-size : 90%;">「旧Ver3.15時点の挙動で動作」以前に変更すると前の挙動に戻ります。</span><br>
+                  </td>
+                </tr>
+        </tbody>
+      </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      　<br>
+      <table class="gray" cellpadding="3" cellspacing="1">
+        <tbody>
+          <tr>
+            <td class="white" style="width : 562px;">
+            <table border="0" cellpadding="5" style="width : 560px;">
+        <tbody>
+          <tr>
+                  <td style="width : 560px;"><b><span style="font-size : 120%;">【コマンドが自動変換される部分】</span></b><br>
+      <br>
+                  　旧データをVer3にすると、下記コマンドが従来の挙動を維持するために、以下のように自動変換されます。<br>
+      <br>
+      <br>
+      <b><span style="font-size : 90%;">◆</span> 【ダウンロード】<br>
+      <br>
+      </b>　　旧データを変換した「ダウンロード」コマンドは、<b>新たに追加された「SJIS変換する」と<br>
+      　　「SJIS文字列を受信」のチェックが自動的にオン</b>になっています。<br>
+      　　<span style="font-size : 90%;">（SJIS：Ver2までのウディタ内で使われていた文字コード。SJISがONだとVer2時点の挙動になります）</span><br>
+      <br>
+      　　もし「UTF-8」の文字コードで送受信したい場合は、上記チェックを外してください。<br>
+<br>
+<br>
+      <b><span style="font-size : 90%;">◆</span> 【文字列操作】</b><br>
+      <br>
+      　　旧データを変換した場合の「↓のファイル読込」コマンドは、新たに追加された<br>
+      　「文字コード」の設定として、自動的に「<b>自動文字コード判別</b>」がセットされています。<br>
+      　　（このほかに「UTF-8」と「SJIS]の選択肢があります）<br>
+　　　　　　<br>
+      　　旧データからの移行で、SaveフォルダとDataフォルダのtxtファイルに<br>
+      　　SJISとUTF-8の文字コードが混在している可能性に備えたものですが、<br>
+                  　　この自動判別機能も完璧ではないため、もしファイルから読み込みした文字列が<br>
+      　　文字化けする場合は手動で文字コードを「UTF-8」か「SJIS」で指定してください<br>
+                  　</td>
+                </tr>
+        </tbody>
+      </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+<br>
+      <b><span style="font-size : 150%;"><a id="3.00new"></a>【新機能】</span></b>　<span style="font-size : 80%;">一目では把握できない量の新機能が増えました！　使えるものから慣れていってください。</span>　<a href="#top" class="green">↑トップへ</a><br>
+      <br>
+      <br>
+      <br>
+●【文字コード】ウディタ全体の文字コードが「SJIS」から「UTF-8(Unicode)」になりました。<br>
+　　　　　　　　以下の点で変化があります。<br>
+<br>
+      　- Ver2以前のデータを読み込んだ際、最初に「コンバート画面」が表示されます。<br>
+      　　 ここで基本データ、マップファイル、txt、csvファイルをUTF-8に変換する作業が実行されます。<br>
+      　　 （txt拡張子以外のテキストファイルは自力でUTF-8に変換してください）<br>
+<br>
+      　- 全てのファイルの文字コードが「UTF-8」になります。<br>
+      　　今後はゲームから読み込むテキストファイルもなるべく「UTF-8」にしてください。<br>
+<br>
+      　- 「【文字列操作】で出力されるファイル」「【DB操作】で入出力されるCSVデータ」、<br>
+      　　「【ダウンロード】機能の通信内容」の標準文字コードが「UTF-8」になります。<br>
+<br>
+      　- 海外OS上でもゲームが正常に動作しやすくなります。<br>
+      　　暗号化データ内にある日本語のファイルも、多くの海外OSでそのまま読み込めそうです。<br>
+<br>
+      　- 文字列として「♥（ハート）」マークなどの記号も入力可能になります。<br>
+      　　ただし、その記号がフォントに含まれていなければ文字化けしますのでご注意ください。<br>
+      <br>
+      <br>
+<br>
+      ●【デバッグ文】デバッグ文に「変数監視」機能を搭載しました。変数の追跡が可能になりますす。<br>
+      <br>
+      　たとえばデバッグ文に<br>
+      　　<b>ValWatch:ON=2000009</b><br>
+      　と入れると、指定した変数が変化したとき「デバッグウィンドウ」に以下のように表示されます。<br>
+<br>
+      <span style="font-size : 80%;">　【表示見本】</span><br>
+      <span style="font-size : 80%;">　# ValWatch=&gt; 2000009 = 4　　※通常変数9に4が格納された</span><br>
+      <span style="font-size : 80%;">　--&gt;[MapEv14/4行]</span><br>
+<br>
+      <span style="font-size : 80%;">　※またこの機能を使うと「コモンイベントの高速化」がオフになるので、</span><br>
+      <span style="font-size : 80%;">　　コモンイベントの処理時間が平均で「元の6～10倍以上」になる場合がございます。</span><br>
+      <span style="font-size : 80%;">　　高負荷の状況をテストするのにも使えますので</span><span style="font-size : 80%;">　他機種への移植をご検討の方は<br>
+      　　これを利用してEv処理時間をなるべく小さくするよう心がけてみてください。</span><br>
+      <br>
+      <span style="font-size : 80%;">　※【注意！　ValWatchで数値計算が狂う場合があります！】</span><br>
+      <span style="font-size : 80%;">　　ValWatchを使用中は、高速化が解除される影響で、コモンイベント内の変数操作などで</span><br>
+      <span style="font-size : 80%;">　　数値が「2147483647」を超えると「-2147483648」に逆転してしまう現象がなくなり、</span><br>
+      <span style="font-size : 80%;">　　</span><b><span style="color : #ff0000;
+	font-size : 80%;
+">常に数値が±20億以内におさめられる</span></b><span style="font-size : 80%;">ようになります。</span><br>
+      <span style="font-size : 80%;">　　±20億近くの値を使う計算を行っている場合や、</span><br>
+      <span style="font-size : 80%;">　　あるいは計算ミスなどで知らない間に21億を超えたことによる</span><br>
+      <span style="font-size : 80%;">　　数値の逆転が発生していた場合、ValWatch機能のON/OFFで</span><br>
+      <span style="font-size : 80%;">　　計算結果に差が発生してしまう場合がございますのでご注意ください。</span><br>
+      <br>
+      <br>
+      <br>
+      ●【デバッグ文】デバッグ文に「ピクチャ監視」機能を搭載しました。<br>
+      <br>
+      　たとえば「デバッグ文」機能で<br>
+      　　<b>PictureWatch:ON=123</b><br>
+      　と入れると、以後ピクチャ123番を監視し続け、そのピクチャに処理が行われるたびに、<br>
+      　「デバッグウィンドウ」にそのピクチャ番号と処理位置、<br>
+      　処理内容（<b>表示(New）　移動（Move)　消去（Delete）<br>
+      　　ディレイリセット（Delay Reset)　ピクチャエフェクト（Effect）</b>）が表示されます。<br>
+      　使いこなせば、ピクチャの問題を探すのが効率的になるでしょう。<br>
+<br>
+      <span style="font-size : 80%;">　【表示見本】</span><br>
+      <span style="font-size : 80%;">　# PictureWatch=&gt; 123 &lt;New&gt; (※新規表示）</span><br>
+      <span style="font-size : 80%;">　--&gt;[ｺﾓﾝ696/28行]</span><br>
+      <br>
+      <br>
+<br>
+      ●【変数操作+】取得できる項目を追加しました。<br>
+      <table cellpadding="6">
+        <tbody>
+          <tr>
+            <td><b>【キャラ】</b><br>
+- キャラチップ横分割数<br>
+- キャラチップ縦分割数<br>
+- 現在ﾋﾟｸﾁｬﾊﾟﾀｰﾝ[1～12+] ： そのキャラをピクチャ分割したと考えた場合の今のパターン番号を返します。<br>
+- ピクセル補正値X/Y[0～(半ﾀｲﾙ-1) ： 「エフェクト」コマンドの「ピクセル移動」をしたとき、精密座標の区切りから加算されているピクセル値を返します。つまり0～[ﾀｲﾙ半分-1] pxまでの値を返します。<br>
+<br>
+            <b>【位置】</b><br>
+- ﾚｲﾔｰ1～3のﾀｲﾙ属性[★1+▲2+↓4+□8+■16]<br>
+- 最も上のｵｰﾄﾀｲﾙﾁｯﾌﾟ番号<br>
+- 最も上のｵｰﾄﾀｲﾙ縦ﾊﾟﾀｰﾝ(1-5の4桁/精密1桁)<br>
+- 最も上のｵｰﾄﾀｲﾙ横ｱﾆﾒﾊﾟﾀｰﾝ(1-)<br>
+- 最も上のｵｰﾄﾀｲﾙ横ｱﾆﾒﾊﾟﾀｰﾝ総数<br>
+- 最も上のｵｰﾄﾀｲﾙﾋﾟｸﾁｬﾊﾟﾀｰﾝ(要[精密])<br>
+- 最も上のｵｰﾄﾀｲﾙﾋﾟｸﾁｬﾊﾟﾀｰﾝ総数<br>
+<br>
+            <b>【その他】</b><br>
+- 現在のマップのタイルセット番号<br>
+            - 現在マップのマップイベント数&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+<br>
+●【文字列操作】「↓のファイルをBase64で読込」コマンドを追加。<br>
+　画像やセーブデータなどのバイナリファイルを、Base64フォーマットの文字列として読み込むことができます。<br>
+　主にサーバとの通信時に使用することになるでしょう。<br>
+      <br>
+      <br>
+●【文字列操作】「特殊文字を全て削除」を追加<br>
+　フォント変更の\f[]などの特殊文字によって生まれた内部コードを全て削除します。<br>
+      　ルビ\r[XX,YY]や\img[]指定も「 ] 」が終わる範囲まで消去されますが、<br>
+　ルビ\r[XX,YY]に関しては「XX」の部分だけ残ります。<br>
+      <br>
+      <br>
+●【文字列操作】「に↓から最後1文字切り出し」コマンドを追加しました。<br>
+　指定した文字列の「最後」から1文字だけ切り出せます。<br>
+      　後述する長さ取得の裏技&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;と合わせて使うと、<br>
+      　文字列の長さを調節しやすそうです。<br>
+<br>
+<br>
+●【文字列操作】「↓のファイル読込」を選んだ場合だけ使える裏技コマンドを追加しました<br>
+      　　「手動入力」で以下の文章を入れることで特殊な情報を得ることができます。<br>
+      　<br>
+      <table cellpadding="10" class="mmgray" cellspacing="1">
+        <tbody>
+          <tr>
+            <td style="width : 532px;" class="white"><b><span style="font-size : 90%;">&lt;&lt;GET_MAPEVENT_ID_FROM_NAME&gt;&gt;(マップイベント名)</span></b><br>
+            <span style="font-size : 90%;">　[マップイベント名]からイベント番号を得られます。</span><br>
+            <span style="font-size : 90%;">　結果の数値は文字列として文字列変数に格納されます。<br>
+　同じ名前が複数ある場合は、一番大きいイベントIDを返します。</span><br>
+            <span style="font-size : 90%;">　　例：サンプルマップAで「&lt;&lt;GET_MAPEVENT_ID_FROM_NAME&gt;&gt;エディ」と指定すると「8」が格納される。</span><br>
+<br>
+            <b><span style="font-size : 90%;">&lt;&lt;GET_MAPEVENT_NAME_FROM_ID&gt;&gt;(マップイベントID)</span></b><br>
+            <span style="font-size : 90%;">　[マップイベントID]からマップイベント名を得られます。</span><br>
+            <span style="font-size : 90%;">　 例：サンプルマップAで「&lt;&lt;GET_MAPEVENT_NAME_FROM_ID&gt;&gt;8」と指定すると「エディ」が格納される。</span><br>
+<br>
+            <b><span style="font-size : 90%;">&lt;&lt;GET_COMMONEVENT_ID_FROM_NAME&gt;&gt;(コモンイベント名)</span></b><br>
+            <span style="font-size : 90%;">　[コモンイベント名]からイベント番号を得られます。</span><br>
+            <span style="font-size : 90%;">　結果の数値は文字列として文字列変数に格納されます。<br>
+            　同じ名前が複数ある場合は、一番大きいコモンイベントIDを返します。</span><br>
+            <span style="font-size : 90%;">　　例：「&lt;&lt;GET_COMMONEVENT_ID_FROM_NAME&gt;&gt;▲装備取得」と指定すると「21」が格納される。</span><br>
+<br>
+            <b><span style="font-size : 90%;">&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;(マップイベントID)</span></b><br>
+            <span style="font-size : 90%;">　指定したIDのマップイベント(IDが-2以下なら主人公や仲間）として、現在表示されている画像ファイル名が取得できます。もしマップイベントに現在表示されているのがタイル画像なら「&lt;TILE&gt;15」(タイル15番)のように格納されます。</span><br>
+            <span style="font-size : 90%;">　　例：「&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;7」と指定すると「CharaChip/[Chara]Doctor.png」が格納される。</span><br>
+<br>
+            <b><span style="font-size : 90%;">&lt;&lt;GET_TILE_FILENAME&gt;&gt;(タイル番号の数値)</span></b><br>
+            <span style="font-size : 90%;">　現在マップの[タイル番号の数値]番のタイルファイル名が取得できます。0なら基本タイル画像、1～31がオートタイル画像です。</span><br>
+            <span style="font-size : 90%;">　　例：サンプルマップAで「&lt;&lt;GET_TILE_FILENAME&gt;&gt;7」と指定すると「MapChip/[A]WaterFall2_pipo.png」が格納される。</span><br>
+<br>
+            <b><span style="font-size : 90%;">&lt;&lt;GET_FILENAME_FROM_PICTURE&gt;&gt;(ピクチャIDの数値)</span></b><br>
+            <span style="font-size : 90%;">　[指定ID]のピクチャとして表示されている「画像ファイル名」、あるいは文字列ピクチャなら「文字列」を返します。</span><br>
+            <span style="font-size : 90%;">　　例：サンプルゲームでメニューを開いた状態で「&lt;&lt;GET_FILENAME_FROM_PICTURE&gt;&gt;10001」と指定すると</span><br>
+            <span style="font-size : 90%;">　　　「SystemFile/WindowBase_amania.png」が格納される。</span><br>
+<br>
+            <b><span style="font-size : 90%;">&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;(文字列)</span></b><br>
+            <span style="font-size : 90%;">　 半角1、全角2と換算して文字列の「長さ」を計算した値を返します。</span><br>
+            <span style="font-size : 90%;">　 UTF-8化でキーボード入力の長さが不定になったため、</span><br>
+            <span style="font-size : 90%;">　 得た文字列を一定の長さにするまで切り取るときのカウント用、などの用途を想定しています。</span><br>
+            <span style="font-size : 90%;">　 例：(文字列)として「あああAAA」と入れると(2×3)+(1×3)で「9」が格納されます。</span><br>
+            <br>
+            <br>
+            <b>&lt;&lt;CUT_STRING_WIDTH_COUNT=(数値)&gt;&gt;(文字列)」</b> (Ver3.230より)<br>
+            <span style="font-size : 90%;">　全角文字を2、半角文字を1としてカウントし、(文字列)を(数値)の横幅でカットした値を返します。</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+
+<br>
+      ●【文字列操作】「↓のファイル読込」処理時、読込ファイルの「文字コード」の指定ができるようになります。<br>
+　　　　「UTF-8読込[標準]」「SJIS読込」「自動文字コード判別」から選ぶことができます。<br>
+      　よく分からない場合は「自動」でほぼ問題ありませんが、処理が少しだけ重くなります。<br>
+      <br>
+      <br>
+●【DB操作】可変DBへの「新規挿入」「抜き出し」処理を追加。<br>
+　　空データをデータ間に挿入したり、データを抜き取って間を詰めることが簡単になります。<br>
+      <br>
+      <br>
+●【ピクチャ】 「文字列ピクチャ」が回転できるようになりました。<br>
+      　　ただ従来作品で文字列ピクチャに内部的に角度が指定されていて<br>
+      　　Ver3で大変なことになるケースもあると思いますので、<br>
+      　　文字列を回転させたくない場合は「ゲーム設定」の「Game.exe 動作バージョン調整」を<br>
+      　　「旧Ver2.29時点の挙動で動作」に切り替えてください。<br>
+<br>
+<br>
+●【エフェクト】エフェクト機能を多数追加しました。<br>
+      <table cellpadding="8" class="mmgray" cellspacing="1">
+        <tbody>
+          <tr>
+            <td style="width : 532px;" class="white"><b><span style="font-size : 90%;">【ピクチャ】</span></b><span style="font-size : 90%;">のエフェクト</span><br>
+            <br>
+            <b><span style="font-size : 90%;">- 描画座標シフト2(角度・拡大率反映)</span></b><br>
+            <span style="font-size : 90%;">　→　通常の「描画座標シフト（最終座標をシフトさせる）」と違い、</span><br>
+            <span style="font-size : 90%;">　　拡大率や角度の影響を受ける「前」のXY座標をシフトさせます。</span><br>
+            <span style="font-size : 90%;">　　ウディタ作者は、「カード」を複数のピクチャを重ねて作るときに使用しています。</span><br>
+            <span style="font-size : 90%;">　（文字や下地などの別ピクチャを全て同じ座標の「中央」座標で重ねて出した後、</span><br>
+            <span style="font-size : 90%;">　　これで座標シフトさせれば、回転・拡大しても1枚のカードとして動くように見せられます）</span><br>
+            <b><span style="font-size : 90%;">- 不透明度補正[±]</span><br>
+            <span style="font-size : 90%;">- 角度補正[±]</span><br>
+            <span style="font-size : 90%;">- 拡大率補正[±]</span><br>
+            <span style="font-size : 90%;">- エフェクト全解除</span></b><br>
+<br>
+            <b><span style="font-size : 90%;">- ピクチャのコピー</span></b><br>
+            <span style="font-size : 90%;">　指定IDから別の指定IDにピクチャをコピーします。</span><br>
+            <span style="font-size : 90%;">　　</span><br>
+            <b><span style="font-size : 90%;">- ピクチャのID移動</span></b><br>
+            <span style="font-size : 90%;">　ピクチャのIDを指定IDから別の指定IDに移動させます。</span><br>
+<br>
+            <b><span style="font-size : 90%;">- 変換/色相彩度輝度</span></b><span style="font-size : 90%;">　ピクチャの色などを変化させます。</span><br>
+            <b><span style="font-size : 90%;">- 変換/モノトーン　ピクチャをモノトーンに変化させます。</span></b><br>
+            <b><span style="font-size : 90%;">- 変換/ぼかし</span></b><span style="font-size : 90%;">　ピクチャをぼかします、限界があります。</span><br>
+            <b><span style="font-size : 90%;">- 変換/階調反転　ピクチャの色を反転します。</span></b><br>
+            <b><span style="font-size : 90%;">- 変換/レベル補正</span></b><span style="font-size : 90%;">　ピクチャの明るさを、旧MIN～MAXの範囲から新MIN～MAXの範囲に補正します</span><br>
+            <b><span style="font-size : 90%;">- 変換系のみ全解除</span></b><span style="font-size : 90%;">　これら変換エフェクトを全解除して最初の状態に戻します</span><br>
+            <span style="font-size : 90%;">→　これらの「変換」系処理は、不可逆な変換を行います。一度かけた「変換」エフェクトは</span><br>
+            <span style="font-size : 90%;">　「変換系のみ全解除」かピクチャが消去されるまで持続し、一つだけ戻すといったことはできません。</span><br>
+<br>
+            <br>
+            <br>
+            <b><span style="font-size : 90%;">【キャラ】</span></b><span style="font-size : 90%;">のエフェクト</span><br>
+            <br>
+            <b><span style="font-size : 90%;">- ピクセル移動(α版)<br>
+            </span></b><span style="font-size : 90%;">　 ピクセル単位でイベントを移動させます。</span><br>
+            <span style="font-size : 90%;">　「主人公」や「マップイベント」をピクセル移動で移動させた場合、マップの侵入不可チップに当たるとそこで停止します。</span><br>
+            <span style="font-size : 90%;">　また、「並列イベント」でこのエフェクトを使用して主人公やイベントを動かすと、「プレイヤー接触」や「イベント接触」のイベントを起動させることができます。</span><br>
+            <span style="font-size : 90%;">　ただし、現状は【主人公だけがピクセル移動を行い、イベント側はマス目移動を行う】という前提の処理になっているため「α版」です。</span><br>
+            <br>
+            <span style="font-size : 90%;">　※現在、イベント側の当たり判定はどんな状況でも「マス目単位」で判定するため、もしイベントも主人公もピクセル移動させた場合、</span><span style="font-size : 90%;">（最大半マス内の）見えない当たり判定にぶつかったり、急に押し出されたりする場合があります。</span><br>
+            <span style="font-size : 90%;">　※キャラのピクセル補正値を取得したい場合は「変数操作+」を使ってください。</span><br>
+            <br>
+            <b><span style="font-size : 90%;">- 不透明度補正[±]</span></b><br>
+            <b><span style="font-size : 90%;">- 強制パターン上書[0:ﾅｼ]</span></b><span style="font-size : 90%;">　<br>
+            　キャラチップを指定したパターン番号にして停止させます。パターン値はピクチャと同じ分け方です。</span><br>
+            <b><span style="font-size : 90%;">- 高さ変更</span></b><br>
+            <b><span style="font-size : 90%;">- ｷｬﾗﾁｯﾌﾟを変更</span><br>
+            <span style="font-size : 90%;">- 重ねｷｬﾗﾁｯﾌﾟを変更(α版)</span></b><br>
+            <span style="font-size : 90%;">　元のキャラチップに最大5枚分、別のキャラチップを重ねられます（つまり全6レイヤーで着せ替えが可能です）。</span><br>
+            <span style="font-size : 90%;">　重ねる画像は元の画像と同じサイズである必要があります。</span><br>
+            <span style="font-size : 90%;">　なおこれはまだ仮のもので、「下半身が半透明」地形などに入ると「パーツごとに不透明度が50％になる」ため、下のレイヤーが透けて見えてしまいます。</span><br>
+            <span style="font-size : 90%;">　今後、半透明チップに入っても下レイヤーが透けないような修正を検討しています。</span><br>
+            <span style="font-size : 90%;">　</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+<br>
+●【エフェクト】 マスク機能を追加しました。簡単に言うと描画範囲を一部封印できる機能です。<br>
+      　　　白黒の画像を使って「マスク」に書き込み、キャラ・マップ・ピクチャのマスクをONにすると、<br>
+      　　　指定したキャラ・マップ・ピクチャのみ、表示される範囲を制限することができます。<br>
+      <br>
+      　　使えるマスクは1レイヤーだけですが、暗闇の表現、マップ上のキャラが一定範囲内にしか<br>
+      　　表示されない表現、ミニマップ表示、カットイン作成などが実現できます。
+      <table cellpadding="10">
+        <tbody>
+          <tr>
+            <td style="width : 388px;"><b><span style="font-size : 90%;">【マスク】　</span></b><span style="font-size : 90%;">使用可能なコマンド</span><br>
+            <span style="font-size : 90%;">- マスク全リセット</span><br>
+            <span style="font-size : 90%;">- 全面[表示]に塗りつぶす </span><br>
+            <span style="font-size : 90%;">- 全面[非表示]に塗りつぶす</span><br>
+            <span style="font-size : 90%;">- (画像)の表示範囲(黒)追加</span><br>
+            <span style="font-size : 90%;">- (画像)の非表示範囲(白)追加 </span><br>
+            <span style="font-size : 90%;">- （キャラID）のキャラのマスクON</span><br>
+            <span style="font-size : 90%;">- （キャラID）のキャラのマスク解除</span><br>
+            <span style="font-size : 90%;">- マップのマスクON</span><br>
+            <span style="font-size : 90%;">- マップのマスク解除</span><br>
+            <span style="font-size : 90%;">- (ピクチャID)をﾋﾟｸﾁｬﾏｽｸONにする</span><br>
+            <span style="font-size : 90%;">- (ピクチャID)のﾋﾟｸﾁｬﾏｽｸ解除</span></td>
+          </tr>
+        </tbody>
+      </table>
+      　 <br>
+      　<img src="./image/ReleaseLog300_mask.gif"><br>
+      　<span style="font-size : 80%;">↑全面表示のピクチャを「マスク」で画面の左右1/3だけ非表示にして斜めカットイン風に見せている例</span><br>
+      <br>　
+      <table border="0" class="mgray" cellpadding="5" cellspacing="1">
+  <tbody>
+    <tr>
+      <td class="white"><b>&nbsp;【マスクで使われる素材】</b><br>
+<br>
+            　　↓マスクの書き込みに使う画像は、このような白黒画像です（そのまま保存して使用可能です）<br>
+　　<img src="image/2024_04ev_effect_mask1.png" border="1">　<img src="image/2024_04ev_effect_mask2.png" border="1" height="120">　<img src="image/2024_04ev_effect_mask3.png" border="1"><br>
+            　　「<b>(画像)の表示範囲(黒)追加</b>」機能を使った場合、黒い部分が「表示可能範囲」としてマスクに書き込まれます。<br>
+      <br>
+            　　2つめの「細長い斜め画像」で表示範囲をうまく作れば、↑のようなカットインを作ることが可能です。</td>
+    </tr>
+  </tbody>
+</table>
+      <br>
+      <br>
+      <br>
+      ●【ピクチャ】 ピクチャへの画面取得機能 &lt;SCREENSHOT&gt; を実装。<br>
+      　　「[1]ファイル読み込み」のファイル名、または「[2]文字列読み込み時」の文字列変数内に<br>
+      　　&lt;SCREENSHOT&gt;と入れると、「その時点で表示されている画面」をピクチャとして<br>
+      　　利用できるようになります。<br>
+      　　なお、このピクチャ内容はセーブできず、ロード時には消えてしまいます。<br>
+　<br>
+      　　また、この&lt;SCREENSHOT&gt;ピクチャ指定で「表示」をするたび、<br>
+      　　「すでに&lt;SCREENSHOT&gt;を表示中の他の全ピクチャの画像」も更新されます。<br>
+      　　つまり、ゲーム内では&lt;SCREENSHOT&gt;は内部で共通の画像であり、<br>
+      　　【最新の1枚分しか表示できません】。この点はあらかじめご了承ください。<br>
+　<br>
+<br>
+      ●【ピクチャ】 部分切り出し表示機能&lt;CUT/～&gt;を実装。<br>
+      　　[1]ファイル読み込みまたは[2]文字列読み込み時に<br>
+      　　「&lt;CUT/X10-150/Y40-300&gt;Picture/AAA.jpg」と指定すると、<br>
+      　　画像「AAA.jpg」から、X座標10～150ピクセル、Y座標40～300ピクセルの範囲だけ<br>
+      　　切り出して表示することができます。<br>
+      <br>
+      <br>
+●【ピクチャ】表示基準位置として「中央上」と「中央下」を新たに実装。<br>
+      <br>
+      <br>
+●【チップ処理】 「単体チップ設定を変更」に「後ろだと隠れる」属性を追加。<br>
+　　　　　　　　従来バージョンではなぜかこれだけありませんでした。<br>
+      <br>
+      <br>
+●【ダウンロード】 POST送信機能を実装しました。<br>
+　　※POST送信：URL内にデータを書き込むGET方式と違うやり方でデータをやり取りする。改ざんされにくく、読まれにくい。<br>
+      <br>
+      <br>
+      ●【ダウンロード】 URLとPOST内容に「SJIS変換する」「SJIS文字列を受信」「URLエンコードして送信」オプションを追加。<br>
+      <br>
+      <span style="font-size : 80%;">　・「SJIS変換する」をチェックすると、文字列情報の文字コードをSJISに変換して送信します。</span><br>
+      <span style="font-size : 80%;">　　これはVer2時点の処理で使われる文字コードで、従来に合わせる場合は</span><br>
+      <span style="font-size : 80%;">　　「SJIS変換する」をチェックしてください。チェックしない場合は「UTF-8」文字列で送信します。</span><br>
+      <br>
+      <span style="font-size : 80%;">　・「SJIS文字列を受信」をチェックすると、受け取ったデータをSJIS文字列として認識し、</span><br>
+      <span style="font-size : 80%;">　　ウディタ内で使える文字列に変換します。</span><br>
+      <span style="font-size : 80%;">　　そうでなければ受信されたのは「UTF-8」文字列として扱われます。</span><br>
+      <br>
+      <span style="font-size : 80%;">　・「URLエンコードして送信」は、URLの「クエリー部分（URLの?以降の部分）」だけをエンコードします。</span><br>
+      <span style="font-size : 80%;">　　またこのURLエンコードは、アルファベット、数字、記号の「*」「.」「-」「_」「&amp;」「=」のみ変換しません</span><br>
+      <span style="font-size : 80%;">　　（クエリーやPOST内容全体をURLエンコードする場合、「&amp;」や「=」が違う文字になっていると</span><br>
+      <span style="font-size : 80%;">　　　フォームデータ受信の方法が使えなくなるため。基本的に問題はないと思います）。</span><br>
+<br>
+<br>
+●【特殊文字】\iS[?]、\imgS[？]を実装。<br>
+　　ゲーム基本設定でピクチャの拡大縮小時が「なめらか」になっていても、<br>
+　　この特殊文字で指定されたアイコンや画像に限り常に「ガタガタ＆くっきり」になります。<br>
+      <br>
+      <br>
+      ●【特殊文字】　フォントのふちの色や影カラーを設定できる　\cE[?]、\cS[?]を実装<br>
+　\cE[?]　\Eによるフォントのふちの色を?番のフォントカラーに変更します。設定しなければ黒です。<br>
+　\cS[?]　フォント影　の色を?番のフォントカラーに変更します。設定しなければ黒です。<br>
+      <br>
+      <br>
+      ●【特殊文字】 文字のふちの太さを設定できる \wE[?] を実装<br>
+　これまでエッジを付ける特殊文字「\E」がありましたが、「\wE[?]」と入力することでふちの太さを?ピクセルに設定できるようになりました。<br>
+　設定できるふちの太さは1～5です。従来の「\E」は「\wE[1]」と同じです。<br>
+      <br>
+      <br>
+      ●【特殊文字】 文章中の画像サイズを％補正できる特殊文字、\isize[??]を実装。<br>
+　たとえば文中に\isize[50]と入れると、その後の\i[?]や\img[～]で表示される画像のサイズを50％の大きさで表示します。<br>
+      <br>
+      <br>
+      ●【特殊文字】 位置、フォントサイズ系の特殊文字、\bx[??]、\f+[?] を追加。<br>
+      　・\bx[??] ： 次行からの開始X座標を設定する。\bx[30]と入れると次の行から30px右にずれた状態から文字表示される。<br>
+      　・\f+[?]　：　フォントサイズを「加算」。直前のフォントサイズに足したり引いたりできます。<br>
+<br>
+<br>
+●【システム変数】「Sys26～27：選択肢ウィンドウX/Y余白」のシステム変数を追加。<br>
+      　　　　選択肢ウィンドウの縦横の余白を設定できます。<br>
+      　　<br>
+      <br>
+●【システム変数】「Sys119：基本画面倍率[1-3]」を追加。<br>
+      　　　　320×240の2倍表示なら「2」、それ以外なら1が返ります。<br>
+      　　　（プロ版で1～3倍まで任意に変更できるようになったので、その判別用として追加されました）<br>
+      <br>
+      <br>
+●【システム変数】 「Sys122：Map&amp;Evｽﾞｰﾑ時なめらか=1」のシステム変数を追加。<br>
+      　　　1を代入すると、「3Dモード」でプレイしている場合に限り、<br>
+      　　　マップやイベントをズーム（拡大縮小）したときにガタガタではなくなめらかな表示になります。<br>
+      　　　（これまではゲーム設定がどうであれ、必ず「ガタガタ」モードで描画されていました）<br>
+      <br>
+      <br>
+●【システム変数】「Sys123：次表示ﾋﾟｸﾁｬ拡縮くっきり(1=YES)」を実装。<br>
+      　　　これが「1」の状態でピクチャの「表示」を指示したピクチャに限り、<br>
+      　　　ゲーム基本設定でピクチャを「なめらか・ぼんやり」表示にしていても「ガタガタ・くっきり」で表示されます。<br>
+      　　　ドット絵のピクチャをきれいに拡大したいときに。<br>
+      <br>
+      <br>
+●【システム変数】「Sys125：フォント太さ(1～10)」を実装。<br>
+      　　　全フォントの「太さ」を変更します。基本値は5です。<br>
+      　　　3くらい変えないと変化が見えない場合があります。<br>
+      <br>
+      <br>
+●【システム変数】 Sys127：マップタイル非セーブフラグ（1=YES）　を実装。<br>
+　　　これを1にしているとセーブファイルに現在マップのタイル情報を保存しなくなります。<br>
+　　　500x500のマップだとセーブする際、マップ領域の保存だけで3MB分も使ってしまうので、<br>
+　　　その情報を保存したくない人向けです。<br>
+      　　　これをオンにしてセーブした際、ロード時にはマップタイルが「マップファイルから」再読込されます。<br>
+　　　（つまり、ゲーム内で書き替えたマップタイルも元に戻ります）<br>
+<br>
+<br>
+●【システム変数】 Sys129:Ev斜め移動 X速度補正[%]、Sys130:Ev斜め移動 Y速度補正[%]、追加<br>
+      　　　主人公と全てのイベントが「斜め」に移動する際、X方向とY方向の速度に補正をかけられます。<br>
+      　　　（エフェクトの「ピクセル移動」には影響しません）<br>
+      　　　斜め移動時、上に1、横に2マスの速度で移動させたりできます。<br>
+      　　　クォータービューのマップを実装する際などに有用だと思います。<br>
+      <br>
+      <span style="font-size : 80%;">　　基本的には、キャラの座標直接指定「9100000+Y*10」の変数で</span><span style="font-size : 80%;">移動先を直接指定するときに効果を発揮します。</span><br>
+      <span style="font-size : 80%;">　　（以下はSys129:斜めX速度補正を「100％」、Sys130:斜めY速度補正を「50％」にし、</span><br>
+      <span style="font-size : 80%;">　　　9190000(このEvのX座標）に+2と-2を、9190001(このEvのY座標）に+1と-1を</span><br>
+      <span style="font-size : 80%;">　　　定期的に加算して移動させた例）</span><br>
+      　　<img src="image/2024_06systemvalue_sys129.gif"><br>
+      <br>
+      <br>
+●【システム変数】 Sys131:主人公 中心X補正、Sys132:主人公 中心Y補正を追加。<br>
+      　　　主人公の中心表示座標を補正します。これを変更した後は<br>
+      　　　エフェクト処理でスクロール「主人公に戻す」をかけてください。<br>
+      <br>
+      <br>
+●【システム変数】Sys137:ウィンドウ拡大率[%]　を追加。<br>
+      　　　ゲーム画面のウィンドウ拡大率を取得ないし代入できます。<br>
+      <br>
+<br>
+●【システム変数】Sys138:画面ﾓｰﾄﾞ[ｳｨﾝﾄﾞｳ:0/仮想全:1/全:2]を追加<br>
+      　　　ゲーム画面の画面モードを切り替えできます。<br>
+      　　　「仮想全:1」はボーダーレスのフルスクリーン化、「全:2」は解像度切り替えの全画面化です。<br>
+      <br>
+<br>
+●【システム変数】Sys143：[読]処理可能ｺﾏﾝﾄﾞ[通常0/プロ版1]を追加　<br>
+      　　　プロ版のコマンドが使用可能な状態なら1を返します。<br>
+      <br>
+      <br>
+●【システム文字列】「SysS52：[読]起動時データフォルダ」を正式追加。<br>
+      　　　起動時のフォルダ名が格納されます。通常は「Data/」が入っていますが、<br>
+      　　　-fオプションでGame.exeを起動させた場合のみ変化します。<br>
+      　　　（いつの間にか入ってた同機能の-bオプションはこの-fに変更されました）<br>
+      <br>
+      <br>
+●【システム文字列】「SysS54：最終緑帯メッセージ文」　を追加。<br>
+      　　　最後に表示した緑帯のエラーメッセージが格納されます。<br>
+      <br>
+      <br>
+●【変数呼び出し値】「9100000+10*Y+X」のキャラ情報呼び出し値に、<br>
+　　　　　　　　　　X=7：ピクセル補正X　　8:ピクセル補正Y　　を追加<br>
+      <br>
+      <br>
+●【コモンイベント入力内容】 コモンイベントの変数と文字列の「入力」が各4個から各5個に増えました。<br>
+      <br>
+      <br>
+      ●【ピクチャ表示一覧】 テストプレイ中、「Shift」か「中クリック」を押しながら「F7」キーを押すことで<br>
+　　　「いまマウスカーソルが重なっているピクチャ」だけを「ピクチャ表示一覧」に表示できるよう修正。<br>
+　　　たくさんのピクチャがあっても、指示した位置だけの情報を得やすくなります。<br>
+      <br>
+      <br>
+      ●【タイルセット設定】 オートタイルの数が15個→31個に増加しました<br>
+      <br>
+      <br>
+●【タイトルバー】 テストプレイ時のタイトルバーに、イベント処理回数を「?k」で表示するようにしました。<br>
+      　　　「k」は1000の意味で、「2.2k」なら約2200回のイベント処理が行われたことになります。<br>
+      　　　負荷チェックのおおまかな目安としてお使いください。<br>
+      <br>
+      <br>
+●【起動オプション】 Game.exeとEditor.exeに「-f &lt;読み込みフォルダ&gt;」のオプションを追加。<br>
+      　　　Game.exeやEditor.exeの起動時、コマンドプロンプトやバッチ(.bat)ファイルなどを使って<br>
+      　　　「Editor.exe -f Data2」などと入れて起動させると、通常の「Data」でなく「Data2」フォルダのデータを編集対象にして起動できます。<br>
+      　　　Game.exeでも同様で、対象としたフォルダ名のゲームデータを読み込んでプレイ可能です。<br>
+      　　　※ただしセーブフォルダ名は同じままなので、複数のゲームのセーブデータが1つのSaveフォルダ内に混ざってしまう危険性がございます、あらかじめご注意ください。<br>
+<br>
+      <br>
+●【Editor.ini】 エディタ内の「システム変数名」、および「一部の変数呼び出し文」の言語を、Editor.iniの「SystemValue_Language=X」で切り替え可能にしました。<br>
+      　　　Xを0にすると日本語、1にすると英語になります。<br>
+      　　　（ここで切り替えできるテキストは「リソース」でなく「プログラム内に直接書かれた文章」であり、リソースから翻訳するのが難しかったため、ini側で切り替え可能にしました。英語テキストは
+      Velella Himmel様とJeffrey Casey様によるVer2.24Zのものを一部使わせていただきました）<br>
+<br>
+<br>
+●【Game.ini】 INIファイル内にクリップボード関連の隠しオプションを追加しました。<br><BR>
+　　　<B>ClipBoard_Use=1</B>：<BR>
+　　　　 プレイヤー側の都合で最初からクリップボード機能を使いたくない場合は0にしてください。通常は1になっています。<br><BR>
+　　　<B>MainText_to_ClipBoard=0</B> ：<BR>
+　　　　1にすると「文章の表示」の文章を自動でクリップボードにコピーします。<br>
+　　　　翻訳しながら遊ぶときに使ったり、「棒読みちゃん」など外部ツールのクリップボード機能で読み上げさせたりできます。<br>
+<br><BR>
+      <br>
+      <br>
+●【エディターオプション】エディタのカラーテーマを選択できるようになりました。<br>
+　　一般公開版では「ウディタホワイト」と「クラシックグレー」が選べます。<br>
+　　プロ版専用機能として「ネイビーブルー」、「パーフェクトダーク」が選択可能です。<br>
+　　（ただし技術的な都合で、チェックボックスやボタン、グループボックス欄は色変更されません）<br>
+<table border="0">
+  <tbody>
+    <tr>
+      <td style="width : 38px;">&nbsp;</td>
+      <td>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><b>ウディタホワイト<br>
+            <img src="image/2024_02editor_option_color1.png" width="200" border="1"><br>
+            </b></td>
+            <td><b>&nbsp;クラシックグレー<span style="font-size : 60%;">（動作が不安定なときはこれがおすすめです）</span><br>
+            </b><img src="image/2024_02editor_option_color2.png" width="200" border="1"></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+      ●【エディターオプション】「旧ファイル読込言語」の項目が追加されました。<br>
+      　　　Ver2以前のバージョンで作られ、まだUTF-8変換がされていないマップ・コモン・タイル設定・DB設定などは文字列情報がSJIS文字コード（日本語）になっているため、この「旧ファイル読込言語」を「日本語」に設定していないと読み込み時に正常に読み込めない場合があります。<br>
+      　　　もし他の言語で作られた旧ファイルを読み込む場合は、その言語に変更してください。<br>
+      <br>
+      <br>
+      ●【エディターオプション】「マップ編集　遠景表示の有無」に「ループ表示する」が追加されました。<br>
+      　　　　　　　　　従来までの表示方式は「1枚だけ表示する」に名前が変わります。<br>
+      <br>
+      <br>
+      ●【マップ/コモンイベントウィンドウ】 検索ウィンドウに「置換」機能を追加。<br>
+      　　　　　　　　　コマンド内の文字列または数値を置換できます。<br>
+      <br>
+      <br>
+      ●【マップイベントウィンドウ】 「半歩左に設置」オプションを追加。「半歩上に設置」の左版です。<br>
+      <br>
+      <br>
+      ●【マップイベントウィンドウ】 開いているイベントの座標に「精密」表示を追加。<br>
+      　　　　　　また、半歩上・半歩左による座標補正も加味した座標を表示するよう修正。<br>
+      <br>
+      <br>
+      ●【コモンイベントウィンドウ】 コモンイベントの起動条件として<br>
+      　　　　　　「このEvのコモンセルフ変数」が指定できるようになりました。<br>
+      <br>
+      <br>
+      ●【ゲーム基本設定】 「MIDIの再生方式」に「MIDI音源を使わない[GuruguruSMF.dllも不要に]」を追加しました。<br>
+      　　　　これを選択していると、ゲームデータの作成時に「GuruguruSMF.dll」がコピーされなくなり、<br>
+      　　　　起動時にこのファイルがないという警告が出なくなります。<br>
+      <br>
+      <br>
+      ●【ゲーム基本設定】キャラのアニメパターン順を「往復（従来のもの）」と「ループ」で切り替えられる機能を追加しました。<br>
+      　<br>
+      <br>
+      ●【ゲームデータの作成】<br>
+      　　ゲームデータの「暗号化バージョン」を選べるようになりました。<br>
+      　　現在は「Ver2.25～2.29」と「Ver3.00～」「最新（Ver3.00と同じ）」の3つから選択できます。<br>
+      <br>
+      　　→　オンラインアップデートを行う場合など、古い暗号化バージョンのゲームデータを一部だけ更新したい場合はそのときと同じ暗号化バージョンを選んでください。<br>
+      <br>
+      　　→　また、Ver2.25以降の通常版ウディタで暗号化されたゲームデータは、<br>
+      　　　　Game.exe側で暗号化バージョンを自動判別して読み込まれます。<br>
+      　　　　ただし異なる暗号化がされたデータが混ざっている場合は読み込めなくなるので注意してください。<br>
+      <br>
+      <br>
+      <br>
+      ●【Editor全体】 Dataフォルダが存在しないときにEditor.exeを起動した場合、<br>
+      　　　　　　　　「空のゲームデータ（Dataフォルダ）」を作れる処理を追加しました。<br>
+      　　　　　　　　　作れるDataフォルダは2種類で、従来の「RPG基本システム入り空データ」と、<br>
+      　　　　　　　　　開始マップ以外本当に何もない「完全初期データ」から選べます。<br>
+      　　　　　　　　　これでデータがなくとも、Editor単体からゲームが作り始めるようになります。<br>
+      　　　　　　　→　これにより、空データがフルパッケージに同梱されなくなりました。<br>
+      　　　　　　　→　Ver3.10で新規データを選択する画面が追加されました<br>
+      <br>
+      <br>
+●【文字列操作】「をﾌｧｲﾙ↓に出力」コマンドに<br>
+　　　　「UTF-8/BOM有[基本]」「UTF-8/BOMなし」のオプションを追加(Ver3.10で追加)。<br>
+　　　　出力するUTF-8テキストにBOMの有無を設定します。<br>
+　　　　文字列をCSVファイルとして出力する場合などは「有」にしておかないと<br>
+　　　　Excel側で文字化けしてしまいます。<br>
+　　　　よく分からなければ「BOM有」にしておいてください。<br>
+　　　（なお、過去に入力されたコマンドは「UTF-8/BOMなし」になっています）<br>
+<br>
+●【エフェクト】「キャラ」エフェクトに「移動アニメ強制」を追加(Ver3.10で追加)。<br>
+　　　　　　ONにするとキャラを強制的に「移動アニメ」状態にできます。<br>
+　　　　　　主に「～T.png」や「～TX.png」の画像が設定されたキャラの、<br>
+      　　　　　　ピクセル移動中の移動アニメ切り替え用に用意されました。<br>
+      <br>
+      ●【Game.ini】「SelectedText_to_ClipBoard_F2=」の行を追加(Ver3.105で追加)。<br>
+      　　　デフォルトは0です。1にしてゲームを起動すると、F2キーを押すことで<br>
+      　　　「選択中の選択肢」→「なければマウスカーソル上の文字列ピクチャの文字列(不透明度1以上)」<br>
+      　　　をクリップボードにコピーできます。<br>
+<br>
+●【Config.exe】iniファイルの保存処理をUnicodeに対応(Ver3.105で追加)<br>
+　　　　　　　日本語以外のロケールで起動した場合は自動で英語になる機能を追加。<br>
+<br>
+●【ダウンロード】POST時のContent-Typeを変更できる裏技を追加(Ver3.105で追加)<br>
+　「POST送信」文のどこでも「&lt;&lt;CONTENT&gt;&gt;～～&lt;&lt;CONTENT_END&gt;&gt;」と入れると<br>
+      　送信時のContent-Typeヘッダを～～部分で上書きできます。<br>
+      <br>
+      <span style="font-size : 80%;">　【入力例】&lt;&lt;CONTENT&gt;&gt;application/json&lt;&lt;CONTENT_END&gt;&gt;～ここにPOST内容～</span><br>
+      <span style="font-size : 80%;">　※デフォルトでは&lt;&lt;CONTENT&gt;&gt;application/x-www-form-urlencoded&lt;&lt;CONTENT_END&gt;&gt;が</span><br>
+      <span style="font-size : 80%;">　　入っているのと同じ処理が行われています。</span><br>
+      <span style="font-size : 80%;">　※&lt;&lt;CONTENT&gt;&gt;～&lt;&lt;CONTENT_END&gt;&gt;部分は削除されて送信されます。</span><br>
+      <br>
+      <br>
+      ●【イベント・データ選択欄】コモンイベントウィンドウ、マップイベントウィンドウ、<br>
+　　データベース画面において、中クリックをドラッグしながら上下スライドで<br>
+      　　リストボックスをスクロールさせられるように修正（Ver3.121で追加）。<br>
+      　　Editor.ini内の「ListBox_MClickDrag=1」を「0」にすると機能停止できます。<br>
+      <br>
+      ●【マップ・コモンイベントウィンドウ】「イベントの挿入」コマンド上で「F12」を押すと、<br>
+      　　そのコマンドで呼び出されているコモンイベント・DB画面（DB操作）・ラベルジャンプ先（ラベル処理）に<br>
+      　　ジャンプする機能を追加（Ver3.155で追加、Ver3.210でさらに改善）。<br>
+      　　→　サポートツール、<b><a href="https://alpha-stella.com/tool/wodistant/ " target="_blank">Wodistant</a></b>の機能を参考にさせていただきました。<br>
+      　　　　すばらしいツールなので皆さまもぜひ！<br>
+      <br>
+      ●【コモンイベントウィンドウ】F5で前に選んでいたコモンイベントへ、F6で次に選んでいたコモンイベントへ<br>
+      　　　　　　　　　　ジャンプする機能を追加しました。最大20個分ほど記憶します（Ver3.158で追加）。<br>
+      <br>●【システム変数】「Sys146:DirectInputならPS/Swiｺﾝ準拠?=1(1推奨)」を追加。初期値は1です。<br>
+　　　　　　これが1になっていると、PS4/PS5コントローラーやSwitchのジョイコンやプロコンを<br>
+　　　　　　自動判別して、これらのパッドの右スティックやR2L2トリガー情報が<br>
+      　　　　　　期待通りに取得できる確率が上がります（Ver3.230で追加）<br>
+      　　　　　　　→　Xboxのパッドやその他の「XInput対応」コントローラーは<br>
+      　　　　　　　　　Sys146が0でも1でも正常に動作します。<br>
+      <br>
+      <br>
+      ●【システム文字列】システム文字列「SysS 70:ゲームパッドデバイス名」を追加（Ver3.230で追加）<br>
+      　　　　→　パッドごとにボタン設定やスティック情報を調整したい場合に使ってください。<br>
+      <br>
+      <br>
+      ●【システム文字列】システム文字列「SysS 71:ゲームパッドの種別」を追加（Ver3.230で追加）<br>
+      　　　パッドを挿しているとき、そのパッドのタイプを以下のいずれかの文字列として得ることができます。<br>
+　　　<br>
+　　　XBOX_360、XBOX_ONE、PS_DUAL_SHOCK_3、PS_DUAL_SHOCK_4、PS_DUAL_SENSE<br>
+　　　SWITCH_JOY_CON_L、SWITCH_JOY_CON_R、SWITCH_PRO_CON、SWITCH_HORI_PAD<br>
+　　　<br>
+      　　どれにも該当しないときは 「UNKNOWN」が返されます。パッドがなければ文字列は空です。<br>
+      <br>
+      ●【変数操作+】「その他」に「ゲームパッドタイプ(DirectInput=0/XInput=1)」追加。<br>
+      　　　　　　　ゲームパッドがDirectInput方式かXInput方式かを判別できます（Ver3.230で追加）<br>
+      <br>
+      ●【キー入力】「キー入力受け付け」の「アナログスティック」に「X/Y/Z回転」を追加（Ver3.230で追加）<br>
+　　　　　　　DirectInputのパッドでまれに使われる値です。<br>
+      <br>
+      ●【フォント】ゲーム側で使用できるフォントとして、新たにotfフォントに対応（Ver3.230で追加）<br>
+      <br>
+      <br>
+      </p>
+      </TD>
+    </TR>
+  </TBODY>
+</table>
+<br><br>　
+<TABLE>
+  <TBODY class=ten>
+    <TR>
+      <TD width="680"><a id="game300_kaizen"></a><b><span style="font-size : 150%;"><br>
+      　<br>
+      【ゲーム部の改善・仕様変更】</span></b>　　　　<a href="#top" class="green">↑トップへ</a><br>
+      <br>
+      <br>
+      ●【イベント処理速度】 アルゴリズム改善とプログラム環境の更新により、<br>
+      　　　　　　コモンイベント内のイベントコマンド処理が大幅に高速化されました。<br>
+      　　　　　　組み方にもよりますが、一般的な処理ならば従来の平均2～4倍以上の速度で<br>
+      　　　　　　イベント処理が行えるようになるようです。<br>
+<br>
+      <span style="font-size : 80%;">　【高速化実例】</span><br>
+      <span style="font-size : 80%;">　　コモンイベント内で3万回ループに「Cself0 = 0」を10個入れた処理を毎フレーム回したときのイベント処理時間が、</span><br>
+      <span style="font-size : 80%;">　　ウディタ開発者の環境で　Ver2.294　約36ms　→　Ver3.00　約1.5ms　（24倍速）にまで削減できました。</span><br>
+      <span style="font-size : 80%;">　　「(オプションにチェックの入っていない)変数操作」や「ループ」関連の処理が大幅に高速化されているので、<br>
+      　　シミュレータ系のゲームも動かしやすくなると思います。</span><br>
+      <br>
+      <br>
+<br>
+●【描画速度】 描画速度が平均2倍近くになりました。<br>
+      　　　　　　　　　描画時間が従来のおおよそ半分程度になると思われます。<br>
+      <br>
+      <br>
+●【ゲーム起動】ゲームの起動を高速化しました。<br>
+      　　　　ウディタ作者の環境にて、Data.wolf暗号化したサンプルゲームの初期起動時間が、<br>
+      　　　　従来　2.6秒　→　最新版　1.5秒　　くらいに早くなりました。<br>
+      <br>
+      <br>
+      ●【リセット処理】 リセットを高速化しました。<br>
+      　　　　リセット時に余計なデータを再読み込みしないようにしてリセット速度を高速化しました。<br>
+      　　　　Data.wolf化したサンプルゲームで旧版1.5秒のところが最新版で0.55秒くらいになりました。<br>
+      　　　　テストプレイ時に特に快適になると思います。<br>
+<br>
+<br>
+      ●【変数操作+】 「ピクチャ番号X」の「マウスカーソル重なってる？(1=YES)」機能において、<br>
+      　　　　　　　　角度の付いたピクチャでも重なり判定をほぼ正確に取れるよう修正。<br>
+      <br>
+      <br>
+      ●【文字列操作】 キーボード入力用のデフォルトフォントを「Meiryo」に変更しました。<br>
+      　　　　　　　　　　海外のWindowsだと「MSゴシック」が入っていない可能性が高かったためです。<br>
+      　　　　　　　　　　ただし言語によってはMeiryoもたまに入ってないようです。<br>
+      <br>
+      <br>
+●【ピクチャ】通常ピクチャの「角度」を0以外にした場合でも縦横の拡大率が異なる状態を維持できるように修正。<br>
+　　　　（文字列ピクチャは、今回の修正ですでに縦横の長さが異なる場合の角度変更が可能です）<br>
+　<br>
+      <br>
+      ●【ピクチャ】 画面外の「通常ピクチャ（角度0のみ）」の処理を従来よりも早く打ち切る処理を追加。<br>
+      　　　　地面にピクチャを貼り付けたり、キャラにかぶせてピクチャを表示している場合の負荷軽減が期待できます。<br>
+      <br>
+      <br>
+      ●【イベント制御】 「イベントの一時消去」「トランジションの指定」時の「フレーム」値として<br>
+      　　　　　　　　　　変数(100万以上の値)が入力できるよう修正。<br>
+      　　　　　　　　　　従来は999999以下の固定値しか入れられないようになっていました。<br>
+      <br>
+      <br>
+●【ピクチャ一覧表示】テストプレイ時にF7で出せる「ピクチャ一覧」機能の使いやすさを向上しました。<br>
+      <br>
+      　　- マウスホイールまたは上下キーで前後にページ送りできる機能を追加。<br>
+      <br>
+      　　- キャンセル、Ctrl、右クリックですぐ抜けられる機能追加。<br>
+      　　　またこれらのキーで画面を抜けた場合、最後に表示されていたページを記憶する機能を追加。<br>
+<br>
+<br>
+●【座標取得】イベントコマンドで得られる「主人公」の「画面座標」が正確になるよう修正しました。<br>
+      　　　たとえば【変数操作+】による「主人公」の「画面X・Y座標」などです。<br>
+      　　　おそらくスクロール値も正確になっていると思われます。<br>
+　<br>
+      <span style="font-size : 80%;">　→　従来は「1フレーム前の座標値」が取得されていたため、主人公のキャラチップに<br>
+      　　　ピクチャを重ねようとしてもどうやっても1フレーム分ズレる現象がありました。</span><br>
+      <span style="font-size : 80%;">　　　これは従来、「イベント処理後に主人公のキー入力 + 位置情報が更新されていたため」で、<br>
+      　　　最新版では「キー入力」と「位置情報更新」を分離して「イベント前に位置情報だけ更新」する形にしました。</span><br>
+<br>
+      <span style="font-size : 80%;">　→　代わりに、キー入力による「主人公」の移動が「動き始めの1フレームだけ遅れる」ことになるので、<br>
+      　　　1フレームしか猶予のない逃走ゲームなどはVer3.00への更新によってクリア不能になる場合がございます。</span><br>
+      <span style="font-size : 80%;">　　　過去の挙動に戻したい場合は、「ゲーム基本設定」の「Game.exe 動作バージョン調整」で<br>
+      　　　「Ver2.29時点の挙動で動作」に切り替えてください。</span><br>
+<br>
+<br>
+      ●【エフェクト】 キャラ・ピクチャのシェイク回数、あるいはマップエフェクトのフレームとして<br>
+      　　　　　　　　　「100000（10万）」以上を指定すると「無限回」になるよう修正<br>
+      <br>
+      <br>
+●【エフェクト】マップのズーム時、拡大率に0以下の値を指定しても1になるように修正。<br>
+      　　　マップなどが正常に描画されなくなる問題への対応です。<br>
+      <br>
+　→ 従来はマップズームでマイナスの値を入れてマップ反転する描写ができましたが、<br>
+　　 Ver3からできなくなってしまうので、必要な方はver2.29以前をご利用ください。<br>
+　　（将来的に、同様の演出ができるような機能の追加を検討しています）<br>
+      <br>
+      <br>
+      ●【イベント制御】 「キャラ動作指定」で、入力された「変数」は<br>
+      　　　　　　　　　動作指定開始時点の値が使用されるようになります。<br>
+      　　　　　　　　　これに伴い、コモンセルフ変数なども使用可能になります。<br>
+      　　　　　　　　　挙動がおかしくなる場合は「旧Ver2.29以前の動作」に変更してください。<br>
+<br>
+<br>
+      ●【システム変数】 「Sys30:[読]プレイ時間(ﾐﾘ秒単位)」がフレーム途中でも<br>
+      　　　　　　　最新のミリ秒を得られるよう修正。<br>
+　　　　　　（従来はフレームが経過しないと更新されませんでした）<br>
+      　　　　　　また、同フレーム中なら「1000」以上の値になるよう修正しました。<br>
+      　　　　　　つまり同フレーム中の引き算がしやすくなります。<br>
+      <br>
+      <br>
+      ●【エラー】 緑帯エラーの表示中にF12リセット、あるいはF11更新できるように修正。<br>
+      　　　　　　　（ただし緑帯中のF11はクラッシュしやすいです！）<br>
+      <br>
+●【DB操作】「DB操作：データ番号がマイナスです」のエラーのとき、そのマイナスになっている番号を表示するよう修正<br>
+      <br>
+      <br>
+●【起動処理】-vinput、-sinput機能を削除。<br>
+      <br>
+      <br>
+●【起動処理】暗号化のバージョンが異なる「.wolf」ファイルが混ざっていたり、<br>
+　　　　　Game.exeに対応してない暗号化データがあった場合は、<br>
+　　　　　起動時にその旨を知らせるエラーを表示するよう修正。<br>
+　　　　（これまでは「BasicData/Game.datがない」としか表示されませんでした）<br>
+      <br>
+      <br>
+●【F11キー】F11キーによる全画面化を「画面解像度切り替え全画面化」から「ボーダーレス全画面化」に変更<br>
+      <br>
+      <br>
+●【Editor全体】Editor.iniがない場合に起動するとウィンドウ座標が0基準になっていたのを、<br>
+      　　　　　　　　　サンプルデータのフルパッケージ時のようなウィンドウ座標初期値を使用するよう修正。<br>
+      <br>
+      ●【ファイル入出力】 各種ファイル読み書きにおいて、ゲームデータフォルダの外に保存しようとしたときにエラーが出るよう修正。<br>
+      <br>
+      ●【DB操作】 CSV保存で存在しないフォルダを指定した場合、自動でフォルダが生成されるよう修正(Ver3.081修正)<br>
+<br>
+      <br>
+<br>
+<br>
+      <b><span style="font-size : 150%;"><a id="editor300_kaizen"></a>【エディタの改善・仕様変更】</span></b>　　　<a href="#top" class="green">↑トップへ</a><br>
+      <br>
+      <br>
+●【エディタ全体】プログラム作成環境をVisual Studio2003から2022に変えた影響で<br>
+　　　　　　　　　エディタ全体のデザインがフラットになりました。<br>
+　　　　　　　　　また、各ウィンドウのサイズやパーツが10数％程度ですが大きくなっているようです。<br>
+      <br>
+      <br>
+●【起動画面】起動時のスプラッシュウィンドウに進行状況の％が表示されるようになりました。<br>
+      <br>
+      <br>
+      ●【コモンイベントウィンドウ】 コモンイベント編集時、Ctrl+Rの「直前のイベントに戻る」で<br>
+      　　　　　　　　　　　　　　　　　前のイベントに戻ったとき、「行数」も最後の位置に戻るように修正<br>
+      <br>
+      <br>
+      ●【コモンイベントウィンドウ】 コモンイベント名の欄の横幅を少し伸ばしました。<br>
+      <br>
+      <br>
+●【条件（変数）】　従来、最大3択までだったのが「4択」まで分岐可能になりました。<br>
+      <br>
+      <br>
+      ●【文字列操作】 文字コードがUTF-8化した影響で全角1文字が最大4バイト以上になる可能性が発生したため、<br>
+      　　　　　　　　　　キーボード文字入力数の最小値が「4」になりました。<br>
+      　　　　　　　　　（Ver2.29以前ではバイト数オーバーによるフリーズを避けるため、最小値が2バイトでした）<br>
+      <br>
+      <br>
+●【マップイベントウィンドウ】「通常変数」が増えるとイベント切り替えに時間がかかっていたのを高速化。<br>
+      <br>
+      <br>
+●【マップ編集画面】マップでイベントを複数1箇所に重ねた場所をクリックして<br>
+　　　　　　アクセスできるイベントを「一番IDが大きいもの」に修正。<br>
+      　　　　　　従来は最もIDが小さい方にアクセスしてしまったため、目に見えている<br>
+      　　　　　　最も大きいIDのイベントをずらせなかったり編集できなかったりして直感的ではありませんでした。<br>
+      　<br>
+      <br>
+      ●【タイルセット設定画面】 タイル画像上でマウスホイールを回転、ないしホイール押しながらドラッグで<br>
+      　　　　　　　　　　　　　　　　スクロールできるように修正。<br>
+<br>
+      <br>
+      ●【タイルセット設定画面】タイル設定時のレスポンスを高速化しました<br>
+      <br>
+      <br>
+      ●【タイルセット設定画面】 オートタイルの数が15個→31個に増加したためオートタイル行数が2列増加。<br>
+      <br>
+      <br>
+●【タイルセット設定画面】 1マスの見え方を32pxと48pxで切り替えできるオプションを追加<br>
+      <br>
+      <br>
+●【タイルセット設定画面】 「1画像分CSV出力/読込」機能を追加。<br>
+      　　　　　画像単位で「通行許可設定」「通行方向設定」「カウンター属性設定」「タグ番号設定」を読み書きできます。<br>
+      　　　　　画像を読み込むとき、「同名のCSVファイル」があると自動で上記4設定を読み込むか質問が表示されます。<br>
+      　　　　　（つまりタイル画像配布時、CSVとセットで配布すれば通行設定の手間がいりません。<br>
+      <br>
+      <br>
+●【タイルセット設定画面】上記のCSV通行設定をタイルにドラッグできる機能を追加。<br>
+      　　　　　　　　　　　　　　　好きな場所に一定列分の通行設定だけ読み込ませることができます。<br>
+      <br>
+      <br>
+      ●【コマンド表示】 コマンド入力ウィンドウの、以下のコマンドへの「コマンド切り替え時」、<br>
+      　　　　　　　　　ないし「イベントコマンドの修正」時のレスポンスを高速化しました。<br>
+　- 変数操作<br>
+　- DB操作<br>
+　- 文字列操作<br>
+　- 条件(変数)<br>
+　- 条件(文字列)<br>
+　- コモンイベント<br>
+      <br>
+      <br>
+●【データベースウィンドウ】<br>
+      　- データの切り替え時のレスポンスを高速化しました。<br>
+      　- タイプの切り替え時に「データベース参照」のデータを表示する際、最低限の数だけ読み込むようにして切り替え負荷を軽減しました。<br>
+      　　従来は、読み込み先DBのデータ数が1000個以上あるデータベースを読み込むときなどに、だいぶ時間がかかってしまっていました。<br>
+      <br>
+      <br>
+      ●【データベースウィンドウ】 タイプ名、データ名の欄を少し横に伸ばし、右下キャプション欄の行数を増加、メモ欄の縦スクロールバーを消去しました。<br>
+      <br>
+      <br>
+      <br>
+●【データベースウィンドウ】「Ctrl+R:直前のタイプに戻る」のショートカットでページ数も戻るよう修正。<br>
+　　　また、新たに「Ctrl+Shift+R:直前のデータに戻る」のショートカットを追加しました。<br>
+      <br>
+      <br>
+      ●【コモンイベント(コマンド)】 コモンイベント数や変数が多くなると「コモンイベント」コマンドの「修正」をしたとき<br>
+      　　　　　　　　　　　　　　　ウィンドウが開くまで数秒単位で時間がかかることがあったのを修正。<br>
+      <br>
+      <br>
+●【マップ編集画面】「半歩左に設置」「半歩上に設置」をしたキャラがずれて表示されるように修正。<br>
+      <br>
+      <br>
+●【マップ編集画面】マップの書き換えを1手戻せるショートカット「Ctrl+Z」を追加。<br>
+      <br>
+      <br>
+●【マップ編集画面】マップの「1手戻す」機能が高速になりました。<br>
+      <br>
+      <br>
+●【マップ編集画面】1000マス以上の超巨大なマップでも正常に描画されるように内部処理を抜本修正しました。<br>
+　　　　（従来は描画できず真っ白になっていました）<br>
+　　　　さらに、マップがどれだけ広くてもエディタの描画負荷が一定以下になります。<br>
+　　　　ただし、ウィンドウを広げたりズームアウトしたりして一度に映るマップ範囲を広くすると重くなります。<br>
+      <br>
+      <br>
+●【マップチップ選択ウィンドウ】従来、16と32サイズ以外のチップがジャギジャギになっていたのを、なめらかに描画されるように修正。<br>
+　　また、PNGファイルの保存の仕方によってチップ選択欄の見た目が白抜きになる現象が起きにくくなるよう修正。<br>
+      <br>
+      <br>
+●【マップチップ選択ウィンドウ】 ホイールを押しながら上下ドラッグでスクロールできる機能を追加。<br>
+      <br>
+      <br>
+      ●【場所移動】 「移動先を見ながら指定」を開いた直後、あるいは「拡大率を変更」したタイミングで、<br>
+      　　　　　　　　　「選択されている座標」が中央に表示されるようになりました。<br>
+      <br>
+      <br>
+      ●【場所移動】 「移動先を見ながら指定」において、非常に大きいサイズのマップでも<br>
+      　　　　　　　　　マップが正常に描画されるよう修正しました。<br>
+      <br>
+      <br>
+●【イベント制御】「トランジションの指定」の「瞬間表示」を「単純切替」に名前変更。<br>
+      <br>
+      <br>
+●【マップイベントウィンドウ】 検索ウィンドウを追加。<br>
+      　　　　　　　また、ショートカット「Ctrl+F」で検索ウィンドウを表示できるようになりました。<br>
+      　　　　　　　（コモンイベントウィンドウにあったものと同様のものです）<br>
+<br>
+      <br>
+      ●【マップイベントウィンドウ】 「行数」欄を追加。選択中の行数が分かるほか、<br>
+      　　　　　　　ここに行数を入力してEnterを押すとその行までジャンプできます。<br>
+      　　　　　　　（コモンイベントウィンドウにあったものと同様のものです）<br>
+      <br>
+      <br>
+●【マップ保存】マップのタイルが「3レイヤーとも完全に空白」ならマップファイルにタイル情報を保存しないよう修正。<br>
+　　ランダム生成用などで巨大な「空白の」マップファイルを作る際、マップ容量を圧迫せず、読み込みも早くなります。<br>
+<br>
+      <br>
+      ●【マップ/コモンイベントウィンドウ】 検索ウィンドウの履歴文字列を10個まで保存するように。<br>
+      <br>
+      <br>
+●【マップ/コモンイベントウィンドウ】 イベントウィンドウを閉じたとき、検索ウィンドウも同時に閉じるよう修正。<br>
+      <br>
+      <br>
+●【コモンイベントウィンドウ】 「一つ元に戻す」をしたとき、内容を戻した行にジャンプするよう修正。<br>
+      <br>
+      <br>
+      ●【マップ・コモンイベントのイベント一覧、イベントコマンド一覧】<br>
+      　　　従来は中クリックを押すとブラウザのように上下スクロール操作ができたのが、<br>
+      　　　プログラム環境を新しくしてからできなくなってしまいました。<br>
+      　　　元のようにする方法が分からないので、新たにクリックドラッグのスクロールを実装しようと検討中ですが<br>
+      　　　思ったより苦戦しており、今回の修正では搭載できませんでした。<br>
+      　　　今後も挑戦してきたいと考えています。<br>
+      <br>
+<br>
+      ●【ゲームデータ作成】 最後に使用した暗号化の種類（なし/Data.wolfのみ/フォルダ別）と選択されたフォルダを記憶し、<br>
+      　　　　　　　　　　　　　次回からそれを初期値にするよう修正。<br>
+      <br>
+      <br>
+●【ゲームデータ作成】ゲームデータ作成・暗号化処理が従来よりも安定して行えるようになりました。<br>
+      <br>
+      <br>
+●【ファイル】従来必要だったEditorGraphic.datが不要になりました。<br>
+      <br>
+      <br>
+●【マップ保存】マップに変更を加えた後、ゲーム設定画面やエディターオプションなど<br>
+      　　　　再起動しうる画面に入ろうとする前に変更されたマップを保存するか聞くように変更しました。<br>
+      　　　　（再起動時におかしなことになるため）<br>
+      <br>
+<br>
+●【終了時確認】エディタを閉じるときのマップ保存確認の質問が、エディタを閉じる「前」に表示されるよう修正。<br>
+　　　（従来は技術的な都合で、画面が全て閉じてからマップ保存確認が表示されるようになっていました）<br>
+      <br>      ●【タイルセット設定画面】「最後に選んでいたタイルセット番号」が最初に出るよう修正(Ver3.071修正)<br>
+      <br>
+      ●【マップ編集】マップ編集画面の全体化状態・画面倍率状態が記憶されるように(Ver3.08修正)<br>
+<br>
+      ●【マップ編集】マップ選択ウィンドウの初期位置・サイズが記憶されるように(Ver3.08修正)<br>
+<br>
+      ●【データベース画面】DBウィンドウでCtrl押しながらタイプ切り替えでデータ維持できるように(Ver3.09修正)<br>
+      <br>
+      ●【翻訳リソースデータ】Editor.exeの機能として、システム変数、システム文字列名を書き替えられる<br>
+　　　　Editor.Lang.SystemValue.txt、Editor.Lang.SystemString.txtを<br>
+      　　　　翻訳用リソースデータに追加（Ver3.145修正）<br>
+      <br>
+●【起動時】コモンイベントファイルやシステムデータベースのファイルが破損している場合、<br>
+      　　　　　　（クラッシュせず認識できれば）起動時にそのことを伝える機能を追加（Ver3.210修正）。<br>
+      <br>
+      ●【ゲームデータの作成】動作バージョンを固定化するオプションを追加　（Ver3.260修正）<br>
+　　　→　チェックを入れて動作バージョンを固定すると、将来的に<br>
+      　　　　Game.exeを新しいものに差し替えても正常に動作しやすくなります。<br>
+<br>
+      <br>
+      <br>
+      <br>
+      <b><span style="font-size : 150%;">【ゲーム部　バグ修正】</span></b>　　<a href="#top" class="green">↑トップへ</a><br>
+      <br>
+      <br>
+●【変数操作＋】　マップイベントの起動条件の変数を満たしていない場合に、<br>
+　　　　「変数操作+」でそのキャラの「起動条件」を読み込むと<br>
+　　　　常に「0（決定キーで実行）」が返されてしまっていたのを、-1が返るよう修正。<br>
+　（「ゲーム基本設定」の「動作バージョン調整」を「Ver2.29以前の挙動」にすると0が返るように戻せます）<br>
+      <br>
+      <br>
+●【DB操作】データ数が0個だと、「データ数を取得」しようとしてもDBがない扱いになるバグを修正<br>
+      <br>
+      <br>
+●【DB操作】「50バイト超の『データ名』で名前呼び出し」をするとエラーが発生するバグを修正<br>
+      <br>
+      <br>
+●【変数操作+】「その他」の 「言語[1:日/2:英/3:西欧/4:中国(簡)/5:中国(繁)/6:ﾊﾝｸﾞﾙ]」取得機能が機能していなかったバグを修正<br>
+      <br>
+      <br>
+●【ピクチャ】「表示」を予約した状態のピクチャがある状態でセーブしてからロードすると<br>
+　　　ファイル名が指定されてないピクチャが存在したままになる場合があるバグを修正<br>
+      <br>
+      <br>
+●【ピクチャ】 カラーが100より大きいピクチャを「消去」すると明るくなりながら消えていく不具合を修正<br>
+　　　　　（今後は「消去」をした場合、「移動」で不透明度を0にしていく場合と同じように消去されます）<br>
+      <br>
+      <br>
+●【エフェクト】「自動パターン切替」で元ピクチャのパターン数をオーバーしたときクラッシュすることがあるバグを修正<br>
+      <br>
+      <br>
+●【キー入力】「キー入力の禁止」で「パッド全部」を停止させても左スティックで移動できてしまうバグを修正<br>
+      <br>
+      <br>
+●【キー入力】「キーボード全キー」の「キーが押されるまで待つ」にしたとき、あるキーコードの番号が押されている状態でそれより大きいキーコードのキーを押してもキーが受理されない現象を修正<br>
+      <br>
+      <br>
+●【イベント制御】「トランジションの指定→トランジション実行」の最中にトランジションの指定を変えると<br>
+　　　トランジション途中でもトランジションが新しい方に変わってしまうバグを修正<br>
+      <br>
+      <br>
+●【フレームレート】最大フレームレートがおよそ60fpsになるようウェイトを調整<br>
+　　（一時的に61～62フレームまで出ることがありますがほぼ60安定になりました。<br>
+　　　従来は120Hzのディスプレイにおいて安定状態で63～64fpsまで出てしまいました）<br>
+      <br>
+      <br>
+●【特殊文字】ルビの特殊文字\r[XX,YY]が一瞬で表示されていたのを、他の文字と同じように「メイン文字を表示して、それが全て表示された後にルビが表示される」よう修正<br>
+　（「ゲーム基本設定」の「動作バージョン調整」を「Ver2.29以前の挙動」にすると瞬間表示に戻せます）<br>
+      <br>
+      <br>
+●【画像読込】ある画像ファイルと、同じ名前で末尾に「_a」が付いたファイルが同時に存在するとエラーが出ることがあった現象を解消。<br>
+<br>
+●【マップ】「基本マップチップ」が設定されていないと「オートタイル」も表示されなかったのを修正。<br>
+　　　　　ただ、もともとクラッシュ対策でその仕様になっていたようなので、<br>
+　　　　　またクラッシュするようなら元の仕様に戻す予定です。<br>
+      <br>
+      <br>
+      ●【マップイベント】 キャラクターのアニメが5パターンの時、特定の条件で<br>
+      　　　　　　　　　　　マップ移動後の初期アニメパターンが3(中心)でなく2になってしまうバグを修正。<br>
+      <br>
+      <br>
+      ●【マップイベント】 特定条件で上からプレイヤーに接触してきた<br>
+      　　　　　　　　　　　「イベント接触」条件のマップイベントが起動しないバグを修正。<br>
+      <br>
+      <br>
+      ●【コモンイベント】 テストプレイ中、コモンイベントに「並列実行（常時）」を新たに追加して<br>
+　　　　　　　　F11で読み込み直ししても、増やした並列実行イベントが実行されないバグを修正<br>
+      <br>
+      <br>
+      ●【デバッグウィンドウ】 デバッグウィンドウに特殊文字を表示すると文字化けする現象を修正。<br>
+      <br>
+      <br>
+      ●【変数呼び出し値】 キャラ画像が「4方向」のときに変数呼び出し値「9100006+10*Y」に<br>
+      　　　　　　　　　　　　　「7(左上)」「9(右上)」を代入すると「下」を向いてしまうバグ修正<br>
+<br>
+      <br>
+      ●【F4画面切り替え】 メインディスプレイより縦に長いサブディスプレイ側で初期表示した後に<br>
+      　　　　　F4を押すと、メインディスプレイ側にタスクバーが埋まるくらい上に出てしまう<br>
+      　　　　　現象を修正（座標はやや変になりますがタスクバーは触れる状態になります）<br>
+      <br>
+      <br>
+      <br>
+      <br>
+<br>
+      <b><span style="font-size : 150%;">【ゲーム部　既知のバグ】</span></b>　　<a href="#top" class="green">↑トップへ</a><br>
+<br>
+●【トランジション】過去のバージョンで作られたセーブデータを継続して使用したとき、<br>
+　　　何らかの条件でトランジションに微妙な差異が見られる場合があるという現象が報告されています。<br>
+　　　原因はつかめていませんが、Ver3以降のGame.exeで新たに始めたセーブデータでは<br>
+　　　起きない可能性が高いようです。<br>
+<br>
+      <br>
+      <br>
+<br>
+      <b><span style="font-size : 150%;">【エディター部　バグ修正】</span></b>　　<a href="#top" class="green">↑トップへ</a><br>
+<br>
+●【DB操作】そのDBに存在しないタイプ番号を指定し、データ名や項目に空欄の「名前」を指定して<br>
+　　　　　　「入力」しようとするとクラッシュするバグを修正<br>
+      <br>
+      <br>
+●【コモンイベントウィンドウ】DB操作で特定の操作をすると「セルフ変数使用状況」にて<br>
+　　　　　未使用のはずのセルフ変数が使用済みになってしまう現象を修正。<br>
+　　　　（ただ「使用状況」はコマンド内に入っているセルフ変数の値を検出するだけの処理なので、<br>
+　　　　　これが防げない状況はどうしても発生します。こうなる頻度が高い部分だけもぐら叩き式で直していく予定です）<br>
+      <br>
+      <br>
+●【コモンイベントウィンドウ】非常に行数が多いコモンイベントを開いたときにクリックすると<br>
+　　　　　　　　コモンイベントウィンドウ裏側をクリックすることがあるバグの修正を試みました<br>
+      <br>
+      <br>
+●【データベースウィンドウ】タイプ・データ切り替えなどで一時的に重くなったときにクリックすると<br>
+　　　　　　　　データベースウィンドウ裏側をクリックすることがあるバグの修正を試みました<br>
+      <br>
+      <br>
+●【データベースウィンドウ】タイプを削除しても項目名だけ内部的に残ってしまっていたバグを修正<br>
+      <br>
+      <br>
+●【マップ編集】 特定条件で、画面外をクリックしたときにクラッシュすることがあるバグを修正<br>
+<br>
+      ●【ファイル選択】 一部のファイル選択ボタンを押したとき、<br>
+      　　　「すでに文字列に指定されているファイルのフォルダ」を優先的に開くようになっていなかった箇所を修正。<br>
+      　　- サウンド<br>
+      　　- マップ設定の各種ファイル指定<br>
+<br>
+      ●【マップ選択】　「マップ選択」ウィンドウのサイズを一度変更すると、<br>
+      　　　　　　　　　　「ツリー構造セーブ」と「データ更新」のボタンが左下の見切れる位置に移動してしまうバグ修正。<br>
+<br>
+      ●【ゲームデータ作成】 ゲームタイトルが空欄の場合でもそのままゲームデータの作成を実行できてしまい、<br>
+      　　　　　　　　　元のデータが危険な状況になる不具合を修正。<br>
+<br>
+      ●【イベント制御】 コモンイベント時、「動作指定」でコモンセルフ変数を選んだものに「修正」を行うと<br>
+　　　　　　　　　対象キャラ欄がおかしくなるバグ修正<br>
+      <br>
+      <br>
+   -------------<br>
+<br>
+      <b><span style="font-size : 150%;">【動作バージョン調整】</span></b><br>
+      <br>
+      　上にも書きましたが、ゲーム基本設定の「Game.exe　動作バージョン調整」に新たに「Ver2.29」が追加されました<br>
+      　「旧Ver2.29時点の挙動で動作」にするとVer3.00と比べ、挙動が以下の仕様に戻ります。<br>
+<br>
+      <span style="font-size : 80%;">●【システム変数】Ver2.29挙動では「Sys26～27：選択肢ウィンドウX/Y余白」が無効になり-999のみ返されます。</span><br>
+      <span style="font-size : 80%;">　　また、選択肢ウィンドウの余白が「チップサイズに応じて自動で設定」されます。</span><br>
+      <span style="font-size : 80%;">　　Ver3.00以降ではSys26、27で手動で選択肢ウィンドウの余白を設定できます。</span><br>
+<br>
+      <span style="font-size : 80%;">●【ピクチャ】Ver2.29挙動では文字列の角度が反映されなくなります。Ver3.00以降では文字列の角度が反映されます。</span><br>
+<br>
+      <span style="font-size : 80%;">●【変数操作+】Ver2.29挙動ではイベントが存在していないときの「起動条件」が0を返します。Ver3.00以降では-1を返します。</span><br>
+<br>
+      <span style="font-size : 80%;">●【文章の表示・文字列ピクチャ】 Ver2.29挙動ではルビの特殊文字\r[XX,YY]の部分が文字速度にかかわらず一瞬で表示されてしまいます。</span><br>
+      <span style="font-size : 80%;">　　Ver3.00以降ではXX部分が文字速度に応じて1文字ずつ表示されます。</span><br>
+<br>
+      <span style="font-size : 80%;">●【プレイヤーの画面座標】 座標の更新がVer3.00以降より1フレーム早くなりますが、「イベントコマンドで取得したプレイヤー画面座標」が1フレーム分だけずれるようになります（つまり、ピクチャを重ねてもぴったりの位置に表示されません）。</span><br>
+      <span style="font-size : 80%;">　Ver3.00以降ではイベントコマンドで取得した位置がプレイヤーぴったりの位置になります。</span><br>
+<br>
+      <span style="font-size : 80%;">●【チップ処理】Ver2.29挙動ではオートタイルが0-15番までと想定されてチップ番号が処理されます。</span><br>
+      <span style="font-size : 80%;">　　（全て「固定値」でチップ番号を指定している場合は自動で補正されるため、Ver3にしても問題ありません）</span><br>
+<br>
+      <span style="font-size : 80%;">●【変数操作+】 Ver2.29挙動ではオートタイル15個と想定した場合のチップ番号を返すようになります。</span><br>
+<br>
+      <span style="font-size : 80%;">●【ピクチャ】Ver2.29挙動ではピクチャの「角度」を0以外にすると強制的に「縦横同じ拡大率」になります。</span><br>
+<br>
+      <span style="font-size : 80%;">●【文字列ピクチャ】Ver2.29挙動では文字列ピクチャの「角度」が反映されません。</span><br>
+<br>
+      <span style="font-size : 80%;">●【文字列操作】キーボード入力時の文字入力数が「入力された値の1.5倍」に調整されます。</span><br>
+      <span style="font-size : 80%;">　　　UTF-8文字コードになった都合上、「全角1文字で3バイト分」になるケースがあるためです。</span><br>
+<br>
+      <span style="font-size : 80%;">●【イベント制御】Ver2.29挙動では「キャラ動作指定」において、指定された「変数」として</span><br>
+      <span style="font-size : 80%;">　　　　　　「その各動作を実行する瞬間」のものが使用されます。</span><br>
+      <span style="font-size : 80%;">　　　　（たとえば「ジャンプ」の右・下に「3」が入ったセルフ変数1を指定しても、</span><br>
+      <span style="font-size : 80%;">　　　　　ジャンプ前にセルフ変数が「0」になっていれば移動量「0」のジャンプしか行いません）</span><br>
+<br>
+      -----<br>
+      <br>
+      <b><span style="font-size : 150%;">【基本システム修正】</span></b><br>
+      <br>
+      　基本システムをVer3.00に更新しました。<br>
+      　自由なゲーム画面サイズにも対応、システム設定画面のキャンセルキー時の質問を追加、<br>
+      　「主人公ピクセル移動切り替え」コモンイベントを新たに追加、その他、微調整しました。<br>
+<br>
+      　・見本として「主人公ピクセル移動切り替え」処理を追加 [コモン39]<br>
+      <br>
+      　・初期BGM・BGS・SE音量を50に設定、フォントの太さを設定 [コモン48/218行付近]<br>
+      <br>
+      　・メッセージ/選択肢ウィンドウの表示位置を微調整[コモン63/47・50行目]<br>
+      <br>
+      　・システム設定で「キャンセル」した時、変更を保存するか質問を表示するよう修正<br>
+      　　[コモン95/749～800行 ・ コモン132/多数：「Ver3.00修正」で検索可]<br>
+      <br>
+      　・画面サイズの縦・横の小さい方を参照してフォントサイズを決定するよう修正 [コモン90/192-195行]<br>
+      <br>
+      　・画面サイズ指定によっては右寄せで文章を表示している部分がおかしくなるのを修正<br>
+      　　（主に\ax[]を使っている部分をSys119:[読]基本画面倍率x[1-3] に合わせて調整するよう修正)<br>
+      　　　[コモン64/547-562行][コモン88/225-239行][コモン90/258-274行・311-327行]<br>
+      　　　[コモン93/252-268行・331-347行・621-635行][コモン102/174-190行・231-247行]<br>
+      <br>
+      　・キャラクター欄の顔サイズを画面の縦横の小さい方に合わせて表示するよう修正 [コモン90/192-195行]<br>
+      <br>
+      　・セーブ・ロード画面の名前の\A-(アンチエイリアスなし)を削除[コモン94/403行]<br>
+      <br>
+-----<br>
+<br>
+      <b><span style="font-size : 150%;"><a id="pro300"></a>【Ver3.00 「プロ版」の新機能】</span></b>　　　　<a href="#top" class="green">↑トップへ</a><br>
+<br>
+      　プロ版は有料版のWOLF RPGエディターです。<br>
+      <br>
+      　主な機能は通常版と同じで、バージョンが同じならファイルにも互換性がありますが、<br>
+      　セキュリティの都合で通常版では搭載していなかった機能、「ウディタっぽさ」を減らす機能、<br>
+      　その他プレミアムな機能が使用できます。<br>
+      <br>
+      　　<b><a href="https://silversecond.booth.pm/items/4302198" target="_blank">【WOLF RPGエディター3 PRO版　販売ページへ（BOOTH）】</a></b><br>
+<br>
+　なお毎年8月頃に行われるWOLF RPGエディター製ゲームのコンテスト「ウディコン」では、<br>
+      　公平性と安全性のため、<b><span style="color : #ff0000;">「通常版のGame.exe」のみ使用可能となっており、<br>
+      　</span></b><b><span style="color : #ff0000;
+	font-size : 120%;
+">【プロ版のGamePro.exeは使えません】</span></b>のであらかじめご了承ください。<br>
+      <br>
+      　（プロテクトがかかっていなければ、Game.exeを通常版のものに差し替えるだけでOKです。<br>
+      　　その場合、プロ版専用の機能だけが使用できなくなります）<br>
+      <br>
+      <br>
+      <br>
+<br>
+      ●【[P]ゲーム設定】 ゲーム画面サイズの「ピクセル単位の自由設定」機能が搭載。<br>
+      <br>
+      　　通常版では横1280×縦960までの画面サイズですが、プロ版では最低「横100×縦100」から<br>
+      　　最大「横1920×縦1440」まで1ピクセル単位で自由に画面サイズを設定できるほか、<br>
+      　　1ピクセルを「2～3倍」にすることもできます。<br>
+      　　（従来で言うと、「320×240」が「2倍」モードとして処理されています）<br>
+      　　画面を正方形にしたり、スマートフォンのゲームらしく縦長にしたりすることが可能です。<br>
+      <br>
+      <br>
+<br>
+      ●【[P]エフェクト】 簡単に実行できる割に処理が非常に重い「マップ/画面全体」用のフィルタがプロ版限定で使用可能になります。<br>
+      <br>
+　　「マップ全体」あるいは「ピクチャも含めた画面全体」に適用できます。<br>
+　　「ソフトウェアモード」で実行した場合や、一部のビジネスノートパソコンなどでは、これらを使うと<br>
+　　たった数コマンドで処理が10FPSまで下がってしまうくらい処理が重いので、理解のある方向けです。<br>
+<br>
+      <b><span style="font-size : 80%;">　【マップ】</span></b><span style="font-size : 80%;">のエフェクト</span><br>
+      <span style="font-size : 80%;">　- [P]フィルタ(F)をﾘｾｯﾄ </span><br>
+      <span style="font-size : 80%;">　- [P]ﾏｯﾌﾟF/色彩明[重!] 　※色相・彩度・明度です</span><br>
+      <span style="font-size : 80%;">　- [P]ﾏｯﾌﾟF/モノトーン[重!] </span><br>
+      <span style="font-size : 80%;">　- [P]ﾏｯﾌﾟF/ぼかし[超重!!] </span><br>
+      <span style="font-size : 80%;">　- [P]全体F/色彩明[重!] </span><br>
+      <span style="font-size : 80%;">　- [P]全体F/モノトーン[重!] </span><br>
+      <span style="font-size : 80%;">　- [P]全体F/ぼかし[超重!!] </span><br>
+<br>
+      <br>
+      <br>
+      ●【[P]プロ版機能】 プロ版専用コマンドが解放されます。現在、以下の機能が実装されています。<br>
+      <br>
+　- JPGスクリーンショット機能 ： 緑帯なしでJPGスクリーンショットが撮れます。セーブ画面などにも使えるでしょう。<br>
+　- PNGスクリーンショット機能 ： 緑帯なしでPNGスクリーンショットが撮れます。<br>
+　- フォルダ作成機能<br>
+　- ファイルコピー機能<br>
+　- ファイル削除機能 ： Dataフォルダ内は削除できません。主にセーブデータの削除用です。<br>
+　- 処理停止ウェイト(ミリ秒) ： 画面更新含め、全処理を指定ミリ秒止められます（実際にウェイトが入るのはフレーム切り替わり時）。ヒットストップ演出やスロー演出、処理落ち再現などに。<br>
+<br>
+      <br>
+      <br>
+      ●【[P]ゲーム基本設定 プロ版】 追加のゲーム設定画面が搭載されます。<br>
+      　　　　　　　　　　　　　　　　　　どれも「ウディタっぽさ」を減らせる機能となっています。<br>
+<br>
+- タイトルバー設定<br>
+　ゲームプレイ時や、起動待ち時にタイトルバーに表示される文字列を好きなように変更できます。<br>
+　<br>
+- 初期ローディング画像設定<br>
+　起動時、ゲーム画面が出る前に「画像」と「ロード中ゲージ」を出すことができます。<br>
+　起動後の真っ暗な時間が減らせます。ゲージは左側から表示されます。<br>
+<br>
+- ファンクションキーのON/OFF設定<br>
+　任意のファンクションキーと、PrintScreenなどのデフォルト機能をオフにできます。<br>
+　オフにした後、スクリーンショット機能やリセット機能などを自力で搭載すればウディタらしさが減らせます。<br>
+      <br>
+      <br>
+<br>
+      ●【[P]ダウンロード】 プロ版のみ「ダウンロード機能」で以下の機能が解放されます。<br>
+<br>
+ - プロ版では「連続ダウンロード時に発生する自動ウェイト」がなくなります。<br>
+ 　（1つのダウンロードが終わるまで他の通信ができないのは従来通りです）<br>
+<br>
+ - 「指定URLをブラウザで開く」機能が使用できます。公式サイトや交流サイトへ誘導することができます。<br>
+<br>
+ - 「指定Zipファイルをダウンロードして解凍（解凍後、Zipは削除）」機能が解放されます。オンラインアップデートに向いています。<br>
+<br>
+      <br>
+      <br>
+●【[P]エディタ設定】エディタのテーマカラーとして、追加で「ネイビーブルー」「パーフェクトダーク」が選べるようになります。<br>
+　ただし技術的な都合で、ボタンやチェックボックスなど色が変わらない箇所がありますのであらかじめご了承ください。<br>
+      <br>
+<table border="0">
+  <tbody>
+    <tr>
+      <td style="width : 38px;
+	height : 204px;
+">&nbsp;</td>
+      <td style="height : 204px;">
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><b>ネイビーブルー<br>
+            <img src="image/2024_02editor_option_pro_color3.png" border="1" style="width : 234px;height : 212px;"><br>
+            </b></td>
+            <td><b>パーフェクトダーク<br>
+            </b><img src="image/2024_02editor_option_pro_color4.png" border="1" style="width : 227px;height : 207px;"></td>
+          </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+<br>
+●【[P]プロテクト機能】エディタ側でプロテクト用キーを設定することができるようになります。<br>
+　「ゲームデータの暗号化」処理がキーに応じて変化するようになり、また、正しいキーなしには基本データが開けなくなります。<br>
+　プロテクト用キーを設定すると以下のようになります。<br>
+　<br>
+　- ゲーム基本設定ファイル、各データベースファイル、コモンイベントファイル、タイル設定ファイル、<br>
+　　の基本データが編集段階でも暗号化され、正しいプロテクトキーを入力しなければ読み込みできなくなります。<br>
+　（設定したプロテクト用キーはEditor.ini内に書き込まれ、エディタ起動時に自動で読み込まれます。<br>
+　　うっかりキーを忘れてEditor.iniを消すと自分でもデータが開けなくなってしまうので注意してください）<br>
+<br>
+　- ゲームデータ作成時、プロテクト用キーによって暗号化のされ方が変わるようになります。<br>
+      <br>
+      <br>
+<br>
+●【[P]ゲームデータ作成】「プロテクト用キーを設定しているとき」だけ、ゲームデータ作成時に以下の設定が可能になります。<br>
+　　これらを設定することで、一見したときのファイル構造をウディタっぽく見せないことが可能です。<br>
+　　<br>
+　- 暗号化データの「拡張子」の変更<br>
+　　用意された中から「.wolf」以外の拡張子が選べます。「Data.assets」など他ゲームによくある拡張子に変えられます。<br>
+<br>
+　- 「キーファイル名」の設定<br>
+　　用意された中からキーファイル名を選べます（Data2.assetsなど）。<br>
+　　このキーファイル内には、上の拡張子変更や暗号化に関するデータが含まれます。<br>
+      <br>
+      <br>
+<br>
+●【[P]ゲームデータ作成】ゲームデータ出力したGame.exeのアイコンを、指定した「.ico」ファイルに差し替えることができます。<br>
+　　アイコンファイルとしては「32×32の透過アイコン」を強く推奨します。<br>
+　　他のサイズでも問題なければ使って構いませんが、64サイズやマルチアイコンは正常に動作しないそうです。<br>
+　　またおまけの機能として、アイコンを差し替えると「Game.exeの著作権表記も消去される」ようになっており、<br>
+　　ウディタ製の痕跡を減らすことができます。<br>
+<br>
+      　※この機能を使わずとも、リソースエディタなどを利用したGame.exeのアイコン差し替えは規約上、許可されています。<br>
+      　　できる方は、通常版でも自由にアイコンを差し替えてください。<br>
+      <br>
+      <br>
+<br>
+●【[P]システム変数】プロ版では以下のシステム変数が使用可能になります。<br>
+<br>
+      - <b>Sys139：[P]ｽﾞｰﾑｱｳﾄ時ﾏｯﾌﾟ拡張表示 1:ON</b><br>
+　　「エフェクト」でマップをズームアウトしたとき、通常だと「元画面外のマップは表示されず黒塗りになる」のですが、<br>
+　　この値を「1」にするとズームアウトした分だけ「もっと広範囲までマップ表示」されるようになります。<br>
+　　ただし、表示されるのはおそらく最大で縦横100～150マス分くらいまでですし、そこまで表示すると負荷が非常に大きいです。<br>
+      　　プロ版のGame.exeで起動した場合、この値はデフォルトで「1」になっています。<br>
+      <br>
+      <span style="font-size : 80%;
+	color : #ff0000;
+">　※特性上、ループ有りのマップでこの機能を使用すると、マップイベントの挙動が不安定になる場合がございます。</span><span style="color : #ff0000;"><br>
+      </span><span style="font-size : 80%;
+	color : #ff0000;
+">　　　たとえば小さいマップをループさせてズームアウトした場合、向こう側にも同じマップが出ていると</span><span style="color : #ff0000;"><br>
+      </span><span style="font-size : 80%;
+	color : #ff0000;
+">　　　マップイベントが片方にしか出なくなったり、あるいは</span><span style="color : #ff0000;"><br>
+      </span><span style="font-size : 80%;
+	color : #ff0000;
+">　　　近くにイベントがいても表示されなくなるなど表示が不安定になります。</span><br>
+      <br>
+<table border="0">
+  <tbody>
+    <tr>
+      <td style="width : 38px;
+	height : 204px;
+">&nbsp;</td>
+      <td style="height : 204px;">
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><b>Sys139が「0」の場合<br>
+            <img src="image/2024_06systemvalue_Pro1.png" border="1" style="width : 286px;"><br>
+                  </b></td>
+            <td><b>Sys139が「1」の場合<br>
+                  </b><img src="image/2024_06systemvalue_Pro2.png" border="1" style="width : 286px;"></td>
+          </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      - <b>Sys141：[P]システム言語[日本語:0/英語:1]</b><br>
+ 　 エラー時の文章を日本語・英語で切り替えられます。もっぱら、多言語対応用に用意されています。<br>
+<br>
+      <br><br><br>
+      <br>
+●【[P]システム文字列】プロ版では以下のシステム文字列が使用可能になります。<br>
+<br>
+      - <b>SysS57：[P]クリップボード内容</b><br>
+　　クリップボードが読み書きできるようになります。<br>
+　　クリップボードに書き込みすれば、クリップボード監視機能がある<br>
+　　読み上げソフトなどにテキストを読ませたりすることもできます。<br>
+<br>
+　　ただしセキュリティの都合上、「読み込み」に関しては以下の2点の制限をかけています。<br>
+　　<br>
+      <span style="font-size : 80%;">　　1.ゲーム開始時点からクリップボードの内容に変化がない場合は、</span><br>
+      <span style="font-size : 80%;">　　　&lt;&lt;StartClipBoard&gt;&gt;という文字列が返され、クリップボード内容を読み込むことはできません。</span><br>
+      <span style="font-size : 80%;">　　　（「ゲーム開始時のクリップボード内容と同じ内容を何度もコピーした場合」も</span><br>
+      <span style="font-size : 80%;">　　　　変化がない扱いになるので、プレイヤー側にクリップボード読み込み経由での</span><br>
+      <span style="font-size : 80%;">　　　　データ入力をさせたい場合などは、いったんSysS57に空の文字列を代入してから</span><br>
+      <span style="font-size : 80%;">　　　　コピーをうながすなどしてください）</span><br>
+      <span style="font-size : 80%;">　　　　</span><br>
+      <span style="font-size : 80%;">　　2.最初にクリップボードを読み込もうとしたときに</span><br>
+      <span style="font-size : 80%;">　　　「ゲーム側がクリップボード情報を要求しています。</span><br>
+      <span style="font-size : 80%;">　　　　クリップボード情報を送信しても問題ありませんか？」</span><br>
+      <span style="font-size : 80%;">　　　とメッセージボックスが表示され、「はい」を押した場合だけクリップボード情報が送信されます。</span><br>
+      <span style="font-size : 80%;">　　　「いいえ」が選ばれると、SysS57は以降ずっと「&lt;&lt;AccessDenied&gt;&gt;」という文字列を返します。</span><br>
+      <span style="font-size : 80%;">　　　（なお、この確認メッセージボックスはテストプレイ時には表示されません）</span><br>
+<br>
+<br>
+      - <b>SysS60：[P]タイトルバー上書き</b><br>
+　　タイトルバーに表示される内容を指定文字列で上書きできます。<br>
+      <br>
+      <br>
+      - <b>SysS62：[P]基本フォント上書き</b><br>
+      - <b>SysS63：[P]サブ1フォント上書き</b><br>
+      - <b>SysS64：[P]サブ2フォント上書き</b><br>
+      - <b>SysS65：[P]サブ3フォント上書き</b><br>
+　　各フォントをゲーム中に切り替えられます。<br>
+　　1ゲームデータ内で多言語対応をする場合に備えて用意されています。<br>
+　　入力したフォントが受け付けられなかった場合は「&lt;&lt;NotFound&gt;&gt;」が格納されます。<br>
+      <br>
+      <br>
+      - <b>SysS67：[P]キーボード入力用フォント</b><br>
+　　「文字列操作」の「キーボード入力」時の文字として使われるフォントを切り替えられます。<br>
+　　入力したフォントが受け付けられなかった場合は「&lt;&lt;NotFound&gt;&gt;」が格納されます。<br>
+</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<table>
+  <TBODY class=ten>
+    <TR>
+      <td style="width : 688px;">
+      <div align=left>
+        <br>
+        <br>------------<br>
+<br>
+<a id="ver300_addbug"></a><BIG><B>【公開(Ver3.00～)からの追加修正】</B></BIG><BR>
+        <BR>
+<BR>
+<B><span style="font-size : 120%;">【ゲーム部の追加修正】</span></B>　　<a href="#top" class="green">↑トップへ</a>　　　<a href="#ver300_addbugEditor" class="green">エディターの追加修正へ</a> <br>
+        <br>
+Ver3.281　2024/02/20<br>
+●【文字列操作】キーボード入力時、文字があふれると最後の文字が<br>
+　　　　　上書きされてしまう挙動が変わり、文字がいっぱいの場合は<br>
+        　　　　　何を入力しても最後の文字が変更されないようになりました。<br>
+        <br>
+<br>Ver3.280　2024/02/20<br>
+●【文字列操作】キーボード入力時、「Sys10:[Sys]入力文字色」に暗い色が設定されていると<br>
+　　　　　　変換候補の文字が読めなくなるので、その場合は「候補選択欄の下地」の色を<br>
+　　　　　　Sys10の各RGB値に+70した色で表示するよう修正<br>
+　　→「[0.299*赤 + 0.587*緑 + 0.114*青] の値が70以下」の場合にこの処理が行われます。<br>
+        　　　とにかく文字と下地の色の差を一定以上生み出すための処置です。<br>
+        <br>
+<br>
+ver3.277　2024/02/03<br>
+●【プロ版機能】「フォルダ作成」機能において、末尾に「/」が入っていないと<br>
+　　　　　　　　フォルダ生成されなくなっていたバグを修正<br>
+　　　　　　　→　Ver3.24あたりのフォルダ作成処理の更新以降、<br>
+        　　　　　　　　　この問題が起きていた可能性があります。<br>
+        <br>ver3.276　2024/02/02<br>
+●【システム変数】「Sys28:[読]経過ﾌﾚｰﾑ数[1000万で一周]」、<br>
+　　　　「Sys29：[読]プレイ時間（1秒単位）」<br>
+　　　　「Sys30：[読]プレイ時間(ﾐﾘ秒単位)」から「[読]」表記を削除<br>
+        　　　　→　これらの変数はだいぶ前から「代入」が可能になっていました。<br>
+        <br>
+<br>ver3.274　2024/01/18<br>
+●【ピクチャ】「ディレイ」を指定してピクチャを「表示」する場合、<br>
+　　　　　ファイル読み込みエラーが起きた場合に表示される「処理地点」が<br>
+　　　　　本来のイベント位置と違うところを指してしまう問題を修正<br>
+<br>
+●【ピクチャ】長いファイル名のピクチャ指定時にエラーが起きた場合、<br>
+　　　　　クラッシュする可能性があったのを修正<br>
+<br>
+●【ダウンロード】URLのエンコードをオンにした場合や<br>
+        　　　　長いURLのエラー処理時にクラッシュすることがあるバグを修正<br>
+        <br>
+<br>Ver3.273　2023/12/31<br>
+●【システム変数】「Sys55～57：決定/キャンセル/サブキー(パッド）」に<br>
+　　　　　　301～320までの値を格納できるように修正<br>
+　→　対応パッドボタンが314までだったのが320まで対応になりました。<br>
+　　　同時にパッドボタンに関連したバグも修正されたと思います。<br>
+<br>
+●【特殊文字】特定条件で、速度変更の特殊文字「\sp[?]」を入れたときに<br>
+　　　　　文字が速度通りに処理されていない場合があるバグを修正<br>
+<br>
+        <br>
+        Ver3.271　2023/12/04<br>
+●【特殊文字】「\&gt;」(瞬間表示）の特殊文字の後に\r[A,B]でルビを表示する場合、<br>
+        　　　　　　一瞬だけルビの小文字部分が通常文字サイズで出てしまうバグ修正<br>
+        <br>
+<br>Ver3.270　2023/11/24<br>
+●【マップイベント】「接触範囲拡張」した「プレイヤー/イベント接触」イベントが<br>
+　　　　　　「通行不能」チップ上にあるか、またはイベント本体が通行不能な場合、<br>
+　　　　　　接触範囲拡張内で1歩あるくたびに「移動開始時」と「移動終了時」で<br>
+　　　　　　2回連続でイベントが起動してしまうバグ修正。<br>
+　　　→　「移動開始時」に起動する処理がバグでしたので、以後はなくなります。<br>
+        　　　→　ゲーム基本設定で「動作バージョン調整」を「旧Ver3.250の挙動で動作」にすると前の挙動に戻せます。<br>
+<br>
+<br>Ver3.261　2023/11/23<br>
+●【エフェクト】「角度」を付けた「文字列ピクチャ」に対し、<br>
+　　　　　　　　ピクチャエフェクトの「シェイク」をかけると<br>
+        　　　　　　　　1文字ずつ異なるタイミングで移動してしまう現象を修正<br>
+        <br>
+<br>Ver3.251　2023/11/13<br>
+●【ピクチャ】&lt;CUT～&gt;の指定をしたとき、表示されない大きさで表示すると<br>
+　　　　　　スプライト数が高速で増えていき、最終的に<br>
+　　　　　　スプライトオーバーのエラーが出続けるようになるバグ修正<br>
+　　　　　　→　Ver3.245あたりから発生していたバグでした<br>
+<br>
+        ●【エフェクト】「タイル画像」にキャラチップレイヤーを指定したとき、<br>
+        　　　　　　　タイル画像には使えないというエラーを表示するよう修正<br>
+        <br>
+<br>
+        Ver3.250　2023/11/10<br>
+●【ピクチャ】ウィンドウピクチャで&lt;SQUARE&gt;使用時、320×240などの2倍画面時に<br>
+　　　　　基準位置によって半ピクセル分の座標ズレが起きていた問題を修正<br>
+　　　　　→　こちらは最近の修正によって発生した問題です。<br>
+<br>
+●【ピクチャ】ウィンドウピクチャで&lt;SQUARE&gt;使用時、<br>
+　　　　　　サイズ51×150％など小数点が発生するサイズで表示したとき<br>
+　　　　　　基準位置が「右上」表示の場合のみ縦幅が1ピクセル小さく<br>
+　　　　　　表示されてしまうことがあるバグ修正<br>
+<br>
+●【エフェクト】ピクチャエフェクトで大きな数値を入れたとき、<br>
+　　　　　　　挙動がおかしくなることがあるバグの修正をいくらか試みました<br>
+　　　　　→　例：角度補正[±]で角度999999を999999フレームで動かすなど<br>
+<br>
+●【デバッグ文】システム言語を「英語」にしたときのデバッグ文で出てくる、<br>
+　　　　　　[MapEv?/Common?/?line]表記を[MapEv ?/Common ?/? Line]に修正<br>
+<br>
+●【動作指定】動作指定中に変更可能な「マップセルフ変数」と「通常変数」だけは、<br>
+　　　　　　　動作指定内でリアルタイムの値を使う用に修正<br>
+　　　→　Ver3の修正で変数は全て「動作指定の【開始時点】の数値」が読み込まれるように<br>
+　　　　　なっていたのですが、上記2つに関しては動作指定内の「変数の設定」で変更した値が<br>
+　　　　　同じ動作指定内で反映されないのが直感的ではなかったための変更です。<br>
+　　　→　ゲーム基本設定の「動作バージョン調整」で「旧Ver3.233時点の挙動で動作」以前に<br>
+        　　　　　すると前の挙動に戻せます。<br>
+        <br>
+<br>
+        Ver3.248　2023/10/28<br>
+●【ピクチャ】「お手軽ウィンドウ」で表示した際のピクチャがまた特定条件で<br>
+        　　　　　　　ぼやけるようになってしまっていたバグ修正。<br>
+        　　　　　　　同時に、よりくっきり表示されるようになります。<br>
+        　　　※また、Ver3.242～3.247までの間、ピクチャ座標の計算の試行錯誤をしていたせいで<br>
+        　　　　お手軽ウィンドウがVer3.241以前より1ピクセルずれの大きさで描画されるように<br>
+        　　　　なっていたのですが、今は<b>ver3.241以前と同じサイズに戻っている</b>はずです。<br>
+<br>
+Ver3.247　2023/10/28<br>
+●【ピクチャ】Ver3.245の修正で「お手軽ウィンドウの」裏技の「&lt;LINE&gt;」ピクチャにおいて<br>
+　　　　　　　サイズの縦か横に0を入れると表示されなくなっていたバグ修正<br>
+<br>
+Ver3.246　2023/10/28<br>
+●【ピクチャ】Ver3.245の修正で「自由変形」ピクチャが表示されなくなっていたバグ修正<br>
+        <br>
+        <br>
+Ver3.245　2023/10/27<br>
+●【ピクチャ】「通常ピクチャ」と「お手軽ウィンドウ」が拡大率を0％にしても<br>
+        　　　　　　　少し表示されてしまうバグを修正<br>
+<br>Ver3.243　2023/10/27<br>
+●【システム変数】「Sys102:SE音量補正[%]」が-1以下に設定できるバグ修正<br>
+<br>
+●【ピクチャ】「お手軽ウィンドウ」で表示した際のピクチャの見え方が<br>
+        　　　　　　前回の修正でぼやけてしまっていたバグを修正<br>
+        <br>
+<br>
+Ver3.242　2023/10/22<br>
+●【ピクチャ】奇数ピクセルの画像を320x240（x2倍）の画面サイズで<br>
+　　　　　　拡大率150％（合計300％）にして表示した場合などにおいて、<br>
+　　　　　　表示する大きさが1ピクセル足りなくなるバグを修正<br>
+<br>
+●【起動時】多重起動での起動失敗時にひそかにクラッシュしており、<br>
+        　　　　　　その後Game.exeが削除・上書き不能になってしまうバグを修正<br>
+        <br>
+        <br>
+Ver3.241　2023/10/21<br>
+●【ダウンロード】ダウンロード中にSys48に-1を代入して強制停止したとき、<br>
+　　　　　　内部的にクラッシュすることがある現象への対応を試みました。<br>
+<br>
+●【ダウンロード】実行直後に一瞬カクッと止まることがあるため、<br>
+        　　　　　　　　　実行直後の処理の軽量化を試みました。<br>
+<br>
+●【セーブ・ロード操作】「セーブデータへの(変数)書き込み」時に限り、<br>
+　　　　　　セーブデータが「読み取り専用」などになっていて書き込めない場合でも<br>
+　　　　　　エラーが出なかったバグを修正<br>
+<br>
+●【文字列操作】「に↓のファイル内容読込」の裏技に<br>
+　　　　　　　　「&lt;&lt;GET_DIRECTORY_EXIST&gt;&gt;(文字列)」を追加。<br>
+　　　　　　→　(文字列)に「Data/Graphic」などのフォルダ名を指定すると<br>
+　　　　　　　　そのフォルダが存在した場合に文字列として「1」が返されます。<br>
+<br>
+●【マップイベント】ページ切り替わり後、待機アニメなしにしててもアニメパターンが<br>
+　　　　　　　　　まれに設定した画像とずれて表示されてしまう現象を修正<br>
+        <br>
+●【マップイベント】キャラチップ画像のファイル読み込み失敗時に<br>
+        　　　　　　　　　クラッシュしにくくなるよう修正<br>
+        <br>
+●【ピクチャ】角度を「同値」にして新規表示したとき、<br>
+　　　　　　　ピクチャ表示位置にずれが生じることがあるバグを修正<br>
+<br>
+●【画面】メインディスプレイの拡大率が100％以外の場合に<br>
+　　　　　拡大率100％のサブディスプレイに全画面表示しようとすると<br>
+　　　　　画面が小さく表示されてしまうバグを修正<br>
+<br>
+●【プロ版機能】「スクリーンショット」「フォルダ作成」「ファイルコピー」時に<br>
+　　　　　　　　フォルダが自動生成されるよう修正<br>
+<br>
+●【ファイル出力】フォルダ自動生成処理の修正にともない、<br>
+　　　　　「文字列操作」「CSV出力」「ダウンロード処理」「セーブ・ロード操作」の<br>
+　　　　　　ファイル出力関連の処理も内部的に整理。挙動の変化はないはずです。<br>
+<br>
+●【ファイル読込】「文字列操作」「ピクチャ」「DB操作」「エフェクト処理」<br>
+　　　　　　　　　「セーブ・ロード操作」の読み込み処理周りも整理。<br>
+　　　　　　　　　上と同様、挙動の変化はありません。<br>
+        <br>
+        <br>
+        <br>
+<br>Ver3.240　2023/10/14<br>
+●【ゲーム基本設定】「Game.exe動作バージョン設定」にVer3.233を追加しました。<br>
+　1つ前の「旧Ver3.21時点の挙動で動作」にすると、マップイベント周りの挙動が<br>
+        　以下のように以前のものに戻ります（つまりバグがあった状態に戻せます）。<br>
+        <span style="font-size : 80%;">　</span><br>
+        <span style="font-size : 80%;">　-【3.21版　イベントの一時消去】 マップEvの「ページ」が切り替わったフレーム中に</span><br>
+        <span style="font-size : 80%;">　　「イベントの一時消去」をした場合、消去されません。</span><br>
+        <span style="font-size : 80%;">　-【3.21版　イベントの挿入】「ページ」に変数値を指定したとき、変数指定に-1され</span><br>
+        <span style="font-size : 80%;">　　(1100001と入れると1100000(ｾﾙﾌ変数0)が読まれる)、ページ数が+1されます。</span><br>
+        <span style="font-size : 80%;">　-【3.21版　イベントの挿入】 ページ数を「0」（現在のページ）にして</span><br>
+        <span style="font-size : 80%;">　　マップイベントの処理を呼び出したとき、「別ページの起動条件の変数」に</span><br>
+        <span style="font-size : 80%;">　　変わった直後に呼び出しても1フレーム経つまでページが変わりません。</span><br>
+        <br>
+<br>Ver3.233　2023/10/12<br>
+●【コモンイベント】「イベントの挿入」で「ページ数」を「0」（今のページの処理）を<br>
+　　　　　　　　　　実行した際、別ページの起動条件に変わった直後だと1フレーム待たなければ<br>
+　　　　　　　　　　そのページの処理が実行されなかった問題を修正<br>
+<br>
+●【マップイベント】起動条件が変わったフレーム中に「イベントの一時消去」をしても<br>
+　　　　　　　　　　消えなくなっていたバグを修正。<br>
+　　　　　→　一時消去処理がページの切り替わりでキャンセルされてしまっていました。<br>
+<br>
+●【エフェクト】「キャラ」の「キャラチップ変更」「重ねキャラチップ変更」を<br>
+　　　　場所移動時や起動直後に行ったとき、クラッシュすることがある現象を修正<br>
+　　　→　Ver3.221の、これらのエフェクト時に正しくエラー箇所が表示されるようにする<br>
+        　　　　　修正の副作用によって発生していた現象でした。<br>
+        <br>
+<br>
+        Ver3.232　2023/10/05<br>●【文字列操作】「に↓のファイル内容読込」の裏技の<br>
+　　　　　　　　「&lt;&lt;CUT_STRING_WIDTH_COUNT=(数値)&gt;&gt;(文字列)」において、<br>
+　　　　　　　　「\\」が「X」に置き換わってしまうバグを修正。<br>
+<br>
+●【変数操作+】Ver3.211の修正で「キャラ」が「一時消去」後に全部-1が返されていたのを、<br>
+　　　　　「一時消去」されても座標などの情報は「消される前の値」を維持するよう修正。<br>
+　　　→　一時消去された時点の座標を使いたいことも多いので「-1」が返ると不便でした。<br>
+　　　→　一時消去時は「起動中ページ」として「-1」が返されるのでそれで判別してください。<br>
+<br>
+●【変数操作+】「その他」の「現在のマップイベント数」が一つ前のVerからから正しい値を<br>
+　　　　　　　返さなくなっていたバグを修正。<br>
+<br>
+●【コモンイベント】「イベントの挿入」などで「ページ数」を「変数」で指定した場合、<br>
+　　A.「イベントの挿入」で「ページ」数として読み込まれる変数指定の値が<br>
+　　 　1ずれて処理されるバグを修正。<br>
+　 　 　→　ページ数に1600001を入れると1600000(Cself0)が読まれてしまっていました。<br>
+　　B.その変数に格納されている値より1大きなページが呼び出されてしまっていたバグを修正。<br>
+        　　  　→　たとえば変数に1が入っていたとき、2ページ目が呼び出されてしまっていました。<br>
+<br>
+        <br>
+Ver3.230　2023/09/28<br>
+●【文字列操作】「に↓のファイル内容読込」の裏技で<br>
+        　　　　　　　　「&lt;&lt;CUT_STRING_WIDTH_COUNT=(数値)&gt;&gt;(文字列)」を追加。<br>
+　　　　　　　　全角文字を2、半角文字を1としてカウントし、<br>
+　　　　　　　　(文字列)を(数値)の横幅でカットできます。<br>
+<br>
+●【システム変数】「Sys146:DirectInputならPS/Swiｺﾝ準拠?=1(1推奨)」を追加。初期値は1です。<br>
+　　　　　　これが1になっていると、PS4/PS5コントローラーやSwitchのジョイコンやプロコンを<br>
+　　　　　　自動判別して、これらのパッドの右スティックやR2L2トリガー情報が<br>
+　　　　　　期待通りに取得できる確率が上がります。<br>
+　　　　　　<br>
+　　→　DirectInput方式であるPS4/5コントローラーの右スティック挙動やトリガーの値が<br>
+　　　　これまでおかしかったので、それに対応するために搭載されました。<br>
+　　→　Switch用でもPS用でもないDirectInputゲームパッドの場合、ほとんどは動作しますが<br>
+　　　　特殊なものだと右スティックやトリガーが正常に動作しないことがあります。<br>
+　　→　Xboxのパッドやその他の「XInput対応」コントローラーは<br>
+　　　　Sys146が0でも1でも正常に動作します。<br>
+<br>
+●【システム文字列】システム文字列「SysS 70:ゲームパッドデバイス名」を追加。<br>
+　　　　→　パッドごとにボタン設定やスティック情報を調整したい場合に使ってください。<br>
+　　　　　特にDirectInputのパッドの場合、右スティックの状態が「キー入力の受け付け」の<br>
+　　　　　「アナログスティック」内の「Z軸」や「X/Y/Z回転値」のいずれかでしか<br>
+　　　　　得られない場合もあるので、その対策までしたい向けです。<br>
+<br>
+●【システム文字列】システム文字列「SysS 71:ゲームパッドの種別」を追加。<br>
+　　　パッドを挿しているとき、そのパッドのタイプを以下の<br>
+　　　いずれかの文字列として得ることができます。<br>
+　　　<br>
+　　　XBOX_360、XBOX_ONE、PS_DUAL_SHOCK_3、PS_DUAL_SHOCK_4、PS_DUAL_SENSE<br>
+　　　SWITCH_JOY_CON_L、SWITCH_JOY_CON_R、SWITCH_PRO_CON、SWITCH_HORI_PAD<br>
+　　　<br>
+　　どれにも該当しないときは 「UNKNOWN」が返されます。<br>
+　　パッドがなければ文字列は空です。<br>
+<br>
+●【変数操作+】「その他」に「ゲームパッドタイプ(DirectInput=0/XInput=1)」追加。<br>
+　　　　　　　ゲームパッドがDirectInput方式かXInput方式かを判別できます。<br>
+<br>
+●【キー入力】「キー入力受け付け」の「アナログスティック」に「X/Y/Z回転」を追加。<br>
+　　　　　　　DirectInputのパッドでまれに使われる値です。<br>
+<br>
+●【システム変数】「Sys123：次表示ﾋﾟｸﾁｬ拡縮くっきり(1=YES)」が1のとき、<br>
+        　　　　　　　　特定条件でマップが「ぼんやり」描画になってしまうバグを修正<br>
+        <br>●【フォント】新たにotfフォントに対応。<br>
+        　　　　　　fntフォントの読込処理も仮に入れてみましたが動作テストはできていません。<br>
+<br>
+<br>
+        Ver3.221　2023/09/22<br>
+●【ゲーム基本設定】移動幅「1マス」のとき、「半歩上に設置」されたマップイベントに<br>
+　　　　　　　　　Y座標が半分重なるよう移動できてしまうバグを修正<br>
+<br>
+●【動作指定】Ver3.220で追加された「仲間」の速度変更テストプレイ時エラーは<br>
+　　　　　　　隊列ON時のみ表示されるように修正。<br>
+　　　　→　「隊列を解除」した状態なら仲間の速度変更が有効なため。<br>
+　　　　　また、このエラーは「テストごとに最初の1回だけ」表示されるよう修正しました。<br>
+<br>
+●【キー入力】キーやマウス入力が禁止されたセーブデータを変数だけロードすると、<br>
+　　　　　　今のプレイでも入力が禁止された状態になってしまうバグを修正<br>
+<br>
+●【動作指定】Ver3.220の修正で「～の座標/イベントに接近」コマンドで<br>
+　　　　すでに目標座標と同じ座標にいる場合は処理をスルーする機能が、<br>
+　　　　マップイベントのカスタムルート内では動作していなかったのを修正<br>
+<br>
+●【システム変数】F9の変数一覧デバッグ画面で文字が重なりそうな場合は<br>
+　　　　　　　　..で省略する処理を追加<br>
+　　　　→　ひとまずデフォルトフォントに近いフォントで問題が起きない文字数調整に<br>
+　　　　　　してあります。フォントによっては重なる場合があります。<br>
+<br>
+●【エフェクト】「キャラ」の「重ねキャラチップ変更」「キャラチップ変更」の<br>
+　　　　　　　　エフェクトを使ったとき、エラー発生時の<br>
+        　　　　　　　　イベント番号や行数が正しくなかったバグを修正<br>
+        <br>
+        <br>Ver3.220　2023/09/16<br>
+●【マップイベント】前回の修正でタイルセットが画像として設定されたとき<br>
+　　　　　　　「影」が表示されてしまうバグを修正（本来は出ないのが正常です）<br>
+<br>
+●【変数操作＋】「位置」情報の取得時、「指定した位置は画面外です」エラーに<br>
+　　　　　　　　表示される「マップ限界X・Y」の値を1減少<br>
+　　　　　　→　サイズX50のマップなら「マップ限界X49」と表示されるようになります。<br>
+　　　　　　　　取得可能なX座標の範囲は0～49なので、こちらの方が直感的なはずです。<br>
+<br>
+●【動作指定】エラー時のイベントIDや行が正確でない場合があったバグを修正<br>
+<br>
+●【動作指定】「仲間」の速度を変えようとした場合はテストプレイ時専用エラーが出るように。<br>
+<br>
+●【動作指定】「～の座標/イベントに接近」コマンドは、すでに目標座標と<br>
+　　　　　　　同じ座標にいる場合は処理をスルーするように修正<br>
+<br>
+●【ゲーム基本設定】「システム言語」が「英語」のとき、<br>
+　　　　　　　　F8のデバッグ画面で一部文字が重なる問題を修正<br>
+<br>
+●【コモンイベント】「コモンEv名で呼出」欄に\s[]を入れても変換されないバグを修正。<br>
+　　　　　　　ただし、Editor側で当該コマンドを一度入力/修正し直す必要があります。<br>
+　　　　→　処理速度を稼ぐため、「コモンEv名の特殊文字変換が必要か」のフラグを<br>
+　　　　　　Editor側で入れているためです。今回のバグは\s[]が<br>
+        　　　　　　Editor側で判定漏れしていたことで起きていました。<br>
+        <br>
+<br>Ver3.217　2023/09/07<br>
+●【マップイベント】ページが変わった時、「タイルセット」が画像として<br>
+　　　　　　　　　設定されていると「影」が変更されないバグを修正<br>
+<br>
+●【特殊文字】文字列内で「\img[\img[」と指定したときにフリーズする現象を修正<br>
+        <br>
+        <br>Ver3.216　2023/09/02<br>
+●【エフェクト】「ピクチャ」の「ID移動」でピクチャを「同じフレーム中」に<br>
+　　　　　特定の順番に並び変えると「ID移動」が正常に動作しなくなるバグを修正<br>
+<br>
+●【文字列操作】「ファイルリスト取得」で暗号化データ内や存在しないフォルダを<br>
+　読みに行ったとき、&lt;&lt;ERROR&gt;&gt;が返らず非テストプレイ時にもエラーが出る現象を修正<br>
+　→　ファイルリスト取得のエラーはテストプレイ時のみに出るはずでしたが<br>
+　　　Ver3で増やした分に対応漏れがありました。<br>
+<br>
+●【キー入力】「キー入力の許可/禁止」の状態がセーブされていなかったバグを修正<br>
+　　　　→　入力を禁止した状態でロードすると、ロード後も禁止状態が継続されてしまう<br>
+　　　　　　問題がありました。<br>
+<br>
+●【マップ基本設定】システムDBの番号で背景を指定しているマップから<br>
+　　　　　　ファイルを直接指定しているマップへ移動すると<br>
+        　　　　　　正常に切り替わらないことがあるバグを修正<br>
+        <br>
+<br>
+        Ver3.215　2023/08/23<br>
+●【起動時】起動時やリセット時、一瞬左上に主人公のグラフィックが<br>
+　　　　　表示されてしまうバグを修正<br>
+<br>
+●【変数操作+】マップイベントの起動条件が別ページの値に切り替わった後に<br>
+　　　　　「現在の起動ページ」を得たとき、その値がこれまで1フレーム遅れて<br>
+　　　　　反映されていたのを、即座に反映されるよう修正<br>
+<br>
+●【マップイベントの画像変更】マップイベントのページが切り替わるよう<br>
+　変数操作したフレーム中に「9100009～」の変数指定による画像変更や、<br>
+　エフェクトによるマップEvの画像変更を行った場合、それらを無視して<br>
+　切り替わり後の「ページの画像」になってしまう現象を修正<br>
+<br>
+●【デバッグウィンドウ】テストプレイ中、『トラジション準備』中の間だけ、<br>
+　　　　　　デバッグウィンドウが更新されなくなるバグを修正<br>
+<br>
+●【エフェクト】ピクチャの「ID移動」を行ったフレーム中、消えたはずの元のID側に<br>
+        　　　　内部的な座標やディレイ付きの処理が残ってしまうバグを修正<br>
+        <br>
+<br>Ver3.214　2023/08/16<br>
+●【サウンド】チャンネル「1」以上でSEを再生するとメモリから消去されず、<br>
+　　　　　累計32768回以上再生すると以後サウンドが再生されなくなるバグ修正<br>
+　　　　　(Ver3.106あたりから発生していた疑いがあります)<br>
+<br>
+●【文字列操作】「に↓のファイル内容読込」の裏技で<br>
+　　　　　　　&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;-2（画像名を得る）などをしたとき、<br>
+　　　　　　　-2以下(主人公・仲間)が指定されると&lt;&lt;NotFound&gt;&gt;が返されるバグを修正<br>
+<br>
+●【文字列操作】「に↓のファイル内容読込」の裏技で<br>
+　　　　　　　「&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;-8」を実行するとクラッシュするバグを修正<br>
+<br>
+●【特殊文字】\i、\iS、\img、\imgSで指定したファイルがなかった場合に追加の<br>
+　　　　　エラー文が出るようになり「イベント番号」や「行数」が表示されるよう修正<br>
+　　　　　（従来は処理の都合で表示されませんでした）<br>
+<br>
+●【システム変数】「Sys5～6:ﾎﾟｰｽﾞｶｰｿﾙX/Y (-1=自動)」の<br>
+　　　　「-1:自動」という処理がもともと存在しなかったため<br>
+　　　　「Sys5:ﾎﾟｰｽﾞｶｰｿﾙX (Sys1に足した位置)」<br>
+        　　　　「Sys6:ﾎﾟｰｽﾞｶｰｿﾙY (Sys2に足した位置)」という名前に変<br>
+        <br>
+        <br>Ver3.213　2023/08/11<br>
+        ●【パーティ画像】Ver3.211の修正で「仲間」の画像が変更できなくなる現象が<br>
+        　　　　　　　　発生していたバグを修正<br>
+        <br>
+        Ver3.212　2023/08/11<br>
+●【変数操作+】Ver3.211の修正で「主人公」や「仲間」の情報が<br>
+        　　　　　　　「変装操作+」で取得できなくなってしまっていたバグを修正<br>
+        <br>
+        Ver3.211　2023/08/11<br>
+●【セーブ・ロード操作】Ver3.210の修正の副作用で正常にセーブできなくなっていたバグを修正<br>
+<br>
+●【変数操作+】マップイベントを一時消去した後に「変数操作+」でそのイベント情報を<br>
+        　　　　　　　取得した場合は「イベントID」以外は-1を返すように修正。<br>
+        　　　　　（「ゲーム基本設定」で「旧Ver3.19時点の挙動で動作」にすると前の仕様のままにできます）<br>
+        <br>Ver3.210　2023/08/11<br>
+●【方向キー入力】左アナログスティックでの8方向入力の角度が<br>
+　　　　　　　　45度刻みになっていなかった問題を修正。<br>
+　　　　　　　　左スティックによる方向切り替えが敏感すぎたのが改善されるはずです。<br>
+<br>
+●【プロ版機能】「ファイル削除」でセーブデータを削除したとき、すでに読まれたセーブの<br>
+　　　　　　「Sys24:[読]ｾｰﾌﾞﾃﾞｰﾀ読込判定(1=成功 0=失敗)」の値が1のままになるバグを修正。<br>
+<br>
+●【セーブ・ロード操作】内部的に、セーブデータのファイル名の大文字、小文字が違うと<br>
+　　　　　　　　　別セーブとして認識されてしまう可能性があったのを修正。<br>
+<br>
+●【エフェクト】「自動パターン切替」エフェクトを使ってピクチャの分割数以上の<br>
+　　　　　　　パターン値に変化させたとき、おかしな画像が出ることがあるバグを修正<br>
+<br>
+●【システム変数】「ループなし」でマップサイズが「横20、縦15未満」のマップだと<br>
+　　　　　　　「Sys104:Xスクロール値」「Sys105:Yスクロール値」に値を代入したときに<br>
+        　　　　　　　スクロール挙動がおかしくなるバグ修正<br>
+<br>
+●【マップイベント】「一時消去」したイベントに対して画像や不透明度を変更すると<br>
+        　　　　　　　　　　表示されてしまうバグを修正<br>
+        <br>
+<br>Ver3.208　2023/08/04<br>
+●【サウンド】2回連続で同じSEを鳴らした際に、2回目のSEの遅延フレーム中に<br>
+　　1回目のSEが鳴り終わると2回目のSEが鳴らなくなるバグを修正。<br>
+　→　要するにディレイなどを利用した際にまれに音が鳴らない症状がなくなります。<br>
+<br>
+●【暗号化ファイル】暗号化ファイルが「BasicData2.wolf」など特定のファイル名だと<br>
+　　　　起動時にクラッシュすることがあるバグを修正<br>
+<br>
+●【文字列操作】ファイル読み込み処理のセキュリティを強化しました。<br>
+<br>
+●【ゲーム基本設定】英語時のデフォルトフォントを「Tahoma」に変更しました。<br>
+　　→「Arial」は、言語環境によって文字幅が変わったり使えないことがあったため、<br>
+　　　　Arialと見た目が近く、長らくWindowsの標準フォントで<br>
+        　　　　言語ごとの表示差が少ないTahomaフォントにしました。<br>
+        <br>
+        <br>Ver3.207　2023/07/14<br>
+●【ピクチャ】ピクチャの基準位置に「右」や「下」部分を含む場合、かつ<br>
+　　　　　　「拡大率」が100％以外かつ計算後に小数点の端数を含む座標値になったとき、<br>
+　　　　　　基準位置から1ピクセルずれて表示されてしまうことがあるバグを修正<br>
+<br>
+Ver3.206　2023/07/08<br>
+●【システム変数】Sys119:[読]Gameバージョンx100が320になっていなかったのを修正<br>
+<br>
+Ver3.205　2023/07/03<br>
+        ●【文字列操作】まだVer3.203から続く「\」の文字関連の処理で<br>
+        　　　　　　　　　フリーズする場合があったので再修正を試みました。<br>
+<br>
+Ver3.204　2023/07/02<br>
+●【文字列操作】Ver3.203で「\」の文字の消去・置換・切り出し処理が<br>
+　　　　　　　　正常に修正されておらずフリーズする場合があったので再修正<br>
+<br>
+<br>
+        Ver3.203　2023/07/01<br>
+●【キー入力】エラー「ERROR:キー設定(パッド)で範囲外(301～308外)の値を与えました」の<br>
+　　　　　　　範囲の値を「301～314」に修正（パッドボタンが14番まで使えるらしいので）<br>
+<br>
+        ●【文字列操作】特定の状況で「\」の文字が消去・置換・切り出しできなくなる現象を修正<br>
+        <br>
+<br>
+Ver3.202　2023/06/17<br>
+        ●【システム変数】「Sys23:ルビのフォントサイズ」によるルビの大きさの適用タイミングを<br>
+        　　　　　　　『文字が表示された時点』に変更。個別にルビサイズが設定できるようになります。<br>
+        　　　　　　（従来は『フレーム終了時』のSys23に従って「全ての」文字列ピクチャや<br>
+　　　　　　　　文章の表示のルビサイズが変わっていました）<br>
+<br>
+        Ver3.201　2023/06/10<br>
+●【パーティ画像】特定の並びで「キャラ画像の隊列を前に詰める」を行うと<br>
+        　　　　　　　　消えるはずのキャラが残ることがあるバグを修正<br>
+        <br>
+        <br>Ver3.20　2023/06/09<br>
+●【デバッグ文】「ValWatch」機能で文字列変数の内容を表示したとき、<br>
+　　　　　合計256バイト以上を一度に表示しようとするとクラッシュするバグを修正<br>
+        <br>
+        <br>Ver3.192　2023/06/01<br>
+●【変数操作】「角度（x10）←傾き」処理したとき、ちょうど45度区切りになる傾きでも<br>
+　　　　　2699、2249、3149のように1小さい角度が返されてしまうことがある現象を修正<br>
+<br>
+●【ダウンロード】ダウンロードして得た文字列変数に「\」を含む文字の置換を行うと<br>
+　　　　　　　うまく置換できないバグを修正<br>
+　　　　　　（ダウンロードしたての文字列変数が生の文字列のままで、<br>
+        　　　　　　　ウディタ用のコードに変換されていませんでした）<br>
+        <br>
+        <br>
+Ver3.191　2023/05/29<br>
+        ●【システム変数】Sys119:[読]Gameバージョンx100が319になっていなかったのを修正<br>
+        <br>
+<br>Ver3.190　2023/05/28<br>
+●【可変DB】可変DBを何らかの形で読み込んだとき、読み込み先のデータ番号が<br>
+　　　　　元より多かったら勝手にデータ数を拡張してしまう現象を修正。<br>
+　　　※前の仕様に戻したい場合は「ゲーム基本設定」の「Game.exeバージョン調整」を<br>
+　　　　「旧Ver3.18以前」に設定してください。<br>
+　<br>
+●【変数操作+】「当たり判定1×1」のキャラに「標準座標」がY「0」座標の<br>
+　「通行可能」を取ると1（通行不能）が返ってしまうバグを修正<br>
+　（Ver3.184で新たに発生したバグでした）<br>
+<br>
+●【サウンド】サウンドデバイスが1つもない状態でBGMを再生すると<br>
+        　　「サウンドデータを正常に読み込めませんでした」というエラー文が出る現象を修正<br>
+        <br>
+<br>Ver3.184　2023/05/15<br>
+●【キャラクターの移動】キャラの「すり抜け」がONになっているとき、<br>
+　　　　　マップ外へ半マスはみ出すことができてしまうバグを修正<br>
+<br>
+●【ピクチャ】ソフトウェアモード時のみ、一定以上に拡大率を上げると<br>
+　　　　クラッシュする場合があったのでピクチャ端の限界座標が強制的に<br>
+        　　　　X座標で-20000～20000、Y座標で-16000～16000内に収まるよう修正<br>
+        <br>Ver3.183　2023/05/13<br>
+●【エフェクト】特定の条件で「ピクチャのID移動」を使用した場合、<br>
+        　　　　　　　ピクチャが存在するのに表示されなくなってしまうバグを修正<br>
+        <br>
+        Ver3.181　2023/05/07<br>●【動作指定】マップイベントが条件を満たさなくなり、「存在しないページ」に<br>
+　　　　　　切り替わった後にそのマップイベントの「動作指定」をすると<br>
+        　　　　　　クラッシュすることがあるバグを修正<br>
+        <br>Ver3.180　2023/05/04<br>
+●【変数操作+】「最も上にあるﾀｲﾙのﾀｸﾞ番号」の「精密座標」でタグ番号を取得できる座標が<br>
+　　　　　　　「レイヤーXのタグ番号」とずれていたバグを修正<br>
+        　　　　（「ゲーム設定」で「旧Ver3.17以前の挙動で動作」にすると前の挙動に戻せます）<br>
+<br>
+Ver3.177　2023/04/29<br>
+●【選択肢】「Sys73:文･選択肢のﾏｳｽ入力(1なら受付)」を1にして選択肢ウィンドウを<br>
+        　　　　マウスで選択したときのみ、表示されないはずの選択肢が選べてしまうバグ修正<br>
+        <br>Ver3.176　2023/04/25<br>
+●【フォント】フォントが空欄だったり、フォントが見つからなかった場合の<br>
+　　デフォルト日本語フォントとして『Yu Gothic UI』を追加しました。<br>
+　　『Yu Gothic UI』は海外のWindows10，11でもほぼ確実に入っているとのことです。<br>
+　※今のところ、ゲームの言語を「日本語」にしてフォントが見つからない場合は<br>
+　　「Yu Gothic UI」→「Meiryo」→「MS Gothic」の順に使用可能かチェックします。<br>
+<br>
+●【文字列操作】「↓のﾌｧｲﾙ内容読込」の文字幅取得の裏技「&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;」で<br>
+　　　　　「\^」など一部の特殊文字が含まれていると、フリーズしたり<br>
+　　　　　1以上の値でカウントされてしまうことがあるバグを修正<br>
+<br>
+●【ピクチャ・エフェクト】「&lt;SCREENSHOT&gt;」で表示したピクチャに<br>
+　　　「変換」系のエフェクトをかけてセーブ→ロードするとクラッシュするバグ修正。<br>
+        　　　過去にも一度修正したのですがどこかのタイミングで再発してしまっていました。<br>
+        <br>
+<br>Ver3.175　2023/04/14<br>
+●【DB操作】特定の処理内で「新データ挿入」コマンドを大量に実行すると<br>
+　　　　　　まれにクラッシュすることがあるバグを修正<br>
+<br>
+●【F8デバッグ画面】一番上に「現在マップ」の番号を表示するよう修正<br>
+<br>
+        ●【Game.exeバージョン調整】「旧Ver3.155時点の挙動」以前に設定することで、<br>
+        　　　　　　マップイベントのページが切り替わった際に正確に向きが変わる仕様を<br>
+        　　　　　　昔のあいまいな状態に戻せるようにしました。<br>
+        <br>Ver3.174　2023/04/11<br>
+●【INIファイル】Game.iniの先頭に「[DEFAULT]」という文字列を追加。<br>
+　（Config.exeを自作する場合、一般的なプログラミング用モジュールで<br>
+        　　　INIファイルを読み込む場合に必要になるためです）<br>
+<br>
+●【文字列操作】「↓のﾌｧｲﾙ内容読込」の文字幅取得の裏技「&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;」で<br>
+        　　　　　　　　　　「志」「依」「羽」「迂」「往」「応」など一部の全角文字が横幅1（半角）として処理されるバグを修正<br>
+<br>
+Ver3.173　2023/03/30<br>
+●【スクロール】Ver3.170の修正の副作用でループ際のスクロール挙動が<br>
+　　　　　　　　うまくできなくなっていたバグを修正<br>
+<br>
+Ver3.172　2023/03/28<br>
+●【スクリーンショット】スクリーンショット撮影時の緑帯表示中にゲームを終了すると<br>
+　　　　　　画面が閉じてもBGMが止まらず、プロセスがずっと残ってしまうバグを修正<br>
+<br>Ver3.170　2023/03/27<br>
+●【マップセルフ変数】「コモンイベント処理内」でのみ、「場所移動」した後の<br>
+　　「マップセルフ変数」が正しく「移動後」のマップから読み込まれるようになりました。<br>
+　　これにより、ゲーム挙動が変化する可能性があります。<br>
+　（従来はそのコモンが終わるまで「場所移動」しても「直前マップ」のマップセルフ変数を<br>
+　　読みに行っていました）<br>
+　　→　「ゲーム基本設定で」Game.exeバージョン調整を「Ver3.155」以前にすると<br>
+　　　　　前の挙動に戻せます<br>
+　　　　　<br>
+●【エフェクト】マスク機能の「マスクを全面[非表示]に塗る」を実行したとき、<br>
+　　　　　　　　緑帯エラーが表示されなくなることがあるバグを修正<br>
+<br>
+●【スクロール】主人公の移動速度を非常に低速にしたとき、一定以上の速度のときと比べて<br>
+        　　　　　　　　スクロールが1ピクセルずれるバグを修正<br>
+<br>
+●【エフェクト】「ピクチャのコピー」「ピクチャのID移動」をしたとき、<br>
+        　　　　　　　完全に同じID同士で処理するとピクチャが見えなくなってしまうバグを修正<br>
+        <br>
+Ver3.166　2023/03/18<br>
+●【プロ版/システム文字列】「SysS60：[P]タイトルバー上書き」に「&lt;TITLE&gt;」「&lt;TITLE_PLUS&gt;」<br>
+　　　　　　　「&lt;SOFT&gt;」の文字列を入力すると、タイトルのメイン部、タイトルの追記、<br>
+　　　　　　　ソフトウェアモード状態(無または【ソフトウェア】)の文字列に<br>
+        　　　　　　　自動変換されるよう修正<br>
+<br>
+        Ver3.165　2023/03/16<br>●【プロ版/システム文字列】ゲーム開始時のクリップボードが「空」か「文字列以外」の場合、<br>
+　　　　「Sys57:[P]クリップボード内容」が「&lt;&lt;StartClipBoard&gt;&gt;」を返さないバグを修正<br>
+<br>
+●【プロ版/システム文字列】開始時にクリップボードの内容が何もない場合、<br>
+　　　　クリップボード読み取り確認のメッセージボックスで「いいえ」を選んでも<br>
+　　　　「Sys57:[P]クリップボード内容」で「&lt;&lt;AccessDenied&gt;&gt;」を返さないバグを修正<br>
+<br>
+        ●【変数操作+】 キャラIDの指定で-5000など指定するとクラッシュするバグを修正<br>
+        <br>●【ピクチャ一覧】文字列ピクチャの改行は「\n」に変換されて表示されるよう修正<br>
+<br>Ver3.164　2023/03/07<br>
+●【動作指定】主人公や仲間に動作指定を行うと透明化が解除されてしまうバグを修正<br>
+        　　　　　　　（Ver3.161の修正で発生した副作用でした）<br>
+        <br>Ver3.163　2023/03/07<br>
+●【DB操作】データ数が0個になったDBタイプに「データ数取得」をしようとすると<br>
+　　　　　「読み込もうとしたタイプ番号が存在しません」というエラーが出るバグを修正<br>
+<br>
+        ●【タイトルバー】スクリーンショット撮影後、タイトルバー表記が撮影時のまま残ってしまう現象を修正<br>
+<br>
+●【サウンド】サウンドの再生方式をVer2時代のものに戻しました<br>
+<br>
+        <br>Ver3.162　2023/03/05<br>
+●【ピクチャ・文章の表示】サイズ80以上のフォントを使っている場合に限り、特定状況で<br>
+　　　　　　　　　　過剰にメモリ消費したりフォントキャッシュの限界を<br>
+        　　　　　　　　　　超えてしまう可能性があったバグを修正<br>
+<br>Ver3.161　2023/03/03<br>
+●【マップイベント】 マップEvの起動条件を満たしたのと同フレームに方向転換させても<br>
+　　　　　　　　　　反映されない問題を修正。<br>
+　　→　起動条件を満たして1フレーム待ってから方向転換する必要がある状態になっていました。<br>
+<br>
+　　（今の仕様のまとめですが、「変数の条件を満たしてマップEvのページが変わった場合」は、<br>
+　　　とにかく一度「エディタで設定された初期方向」を向くようになっています。<br>
+        　　　その直後に(同フレーム中でも)方向を変更すれば出現時点の向きを変えることができます）<br>
+        <br>
+        <br>
+        Ver3.159　2023/02/26<br>●【ピクチャ一覧】F7ピクチャ一覧の1ページの表示数が見た目より<br>
+　　　　　　　　　1少なくカウントされていたバグ修正<br>
+　　　　　　　（次ページの始まりで1つ前ページの最後の分が<br>
+　　　　　　　　表示されるようになっていました）<br>
+<br>
+        Ver3.158　2023/02/23<br>
+●【セーブ･ロード操作】ピクチャの&lt;SCREENSHOT&gt;使用時に「変換」系エフェクトをかけて<br>
+　　　　　　　セーブすると、ロード時にクラッシュすることがあるバグを修正<br>
+<br>
+●【Config】「ガタガタ」モードにしてもフレームスキップが機能していなかったバグを修正<br>
+<br>
+●【F5フレームスキップ】 昨今の環境ではF5キーのフレームスキップ切り替え機能が<br>
+　　　　ほぼ不要かつ事故の元でしかなくなっているので、<br>
+　　　　F5キーの機能をデフォルトでOFFにしました。<br>
+　　　（プロ版に限り、F5フレームスキップ切り替え機能をオンにできます。<br>
+        　　　　また、Config.exeやシステム変数Sys33からのフレームスキップ変更は引き続き可能です）<br>
+<br>
+●【システム変数】全画面で起動して「Sys138:画面ﾓｰﾄﾞ[ｳｨﾝﾄﾞｳ:0/仮想全:1/全:2]」で<br>
+　　　　　　　全画面（2）以外に切り替えるとフォントがキャッシュできないというエラーが<br>
+　　　　　　　無限に出続けてしまうバグを修正<br>
+<br>
+●【タイトルバー】F8を押したときのタイトルバーの「(F5で変更)」部分は<br>
+　　　　　　　　F5機能がオンかどうかで表示有無を切り替えするよう修正<br>
+　　　　　　　　（無料版では表示されなくなります）<br>
+<br>
+●【スクリーンショット】PrintScreenなどでスクリーンショット撮影時に緑帯が出たとき、<br>
+　　　　　　　　　　　キー入力しても動かなくなってしまうケースがまれに発生するため<br>
+        　　　　　　　　　　　キー待ち処理を変更してみました。<br>
+        <br>
+<br>Ver3.157　2023/02/19<br>
+●【マップイベント】ロード時にキャラのパターンが変わってしまうバグを修正<br>
+　　　　　　　　　　(Ver3.153の修正で発生)<br>
+<br>
+●【ゲーム基本設定】「Game.exe動作バージョン調整」の「旧Ver3.123の挙動」を選ぶことで<br>
+        　　　　　　　　　　Sys10の挙動をVer3.155より前に戻せるよう修正<br>
+        <br>Ver3.156　2023/02/18<br>
+●【ピクチャ】特定の状況で角度0の通常ピクチャが表示されなくなるバグを修正<br>
+<br>
+Ver3.155　2023/02/18<br>
+●【エフェクト】「ピクチャのコピー」を実行した際、存在しない<br>
+　　　　　　　大きいピクチャ番号を指定するとクラッシュすることがあるバグを修正<br>
+<br>
+●【システム変数】「Sys10：ﾒｯｾｰｼﾞ表示ｳｪｲﾄ(X ﾌﾚｰﾑ)」の挙動を修正。<br>
+　　　　　　「【文章の表示】が実行された時点のSys10の値」でウェイトするよう修正しました。<br>
+　　　→　「文章の表示」をした同フレーム中の並列処理でSys10が書き換わった場合、<br>
+　　　　　そちらのウェイト値の方でメッセージ表示待ち処理がされてしまうので<br>
+        　　　　　直感的ではありませんでした。<br>
+        <br>
+Ver3.153　2023/02/16<br>
+●【マップイベント】起動条件が変わってイベントページが切り替わる際、<br>
+        　　　　　　　　　画像の向き変更・パターン変更がおこなわれない場合があるバグを修正<br>
+        <br>
+Ver3.152　2023/02/13<br>
+●【変数操作+】並列実行で「イベント」の「ピクチャパターン」を取得し続けると<br>
+　　　　　　　クラッシュするバグの修正を試みました<br>
+<br>
+Ver3.151　2023/02/13<br>
+●【文字列操作】「ファイル内容読込」の裏技の「&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;」の取得で<br>
+　　　　　　ファイル名を得る対象番号が「イベントID」でなく「何番目のイベントか」で<br>
+　　　　　　判定されてしまっていたバグを修正<br>
+<br>
+●【マップ表示】「基本タイル画像」を増やした後、「タイルセット設定」でそのタイルセットを<br>
+        　　　　　　保存し直さずにゲームを開始した場合、まれにタイルが正常に表示されないバグを修正<br>
+        <br>
+Ver3.150　2023/02/11<br>
+●【変数操作+】並列実行で「主人公」の「ピクチャパターン」を取得し続けると<br>
+        　　　　　　クラッシュすることがあるバグを修正。<br>
+        <br>
+Ver3.149　2023/02/09<br>
+●【変数操作+】主人公から離れた画面外のキャラに対して<br>
+　　　　「キャラチップ縦/横分割数」や「現在ピクチャパターン」を行うと<br>
+        　　　　クラッシュすることがあるバグを修正<br>
+        <br>
+Ver3.148　2023/02/08<br>
+●【自動実行イベント】Ver3.147の場所移動の修正により、ロード後の<br>
+　　　　　　　自動実行イベントが実行されなくなっていたバグを修正<br>
+<br>
+●【変数操作+】「キャラチップ縦/横分割数」を読み込む際、<br>
+　　　　　同フレーム中にキャラチップの画像が変更されていると<br>
+        　　　　　変更前の画像の情報を取得してしまうバグを修正。<br>
+        <br>
+Ver3.147　2023/02/06<br>
+●【デバッグ画面】変数の数が多い場合、F9変数確認画面の1ページ目が<br>
+        　　　　　　　　表示されないことがあるバグ修正(Ver3.145の修正で発生していました)<br>
+        <br>
+●【場所移動】「トランジションなし」で場所移動したときだけ同フレーム中に<br>
+　　　　　　　他イベントが処理されてしまうバグを修正<br>
+　　　　　　（「トランジションあり」で実行された場合、場所移動中は<br>
+        　　　　　　　他イベントが実行停止されるのでそれに合わせた修正です）<br>
+        <br>
+Ver3.146　2023/02/05<br>
+●【セーブ・ロード操作】まだフォルダがないときにそのフォルダ内のファイルへ<br>
+　　　　　　　　「セーブデータへの書き込み」を行うとエラーが出てしまうバグを修正<br>
+<br>
+Ver3.145　2023/02/03<br>
+●【セーブ・ロード操作】セーブ失敗のエラーが起きたときにフリーズする可能性があったバグを修正<br>
+<br>
+●【セーブ・ロード操作】セーブ失敗時にエラー地点が表示されてなかったのを修正<br>
+<br>
+●【デバッグ機能】テストプレイ中のF7キーのピクチャ詳細一覧ならびにF9の変数一覧で<br>
+        　　前ページの情報がそのまま残って見にくくなっていたのを修正<br>
+        <br>
+Ver3.144　2023/01/28<br>
+●【プロ版機能】「フォルダ作成」機能で\cself[5]などが変換されなかったバグを修正<br>
+<br>
+        Ver3.143　2023/01/26<br>
+●【システム変数】一部の空白のシステム変数が次の値と同じ値を返していた現象を修正<br>
+<br>
+●【セーブ・ロード操作】 存在しないセーブデータに対し、「セーブデータへの書き込み」を<br>
+　　　　したのと同じフレーム中に「変数・文字列の読み込み」をしても<br>
+　　　　書き込みされたデータを読み込めなくなっていたバグを修正<br>
+　　　（Ver3.134のセーブデータへの書き込み処理高速化によって発生したバグでした）<br>
+<br>
+Ver3.140　2023/01/24<br>
+●【ピクチャ】Ver3.138の修正によって、分割した画像（お手軽ウィンドウ含む）に<br>
+　　　　　　　「変換」エフェクトをかけたとき正常に表示されなくなるバグが出ていたのを修正<br>
+　　　　　　　<br>
+Ver3.138　2023/01/17<br>
+●【ピクチャ】ピクチャの「&lt;CUT/X～/Y～&gt;」とエフェクト「変換」系を組み合わせて使うと<br>
+　　　　　　特定の状況でピクチャが表示されなくなるバグを修正<br>
+        <br>
+Ver3.137　2023/01/16<br>
+        ●【セーブ・ロード操作】 「変数・文字列の読み込み」と「セーブデータへの書き込み」が<br>
+        　　　可変DBのデータがないセーブデータに対して行われた場合は、<br>
+　　　『Tips：「セーブデータへの書き込み」機能で無から作成したセーブには<br>
+　　　　可変DBのデータがないので注意して下さい』<br>
+　　　という文章を出すよう修正<br>
+<br>
+●【セーブ・ロード操作】 「ロード」時、マップ・CDB情報がないセーブデータを<br>
+　　　　　　　ロードしたときにそれを伝えるエラーが出るよう修正<br>
+<br>
+        ●【セーブ・ロード操作】 「セーブデータへの書き込み」処理の後に「ロード」処理を同じフレーム中に行うと<br>
+　　　　一度「セーブ」されたデータであっても正常に「ロード」できなくなるバグを修正<br>
+        　　（Ver3.134更新で「セーブデータへの書き込み」が「ロード」後に行われてしまうバグが出ていました）<br>
+        <br>
+Ver3.136　2023/01/15<br>
+●【プロ版機能】Ver3.134で「セーブデータへの書き込み」処理をまとめて行う修正を<br>
+　　行いましたが、「ゲーム再起動」処理時のタイミングにもファイル保存判定を行うよう修正<br>
+<br>
+        ●【全体】音声が安定しやすい設定に変更。見た目には何も変わらないと思います。<br>
+        <br>
+Ver3.135　2023/01/12<br>
+●【ピクチャ】ピクチャの自由変形後に同じピクチャIDでお手軽ウィンドウを「表示」すると<br>
+　　　　指定した座標とは違う位置で表示されるバグを修正<br>
+<br>
+●【セーブ・ロード操作】Ver3.134で「セーブデータへの書き込み」処理をまとめて行う修正を<br>
+　　行いましたが、ファイル保存タイミングを、「1フレーム終了時」「エラー時」に加えて<br>
+　　「ゲーム終了」時のタイミングにも行うよう修正<br>
+<br>
+●【イベント制御】「ゲーム終了」コマンドで不安定な終了をする可能性があったのを修正<br>
+<br>
+●【選択肢】タイルサイズを16以外にして「Sys73:文･選択肢のﾏｳｽ入力(1なら受付)」を<br>
+        　　　　　　1にした場合、マウスで選択肢を選ぶときの座標がずれる現象を修正<br>
+<br>Ver3.134　2023/01/11<br>
+        ●【セーブ・ロード処理】「セーブデータへの書き込み」処理で変数・文字列を書き込んだ際、<br>
+        　　　　従来は1つ書き込むたびにファイル保存し直していたのを、<br>
+        　　　　「そのフレーム中のイベント処理が全部終わった時点」と、<br>
+        　　　　「緑帯エラーが起きた時点」にまとめて1回だけファイル保存するように効率化<br>
+<br>
+        ●【コモンイベント】起動条件にコモンセルフ変数を設定した自動実行イベントが起動しないバグを修正<br>
+        <br>
+        Ver3.132～3.133　2023/1/08<br>
+        ●【フォント】文字表示速度を3.110以前頃の速さに再び高速化しました。<br>
+　　　　　　終了時にまれに隠れクラッシュする現象を直した影響でパフォーマンスが<br>
+        　　　　　　大きく低下していたようで、それが再発するのを覚悟での高速化です。<br>
+        <br>
+●【起動時】起動に失敗したときなどに勝手にグラフィック表示モードが<br>
+　　　　　　「ソフトウェアモード」になる現象が起きにくくなるよう修正。<br>
+        　　　　　（現在は起動失敗時、手動で設定を変えてくださいというメッセージが出ます）<br>
+<br>
+●【起動時】ソフトウェアモードで起動したときはタイトルバーに<br>
+　　　　　　【ソフトウェアモード】と追加表示されるよう修正<br>
+        　　　　（プロ版の場合は、ゲームの基本設定[Pro専用]のタイトルバー表示設定に<br>
+        　　　　　&lt;SOFT&gt;と入れるとソフトウェアモード時にその箇所に表示されます）<br>
+<br>
+●【Config.exe】「グラフィック表示モード」の説明文を以下のように変更。<br>
+        　　　　　　　　　　　ソフトウェアモードは描画が多少汚くなることがあります。<br>
+　＜3Dモード＞<br>
+　　グラフィックボードを使用して描画。通常はこちらが高速かつ高い描画品質になります。<br>
+　＜ソフトウェアモード＞<br>
+        　　CPUのみで描画するセーフティモード。動作は安定しますが処理速度は遅く、描画も最低品質です。<br>
+        <br>Ver3.131　2023/1/05<br>
+●【ピクチャ】パターン分割された画像を表示したままセーブ、ロードし、<br>
+        　　　　　　そのピクチャを消去するとずれながら消えるバグを修正<br>
+        <br>
+        Ver3.123　2022/12/31<br>
+        ●【ピクチャ】自由変形で「表示」したとき、「角度」「拡大率」が「同値」として処理されていたので、<br>
+        　　　普通の「表示」と同じく「角度0」「拡大率100」で表示が実行されたものとして扱うようにしました。<br>
+　（前の挙動に合わせて作っていた方もいらっしゃると思いますので、<br>
+　　「ゲーム基本設定」で「動作バージョン調整」を「Ver3.06時点の挙動で動作」にすると<br>
+        　　「自由変形」で「表示」したときに「直前の角度・拡大率を使用する」ままにできます）<br>
+        <br>Ver3.122　2022/12/31<br>
+●【変数操作】「実数計算」をチェックし代入演算子の「%=」を選んで<br>
+　　　　右辺を「1 / 2 (0.5)」などの0超1未満の値にするとクラッシュするバグを修正<br>
+<br>
+●【ゲーム全体】フォント周りの問題でゲーム終了時に密かにクラッシュしてしまい、<br>
+　　　　　　　プロセスが残ることがある要因を一点解消しました<br>
+        <br>
+        <br>
+        Ver3.121　2022/12/30<br>
+●【ピクチャ・動画機能】セーブデータをロードした後、読み込んだ動画ファイルが<br>
+　　　　　内部的に「動画」として認識されなくなることがあるバグを修正<br>
+        　　（再生はされるが「.loop」機能やその他の動画エフェクトが機能しなくなる）<br>
+        <br>
+Ver3.120　2022/12/29<br>
+        ●【エフェクト】直前の修正で「ピクチャ」の「変換」系エフェクトが全て機能しなくなっていた問題を修正<br>
+        <br>
+        Ver3.111～3.112　2022/12/28<br>
+●【文字列操作】「特殊文字を消去して格納」で半角の「\」が消えてしまうバグを修正<br>
+<br>
+●【文字列操作】 「&lt;&lt;GET_STRING_WIDTH_COUNT&gt;」の文字幅取得の裏技で<br>
+　　　　　　　　　　　　　半角\がカウントされていなかったバグを修正<br>
+<br>
+●【ピクチャ】「_loop.」「_LOOP.」が付いた動画がループしない場合があるバグを修正<br>
+<br>
+●【ピクチャ】画像の基準座標を「左上」以外で「表示」してセーブ→ロードし、<br>
+　　　1フレーム以上で「消去」すると消え始めの座標が飛んでしまうバグを修正<br>
+<br>
+●【エフェクト（プロ版）】「マップF/色彩明」が0-360で一周しないバグを修正。<br>
+　　　また「マップF」または「全体F」の「色彩明」「モノトーン」の値が<br>
+　　　範囲外になっても値がループするように修正。<br>
+<br>
+●【エフェクト（プロ版）】「マップF」または「全体F」で「モノトーン」したとき<br>
+　　　　　値が全部「0」の場合だけ画面が元と変わらなくなるバグを修正<br>
+        <br>
+        Ver3.110　2022/12/23<br>
+●【プロ版機能】「実行中メインEv強制中断」機能を追加しました。<br>
+　 「決定キー起動や接触起動、自動起動のイベント」など<br>
+　同時に1つしか実行できない「メイン実行イベント(仮称)」に対して、<br>
+　並列イベント内から強制的に「イベント処理中断」させることができます。<br>
+　- 「ウェイト」や「～～完了までウェイト」系は、ウェイトは中断されますが、同時に実行中の<br>
+　　処理自体は続行されます（動作指定、スクロール、ダウンロード機能など）<br>
+　- 選択肢コマンドや文字列操作コマンドのキーボード入力、キー入力待ちも中断されます。<br>
+　- ウェイトありのトランジション中や場所移動中はそもそも並列イベントが進まないので<br>
+        　　「実行中メインEv強制中断」は実行できません。<br>
+        <br>●【変数操作】「X番の変数呼出」を使って文字列変数へ強引に文字列を代入しようとしたとき、<br>
+　　　　　　右辺左側の文字列変数が無視されてしまうバグを修正<br>
+<br>
+●【文字列操作】「ファイル内容読込」で&lt;&lt;～～&gt;&gt;の裏技コマンドを使用したとき、<br>
+　　　　　　文字列内に「:」や「..」が入っているとエラーが出る現象を修正<br>
+<br>
+●【ピクチャ】「お手軽ウィンドウ」、基準座標「中央上/下」「処理時間2フレーム以上」で<br>
+　　　　実行すると、処理開始時のXサイズだけ本来の2倍になってしまうバグを修正<br>
+<br>
+●【システム変数】「Sys61：フォグ番号」または「Sys66：遠景番号」に数値を<br>
+　　入れたのと同じフレーム中に「Sys62～63：フォグXY速度」や「Sys67～68：遠景XY速度」を<br>
+        　　変更しても速度が反映されなかった現象を修正<br>
+        <br>
+Ver3.108　2022/12/21<br>
+●【セーブ・ロード操作】並列イベント中でロードするとその後の「場所移動」時に低確率で<br>
+　　　クラッシュするバグがあったため、並列実行中にロードするとエラーが出るよう修正<br>
+　（もともとマニュアルでは並列処理中のセーブロードはしないようにと記述されていましたが、<br>
+        　　技術的な都合でGame.exe側で止める処理が作られていませんでした）<br>
+<br>
+Ver3.107　2022/12/19<br>
+        ●【サウンド】SEの再生終了ちょうどのタイミングで同じSEを再生するとまれに再生されないバグを修正<br>
+<br>Ver3.106　2022/12/18<br>
+●【文字列操作】「UTF-8/BOMなし」のテキストファイルを「ファイル内容読込」で<br>
+　　　　　　　文字コード「UTF-8」に指定して読み込んでも文字化けするバグを修正<br>
+<br>
+●【サウンド】Ver2.271より前に入力された『サウンド』コマンドでSEを32768回再生すると、<br>
+　　　　　以降、全てのサウンドが再生できなくなってしまうバグを修正<br>
+<br>
+●【ダウンロード】「保存しない」にチェックを入れても「～_tmp」ファイルが作られていたので、<br>
+　　　　　　ファイル保存が不要なときはそもそも「～_tmp」ファイルを生成しないよう修正<br>
+<br>
+●【ダウンロード】無料版で「http(s)://localhost」に接続する場合は連続で接続しても<br>
+        　　　　　　　　ウェイトが増えないよう修正<br>
+        <br>
+        Ver3.105　2022/12/17<br>●【マップ描画】特定条件において、マップの下端の2マスに置かれた<br>
+　　　　▲タイルに重なってもキャラクターが上に表示されてしまうバグを修正<br>
+<br>
+●【Game.ini】「SelectedText_to_ClipBoard_F2=」の行を追加。<br>
+　デフォルトは0です。1にしてゲームを起動すると、F2キーを押すことで<br>
+　「選択中の選択肢」→「なければマウスカーソル上の文字列ピクチャの文字列(不透明度1以上)」<br>
+　をクリップボードにコピーできます。<br>
+<br>
+●【Config.exe】iniファイルの保存処理をUnicodeに対応。<br>
+　　　　　　　日本語以外のロケールで起動した場合は自動で英語になる機能を追加。<br>
+<br>
+●【ダウンロード】POST時のContent-Typeを変更できる裏技を追加。<br>
+　「POST送信」文のどこでも「&lt;&lt;CONTENT&gt;&gt;～～&lt;&lt;CONTENT_END&gt;&gt;」と入れると<br>
+　送信時のContent-Typeヘッダを～～部分で上書きできます。<br>
+【入力例】&lt;&lt;CONTENT&gt;&gt;application/json&lt;&lt;CONTENT_END&gt;&gt;～ここにPOST内容～<br>
+　※デフォルトでは&lt;&lt;CONTENT&gt;&gt;application/x-www-form-urlencoded&lt;&lt;CONTENT_END&gt;&gt;が<br>
+　　入っているのと同じ処理が行われています。<br>
+        　※&lt;&lt;CONTENT&gt;&gt;～&lt;&lt;CONTENT_END&gt;&gt;部分は削除されて送信されます。<br>
+<br>
+Ver3.104　2022/12/14<br>
+●【文字列操作】＜→の特殊文字を消去して格納＞の内部文字数が<br>
+        　　　　　　　　　消去前のまま変わらないバグを修正<br>
+        <br>
+Ver3.103　2022/12/12<br>
+●【変数操作+】 「タイル属性の取得」の値が全て-1で返ってきてしまうバグを修正<br>
+<br>
+        ●【ピクチャ】「お手軽ウィンドウ」で表示したピクチャに「変換」系エフェクトを使用すると<br>
+        　　　　　　　その画像が見えなくなったり極端に動作が重くなるバグを修正。<br>
+        <br>
+        Ver3.102　2022/12/11<br>
+●【文字列操作】 「↓のファイル内容読込」の隠し機能にある<br>
+　&lt;&lt;GET_MAPEVENT_ID_FROM_NAME&gt;&gt;と&lt;&lt;GET_COMMONEVENT_ID_FROM_NAME&gt;&gt;で<br>
+　イベントが見つからなかったとき「-1」でなく「&lt;&lt;NotFound&gt;&gt;」が格納されてしまうバグを修正<br>
+<br>
+●【文字列操作】 「↓のファイル内容読込」の隠し機能にある<br>
+　&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;に致命的なメモリ漏れバグがあったのを修正<br>
+<br>
+        Ver3.101　2022/12/09<br>
+        ●【フォント】ロード時に特定のフォントがMeiryoに変わってしまうことがあるバグを修正<br>
+        <br>
+        Ver3.10　2022/12/08<br>
+        ●【文字列操作】「をﾌｧｲﾙ↓に出力」コマンドに「UTF-8/BOM有[基本]」「UTF-8/BOMなし」のオプションを追加。<br>
+        　　　　出力するUTF-8テキストにBOMの有無を設定します。よく分からなければ「BOM有」にしておいてください。<br>
+        　　　　文字列をCSVファイルとして出力する場合などは「有」にしておかないとExcel側で文字化けしてしまいます。<br>
+　　　（なお、過去に入力されたコマンドは「UTF-8/BOMなし」になっています）<br>
+<br>
+●【エフェクト】「キャラ」エフェクトに「移動アニメ強制」を追加。<br>
+        　　　　　　ONにするとキャラを強制的に「移動中アニメ」状態にできます。<br>
+        　　　　　　主に「～T.png」や「～TX.png」の画像のキャラのピクセル移動中のアニメ切り替え用に用意されました。<br>
+        <br>●【フォント】ロード時に特定のフォントがMeiryoに変わってしまうことがあるバグを修正<br>
+<br>
+Ver3.092　2022/12/07<br>
+        ●【全体】メモリ溢れする可能性があった場所をいくらか修正。挙動には変化はありません。<br>
+        <br>
+        Ver3.091　2022/12/05<br>
+●【文字列操作】 裏技の&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;において<br>
+        　　　　　　　　　　全角記号￠がまだ半角（1）分として認識されるのを修正<br>
+        <br>●【ゲーム基本設定】 使用フォントをすべて空欄に設定した状態でゲームをセーブ＆ロードすると、<br>
+        　　　　　　　　　　　　デフォルトフォントがMeiryoからMSゴシックに変わるバグを修正<br>
+        <br>●【起動時】使用したGame.exeのバージョンがEditorのバージョンより<br>
+　　　　　古い場合に出る初期エラーメッセージが文字化けしていたのを修正<br>
+<br>
+●【暗号化データ】暗号化データ使用時に強引にテストプレイすると出てくる<br>
+　　　　　　　　Log.txtにてメモリリークが検出されるのを修正<br>
+　　　　　　（ライブラリ作者様に対応していただきました、ありがとうございます！）<br>
+        <br>
+        Ver3.09　2022/12/03<br>
+●【PNGファイル読込】一部の昔のツールで軽量化したPNG画像を<br>
+　　　　　　　　　　読み込んだ際に起きる不具合が修正されました。<br>
+　　　　　（ライブラリ作者様に対応していただきました、ありがとうございます！）<br>
+<br>
+●【マップイベント】マップイベントとしてタイル画像を設定したとき、<br>
+　　　　　　　指定した画像と違うものが表示されることがあるバグを修正<br>
+<br>
+●【文字列操作】 裏技の&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;の<br>
+　　　　全角英数字と全角記号が1バイトとして認識されるバグを修正<br>
+<br>
+●【文字列操作】 裏技の&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;で<br>
+    　　　　Tab文字コードをカウントさせるとクラッシュするバグを修正。<br>
+　　　　　　Tabコードのようにカウントできない文字は0として処理されます。<br>
+<br>
+●【文字列操作】「↓のﾌｧｲﾙをBase64で読込」を繰り返すと<br>
+　　　　　　メモリ溢れする可能性があったバグを修正<br>
+        <br>
+        Ver3.083～　2022/11/29<br>
+●【デバッグ文】Ver3.082のデバッグ文の修正でデバッグウィンドウを出しながらの<br>
+　　　　　　ピクチャ処理時にクラッシュすることがあるバグが出ていたのを修正<br>
+        <br>Ver3.082～　2022/11/29<br>
+●【デバッグ文】PictureWatch機能について、ディレイ指定されたピクチャが<br>
+　　「実際に処理されるタイミング」にもデバッグ文として表示される機能を追加<br>
+<br>
+●【プロ版機能（プロ版）】PNGスクリーンショットの撮影処理が透過PNGになっていたバグを修正。<br>
+　　　　　いつものPrintScreenで撮れるものと同じにしておきました。<br>
+<br>
+●【システム変数】マップ拡大率100％以外の状況で「Sys122:Map&amp;Evｽﾞｰﾑ時なめらか化(1=YES)」に<br>
+　　1を入れるとタイルの隙間が見えてしまうバグを修正。<br>
+　　ただ隙間の黒い空間はなくなっても隣のチップの色が映り込んでしまうので、<br>
+　　この機能自体は実用的ではない気がしました。「α版」と付けておきます。<br>
+<br>
+●【システム変数】Sys122:Map&amp;Evｽﾞｰﾑ時なめらか化(1=YES)　の名前を<br>
+        　　　　　　　　Sys122:Map&amp;Evｽﾞｰﾑ時なめらか(1=YES)[α版]　に変更<br>
+        <br>
+        Ver3.081～　2022/11/27<br>
+●【DB操作】 CSV保存で存在しないフォルダを指定した場合、自動でフォルダが生成されるよう修正。<br>
+<br>
+●【データベース】データベース内に「×NoData」が多数ある状況でゲームを起動すると、<br>
+        　　　　　　　　　まれにクラッシュする可能性があるバグを修正<br>
+        <br>
+●【変数操作+】 ピクチャの「マウス重なってる？」の判定が内部的に<br>
+        　　　　　　　　1フレーム前のピクチャ座標を使用していたバグを修正。<br>
+        <BR>
+        Ver3.073　2022/11/26<br>
+●【システム文字列・プロ版】 ゲーム内から初回「SysS57：[P]クリップボード内容」に代入しても<br>
+　　　　　　　　　読み取り文字列が&lt;&lt;StartClipBoard&gt;&gt;のまま変わらないバグを修正<br>
+<br>
+●【システム文字列・プロ版】 「SysS57：[P]クリップボード内容」の文字列が<br>
+　　　　　　　Unicodeになっていなかったバグを修正。<br>
+<br>
+●【エフェクト】 マップの端で「マップ」エフェクトすると<br>
+        　　　　　　　　瞬間的にマップ画面が黒くなることがあるバグを修正<br>
+        <br>
+        Ver3.06～3.062　2022/11/24<br>
+        ●【Game.exe】 クラッシュを引き起こす要因が見つかったので修正してみました<br>
+        　　　　　　　　　（Ver3.062で修正）<br>
+        <br>●【エフェクト】 主人公の『重ねキャラチップ変更』で変更した状態でセーブすると<br>
+        　　　　　　ロード時にクラッシュするバグ修正（Ver3.061で修正）<br>
+<br>
+●【エフェクト】スクロールできない画面端が映るようにマップエフェクトのシェイクをすると<br>
+        　　画面外が映るタイミングで全てのマップチップが消えて真っ暗になる現象を修正（Ver3.061で修正）<br>
+<br>
+        <br>
+●【キャラの上下描画判定】ループ際の挙動などに問題があったため処理全体を作り直しました。<br>
+        　　　　　　　　もし大きな問題が出ていた場合はいったんVer3.05をご利用ください（Ver3.06で修正）<br>
+　　　　※なおプロ版で「ループ有り」マップ、かつ「ズームアウト」すると相変わらず<br>
+　　　　　マップイベント表示の動作が極めて不安定になりますのでご注意ください。<br>
+<br>
+●【マップチップ】▲チップの裏側のキャラチップがスクロールのたびに<br>
+        　　　　　　　　チップに隠れたり表示されたりする現象を修正（Ver3.06で修正）<br>
+<br>
+●【エフェクト】ピクチャ番号がマイナスのピクチャに対して、エフェクトの「色調変更」で<br>
+        　　　RGB値を99以下にしたとき反映されていなかったバグを修正（Ver3.06で修正）<br>
+　　　前の仕様で作っていた方もおられると思いますので、その場合は「ゲーム基本設定」の<br>
+　　　「Game.exe動作バージョン調整」を「旧Ver3.00以前の挙動」に変えると<br>
+　　　前の挙動のままにできます。<br>
+<br>
+●【変数操作+】エフェクトの「ピクセル移動」を使用して移動させた場合、<br>
+　　　キャラの「移動中？」取得が機能していなかったのを修正。<br>
+        　　　±1ピクセル以上移動できた場合に1を返します（Ver3.06で修正）<br>
+<br>
+●【イベント制御】 「キャラ動作指定」で「パターン1～5」を実行しても<br>
+　　　反映まで15フレームほど遅れるバグを修正。<br>
+　　　すでにこれに合わせて作っていた方もおられると思いますので、<br>
+        　　　前の挙動のままにしたい方は「旧Ver3.00以前の挙動」に変更してください（Ver3.06で修正）<br>
+<br>
+●【システム変数】 「Sys26：選択肢ｳｨﾝﾄﾞｳ X余白」の選択肢余白を入れた分だけ<br>
+        　　　　　　　　　　選択肢ウィンドウが右にずれていってしまうバグを修正（Ver3.06で修正）<br>
+<br>
+        <br>
+        Ver3.04-3.05　2022/11/23<br>
+        ●【クラッシュ問題】昔のツールで軽量化されたPNGファイルが原因で発生すると思われる<br>
+        　　　　　　　　　　まれなクラッシュへの対応を試みました(Ver3.05で修正)<br>
+        <br>
+      ●【変数操作+】 <b><span style="color : #ff0000;">「位置」指定の画面外エラーを止める裏技</span></b>を作っておきました。(Ver3.04で実装)<br>
+　1. Game.exeのある場所で右クリック→新規作成→テキストドキュメント　でテキストを作成。<br>
+　2. 1のファイルを「Game_PosErrorStop.txt」に名前変更し、Game.exeと同じ場所に置く。<br>
+　3. この状態でテストプレイすると、「変数操作+」の「位置」エラーを最初から抑制できます。<br>
+        <br>
+●【動作指定】キャラの「動作指定」時のマップセルフ変数の読み込み先が<br>
+      　　　　　　　間違っていたバグを修正(Ver3.04で修正)<br>
+<br>
+●【エフェクト】ゲーム基本設定で移動幅を「1マス」に設定している状態で<br>
+      　　　　　　　ピクセル移動をすると当たり判定がおかしくなるバグを修正(Ver3.04で修正)<br>
+<br>
+        ●【特殊文字】ルビ\r[X,Y]の表示速度が変則的になっていた現象の修正を試みました(Ver3.04で修正)<br>
+        <br>
+        <br>
+        Ver3.03　2022/11/22<BR>
+●【エフェクト】 ピクチャに「角度」を指定している状態だと、<BR>
+      　　　　　ピクチャエフェクトの「ズーム」が正常に機能しなくなっていたバグを修正(Ver3.03で修正)<BR>
+<BR>
+●【変数操作+】 ルビ付きの文字列ピクチャに対して「ピクチャ」の<BR>
+      　　　　　　　「画像サイズ（横）」を取得するとルビなしと違う値が出るバグ修正(Ver3.03で修正)<BR>
+<BR>
+●【変数操作+】画面外を指定して出るエラーは「テストプレイ時」のみ<BR>
+      　　　　　　　「最初の1回だけ」出るように修正(Ver3.03で修正)。<BR>
+<BR>
+      ●【ピクチャ】ファイル名末尾に_LOOPを付けた動画がループ再生されないバグを修正(Ver3.03で修正)<BR>
+        <br>
+        <BR>
+        <br>
+        <br>
+        --------------------------------------------------------------<br>
+        <br>
+        <BR>
+<B><a id="ver300_addbugEditor"></a><span style="font-size : 150%;">【エディターの追加修正】</span></B>　　<a href="#top" class="green">↑トップへ</a>　　<a href="#ver300_addbug" class="green">ゲーム部の追加修正へ</a><br>
+        <br>
+        Ver3.282　2024/02/21<br>
+        ●【コモンイベント】「コモンイベント」イベント編集時、文字列入力を含む<br>
+        　　　　　　コマンドの編集でクラッシュしてしまうことがあるバグを修正<br>
+        　　　　→　Ver3.280～3.281で発生していました<br>
+<br>Ver3.280　2024/02/20<br>
+●【場所移動】コモンイベントウィンドウから「場所移動」コマンドを開いたとき、<br>
+　　　　　「起動直後」や「マップ選択ウィンドウで編集マップを切り替えた直後」だと<br>
+　　　　　マップイベントが指定できないバグを修正<br>
+<br>
+●【コモンイベント】「コモンイベント」コマンドの「修正」画面を開くのが<br>
+　　　　　　　　　　いくらか高速化されました。<br>
+<br>
+●【コモンイベントウィンドウ】コモンイベント0内のコマンドでマップEv名が<br>
+　　　　　　　表示されていた場合、初回起動時にそのマップEv名が存在しないと<br>
+        　　　　　　　表示されてしまう現象を修正<br>
+        <br>
+        <br>Ver3.279　2024/02/06<br>
+●【イベントコマンド操作】「イベントコマンド→クリップボードへコピー」→<br>
+　　　　「コード貼り付け」する際、空の文字列(&quot;&quot;)を含んだコマンドが<br>
+　　　　正常にコピーできなくなっていたバグを修正（Ver3.278のみで発生）<br>
+<br>
+●【コモンセルフ使用状況】「コモンイベント」の「イベントの挿入」コマンドに対し、<br>
+　　　　　　　　「ページ」に指定されたコモンセルフ変数が1つずれて<br>
+　　　　　　　　使用されている扱いになっているバグを修正<br>
+<br>
+●【コモンセルフ使用状況】「コモンイベント」の「イベントの予約」コマンドに対し、<br>
+　　　　　　　　入力不能な「ページ」に指定されたコモンセルフ変数も<br>
+        　　　　　　　　使用されている扱いの判定対象に含まれてしまっていたバグを修正<br>
+        <br>
+<br>
+Ver3.278　2024/02/04<br>
+●【イベントコマンド操作】「イベントコマンド→クリップボードへコピー」→<br>
+　　　　「コード貼り付け」したとき、「(」が文字列内に含まれると<br>
+        　　　　「MoveRoute Read Error!」と出てしまうバグ修正<br>
+        <br>
+        Ver3.276　2024/02/02<br>
+        ●【動作指定】イベントコマンド上で「特殊コピー　イベントコマンド→クリップボードへコピー」→<br>
+        　　　「コード貼り付け」しても「動作指定」コマンドだけこれまでコピーできなかったのが、<br>
+        　　　コピーできるようになりました。<br>
+<br>
+●【コモンイベントウィンドウ】「セルフ変数使用状況」で「動作指定」内の<br>
+        　　　　　　　　　変数がチェック対象に入っていなかったバグを修正<br>
+<br>
+●【検索・置換ウィンドウ】「動作指定」コマンド内の変数がこれまで<br>
+　　　　　　　　　検索・置換の対象外になっていた問題を修正<br>
+<br>
+●【条件(変数)】「4変数を連動」を解除した状態で4択目の<br>
+　　　　　「Self、変、ｼｽﾃﾑ」などのボタンを押して「入力」したとき、<br>
+        　　　　　3択目の変数にも変数切り替えが行われてしまうバグを修正<br>
+        <br>
+<br>
+Ver3.275　2024/01/18<br>
+●【コモンイベント】「ｺﾓﾝEv名で呼出」で、「コモン2以下のコモンイベントを<br>
+　　　　選んで修正したときの問題」の修正の副作用で、「修正」時に文字列の<br>
+　　　　チェックが外れるバグが発生していたので、この修正分を戻しました。<br>
+<br>
+        Ver3.274　2024/01/18<br>
+●【コモンイベント】「ｺﾓﾝEv名で呼出」でコモン2以下のコモンイベントを<br>
+　　　選んでいると、そのコマンドを「修正」したときに挿入・予約欄側の<br>
+　　　コモンイベントが0番になる現象を修正<br>
+<br>
+●【コモンイベント】「結果の値」を変えてから結果を返さない別コモンに<br>
+　　切り替えてもそれが残ったままになっており、「入力」すると<br>
+　　本来結果値のないコモンイベントにも結果値が設定されてしまうバグ修正<br>
+　　（Ver3.273でのみ発生していました）<br>
+<br>
+●【コモンイベント】「イベントの挿入」「予約」で変数を指定したとき、<br>
+　　　そのコマンドを「修正」すると「結果の値」が選択可能になるバグ修正<br>
+<br>
+●【キー入力】「キー入力受け付け」の「キーボード全キー」で「特定キーのみ判定」したとき、<br>
+　　　300番以降の「対応キー」も説明欄に表示されるよう修正<br>
+　　→　311番あたりまでキーがあるのに表示されていませんでした。<br>
+<br>
+●【エフェクト】「ピクチャ」の「変換/色相/彩度/明度」を指定したコマンドを<br>
+　　「修正」する際、一度非アクティブにして再度アクティブにし直すと<br>
+        　　クラッシュするバグ修正<br>
+        <br>
+        <br>
+        Ver3.273　2023/12/31<br>
+●【場所移動】「移動先を見ながら指定」画面のマップツリーの<br>
+        　　　　　展開状態が「マップ選択ウィンドウ」側と同じようになるように修正<br>
+<br>
+●【変数操作】別のコモンイベントへ移動してもセルフ変数名が<br>
+　　　　　　更新されなくなっていたバグ修正(Ver3.272以降発生）<br>
+<br>
+●【コモンイベント】「ｺﾓﾝEv名で呼出」に\cself[5]などを入れたコマンドを<br>
+　　　「修正」すると入力欄が全てオープンになっていたが、<br>
+　　　そのうち「結果」欄だけがグレーアウトしてしまう現象を修正。<br>
+<br>
+●【データベースウィンドウ】下部入力欄にフォーカスが当たっているときに<br>
+        　　「Tab」を押すと一番下の項目（19、39番など）にしか飛ばない問題を修正<br>
+        　　→　選択中の項目の順番通りに飛ぶようになりました<br>
+<br>
+●【マップ選択ウィンドウ】ツリーの展開状態を変えた後に「データ更新」を押しても<br>
+　　　　　前の状態に戻ってしまうことがあるバグを修正<br>
+        <br>
+        <br>Ver3.272　2023/12/17<br>
+●【変数操作】右辺にV9-XX（最後の変数）などを選択した状態で、システムDBから<br>
+　　　　　　　通常または予備変数のデータ数を減らすとクラッシュするバグを修正<br>
+<br>
+●【変数名の表示】『変数操作』『変数操作＋』『ピクチャ』<br>
+　　　　『エフェクト』『セーブ・ロード操作』『イベント制御』『コモンイベント』<br>
+　　　　の変数名の表示欄の処理を微調整。<br>
+        　　　　コマンド入力ウィンドウを閉じたときは変数名表示欄を空白にするように、など。<br>
+        <br>
+<br>Ver3.271　2023/12/04<br>
+●【ゲーム基本設定】プロ版で設定できる画面サイズの横幅を最低100から150に変更。<br>
+        　　　　　→　100ピクセルの横幅にしてもタイトルバーの－□×ボタンの幅だけで<br>
+        　　　　　　　設定した画面幅を超えてしまい、画面が正常に表示されなくなるためです。<br>
+<br>
+●【マップイベント】「接触範囲拡張」欄が4文字以上になったら自動で250が入るよう修正。<br>
+        　　　　　　　また、手動で入力したとき限界(250)以上の数値が入ってしまうバグを修正。<br>
+        <br>
+<br>Ver3.261　2023/11/23<br>
+●【検索ウィンドウ】「検索」を選んだ場合<br>
+　　　　　　または「【コマンド文】から検索」を選んでいた場合、<br>
+　　　　　　検索/置換履歴が残らなくなっていたバグを修正<br>
+<br>
+●【コモンイベント コマンド】「イベントの挿入」の初期値がコモン0になるよう修正<br>
+<br>
+●【コモンイベント コマンド】コモンイベント名を変更した後に初めて開くと<br>
+　　　　　　　　　　　　　　古い名前がそのまま表示されているバグを修正<br>
+<br>
+●【コモンイベント コマンド】「イベントの挿入」の「修正」時、ホイールで<br>
+　　　　　　　　　　ドロップダウンメニューを上下させたとき、<br>
+        　　　　　　　　　　1回だけ元の位置に戻るバグを修正<br>
+        <br>
+<br>Ver3.260　2023/11/15<br>
+●【ゲームデータの作成】動作バージョンを固定化するオプションを追加。<br>
+        　　　→　ON推奨。チェックを入れて動作バージョンを固定すると、将来的に<br>
+　　　　Game.exeを新しいものに差し替えても正常に動作しやすくなります。<br>
+　　　(一方、動作バージョンが「最新」のままだとexe差替時に安定しません）<br>
+<br>
+●【検索ウィンドウ】マップイベントの「【コマンド文】から検索」で<br>
+　　　　　マップイベント全体を2周して探査してしまうバグを修正<br>
+<br>
+        ●【検索ウィンドウ】元と同じ場所のテキストでも、該当テキストがある場合は<br>
+        　　　　　　　　　　　「見つかりませんでした」と出ないように修正<br>
+<br>
+●【グラフィック選択】DBなどから「File」でファイルを選ぶとき、<br>
+　　　　　　　どれにも該当しないファイル名の場合に<br>
+　　　　　　　初期カーソルが一番上になっていなかった問題を修正<br>
+<br>
+●【ファイルの選択】『サウンド』コマンドなど画像以外での「File」選択時、<br>
+　　　　　　　　元のファイル名にカーソルが合っていないバグを修正<br>
+<br>
+●【マップイベントエディタ】起動条件の数値欄に「-」が直接入らなかったので<br>
+        　　　　　他と同様、数値しばりをなくす形に修正<br>
+        <br>
+<br>Ver3.251　2023/11/13<br>
+●【検索ウィンドウ】マップイベントに対して「イベントをまたいで検索」したとき、<br>
+　　　　　　　　　特定条件でクラッシュするバグを修正<br>
+<br>
+●【検索ウィンドウ】コモンイベントウィンドウでの「【コマンド文】から検索」で<br>
+　　　　　　　コモンイベント全体を2周して探査してしまうバグを修正<br>
+<br>
+●【バージョン】内部的な編集バージョンが更新されていなかったバグを修正。<br>
+　　→　ゲーム基本設定を保存し直さないと内部の編集バージョンの<br>
+　　　　数値が変わらないようになってしまっていました。<br>
+　　→　この数値はGame.exeが安全に起動できるかチェックするのに使われます。<br>
+<br>
+        ●【マップイベントウィンドウ】「アニメ速度」を「アニメ頻度」に変更<br>
+        <br>
+        <br>Ver3.250　2023/11/10<br>
+●【マップイベントウィンドウ】日本語IMEがONだとイベント一覧選択時にも<br>
+　　　　　　　　日本語入力されてキー操作が効かなくなる現象を修正<br>
+<br>
+●【マップ選択】「マップファイル名が設定されていません」エラーを以下のように修正。<br>
+　　　　　　　　→ 「マップ X(数値) を読み込もうとしましたが、<br>
+　　　　　　　　　　　マップファイル名が設定されていません」<br>
+<br>
+●【コモンイベントコマンド】特定の手順を行うと、ドロップダウンメニュー内の<br>
+　　　　　　　　　　コモンセルフ変数名が、いま選んでいるコモンイベントのものとは<br>
+　　　　　　　　　　別のものが出てしまう現象を修正<br>
+<br>
+●【コモンイベントウィンドウ】特定の手順で「一つ元に戻す」を行うと<br>
+　　　　　　　　　　　　　クラッシュすることがあるバグの修正を試みました<br>
+<br>
+●【データベースウィンドウ】ドロップダウンメニュー上で直接ホイール上下をしたとき<br>
+        　　　　　　　　　　　　　　特定方向に反応しない場合があるのを修正<br>
+        <br>
+<br>
+Ver3.246　2023/10/28<br>
+●【グラフィック選択】タイルセットでクリック後にスクロールし、クリックすると<br>
+        　　　　　　　　選択中の四角表示が2つ出てきてしまうバグを修正<br>
+        <br>
+Ver3.244　2023/10/27<br>
+●【新規マップ作成】メインメニュー欄から新規マップのファイルを<br>
+　　　　　　　　　　作れなくなっていたバグを修正<br>
+<br>Ver3.243　2023/10/27<br>
+●【コモンイベントウィンドウ】コモンイベントを複数コピーして「一つ元に戻す」を<br>
+　　　　　　　　繰り返すとまだ名前だけ残ったりすることがあるバグを修正<br>
+<br>
+●【変数操作+】「呼び出し元マップイベント」を指定したとき、コマンド一覧側で<br>
+　　　　「このマップイベント」となっていたのを「呼出マップイベント」に表記変更<br>
+<br>
+●【グラフィック選択】ホイールで右側の画像欄をスクロールできるように修正<br>
+<br>
+●【新規マップ作成】新マップ作成時、格納フォルダの選択欄が正常でなくなっていたバグ修正<br>
+<br>
+        ●【新規マップ作成】新規マップのファイルが作れなくなっていたバグを修正<br>
+        <br>
+<br>
+        Ver3.242　2023/10/22<br>
+●【コモンイベントウィンドウ】起動直後にコモンイベントウィンドウの「一つ前に戻す」を押すと<br>
+　　　　　　　　　　　　　　　クラッシュするバグ修正<br>
+<br>
+●【検索ウィンドウ】マップイベント・コモンイベントの検索時、検索対象が一周して<br>
+        　　　　　　　　　自イベントに戻ってきたときの挙動がおかしかったのを修正<br>
+        <br>
+        <br>Ver3.241　2023/10/21<br>
+●【コモンイベント】コモンイベントを複数コピーして「一つ元に戻す」を繰り返すと<br>
+        　　　　　　　　　名前やコマンドの一部だけ残ることがあるバグを修正<br>
+        <br>
+<br>
+        Ver3.240　2023/10/14<br>
+●【Editor.ini】「Data」というゲームフォルダ内にEditor.exeを置いて起動すると、Editor.iniが<br>
+        　　　　　　　　Editor.exeがあるより一つ上のフォルダに生成されてしまうバグを修正<br>
+        <br>
+<br>Ver3.233　2023/10/12<br>
+●【起動時の引数】Editor(Pro).exeをコマンドラインなどから引数を付けて、<br>
+　　　　　　「-f &lt;読み込みフォルダ&gt;」（※読込Dataフォルダ変更）として起動しても<br>
+　　　　　　読み込むフォルダが変わらないバグを修正<br>
+<br>
+●【コモンイベント】マップイベントからの「イベントの挿入」で「このイベント」を<br>
+　　指定し、イベントコマンドの修正をすると選択欄が正常に表示されなくなるバグ修正<br>
+<br>
+●【コモンイベント 入力内容の設定】Windowsの拡大率によっては文字がかぶって<br>
+　　　　　　　　「ｺﾓﾝｾﾙﾌ?」の端が見にくくなっていたので、画面の表記を調整しました<br>
+<br>
+●【マップ選択ウィンドウ】マップツリー変更時、ドラッグ時、「データ更新」時の<br>
+　　　　　　　　　　　　安定性を向上させました。<br>
+<br>
+●【マップ選択ウィンドウ】ツリーの展開・閉じるを行う+-ボタンの当たり判定がずれており、<br>
+　　　　　クリックしても反応しないように感じられる問題があったので、<br>
+　　　　　展開・閉じるクリックの反応範囲を「左端全部」まで拡張<br>
+<br>
+●【マップ選択ウィンドウ】「新規マップ作成」を開いて「キャンセル」→「データ更新」すると<br>
+        　　　　　　　　　　　　ツリー上に空白のマップが一つ生成されるバグを修正<br>
+        <br>
+        <br>
+        Ver3.232　2023/10/05<br>
+●【イベントウィンドウ】スクロール可能な状態でイベントコマンドを削除・切り取りした後、<br>
+        　　　　　　　　　　　選択位置が見た目とズレておかしくなる現象を修正<br>
+　　　→　Ver3.230の「削除・切り取り時にスクロール位置が変わらないようにする修正」の<br>
+　　　　　副作用でした。コマンド終わり付近で削除・切り取りが行われたときに限り、<br>
+　　　　　スクロール位置の自動補正を行うよう修正しました。<br>
+<br>
+        ●【検索・置換】「イベントの挿入」の「ページ数」の値が「数値検索」で見つからないバグを修正。<br>
+        　　　→　ページ値が内部的に1ずれていたので、検索や置換ではそれを加味するようにしました。<br>
+        <br>●【イベントウィンドウ】F12で「イベントの挿入」からコモンイベントに飛ぶとき、<br>
+　　　　　　　　　特定状況のマップイベントからだとクラッシュするバグを修正<br>
+<br>
+<br>
+        Ver3.230　2023/09/28<br>
+●【キー入力】「キー入力受け付け」の一部のコンボボックスの横幅を延長<br>
+<br>
+●【イベントウィンドウ】イベントコマンドを削除・切り取りしたとき、その<br>
+　　　　　　コマンドが画面内にあるならスクロール位置が変わらないように修正<br>
+<br>
+●【コモンイベント】マップイベントを呼び出すときの「ページ」指定欄が<br>
+　　　　　　変数に対応していなかった問題を修正<br>
+　　　→　実はGame側は「ページ数」の変数処理に対応していましたが、<br>
+        　　　　　Editor側ではそうなっていませんでした。<br>
+<br>
+<br>
+        Ver3.221　2023/09/22<br>
+●【コモンイベントウィンドウ】イベントをまたいだ置換後に「一つ元に戻す」を行うと<br>
+　　　　　　　　　　今開いているコモンイベントに「戻したコモンイベント」が丸々<br>
+　　　　　　　　　　上書きされてしまうバグを修正<br>
+<br>
+●【コモンイベントウィンドウ】「一つ元に戻す」がコモンイベントの切り替えをしても<br>
+　　　　　　　　　　維持されるように修正<br>
+　　　　　　→　従来はイベント切り替えごとに「元に戻す」がリセットされていました。<br>
+<br>
+●【コマンド検索・置換機能】0行目に条件分岐やループがあると置換後に<br>
+　　　　　　　　　次の位置へ正常にジャンプできなかったバグを修正<br>
+<br>
+●【コマンド検索・置換機能】「数値・変数」置換で小さい数値や特定の数値を置換すると<br>
+　　　　　　　　　　　　　クラッシュする可能性があったバグを修正<br>
+<br>
+●【マップイベントウィンドウ】「半歩左に設置」「半歩上に設置」がオンのとき、<br>
+　　　　ウィンドウ内のイベントリストからイベントを選択すると<br>
+        　　　　マップイベントウィンドウに表示される座標が正しくなくなるバグを修正<br>
+        <br>
+        <br>Ver3.220　2023/09/16<br>
+●【コモンイベント入力】変数と文字列の各「入力」欄の横サイズを増加<br>
+<br>
+●【マップイベントウィンドウ】「イベントの挿入」に対してF12したとき、<br>
+　　　　　　　一つ前にF12したIDのコモンイベントが表示されたり、<br>
+　　　　　　　クラッシュすることがあるバグの修正を試みました。<br>
+<br>
+●【イベントコマンド欄】「DB操作」の「新データ挿入」のコマンド欄上の表記を修正<br>
+　　　　→　可変DB[～～] 【の直前に】 データ[1]個の新データを挿入<br>
+        　　　　　　という表記になりました<br>
+        <br>
+        <br>Ver3.216　2023/09/02<br>
+●【マップイベントウィンドウ】起動条件ボタン（「決定キーで起動」など）に<br>
+　　　　　　　　横線が入る現象が起きにくくなるよう修正<br>
+<br>
+●【全体のウィンドウ】Windowsの拡大125％時に一部表記が隠れる問題にいくらか対応<br>
+<br>
+<br>Ver3.215　2023/08/23<br>
+●【ゲームデータの作成】「フォルダ指定」を開いたとき、<br>
+　　初期フォルダとして「Dataフォルダ内」が指定されていたのを<br>
+　　「Game.exeと同じフォルダ」を初期フォルダとするよう変更<br>
+<br>
+●【エフェクト】ダイアログの文字列が一部見えなくなっていたのを修正<br>
+<br>
+●【マップエディタ】タイル40×40の場合のみ、拡大率1/8でマップ表示すると<br>
+        　　　　イベントの拡張範囲のラインがずれて表示されるバグを修正<br>
+        <br>
+<br>Ver3.210　2023/08/11<br>
+●【イベントウィンドウ】コマンド欄でF12を押したとき、以下の挙動を追加しました。<br>
+　　-「DB操作」なら、そのDBのタイプ・データ・項目を開く<br>
+　　-「ラベルに飛ぶ」ならジャンプ先のラベルへ移動<br>
+<br>
+●【マップイベントウィンドウ】コモンイベントウィンドウのF12キーの機能を<br>
+　　　マップイベント内でも使えるように。<br>
+<br>
+●【マップ基本設定】マップが小さすぎるとスクロールに異常が発生するため、<br>
+　　　　　設定できるマップサイズの最小値を横8、縦6から、横10、縦8以上に変更。<br>
+<br>
+●【起動時】コモンイベントファイルやシステムデータベースのファイルが破損している場合、<br>
+　　　　　　（クラッシュせず認識できれば）起動時にそのことを伝える機能を追加。<br>
+<br>
+<br>
+        Ver3.208　2023/08/04<br>
+●【データベース】Ctrl+R、Ctrl+Shift+Rの前タイプ・前データに戻るショートカットを<br>
+　　　　　　使ったとき、ウィンドウ右下の入力欄も戻った先に更新されるように修正。<br>
+<br>
+        Ver3.207　2023/07/14<br>
+●【コマンド検索ウィンドウ】「全てのイベント」をオンにして<br>
+　　　　　　　　　　　検索したときにフリーズすることがあるバグを修正<br>
+<br>
+●【コマンド検索ウィンドウ】イベントの1個目のイベントコマンドが<br>
+　　　　　　　　　　「置換」できないことがあるバグを修正<br>
+　　　　　　　　　　<br>
+●【コマンド検索ウィンドウ】ある行を「置換」した直後、置換文を変えて<br>
+　　　　　　　　　　　再び「置換」しようとしても違う場所に飛んでしまう現象を修正<br>
+<br>Ver3.206　2023/07/08<br>
+●【マップ選択ウィンドウ】右クリック→新規マップの作成→右上の×でキャンセルすると<br>
+　　　　　　　　　　　マップ選択ウィンドウの更新が停止するバグを修正<br>
+<br>
+●【イベントウィンドウ】検索時、同じイベント内にしか該当文字列がない状態で<br>
+　　　　　　　「全てのイベント」を対象に検索すると見つからないことがある現象を修正<br>
+<br>
+Ver3.20　2023/06/09<br>
+●【マップイベントウィンドウ】マップ上でダブルクリックしたとき、<br>
+　　　　　　他ウィンドウが上にあってもウィンドウが最前面に来ない現象を修正<br>
+<br>
+●【マップイベントウィンドウ】「主人公より上」を「前面表示」に変更<br>
+<br>
+●【動作指定】「主人公より上ON/OFF」（旧「最前面表示ON/OFF」）を<br>
+　　　　　「前面表示ON/OFF」に変更し、以下の説明文をボタンの下に追加。<br>
+　　　　　「※前面表示：通常Evや▲ﾁｯﾌﾟより上、★ﾁｯﾌﾟより下に表示」<br>
+<br>
+●【ゲーム基本設定】「Game.exe動作バージョン調整」のところに説明ページへのリンクを追加<br>
+　　　　　　　　　　（[?]ボタン）<br>
+<br>
+●【キー入力】キーボード283（PrintScreen）キーを指定すると<br>
+　　「※PrintScreenは正常に機能しない可能性が高いです！」と下部説明欄に表示するように<br>
+　　（PrintScreenは他のソフトに入力を吸われやすく、<br>
+        　　　ウディタ上で押しても認識されないことが多いです）<br>
+        <br>
+        <br>Ver3.192　2023/06/01<br>
+●【ゲーム基本設定】「Game.exe動作バージョン調整」に「Ver3.19」が<br>
+　　　　　　　　　　入っていなかったのを追加<br>
+　　　　　　　　　　<br>
+●【テストプレイ起動】文字入力時の誤操作を防ぐため「コマンド入力ウィンドウ」と<br>
+　　　　　　　　　　「データベースウィンドウ」上では「F9」を押しても<br>
+　　　　　　　　　　テストプレイが起動しないように修正<br>
+　　　※「Ctrl+T」を押すとこれらのウィンドウでもテストプレイが起動できます。<br>
+<br>
+●【動作指定】「最前面表示 ON/OFF」が誤解をまねく表現だったので<br>
+　　　　　　　「主人公より上 ON/OFF」に変更<br>
+<br>
+        ●【データベース】検索時、右下欄も検索文字列の位置までスクロールするよう修正<br>
+        <br>
+Ver3.191　2023/05/29<br>
+●【マップ編集時】複数のマップに同じマップファイル名が設定されている場合、<br>
+　　　　　「ゲーム開始位置に設定」をしたときに指定したマップとは<br>
+        　　　　　異なるマップ番号が開始マップになってしまうことがあるバグを修正<br>
+<br>Ver3.190　2023/05/28<br>
+●【マップイベントウィンドウ】「当たり判定■」を押しても接触範囲拡張の赤いラインが<br>
+　　　　　　　　　　　　　　即座に更新されないバグを修正<br>
+<br>
+        ●【コモンイベント】特定の手順によって「予約」チェックを選択時でも<br>
+        　　　　　　　　　　「結果」欄が選択可能になってしまう(グレーにならない)バグを修正<br>
+        <br>
+Ver3.184　2023/05/15<br>
+●【変数操作+】「キャラ」の項目の「X座標(精密)」を「X座標(精密) *ｷｬﾗ左側位置」に、<br>
+　　　　　　　「Y座標(精密)」を「Y座標(精密) *ｷｬﾗ足下-1位置」に記述変更しました。<br>
+<br>
+        Ver3.182　2023/05/07<br>
+●【イベントの挿入】Ctrl+Shift+F6/F7でコモンを増減させると別コモンの<br>
+　　　　　　　　「入力」情報が参照されてしまうバグを修正<br>
+　　　　　　　（なるべく直しましたが何度かウィンドウをアクティブ・非アクティブ<br>
+        　　　　　　　　切り替えしないといけない場合もあるかもしれません）<br>
+        <br>
+Ver3.181　2023/05/07<br>
+        ●【コモンイベントウィンドウ】Ctrl+Shift+F6/F7でコモンを増減させると、エディタを<br>
+        　　　　　　　　再起動するまで「イベントの挿入」コマンド一覧の表示情報が狂うことがあるバグを修正<br>
+        　　　　　→　まだ「イベントの挿入」入力ウィンドウのコモンイベントの「入力」が狂うバグが残っています<br>
+        <br>Ver3.180　2023/05/04<br>
+●【自動マップ生成】自動マップ生成を行ってもマップの変更フラグが立っておらず、<br>
+　　　　　　　閉じようとしたときなどにマップの保存確認画面が出ないバグを修正<br>
+<br>
+●【サウンド】SEの「(停止)」を「(停止) [遅延SE消去]」に修正し、<br>
+　　　　　　SEの停止コマンドは遅延SEも消去されることを明記しました。<br>
+        <br>
+        <br>Ver3.176　2023/04/25<br>
+●【エディター】各種データベースを開くボタンやメニューに一言説明を追加。<br>
+　　　・ユーザデータベース（固定値データ）<br>
+　　　・可変データベース（変数データ）<br>
+　　　・システムデータベース（基幹データ）<br>
+<br>
+●【エディター】「マップ選択」ウィンドウと「変数呼出値/特殊文字一覧」ウィンドウの<br>
+　　　　　　　表示位置と前回表示状態を記憶するように修正しました。<br>
+<br>
+●【メニューバー】ヘルプ欄の「仕様変更情報を開く」と<br>
+　　　　　「変数呼び出し値/特殊文字一覧」の位置を入れ替え（後者が一番下に）。<br>
+<br>
+●【マップイベントウィンドウ】特定の状況でイベント一覧のイベントを<br>
+　　　ダブルクリックしたとき、エディターのマップが真っ黒になることがあるバグを修正<br>
+<br>
+●【場所移動】特定の移動先座標とマップサイズのとき、<br>
+        　　　　　　「移動先を見ながら指定」ウィンドウの初期表示が変になるバグを修正<br>
+        <br>
+        <br>Ver3.171　2023/03/28<br>
+●【エディター】無料版のエディターが特定状況で起動できなくなっていたバグを修正<br>
+<br>
+Ver3.170　2023/03/27<br>
+●【エディター】起動時、前バージョンからGame.exeの仕様変更があった場合は<br>
+　　　　　　　その内容を表示するよう修正<br>
+<br>
+●【マップイベントウィンドウ】XやDelキーでイベント一覧からマップイベントを削除するとき、<br>
+　　　　　間違って削除してしまうことがあるのでイベント削除の際は確認画面が出るよう修正<br>
+        　　　　　（Shiftを押しながらXやDelキーを押すと確認画面が出ずに処理されます）<br>
+        <br>
+Ver3.165　2023/03/16<br>
+●【場所移動】タイルサイズが40、48のときだけ「移動先を見ながら指定」画面で<br>
+        　　　　　　　イベントが見えなくなるバグを修正<br>
+        <br>
+Ver3.162　2023/03/05<br>
+●【ゲームデータ作成】暗号化バージョンを「最新」にしてゲームデータを作成した場合、<br>
+　　　　　　　　　次からは実際に使われた暗号化Verが初期値になるよう修正。<br>
+        　　　　（知らない間に暗号化バージョンが変わり、前と違う暗号化ファイルが混ざって<br>
+　　　　　ファイルが読めなくなる問題を避けるためです）<br>
+<br>
+        ●【マップイベントウィンドウ】マップ画面の端にいるイベントへ、リストからダブルクリックして<br>
+        　　　　　　　　ジャンプしたとき、見た目とエディタ内の実座標がずれるバグを修正<br>
+<br>
+●【変数操作+】「レイヤー？のチップ番号」のイベントリスト上の表記が<br>
+　　　　　　　　[1-23:ｵｰﾄ, 24-:etc]となっていたミスを修正<br>
+        　　　　　　　（正しくは[1-31:ｵｰﾄ, 32-:etc]）<br>
+        <br>
+Ver3.160　2023/03/01<br>
+●【コモンイベントウィンドウ】「イベントの挿入」のF12ジャンプが番号指定の<br>
+　　　　　　　　　　　　　コモンイベント呼出では機能しなかった問題を修正<br>
+<br>
+Ver3.159　2023/02/26<br>
+●【システム変数】「Sys108:[読]現ﾌﾚｰﾑのｺﾏﾝﾄﾞ処理数」の名前を<br>
+        　　　　　　　　「現ﾌﾚｰﾑ開始からのｺﾏﾝﾄﾞ処理数」に変更<br>
+        <br>
+Ver3.158　2023/02/23<br>
+●【コモンイベントウィンドウ】F5で前に選んでいたコモンイベントへ、F6で次のコモンイベントへ<br>
+　　　　　　　　　　　　　　ジャンプする機能を追加しました。<br>
+<br>Ver3.157　2023/02/19<br>
+        ●【ゲーム基本設定】「Game.exe動作バージョン調整」に「現Ver3.155時点の挙動で動作」を追加<br>
+<br>
+Ver3.155　2023/02/18<br>●【コモンイベントウィンドウ】「イベントの挿入」コマンド上で「F12」を押すと<br>
+　　　　　　　　　　　そのコモンイベントにジャンプする機能を追加。<br>
+        　　　　　　　　　　　サポートツール、<b><a href="https://alpha-stella.com/tool/wodistant/" target="_blank">Wodistant</a></b>の機能を参考にさせていただきました。<br>
+        　　　　　　　　　　　すばらしいツールなので皆さまもぜひ！<br>
+        <br>Ver3.154　2023/02/17<br>
+●【ピクチャ】縦分割数のスピンボタンが灰色になって上下の数値変更ができなくなるバグ修正<br>
+<br>
+Ver3.152　2023/02/13<br>
+●【システムDBウィンドウ】システムDBウィンドウだけ、内容を書き換えた後<br>
+　　　　　　　メニューバーのSysDBアイコンでウィンドウを閉じる→表示、とおこなうと<br>
+　　　　　　　見た目がそのままで実質キャンセルされている状態になるバグ修正<br>
+<br>
+Ver3.151　2023/02/13<br>
+●【エディターオプション】 イベントコマンドの表示順を変更していると、<br>
+　　　　デフォルトのコマンドと変更した順番のイベントコマンドの表示が<br>
+        　　　　混ざる現象の修正を試みました。<br>
+        <br>
+Ver3.150　2023/02/11<br>
+●【ピクチャ】ファイル名欄の横にあるスピンボタンが、<br>
+        　　　　　　　押せないときでも押せてしまうことがある現象を抑制<br>
+        <br>
+Ver3.147　2023/02/06<br>
+        ●【変数操作・DB操作】コマンドの「修正」時、数値欄を空にしてその欄をコンボボックスに切り替え、<br>
+　　　　　　　　　　「OK」を押すと「Enter an integer.」と出て進まなくなる現象を修正。<br>
+<br>
+Ver3.145　2023/02/03<br>
+●【翻訳機能】Editor.exeの機能として、システム変数、システム文字列名を書き替えられる<br>
+　　　　Editor.Lang.SystemValue.txt、Editor.Lang.SystemString.txtを<br>
+        　　　　翻訳用リソースデータに追加。<br>
+        <br>
+Ver3.142　2023/01/25<br>
+●【マップイベント】「イベント制御」コマンドの「キャラ動作指定」で「キャンセル」すると、<br>
+　　　　　　　　　以後、新規のマップイベントが作れなくなるバグを修正<br>
+<br>Ver3.141　2023/01/24<br>
+●【マップイベントウィンドウ】 Ver3.140の修正で新たなクラッシュバグが発生していたのを修正<br>
+<br>
+Ver3.140　2023/01/24<br>
+●【ゲームデータの作成】「暗号化バージョンの選択」に「Ver3.14～時点の暗号化」が<br>
+　　　　　　　　　　　　新たに追加されました。<br>
+<br>
+        ●【検索ウィンドウ】 マップイベントの検索時、「全てのイベント」に対して検索した後、<br>
+        　　　　　直前のマップイベントを選択すると右側のイベントコマンドの一覧が更新されず、<br>
+　　　　　そこをクリックするとクラッシュすることがあるバグ修正<br>
+<br>
+Ver3.139　2023/01/22<br>
+        ●【基本システム】空データの基本システムのバージョンが3.14になっていなかったのを修正<br>
+        <br>
+Ver3.138　2023/01/17<br>
+●【セルフ変数使用状況】「変数操作」と「条件（変数）」において、<br>
+　　　　「データを呼ばない」にチェックが入っているCself変数は<br>
+　　　　「使用中」とならないよう修正<br>
+<br>
+●【コモンイベントウィンドウ】「条件」の「更新」ボタンを押すと<br>
+　　　　変数が必ず「コモンセルフ0番」に戻ってしまう現象を修正<br>
+<br>
+●【条件(変数)】数値入力欄でスピンボタンまたは上下キーを<br>
+　　　　　　　しばらく押しっぱなしにしていると特定のタイミングから<br>
+        　　　　　　　数値3桁ごとに「,」が入ってしまう現象を修正<br>
+        <br>
+Ver3.136　2023/01/15<br>
+●【チップ処理】項目内の「レイヤー1～3のチップ番号」の「etc:」の表記が<br>
+        　　　　32ではなく「etc:24」のままになっていたミスを修正<br>
+        <br>
+Ver3.135　2023/01/12<br>
+●【検索ウィンドウ】「条件分岐(文字)」コマンドの左辺文字列変数が<br>
+　　　　　　　　　　検索・置換で見つからないバグを修正<br>
+<br>
+Ver3.134　2023/01/11<br>
+●【コモンイベントウィンドウ】セルフ変数使用状況の文字入力欄が重なっていて<br>
+　　　　　カーソルを合わせたときに点滅してしまうときがあるので入力欄の縦幅を少し縮小<br>
+<br>
+●【場所移動】 「移動先を見ながら指定」の場所移動地点の設定において<br>
+　　　　「1/2」表示で「精密マス指定（1マス＝2として計算）」にチェックを入れたとき、<br>
+　　　　　マップイベントの表示位置がスクロール分ずれてしまうバグを修正<br>
+        <br>
+●【場所移動】「移動先を見ながら指定」においてマップ端にスクロールすると<br>
+        　　　　　　　ガタガタする現象を修正（枠部分の点滅は直せませんでした）<br>
+        <br>
+Ver3.131　2023/01/05<br>
+        ●【ゲームデータ作成】Editorの暗号化がVer3.120以前より不安定になっていたので<br>
+        　　　　　　怪しい部分を前と同じ処理に戻しました（警告周りの処理には変更ありません）<br>
+        <br>
+Ver3.130　2023/01/04<br>
+        ●【ゲームデータ作成】ロケール（言語）を「日本語」以外にして日本語ファイル入りのゲームデータを<br>
+        　　暗号化するとエラーが出ないまま進み、Game.exe実行時に暗号化した日本語ファイルが読めなくなるため、<br>
+        　　別ロケールで読めなさそうな日本語ファイルがあった場合は暗号化時に警告が出るよう修正を試みました。<br>
+        <br>
+        Ver3.123　2022/12/31<br>
+        ●【ゲーム基本設定】「Game.exe 動作バージョン調整」に「現Ver3.123の挙動で動作」を追加<br>
+        　- この直前の「Ver3.06時点」より前の設定するとピクチャを「自由変形」で「表示」時に<br>
+        　　内部的に「角度・拡大率が同値」として処理されます。<br>
+        　（Ver3.123以降では「角度0・拡大率100」になります）<br>
+        <br>Ver3.121　2022/12/30<br>
+●【チップ処理】「単体チップ設定を変更」の「全初期化」がオンのコマンドを<br>
+　　　　　　修正すると全初期化のチェックが外れているバグを修正<br>
+<br>
+●【チップ処理】「単体チップ設定を変更」の「全初期化」がオンのときでも<br>
+　　　　　　チップ選択ボタンが押せてしまうバグを修正<br>
+<br>
+●【データベース設定画面】「挿入」「削除」「貼り付け」ボタンを押した後、<br>
+　　　　　そのボタンになるべくそのままフォーカスが戻るよう修正<br>
+　　　　　（うまくやればキーボードで連打可能になります）<br>
+<br>
+●【ゲームデータ作成】「Dataフォルダまるごと暗号化」したときに作られる<br>
+　　「Data_xxxTMPxxx」フォルダが「処理中断」すると残る現象を修正。<br>
+        　　（今のところ、出力先のデータ自体は処理途中のまま残ります）<br>
+        <br>●【イベント・データ選択欄】コモンイベントウィンドウ、マップイベントウィンドウ、<br>
+　　データベース画面において、中クリックをドラッグしながら上下スライドで<br>
+　　リストボックスをスクロールさせられるように修正<br>
+        　（Editor.ini内の「ListBox_MClickDrag=1」を「0」にすると機能停止できます）<br>
+        <br>Ver3.120　2022/12/29<br>
+        ●【マップイベントウィンドウ】 ウィンドウのイベント一覧上から「削除」を行うと、<br>
+        　　　　まれにマップイベントウィンドウが一度消えてから再度表示される現象を修正<br>
+<br>
+●【ゲームデータ作成】ゲームデータ作成後、コモンイベントを保存しても<br>
+        　　保存されなくなったり、タイル設定で画像が読み込めなくなってしまうバグ修正<br>
+        　（注目中フォルダがゲームデータ作成時にずれてしまうバグでした）<br>
+<br>
+●【タイルセット設定】大きい基本タイルセットを読んだ後に小さいタイルセットを<br>
+　　　読み込むと内部的に大きい方のデータ量のままになってしまう現象を修正<br>
+<br>
+●【DBエディタ】「タイプの設定」画面の「OK」「更新」「キャンセル」ボタンの<br>
+　　　　　　　　位置を説明文と入れ替えて少し上に移動<br>
+　　　　　　　　（画面サイズによってはすぐにはみ出してしまうため）<br>
+<br>
+●【ゲームデータ作成】文字種の問題で暗号化に失敗したファイルがあった場合は<br>
+        　　　　メッセージボックスを表示してそのファイルを無視するように修正。<br>
+        　　　　また、「暗号化処理はUnicode化されておらず、日本語と<br>
+        　　　　半角英数字のファイルしか読み込めません」という注意書きを画面に追加しました。<br>
+<br>
+●【ゲームデータ作成】ゲームデータ作成時、Escによる停止が安定しないので<br>
+　　　　　代わりに「処理中断」ボタンを追加しました。<br>
+<br>
+●【イベント検索ウィンドウ】「【コマンド文】から検索」かつ<br>
+        　　　　「全てのイベント」で検索したとき応答なしになる場合があるので、<br>
+　　　　検索中のイベントにカーソルが移動していくように修正<br>
+<br>
+        ●【文字入力】一部言語の文字入力に使われるため「右側のAltキー」が押されている間は、<br>
+        　　　「イベント入力ウィンドウ」「DBウィンドウ」「マップイベントウィンドウ」<br>
+        　　　「コモンイベントウィンドウ」のショートカットが機能しないように修正<br>
+        <br>
+        Ver3.113　2022/12/28<br>
+●【マップ選択】「Shift+上」操作だけ変な挙動になるようになっていたのを修正<br>
+<br>
+●【ゲームデータ作成】「日本語」以外のロケール下で暗号化をおこなうと<br>
+        　　　　　　　　　Game.exeからファイルが読めなくなってしまう現象の修正を試みました<br>
+        <br>
+        Ver3.111～3.112　2022/12/28<br>
+●【マップ選択ウィンドウ】終了時のマップツリー展開状況が正常に<br>
+　　　　　　再現されていないことがある現象の修正を試みました。<br>
+        <br>
+●【エフェクト】数値欄が入力不可の場合はなるべく値を「0」にリセットするよう修正<br>
+　　　（1600000などが入ったままだとコモンセルフ変数が使用中になってしまうため）<br>
+<br>
+●【DB操作】 数値入力欄で日本語切り替えできてしまっていたバグを修正<br>
+<br>
+●【DB操作】「変数に代入→」モードの「タイプ番号取得[数]」のチェックボックスが<br>
+　　他のモードに切り替えたときでも内部的にオンになりっぱなしになっていたバグを修正<br>
+<br>
+●【プロ版機能】マップエフェクトの[P]機能など、一部のプロ版機能が<br>
+　　　　　無料版でも修正画面を開こうとすることができるバグ修正<br>
+　　　　　（無料版で開いても該当するコマンドが出てきませんでした)<br>
+<br>
+●【コモンイベントウィンドウ】 コモンイベントウィンドウでOKまたはキャンセルで閉じると<br>
+　　　　　　検索窓が消えずに残ってしまう現象を修正<br>
+<br>
+●【コモンイベントウィンドウ】 「コモンイベント名」一覧だけシステム言語に<br>
+        　　　　　対応していない文字を使うと文字化けする現象を修正<br>
+        <br>
+Ver3.110　2022/12/23<br>●【マップ選択ウィンドウ】前終了時のマップツリーの展開状態が保存されるよう修正<br>
+<br>
+●【マップ選択ウィンドウ】ツリー構造を変えるたびにツリー展開状態が毎回リセットされてしまうバグを修正<br>
+<br>
+        ●【マップ選択ウィンドウ】ツリー構造を変更する特定の処理をしたときに何度も点滅する現象を抑制<br>
+        <br>
+Ver3.107　2022/12/19<br>
+●【データベース】項目選択後、Ctlr+上下でデータ切り替えした直後に上下キーで項目を<br>
+　　　　　変更させようとしても切り替わらない現象をなるべく減らすよう修正<br>
+<br>
+●【マップイベント編集ウィンドウ】 マップを切り替え時に検索ウィンドウだけ残る現象を修正<br>
+<br>
+        ●【マップイベント】 イベントがないマップで検索するとクラッシュすることがあるバグを修正<br>
+        <br>Ver3.106　2022/12/18<br>
+        ●【マップ編集】右端と下端でホイールやスペース押しながら移動させるとガタガタ揺れる現象を修正<br>
+<br>
+        ●【マップ選択】マップ切り替え時にマップが点滅する現象を修正<br>
+<br>
+        ●【文字列操作】機能を切り替えたときに、文字コード欄が毎回推奨値に戻るよう修正<br>
+        <br>
+Ver3.105　2022/12/17<br>
+        ●【エフェクト】マップシェイクの「縦ゆれ」の欄を変更しても強制的に「縦ゆれ」に戻ってしまうバグを修正。<br>
+        <br>
+Ver3.104　2022/12/14<br>
+●【データベースウィンドウ】 「ファイルの出力」の「データ［複数・csv 形式］」を行ったとき、<br>
+　　　「文字列」の項目を変更してもエディタ起動時点の内容で保存されてしまうバグを修正<br>
+<br>Ver3.103　2022/12/12<br>
+        ●【イベント制御】と【コモンイベント】コマンド修正時のウィンドウに大きな余白ができてしまっているバグを修正。<br>
+        <br>Ver3.102　2022/12/11<br>
+●【マップ編集】マップ編集時、右クリック選択した後にマップチップ選択ウィンドウの<br>
+　　　　　チップを左クリックしても選択状態にならないことがある現象を修正<br>
+<br>
+●【マップ編集】 エディタ起動時にマップ未指定だと白画面が表示される現象を修正<br>
+<br>
+●【マップ編集】1倍表示時、イベントレイヤーのタイル画像の全体像が見えやすくなるよう修正<br>
+<br>
+●【条件（変数）】 修正時のウィンドウが非常に大きく表示されてしまうバグを修正<br>
+<br>
+        ●【新規データ作成】完全初期データの基本フォントを「MS ゴシック」から「Meiryo」に変更<br>
+        <br>Ver3.101　2022/12/09<br>
+●【起動時】新規データを作成するとクラッシュするバグ<br>
+<br>
+●【条件(変数)】 コマンド入力欄のセルフ変数の表示が初回のみ異なる現象を修正<br>
+<br>
+        ●【キー入力】 コマンド入力欄のセルフ変数の表示が初回のみ異なる現象を修正<br>
+<br>
+        Ver3.10　2022/12/08<br>
+        ●【総合】プロ版と無料版を切り替えたときにエディター起動中の警告が出る現象を修正<br>
+<br>Ver3.092　2022/12/07<br>
+        ●【ピクチャ】 自由変形時、コマンド一覧で基準座標が「中央上」と出ていたのを「中央」に修正<br>
+        <br>
+        Ver3.091　2022/12/05<br>
+        ●【DB特殊設定(プロ版)】テーマカラーをパーフェクトダークにしたまま<br>
+        　　　　　　　　　DBの特殊設定を開くと文字が黒のままで一部読めなくなるバグを修正<br>
+        <br>Ver3.09　2022/12/03<br>
+●【エディターオプション】「旧ファイル読込言語」の言語の順序が、<br>
+　　　　　　　　　　実読み込み時に出てくる言語と違っていたのを修正<br>
+<br>
+        ●【データベース】データ消去時のスクロール挙動をVer3.07以前と同じようになるよう修正<br>
+<br>
+        ●【データベース】Ctrlを押しながらタイプを切り替えた際、<br>
+        　　　　　　　　　同じデータ番号を選んだままタイプ変更できるよう修正<br>
+        <br>
+Ver3.086　2022/12/03<br>
+        ●【マップチップ選択】 タイル画像の外を選択すると変な選択のしかたになってしまうバグを修正<br>
+        <br>
+Ver3.085　2022/12/02<br>
+●【データベース】データを削除したときなどにデータがスクロール中央に来なくなっているバグを修正<br>
+<br>
+        Ver3.084　2022/12/01<br>●【画像選択】 マップイベントの画像選択画面などで、画像がないところをダブルクリックしても<br>
+　　　　　　「OK」されてしまうバグを修正。<br>
+<br>
+●【マップ選択】 大きいマップがスクロールされた状態で別の小さいマップへ<br>
+        　　　　　　マップを切り替えたとき、前マップのチップが残ることがあるバグ修正<br>
+        <BR>Ver3.082　2022/11/29<br>
+●【タイルセット設定】表示スケールが100％以外のときのタイルセット設定で<br>
+　　　　下部の表示がおかしくなったり通行設定が表示されなくなるバグを修正<br>
+<br>
+●【データベース設定】タイプ設定で文字列の項目を挿入・削除した場合、元々格納されていた<br>
+　　　　　　　　文字列内容がずれてしまうバグを修正（数値では起きませんでした）。<br>
+<br>Ver3.08～　2022/11/27<br>
+●【起動処理(プロ版)】Editor.iniにプロテクトキーが記述されているのに<br>
+　　Game.datに暗号化がかかってない場合、起動時にメッセージが出るよう修正。<br>
+　　一部の基本ファイルだけにプロテクトがかかってしまう問題をさけるためです。<br>
+<br>
+●【エディターメイン部(プロ版)】起動時とマップ・マップイベントが編集された状態だと<br>
+　　　　　　　タイトルバーの『WOLF RPGエディター PRO』の&quot;PRO&quot;表記が消えるバグを修正<br>
+<br>
+●【コモンイベントウィンドウ】変数の数を多くするとコモンイベントエディタ上で<br>
+　コモンイベントを切り替えたときに時間がかかるようになってしまっていたのを修正<br>
+<br>
+●【ゲームデータ作成】 コピー対象外とするデフォルト拡張子に.clipと.lnkを追加。<br>
+<br>
+●【場所移動】「移動先を見ながら選択」画面でスクロールするとチラ付く問題を修正<br>
+<br>
+●【マップ選択】「マップ選択」ウィンドウの位置が、前回終了時と同じ場所・サイズで配置されるよう修正<br>
+<br>
+●【マップ編集ウィンドウ】前回終了時のマップウィンドウの最大化状態を記憶するよう修正<br>
+<br>
+●【マップ編集ウィンドウ】前回終了時のマップの表示倍率を記憶するよう修正<br>
+<br>
+●【エディターメイン部】ツールバーアイコンを少しだけ調整<br>
+<br>
+        <br>
+        Ver3.073～　2022/11/26<br>
+●【イベントエディタ(プロ版)】 WoditorEvCOMMAND_START ～の文字列によるコード貼り付け処理の<br>
+　　　　　　　　　文字コードがSJISになっていたのをUnicodeに修正。<br>
+　　　　　　　　（ハートマークなどが入りませんでした）<br>
+<br>
+●【複数データ選択】 コモンイベント複数コピーなどデータ範囲を指定する画面で<br>
+        　　　　　　　　　　自動的に数値補正が入る処理を削除しました。<br>
+        <br>
+        Ver3.072　2022/11/25<br>
+        ●【コンバート】コンバート後のデータでエディタがクラッシュする可能性がある要因を修正。<br>
+        <br>
+        Ver3.071　2022/11/25<br>
+●【表示スケール】表示スケールが100％以外のときのレイアウト崩れや座標ズレの修正を試みました。<br>
+　　　対象は「起動時バナー」「ツールバーアイコン（1.5倍、2倍に変化。ただし今は画像ガビガビ）」<br>
+　　「場所移動先の選択画面ズレ」「画像選択画面のクリック位置ズレ」<br>
+　　「タイル選択時のクリック位置ズレ」です。<br>
+<br>
+●【場所移動】移動先を選択する画面で環境によってマップが枠外にはみ出ていることがあるバグを修正<br>
+        　　　→ Ver3.071追加　マップの端が選びにくくなっていたのを修正<br>
+        <br>
+●【タイルセット設定画面】「最後に選んでいたタイルセット番号」が最初に出るよう修正<br>
+　　　　　　　　　　　　　（前回「OK」で終了していた場合のみ）<br>
+<br>
+●【データベース】データベースのメモ欄が15行以上になった場合だけ縦スクロールバーが<br>
+　　　　　　　　　表示されるよう修正（メモ欄の横幅が広く使えるので、<br>
+　　　　　　　　　　Ver3から必要ないときはスクロールバーが非表示になります）<br>
+<br>
+●【コモンイベント編集時】 起動直後、コモンイベント編集時に0番以外のコモンイベントに<br>
+　　　切り替えてイベントコマンド入力【変数操作+】を開いたとき、<br>
+　　　コモンセルフ変数名がコモンイベント0のコモン変数名になっているバグを修正。<br>
+<br>
+●【複数指定画面】コモンイベントの複数コピー画面などで「-1」を入力すると<br>
+　　　　　　　　　　　　クラッシュするバグを修正<br>
+        <br>
+        <br>
+        Ver3.06　2022/11/24<br>
+●【マップエディタ】タイルサイズが正しくないときのエラー文の選択肢表記の中の<br>
+        　　　　　「ゲーム解像度を変更する」表記を「タイルサイズを変更する」に修正(Ver3.06で修正)<br>
+<br>
+●【マップの基本設定】ファイル名の欄で、マップのファイル名の末尾がmかpかsだと<br>
+        　　　　　　　　　その文字だけ表示されなくなっていたバグ修正(Ver3.06で修正)<br>
+        <br>
+        <br>
+        Ver3.04　2022/11/23<br>●【エフェクト】エフェクトコマンド入力欄、「画面のスクロール」内の「上」が<br>
+      　　　　　　　　見えなくなっているのを修正(Ver3.04で修正)<br>
+<br>
+●【コマンド入力ウィンドウ】コマンド順を並べ替えている場合、イベント挿入などの<br>
+　　　コマンドウィンドウを開いた時になぜか常に文章の表示が最初に出てきて<br>
+      　　　1番目のコマンド内容と混ざった表示になってしまうバグ修正(Ver3.04で修正)<br>
+<br>
+●【マップエディタ】 マップが選ばれていない状態でテストプレイを開始しようとすると<br>
+      　　　マップファイル保存ダイアログが表示されてしまう現象を修正(Ver3.04で修正)<br>
+<br>
+        ●【翻訳DLL】「Editor.lang.dll」がうまく読み込まれなくなっていたバグを修正(Ver3.04で修正)<br>
+        <br>
+        Ver3.02　2022/11/22<BR>
+      ●【表示スケール】表示スケールが100％以外だと表示が崩れてしまうため以下の部分だけ緊急修正（Ver3.02で修正）<br>
+　- マップイベントコマンド欄<br>
+　- コモンイベント名・コモンイベントコマンド欄<br>
+　- コマンド入力欄のコマンド名一覧<br>
+　- データベースエディタの項目欄<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <b><a id="ver300_BaseSystem"></a>【基本システムの追加バグ修正】</b> 　　<a href="#top" class="green">↑トップへ</a><br>
+        <br>
+Ver3.22　 2024/02/02<br>
+        ●HP回復処理をおこなっても全員HP0のままだった場合、<br>
+        　全滅処理が起動してしまうバグを修正[コモン70/68-72行]<br>
+<br>
+Ver3.21　2024/01/19<br>
+●「発動回数/武器の影響」が「武器依存でない」カウンターが行われたとき、<br>
+　防具欄に装備している武器があるとそれでカウンターしてしまうバグ修正<br>
+        　 [コモン197/183-184,189-190,220-233行目]<br>
+        <br>
+        Ver3.20　2023/09/22<br>
+        ●横32、縦24で割り切れない画面サイズのときメニューの右や下の黒い背景が<br>
+        　抜けるバグを修正 [コモン88/121-123行目]<br>
+        <br>
+        Ver3.16　2023/08/11<br>
+        ●初期音量を50から60に変更[コモン48/217-220行]<br>
+        <br>
+        Ver3.15　2023/06/17<br>
+        ●戦闘時、味方単体を選んでキャンセルしたときにカーソルが残るバグ修正[コモン158/69行目]<br>
+        <br>
+Ver3.14　2023/01/11 <br>
+        ●メニュー描画時、所持金欄のピクチャID指定が間違っていたのを修正[コモン88/259行目]<br>
+        <br>
+        Ver3.10　2022/12/08<br>
+        ●ピクセル移動処理の「待機アニメON/OFF」を全てエフェクト「移動アニメ強制 ON/OFF」に変更<br>
+　 [コモン39/「Ver3.10でエフェクトに変更↓」で検索可]<br>
+<br>
+Ver3.09　2022/12/05<br>
+●システム画面の「変更を保存して終了」時の音が2重になっていたのを修正<br>
+        　[コモン132/66行にあった決定音を削除]<br>
+        <br>
+        <br>
+        <br>
+        <b>【サンプルデータの修正】</b> 　　<a href="#top" class="green">↑トップへ<br>
+        </a><br>
+●サンプルデータ、ないしEditorから作れる空データのシステムDB内、<br>
+　「SDB 0:マップ設定」の項目4「遠景番号」の「-2」の選択肢を<br>
+　「&lt;変化なし&gt;」から「イベントに任せる」に修正<br>
+        <br>
+        <br>
+        <br>
+        <br>
+      　<a href="#top" class="green">↑トップへ</a><br>
+　　　　　　　<HR size="1" noshade>
+</div>
+</td>
+    </TR>
+</TBODY>
+</table>
+</CENTER>
+<P align="center"><A href="../" target="_self">トップに戻る</A><BR>
+　</P>
+</BODY>
+</HTML>
