@@ -172,6 +172,7 @@ A.blue:HOVER,A.blue:ACTIVE{
 <div class="TopTitle">　 WOLF RPGエディター アーカイブページ</div>
 <BR>
 　このサイトはSmokingWOLFが開発した無料RPG作成ツール『WOLF RPGエディター』のアーカイブページです。
+<div id="woditor-status">　</div>
 <BR>　
 <!-- ウディタとは -->
 <a id="about"></a>
@@ -232,6 +233,33 @@ A.blue:HOVER,A.blue:ACTIVE{
 <BR><BR><BR><BR>
 <center><small>Copyright &copy; SmokingWOLF</small></center>
 
+
+
+
+<script>
+  // ウディタ公式のドメインに接続し、サイト存在確認用のTXT(WODITOR_ALIVE!と書かれている)があれば存在する扱いにする
+  const statusDiv = document.getElementById('woditor-status');
+  const checkUrl = 'https://silversecond.com/WolfRPGEditor/WODITOR_SITE_ALIVE_FLAG.txt';
+
+  fetch(checkUrl, { cache: 'no-store' })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('ネットワークエラー');
+      }
+      return response.text();
+    })
+    .then(text => {
+      if (text.trim() === 'WODITOR_ALIVE!') {
+        statusDiv.innerHTML = '　<a href="https://silversecond.com/WolfRPGEditor/" target="_blank" class="blue" style="font-size:16px;"><B>現在運営中のウディタ公式ページはこちら</B></a> です！<span style="color:#ccf;">（ここはGitHub内のバックアップページです）</span>';
+      } else {
+        statusDiv.textContent = '　';
+      }
+    })
+    .catch(error => {
+      statusDiv.textContent = '　';
+      console.error('ウディタ公式サイトチェック失敗:', error);
+    });
+</script>
 
 
 </BODY>
