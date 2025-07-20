@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>計算式の説明</TITLE>
+<LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>
+<B><FONT size="+1">【計算式の説明　・　変数文字について】</FONT></B>
+<UL type="square">
+  <LI><A href="#calc">計算式の説明</A>
+  <LI><A href="#variable">変数文字について （ V? S? Sys? CSelf? など）</A>
+</UL>
+<HR>
+<P id="calc"><B><FONT size="+1">【計算式の説明】</FONT></B><BR>
+<BR>
+　ここではイベントコマンド各所で見られる、計算式の代入演算子について説明します。まず用語として、代入先を「<B>左辺</B>」、代入方法を「<B>代入演算子</B>」、代入する値を「<B>右辺</B>」と呼びます、イベントコマンド「変数操作」ではそれぞれ以下の部分に対応します。<BR>
+<BR>
+<IMG src="Ev_calc.png" border="0">
+<BR>
+<BR>
+<B>※計算の注意点：</B><BR>
+　WOLF RPGエディターでは処理高速化のため、「<B><FONT color="#ff0000">コモンイベント</FONT></B>」中の変数操作では数値の限界値処理をしていません。<BR>
+　それでどうなるかというと、たとえば<B><FONT color="#ff0000">数値を足していって2,147,483,648の限界値を超える</FONT></B>と、オーバーフローして<BR>
+　<B><FONT color="#ff0000">数値が-2,147,483,647になってしまう</FONT></B>のです。<BR>
+　コモンイベント中では、±20億を超えない組み方を行ってください。マップイベント中ではこの問題は起きません。<BR>
+<BR>
+　→　なお、変数操作のどれかのチェックボックスに1つでもチェックが入っていたり、数値・セルフ変数・通常変数以外の<BR>
+　　　 変数を使用した場合はこの「高速化」が行われないため、上下限は±20億までになります。
+
+<hr>
+<p><b><span style="font-size : 120%;">【代入演算子について】</span></b></p>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD align="center">　　（代入先）</TD>
+<TD align="center">（代入演算子）</TD>
+<TD align="center">（代入する値）</TD>
+</TR>
+<TR>
+<TD align="center">　　<B>左辺</B></TD>
+<TD align="center"><B>＝</B></TD>
+<TD align="center"><B>右辺</B></TD>
+</TR>
+</TBODY>
+</TABLE>
+<BR>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD></TD>
+<TD>
+<TABLE border="1" cellpadding="2" cellspacing="1">
+<TBODY>
+<TR>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">代入演算子</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">別名</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">意味</FONT></B></TD>
+</TR>
+<TR>
+<TD>＝</TD>
+<TD>代入</TD>
+<TD>右辺を左辺にそのまま入れる</TD>
+</TR>
+<TR>
+<TD>＋＝</TD>
+<TD>加算</TD>
+<TD>左辺の値に右辺を足す</TD>
+</TR>
+<TR>
+<TD>－＝</TD>
+<TD>減算</TD>
+<TD>左辺の値から右辺を減らす</TD>
+</TR>
+<TR>
+<TD>＊＝</TD>
+<TD>乗算</TD>
+<TD>左辺の値に右辺を掛ける</TD>
+</TR>
+<TR>
+<TD>/＝</TD>
+<TD>除算</TD>
+<TD>左辺の値を右辺で割る。<br>
+            0で割った場合は数値は変化しません(÷1扱いになる)</TD>
+</TR>
+<TR>
+<TD>％＝</TD>
+<TD>余剰</TD>
+<TD>左辺を右辺で割り算し、その余りを左辺に代入</TD>
+</TR>
+<TR>
+<TD>引上げ</TD>
+<TD><BR></TD>
+<TD>左辺より右辺が大きい場合、左辺に右辺を代入。</TD>
+</TR>
+<TR>
+<TD>引下げ</TD>
+<TD><BR></TD>
+<TD>左辺より右辺が小さい場合、左辺に右辺を代入。</TD>
+</TR>
+<TR>
+<TD>絶対値</TD>
+<TD><BR></TD>
+<TD>右辺の値がマイナスならプラスに置き変えて左辺に代入<BR>
+右辺の値がプラスなら何もしない</TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P>また「<A href="04ev_value.html">変数操作</A>」コマンドに限り、以下の3つの代入演算子が使用可能です<BR>
+</P>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD></TD>
+<TD>
+<TABLE border="1" cellpadding="2" cellspacing="1">
+<TBODY>
+<TR>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">代入演算子</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">別名</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">意味</FONT></B></TD>
+</TR>
+<TR>
+<TD>角度x10←傾き</TD>
+<TD>arctan</TD>
+<TD>右辺の2変数がXベクトル、Yベクトルになります。<BR>
+            傾きのX､Yベクトルを右辺の各々に格納すると、左辺に<BR>
+            その「傾きの角度（°）」x10倍の値が代入されます。<BR>
+            （なお、Xベクトルは右方向が+、Yベクトルは下方向が+です）</TD>
+</TR>
+<TR>
+<TD>sin[x1000]←角度x10</TD>
+<TD>sin</TD>
+<TD>右辺に角度の10倍の値を指定すると、左辺に<BR>
+            「その角度のsin値」x1000倍の値が代入されます。<BR>
+            （例： 右辺が600[60°]なら、左辺には<BR>
+            　　　 866[sin60°=（√3）/2=0.866]が格納される）</TD>
+</TR>
+<TR>
+            <TD>cos[x1000]←角度x10</TD>
+            <TD>cos</TD>
+            <TD>右辺に角度の10倍の値を指定すると、左辺に<BR>
+            「その角度のcos値」の1000倍の値が代入されます。<BR>
+            （例： 右辺が600[60°]なら、左辺には<BR>
+            　　　 500[cos60°=0.5]が格納される）</TD>
+          </TR>
+        </TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR width="80%">
+<P></P>
+<P>また、<B>右辺</B>の両値をつなぐ演算子にしかない特殊な処理が2つあります。</P>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD></TD>
+<TD>
+<TABLE border="1" cellpadding="2" cellspacing="1">
+<TBODY>
+<TR>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">演算子</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">別名</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">意味</FONT></B></TD>
+</TR>
+<TR>
+<TD>ビット積</TD>
+<TD><BR></TD>
+<TD>右辺の2つの数値をビットに直したとき、そのビットの積を取ります。<BR>
+（例：5(10<B>1</B>)と3(01<B>1</B>)のビット積を取ると、1(00<B>1</B>)になります）</TD>
+</TR>
+<TR>
+<TD>～</TD>
+<TD>乱数</TD>
+<TD>右辺の両値の範囲で、ランダムな値を取ります。<BR>
+3～6なら、3、4、5、6のうちどれかの値を取ることになります。</TD>
+</TR>
+</TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P><BR>
+</P>
+<HR>
+<P id="variables"><B><FONT size="+1">【変数文字について】</FONT></B><BR>
+<BR>
+　WOLF RPGエディター内の一部では、変数をアルファベットの略称で記載しています（例：<B>V1＝CSelf1 + 5</B>　など）。<BR>
+　ここではそれら変数文字を紹介します。なお、変数文字の「<B>?</B>」には数値が入ります。
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD></TD>
+<TD>
+<TABLE border="1" cellpadding="2" cellspacing="1">
+<TBODY>
+<TR>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">変数文字</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">タイプ</FONT></B></TD>
+<TD bgcolor="#888899"><B><FONT color="#ffffff">意味</FONT></B></TD>
+</TR>
+<TR>
+<TD>V?</TD>
+<TD>数値</TD>
+<TD>?番の通常変数</TD>
+</TR>
+<TR>
+<TD>V?-?</TD>
+<TD>数値</TD>
+<TD>予備変数?-?番</TD>
+</TR>
+          <TR>
+            <TD>S?</TD>
+            <TD>文字列</TD>
+            <TD>文字列変数?番</TD>
+          </TR>
+          <TR>
+            <TD>Self?</TD>
+            <TD>数値</TD>
+            <TD>（マップイベントの）セルフ変数?番</TD>
+          </TR>
+          <TR>
+            <TD>CSelf?</TD>
+            <TD>数値/文字列</TD>
+            <TD>コモンセルフ変数?番<BR>
+            5～9番のみ文字列、それ以外は数値</TD>
+          </TR>
+          <TR>
+            <TD>Sys?</TD>
+            <TD>数値</TD>
+            <TD>システム変数?番</TD>
+          </TR>
+          <TR>
+            <TD>SysS?</TD>
+            <TD>文字列</TD>
+            <TD>システム文字列?番</TD>
+          </TR>
+        </TBODY>
+</TABLE>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P>
+<BR>
+　<BR>
+</P>
+</BODY>
+</HTML>

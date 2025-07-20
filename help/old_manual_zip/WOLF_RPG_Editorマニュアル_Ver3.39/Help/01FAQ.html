@@ -1,0 +1,480 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>よくある質問</TITLE><LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>
+<B><FONT size="+1">【よくある質問】</FONT></B><BR>
+<BR>
+　ここでは、初めてWOLF RPGエディター（ウディタ）を扱う人が陥りやすい状況や疑問への回答を記載しています。<BR>
+<BR>
+<BR>
+&lt;一覧&gt;　　（クリックするとその回答へ飛びます）<BR>
+　【1】<A href="#1" class="glink">キャラクターが半分しか表示されません</A><BR>
+　【2】<A href="#2" class="glink">ゲーム基本設定で「初期主人公画像」を設定しているのに反映されません。 [※基本システム使用時]</A><BR>
+　【3】<A href="#3" class="glink">顔グラフィックの表示ってどうやるんですか？</A><BR>
+　【4】<A href="#4" class="glink">サンプルゲームで話せないイベントがいます</A><BR>
+　【5】<A href="#5" class="glink">イベントに複数のページを設定したんですが、最後のページしか実行されません</A><BR>
+　【6】<A href="#6" class="glink">（ゲーム開始直後に）表示した文章の位置がずれます</A><BR>
+　【7】<A href="#7" class="glink">コモンイベントがコピーできないのが面倒くさいです</A><BR>
+　【8】<A href="#8" class="glink">一度発生したイベントを消去したいんですが</A><BR>
+　【9】<A href="#9" class="glink">マップを編集しているとき、透過色の部分が変な色になります</A><BR>
+　【10】<A href="#10" class="glink">可変DBはおかしくないのに、「存在しない内容番号を読みに行っています」または</A><BR>
+　　　　<A href="#10" class="glink">「文字列を格納すべき場所に変数を格納しようとしました」というエラーが出たり、</A><BR>
+　　　　<A href="#10" class="glink">変更したはずのデータが反映されていないことがあります</A><BR>
+　【11】<A href="#11" class="glink">「スクロールにリンク」した遠景を使用中、ループをまたぐと遠景がずれます。</a><BR>
+　【12】<A href="#12" class="glink">イベントが起動しません。</a><BR>
+　【13】<A href="#13" class="glink">文字列操作の【↓のフォルダのファイルリスト取得】を暗号化フォルダに使うと&lt;&lt;ERROR&gt;&gt;が返る。</a><BR>
+　【14】<A href="#14" class="glink">動作指定を行うと、最初の一個目の動作が何度も実行されます / または一つ目の動作が2回以上行われます。</a><BR>
+　【15】<a href="#15" class="glink">PrintScreenを押すとWindowsのスクリーンショット機能も起動してしまいます、どうすればいい？</a><br>
+　【16】<a href="#16" class="glink">DBのタイプ数って100個までしかないんですか？　これ以上増やせないんでしょうか。</a><BR>
+　【17】<a href="#17" class="glink">同じサイズを指定してもフォントによって文字の大きさが違うことがあります。</a><BR>
+　【18】<a href="#18" class="glink">プレイヤーがF12をうっかり押してリセットするのが困るのでF12キーを無効にしたい。</a><BR>
+<br>
+　ここにない内容は、Wikiの<B><a href="http://silsec.sakura.ne.jp/WolfRPGEditor/WolfEditorWiki/?%A5%D5%A5%A9%A1%BC%A5%E9%A5%E0%A1%A1%BC%C1%CC%E4%A5%B9%A5%EC%A4%DE%A4%C8%A4%E1" target=_blank>質問スレまとめ（要ネット接続）</a></B>へどうぞ。<HR size="1" noshade id=1>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>
+      <P>【1】 キャラクターが半分しか表示されないんですが……。<BR>
+      <BR>
+　<IMG src="FAQ_chara.gif" border="0"> 　← こんな風になります。</P>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="white">　エディターの上部メニューにある「特殊設定」→「ゲーム基本設定」の<BR>
+      　「キャラクター画像方向のタイプ」を「4方向」に変えてくださると改善されると思います。<BR>
+　初期状態では「8方向」用画像を使用するようにセットされているので、<BR>
+      　そのままRPGツクール規格の素材を使ったり、ウディタ講座のデータを導入すると、<BR>
+　キャラが左か右半分しか表示されなくなるのです。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=2>
+<BR>
+
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【2】「ゲーム基本設定」で「初期主人公画像」を設定しているはずなのに、反映されません。<BR>
+      　　 [※基本システム使用時]</TD>
+    </TR>
+    <TR>
+      <TD class="white">　基本システムを使用すると、「<B>ゲーム基本設定</B>」の「<B>初期主人公画像</B>」を設定しても、<BR>
+      反映されません。これは、基本システムのゲーム開始直後に、<BR>
+      <B class=fred>「<B class=fred>キャラグラフィック</B>を、可変DB タイプ6に設定された初期パーティーに自動的に変更する」</B><BR>
+      という処理を行っているため、「初期主人公画像」ではなく、この「初期パーティー」の<BR>
+      グラフィックになっているからです。<BR>
+      <BR>
+      　やりたいことに応じて、それぞれ以下の方法で設定してください。<BR>
+      <BR>
+      <BR>
+      <B>『開始時の主人公を、指定のグラフィックで表示したい』</B><BR>
+      　1．可変DB タイプ0「主人公ステータス」の好きなデータ番号に、登場させたいキャラを作ります。<BR>
+      　　　設定項目の中の「<B>歩行グラフィック画像</B>」が、歩行グラフィックです。<BR>
+      <BR>
+      　2．可変DBのタイプ6「パーティー情報」データ0番の「メンバー1」（2や3でもいいですが）に、<BR>
+      　　　上記 <B>1</B> で設定したキャラクターを登録します。<BR>
+      <BR>
+      　3．ゲームを開始してください。基本システムが動作していれば、<BR>
+      　　 キャラクターグラフィックが反映されているはずです。<BR>
+      <BR>
+      <BR>
+      <B>『開始時の主人公を透明にしたい』</B><BR>
+      　　もし主人公たちを透明にしたいだけなら、ゲーム開始直後に（自動実行イベントなどで）<BR>
+      　イベントコマンド『<B>パーティ画像</B>』の特殊処理「<B>パーティ全員を透明にする</B>」を行い<BR>
+      　パーティーを透明にしてしまうのが簡単です。<BR>
+      　</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=3>
+<BR>
+
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【3】顔グラフィックの表示ってどうやるんですか？</TD>
+    </TR>
+    <TR>
+      <TD class="white">基本システムVer1.26以降では顔グラフィック表示システムが組み込まれています。<BR>
+      使い方は以下の通り。<BR>
+      <br>
+      　1.システムデータベース　の　タイプ24：顔グラフィック名を開き、データ2番目以降に<BR>
+      　　「顔画像ファイル」に表示したい顔グラフィックを指定する。<BR>
+      　2.「文章の表示」で1行目に「@2」という具合に半角@マークの後に<BR>
+      　　表示させたい顔グラフィック番号を書き込む。<BR>
+      <BR>
+      <B>　※顔グラフィック番号0番はメッセージウィンドウを表示せずに文章を表示し、<BR>
+      　　 1番はメッセージウィンドウのみ表示して文章を表示します。</B><BR>
+      <BR>
+      　実例：　顔グラフィック2番を表示させたいときの「文章の表示」指定方法<BR>
+      <BR>
+      　@2<BR>
+      　　はじめまして、私はウルファールです。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=4>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【4】サンプルゲームで話せないイベントがいます</TD>
+    </TR>
+    <TR>
+      <TD class="white">「ゲーム基本設定」の「デフォルトのキャラクター移動幅」を、<BR>
+      「0.5マス」から「1.0マス」に変更していませんか？<BR>
+      1.0マス移動にすると、話せないイベントキャラが出てくる可能性が<BR>
+      ありますので、その場合は移動幅を「0.5マス」に変更してみてください。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+<BR>
+<HR size="1" noshade id=5>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【5】イベントに複数のページを設定したんですが、最後のページしか実行されません</TD>
+    </TR>
+    <TR>
+      <TD class="white">マップのイベントは、<B>番号の大きいページを優先して実行しようとします</B>。<BR>
+      そのため、最後のページの起動条件が満たされてしまうと、<BR>
+      小さい番号のページは実行されません。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+<BR>
+<HR size="1" noshade id=6>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【6】（ゲーム開始直後に）表示した文章の位置がずれます</TD>
+    </TR>
+    <TR>
+      <TD class="white"><B>その直前に1フレーム以上のウェイトを入れてみてください</B>、おそらく<BR>
+      それだけで解決されると思います。<BR>
+      <BR>
+      文字の表示位置は、並列コモンイベント63番X「[共]メッセージウィンドウ」の
+      1フレーム目で行われるので、開始直後に表示された文章は<BR>
+      ウィンドウと場所が合わなくなるのです。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+<BR>
+<HR size="1" noshade id=7>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【7】コモンイベントがコピーできないのが面倒くさいです</TD>
+    </TR>
+    <TR>
+      <TD class="white"> コモンイベントは、左のコモン一覧を選択した状態で「C」キーを押すとコピー、<BR>
+      &nbsp;「X」キーで切り取り、「V」キーで貼り付けを行うことができます。<BR>
+      　コモンイベントに限らず、C、X、Vキーでコピー、切り取り、貼り付け処理が可能です。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=8>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【8】一度発生したイベントを消去したいんですが</TD>
+    </TR>
+    <TR>
+      <TD class="white">イベントコマンド「<B>イベント制御</B>」の「<B>イベントの消去</B>」を行うとイベント消去が可能です。<BR>
+      変数を利用して「一度しか起きないイベント」を作る方法もあります。<BR>
+      <BR>
+      ＜ウディタパーフェクトガイド＞　一度開いたら空きっぱなしの宝箱の作り方<BR>
+      <A href="http://www.silversecond.com/WolfRPGEditor/Guide/EV_006.html" target="_blank">http://www.silversecond.com/WolfRPGEditor/Guide/EV_006.html</A></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=9>
+<BR><TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【9】マップを編集しているとき、透過色の部分が変な色になります</TD>
+    </TR>
+    <TR>
+      <TD class="white">エディタの描画機能の仕様上、透過色が黒以外だと<BR>
+      その部分が半透明のフィルムを貼ったような表示になってしまいます。<BR>
+      実際のゲーム内では正常に表示されますのでご安心下さい。<BR>
+      <IMG src="FAQ_mapedit.gif" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=10>
+<BR><TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【10】 可変DBはおかしくないのに、「存在しない内容番号を読みに行っています」または<BR>
+      　　　　「文字列を格納すべき場所に変数を格納しようとしました」というエラーが出たり<BR>
+      　　　　変更したはずのデータが反映されていないときがあります</TD>
+    </TR>
+    <TR>
+      <TD class="white">ニューゲームでプレイしてみてください、それで解消される場合があります。<BR>
+      <BR>
+      セーブデータには「<B>ゲーム開始時点の可変DBのタイプ・データ情報</B>」が<BR>
+      含まれているため、エディターで可変DBのタイプ設定やデータを変更した後に<BR>
+      「ロード」してゲームを続けると、変更前のDBを読みにいくために<B>項目数が<BR>
+      エディター側より少ないままだったり、</B><B>データが古かったり</B>する場合があるのです。<BR>
+      <BR>
+      なお、ユーザDBやシステムDBの反映はセーブデータに依存しないので、<BR>
+      このような問題が起きることはありません。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+
+<HR size="1" noshade id=11>
+<BR>
+
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【11】 「スクロールにリンク」した遠景を使用中、ループをまたぐと遠景がずれます。</TD>
+    </TR>
+    <TR>
+      <TD class="white">正しい仕様です。この現象への対処としては、320x240サイズの遠景なら、<BR>
+      マップの横サイズを20の倍数、縦を15の倍数に設定すれば問題なく表示されます。<BR>
+      <BR>
+      「<B>『スクロールにリンク』した『動かない遠景』が設定されているとき、<BR>
+      　主人公が0,0の座標にいれば常に同じ画像が表示される</B>」<BR>
+      <BR>
+      というのが正しい仕様なので、マップサイズ（ピクセル単位）が<BR>
+      遠景画像の縦横で割り切れるサイズでない場合は、<BR>
+      ループをまたいだときにカクッとずれるように見えるのです。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR size="1" noshade id=12>
+<BR>
+
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【12】 イベントが起動しません。</TD>
+    </TR>
+    <TR>
+      <TD class="white"><s>　起動条件が<B>「決定キーで起動」「イベント接触」「プレイヤー接触」</B>の場合は、<BR>
+      まずイベントの<B>「半歩上に設置」</B>がオンになっていないかご確認下さい。<BR>
+      もしオンでしたら、<B>オフ</B>にしてみてください。<BR>
+      <B>「ゲーム基本設定」</B>で<B>「デフォルトのキャラ移動幅」</B>が<B>「1x1」</B>に設定されていると、<BR>
+      半歩上に設置したイベントが起動できない仕様になっています。</s><BR>
+      　→　Ver3になって、<b>「デフォルトのキャラ移動幅」</b><s>が</s><b>「1x1」</b>の場合は<br>
+      　　　半歩遠くてもイベント起動できるように修正されたので、この問題はなくなりました。<br>
+      <BR>
+      　そうでない場合は、どの起動条件でも、<B>変数の条件を満たしていない</B>か、<B><BR>
+      ページの順番を間違えている</B>可能性が高いでしょう。<BR>
+      起動は、大きいページが優先されます。<B>ページ1とページ3</B>の起動条件がどちらも<BR>
+      満たされていた場合、実行されるのは<B>ページ3</B>の方です。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=13>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【13】 文字列操作の【↓のフォルダのファイルリスト取得】を暗号化フォルダに使うと&lt;&lt;ERROR&gt;&gt;が返る。</TD>
+    </TR>
+    <TR>
+      <TD class="white">　こちらは仕様となっております（暗号化フォルダの中身を全部見てしまえるようになるため）。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=14>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【14】 動作指定を行うと、最初の一個目の動作が何度も実行されます / <BR>
+      　　　 または一つ目の動作が2回以上行われます。</TD>
+    </TR>
+    <TR>
+      <TD class="white">　自動イベントや並列イベントなどで動作指定をしている場合は、<BR>
+      「ウェイト」や「動作完了までウェイト」を正しく入れているかご確認ください。<BR>
+      <BR>
+      　<B>一つ目の動作が終わる前にまた同じ『動作指定』が実行されると、<BR>
+      再び最初から動作しようとします</B>。そのため、自動イベントや並列イベントで<BR>
+      何度も『動作指定』を呼び出しなおす場合などにおいては、組み方によっては<BR>
+      延々と一つ目の動作しか行わなくなってしまう場合があります。<BR>
+      <br>
+      　他にも、<b>常に並列実行イベントの動作指定で「移動速度を変更」だけを<br>
+      実行し続けている</b>などのケースも、他の場所で動作指定をしても<br>
+      最初の一歩目しか実行されないことになります。<br>
+      <br>
+      <br>
+      <b>【対策】</b><BR>
+      　まずは1歩しか動かない『動作指定』の次に「<B>動作完了までウェイト</B>」を入れて<br>
+      問題が解決できるかチェックしてください。<br>
+      <br>
+      　それでもダメそうなら、<span style="color : #cc0000;">メイン実行イベント中だけ並列イベント内の動作指定を止める</span>対処を<br>
+      行ってみてください。<b>並列実行イベント中の「動作指定」</b>を探し、システム変数の<br>
+      「<b style="color: rgb(67, 67, 85); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">Sys13：ｲﾍﾞﾝﾄ実行中？(1=ON)</b><b>」が0のときだけ動作指定を実行する</b>ように<br>
+      修正します。<br>
+      　</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<br>
+
+<HR size="1" noshade id=15>
+
+<BR>
+
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【15】PrintScreenを押すとWindowsのスクリーンショット機能(Windows11)も<br>
+      　　　起動してしまいます、どうすればいい？</TD>
+    </TR>
+    <TR>
+      <TD class="white">　根本的な対処にはならないのですが、ウディタ側でPrintScreenキーを封印して、<br>
+      スクリーンショット撮影にはScrollLockやPauseキーを使うようプレイヤーにすすめるのがおすすめです。<br>
+      <br>
+      　キーの封印は以下のように行います。<br>
+      <br>
+      　1. ゲームが始まるタイミングで実行されるイベントを探します。<br>
+      　　（サンプルゲームならマップ0にある「タイトル用イベント」）<br>
+      <br>
+      　2．そのイベントの先頭に、「キー入力」コマンド内にある<br>
+      　　「キー入力の許可/禁止」で、「入力デバイス」を「キーボード」に切り替え、<br>
+      　　キーの「<b>283</b>（PrintScren）」を「禁止する」にして「入力」を押します。<br>
+      　　これで<b>PrintScren</b>キーが禁止されます。<br>
+      <br>
+      　3．そうしておけばゲーム起動後、<b>PrintScreen</b>を押しても<br>
+      　　　ウディタ側のスクリーンショットは起動しなくなります。<br>
+      <br>
+      　あなたはマニュアルやゲーム内で、スクリーンショット撮影をする場合は<br>
+      　<b>ScrollLock</b> や <b>Pause</b> キーを使うよう、プレイヤーにうながしてください。<br>
+      　</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<br>
+
+
+<HR size="1" noshade id="16">
+
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【16】DBのタイプ数って100個までしかないんですか？　これ以上増やせないんでしょうか</TD>
+    </TR>
+    <TR>
+      <TD class="white">　はい、自由に使える8桁の値の配分を考えた結果、タイプは100個に設計されています。<br>
+      <br>
+      　ウディタ内の全ての変数は「100万以上」の値でアクセスされるようにしているのですが、<br>
+      たとえば可変DBへのアクセス値は1100000000 (11AABBBBCC、11億～)から始まり<br>
+      タイプはAA(2桁）、データはBBBB(4桁)、項目はCC(2桁)で指定するよう設計されています。<br>
+      <br>
+      　そしてウディタ内で扱えるint型の数値は限界値が「約21億」で、これ以上は桁を増やせないので、<br>
+      この、タイプ2桁=0～99まで、データ4桁=0～9999まで、項目2桁=0～99まで、<br>
+      という配分で桁がすでにいっぱいいっぱいになっているのです。<br>
+      　よって、これ以上のタイプ数の拡張は今のところ難しい状況です。うまくやりくりしてみてください。<br>
+      　　</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+
+
+<HR size="1" noshade id="17">
+
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【17】同じサイズを指定してもフォントによって文字の大きさ(高さ)が違うことがあります。</TD>
+    </TR>
+    <TR>
+      <TD class="white">　この文字の大きさの差が出るのは、使用しているライブラリの影響のようです。<br>
+      （ウディタ内部では、\fなどでたとえばサイズ16ポイントが指定されたら、<br>
+      　　ライブラリのコマンドにも単純に16ポイントで文字表示するよう指示していますが、<br>
+      　　フォントに応じた何らかの特性の差で見た目の大きさが変わるようです）<br>
+      <br>
+      　今のところ見た目の大きさを一律で自動調整する機能はないので、フォント特性に合わせて<br>
+      　手動で\fの特殊文字などを使ってサイズを調整してみてください。<br>
+      <br>
+      <br>
+      　<span style="font-size : 80%;">例：同じフォントサイズ指定でもメイリオより游ゴシックの方が大きく表示されます。</span><br>
+      　<img src="FAQ_font.png" border="0"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<br>
+
+
+<HR size="1" noshade id="18">
+　
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>【18】プレイヤーがF12をうっかり押してリセットするのが困るのでF12キーを無効にしたい。</TD>
+    </TR>
+    <TR>
+      <TD class="white">　以下の方法で、F12キーのリセット機能を無効にすることができます。<br>
+      <br>
+      <br>
+      <b>【無料版ウディタの場合】</b><br>
+      　ゲームデータに同梱されている「<b>Game.ini</b>」をWindowsの「メモ帳」アプリなどで開き、<br>
+      　その中の「F12_Reset=1」の行を「<b><span style="color : #cc0000;">F12_Reset=0</span></b>」に書き換えて保存すると、<br>
+      　次にゲームを起動した際、F12リセット機能をオフにすることができます。<br>
+      <br>
+      （Game.iniがなければ<span style="color : #cc0000;">一度Game.exeを起動してすぐ終了</span>してください、<br>
+      　Game.exe実行中にGame.iniを書き換えてもゲーム終了時にiniが起動前の内容に戻ってしまいます）<br>
+      <br>
+      　※なお、完成品の「ゲームデータを出力」した時点ではフォルダ内にGame.iniは作られていないので、<br>
+      　　一度Game.exeを起動、終了してGame.iniを作った後にこの手順を行うか、<br>
+      　　元のGame.iniをコピーする必要があります。<br>
+      <br>
+      <img src="FAQ_Game_ini.png" border="0"><br>
+      <br>
+      　さらに工夫したい人は、上記手順でF12を無効にした後、<br>
+      　ゲーム内でF12が押されたときの処理を「並列実行」のコモンイベントとして自作して、<br>
+      　<b>　「F12を<span style="color : #cc0000;">長押し</span>するとリセットする」<br>
+      　　「F12を<span style="color : #cc0000;">二度押し</span>するとリセットする」</b><br>
+      　といった具合に、独自のリセット機能を実装している方もおられます。<br>
+      　（リセット処理自体は「<a href="04ev_control.html"><b>イベント制御</b></a>」の<b>「タイトル画面へ」</b>コマンドで実現できます）<br>
+      <br>
+      　実装できる方は、いろいろ工夫してみてください。<br>
+      <br>
+      <br>
+      <br>
+      <b>【プロ版ウディタの場合】</b><br>
+      　ウディタのプロ版では「<a href="02gamesetting_Pro.html#settingPro"><b>ゲームの基本設定Pro</b></a>」内からF12機能をオフにすることができます。<br>
+      　</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<P><BR>
+<BR>
+</P>
+</BODY>
+</HTML>

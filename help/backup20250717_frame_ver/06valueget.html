@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>変数呼び出し値　一覧</TITLE><LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>
+<B><FONT 
+size=+1>【変数呼び出し値　一覧】</FONT></B><BR>
+<BR>
+　数値欄に1000000（100万）以上の値を入れることで、変数の値を読み込むことができます。<BR>
+　使用例を以下に示します。<BR>
+<BR>
+　　<IMG src="Sys_valueget.gif"><BR>
+<BR>
+読み込むことができる値は以下の通りです。<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+<TD>
+<B>1000000+10*Y+X</B> <BR>
+　→ マップイベント<B>Y</B>のセルフ変数<B>X</B><BR>
+<BR>
+<B>1100000+X</B><BR>
+　→ このマップイベントのセルフ変数<B>X</B>（<font color=#ff4444>コモンセルフ変数と間違えやすいので注意！</font>）<BR>
+<BR>
+<B>15000000+100*Y+X</B><BR>
+　→ コモンEv <B>Y</B> のコモンセルフ変数<B>X</B> (X：0-4,10-99通常変数, 5-9文字列)<BR>
+<BR>
+<B>1600000+X</B><BR>
+　→ このコモンEvのコモンセルフ変数<B>X</B>（<font color=#ff4444>マップセルフ変数と間違えやすいので注意！</font>）<BR>
+<HR size="1">
+<B>2000000+X</B><BR>
+　→ 通常変数<B>X</B>番<BR>
+<BR>
+<B>2000000+100000*Y+X</B><BR>
+　→ 予備変数<B>Y</B>の<B>X</B>番（例：2100003＝予備変数1の3番)<BR>
+<BR>
+<B>3000000+X</B><BR>
+　→ 文字列変数 <B>X</B>番<BR>
+<BR>
+<B>8000000+X</B><BR>
+　→ 0からXまでの値をランダムに返す。<BR>
+<BR>
+<B>9000000+X</B><BR>
+　→ ｼｽﾃﾑ変数 <B>X</B>番
+<HR size="1">
+<B>9100000+10*Y+X</B><BR>
+　→ イベントYの座標を取得or入力（<B>※1</B>）<BR>
+(<B>X</B> = <B>0:</B>マップX座標（通常[1マスを1と換算]）　<B>1:</B>マップY座標（通常） <BR>
+　　　 <B>2:</B>マップX座標(精密[0.5マスを1換算]）　 <B>3:</B>マップY座標（精密） <BR>
+　　　 <B>4:</B>イベントの高さ（ピクセル数）　　　　　　 <B>5:</B>イベントの影番号 <BR>
+      　　　 <B>6:</B>イベントの方向（1-9） 　　　　 　　　　　<b>7:</b>ピクセル補正値X<BR>
+      　　　 <B>8:</B>ピクセル補正値Y　　　 　　　　　 <B>9:</B>イベントのキャラチップ画像[文字列] )<BR>
+      <br>
+      　<span style="font-size : 80%;">※「イベントの影番号」：仲間の影番号が-1(デフォルト)の場合、主人公の影番号が自動適用されます。</span><br>
+      <BR>
+<B>9180000+10*Y+X</B><BR>
+      　→ 主人公・仲間の座標などを取得or入力。Xの指定内容は（<B>※1</B>）と同じ。<BR>
+<BR>
+<B>9190000+X</B><BR>
+      　→ このイベントの座標などを取得or入力。Xの指定方法は（<B>※1</B>）と同じ。<BR>
+      <BR>
+      ※「座標」の変数呼び出し値に代入すると設定された移動速度でキャラが移動します。<BR>
+      　 「座標」と「イベントの方向」と合わせて数値を変化させることで、<BR>
+      　 <font color=#ff0000>【変数操作】だけでキャラの移動や向き変更を行わせることができます</font>。<BR>
+―――――――――――――――――――――――――――――――――――<BR>
+<B>9900000+X</B><BR>
+　→ システム文字列X番<BR>
+<BR>
+<B>1000000000  (10AABBBBCC)</B><BR>
+      　→ ﾕｰｻﾞﾃﾞｰﾀﾍﾞｰｽ タイプA/データB/項目C<BR>
+<BR>
+<B>1100000000 (11AABBBBCC)</B><BR>
+      　→ 可変ﾃﾞｰﾀﾍﾞｰｽ タイプA/データB/項目C<BR>
+<BR>
+<B>1300000000 (13AABBBBCC)</B><BR>
+      　→ システムﾃﾞｰﾀﾍﾞｰｽ タイプA/データB/項目C<BR>
+<BR>
+<BR>
+      ※ -999999～+999999(99万9999)は定数として扱われます。<br>
+      <br>
+      ※「XY配列」（<b><a href="04ev_db.html" target="B">DB操作</a></b>内より操作可能）は変数呼び出し値では呼び出せません。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P><BR>
+</P>
+</BODY>
+</HTML>

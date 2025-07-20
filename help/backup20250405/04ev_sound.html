@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>サウンド</TITLE><LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>イベントコマンド　<B><FONT 
+size=+1>【サウンド】</FONT></B><BR>
+<BR>
+　音楽や効果音を再生します。<BR>
+<BR>
+<img src="Ev_sound1.png" border="0"><br>
+<span style="font-size : 80%;"><br>
+【お知らせ：<b>長時間プレイしていると音声がすべて再生されなくなる問題</b>について】</span><br>
+<span style="font-size : 80%;">　Ver2.271～3.105のバージョンにおいて、「Ver2.270以前に入力された【サウンド】コマンド」でSEを32678回再生するとそれ以降の音が完全に鳴らなくなるバグがありました。</span><br>
+<span style="font-size : 80%;">　この問題はVer3.106で解消されましたので、必要ならEXEのアップデートをお願いいたします。<br>
+　（アップデートしなくても、SEを使っている【サウンド】コマンドを「修正」→「OK」すればそのコマンドでは問題は起きなくなります）</span><br>
+<br>
+<br>
+<BR>
+<B><FONT size="+1">【各部の説明】</FONT></B><BR>
+<BR>
+<B>・実行する処理</B><BR>
+　- <B>通常再生</B> … BGMやSEの再生を行います。基本的にはこれだけで十分です。<BR>
+　- <B>メモリに先読みロード</B> … BGMやSEを、データだけメモリにロードしておきます、再生はしません。<BR>
+　- <B>メモリから非使用中音声を全解放</B> … 現在再生されていない音声を全てメモリから解放します<BR>
+<BR>
+　<S>- <B>メモリから手動解放（SEのみ）</B> … 指定したメモリ内のSEのデータを解放します。</S><BR>
+　　　　　　　　　　　　　　　　→　正常に動作しないため、Ver2.20から削除されました。<BR>
+<BR>
+<BR>
+<B>・音声の指定方法</B><BR>
+　サウンドの呼び出し方法を指定します。<BR>
+　なお、直接指定と変数呼び出しの方法ではシステムDBに登録済みのデータしか読み込むことはできません。<BR>
+　- <B>ファイル名で指定</B> … ファイルのアドレスを指定して読み込みます。\sや\cdbなどの変数も指定可能です。<BR>
+　- <B>直接指定</B> … システムデータベースに登録したデータから一つ再生するサウンドを選択します。この中の「（停止）」を選ぶと音声を停止できます。<br>
+　　　　　　　　※なお、<span style="color : #cc0000;">SEの(停止)は、「遅延」を指定して予約したSEも全て消去</span>されます。<BR>
+　- <B>変数呼び出し</B> … 再生する音楽の番号を変数で指定します。<BR>
+<BR>
+<BR>
+<B>・BGM指定・BGS指定・SE指定</B><BR>
+　この3つの欄はそれぞれ、システムデータベースのタイプ1～3から内容が読み込まれています。<BR>
+　この欄を最新の状態にするには「<B>音声の指定方法</B>」を変更してください。<BR>
+　『ファイル名で指定』の場合はここにファイルパスを指定します。<BR>
+<BR>
+<BR>
+<B>・フェード時間（BGM・BGS専用）</B><BR>
+　BGM・BGS時で、音楽のフェード時間をフレーム数で指定します。徐々に音楽が流れ始めたり、徐々に音楽が消えたりする演出時に使います。<BR>
+　ただし、<A href="02gamesetting.html">ゲームの基本設定</A>で「ハードウェア音源」に設定されている場合には機能しません。<BR>
+<br>
+<BR>
+・<B>途中再生 (BGM・BGSの場合のみ)</B> <BR>
+　指定した時間（MP3・OGG・WAVならミリ秒単位/MIDIならTick数単位）だけ、曲の途中から再生を開始できます。※SE指定では使用できません。<br>
+<br>
+<br>
+<b>・パン（BGM・BGS・SEすべて）　</b>(Ver3.50より)<br>
+　音量を左または右に偏らせます。数値の範囲は-255（左）、0（中央）、255（右）です。<br>
+<br>
+<br>
+・<B>音量[%]/周波数[%]/ループ開始[ms BGM・BGSのみ]</B><BR>
+　『ファイル名で指定』の場合のみ指定できます。内容は<b><a href="05systemtype.html">システムデータベース　【各タイプの説明】
+</a></b>のタイプ2と同じです。<BR>
+　※BGM・BGSで同じファイルを読み込んだ場合は、新たな音量と周波数設定に変わるだけで曲自体はそのまま再生され続けます。<BR>
+<br>
+<BR>
+・<B>キー変更機能[MIDIのみ]</B><BR>
+　MIDI再生時に限り、「ループ位置」の代わりに「キーの上下」が設定できます。<BR>
+　キーを上げると音が高く、キーを下げると低くなります。微妙な雰囲気のチューンに最適です。<BR>
+<br>
+<br>
+<br>
+<b><span style="font-size : 120%;">【BGS選択時専用の項目】</span></b><BR>
+<img src="Ev_sound2.png" border="0"><BR>
+<br>
+・<B>BGSチャンネル (BGSの場合のみ)</B> 　(Ver3.50より)<BR>
+　BGSの「チャンネル」を設定できます。BGSは複数のチャンネルで同時に再生できます。<BR>
+　全てのBGSチャンネルを停止させたい場合は「<b><span style="color : #cc0000;">-1</span></b>」チャンネルを停止させてください。<BR>
+<br>
+<br>
+<BR>
+<b><span style="font-size : 120%;">【SE選択時専用の項目】</span></b><BR>
+<img src="Ev_sound.png" border="0"><br>
+<BR>
+<B>・再生を遅延させる（SE専用）</B><BR>
+　SE時のみ有効な欄です、指定フレームだけ再生開始を遅らせます。<BR>
+<br>
+<BR>
+・<B>SEチャンネル指定  (SEの場合のみ)</B><BR>
+　SE再生時のみ、「チャンネル」を設定できます。たとえば「1チャンネルと2チャンネルでそれぞれSEを再生」したとき、「1チャンネル側のSEだけ停止させる（2チャンネルはそのまま再生させる）」ということができます。<BR>
+　「停止」時にチャンネル「-1」を指定すれば、「全チャンネル」のSEを停止させることができます。<BR>
+<BR>
+<SPAN style="font-size : 80%;">→　 使用例としては「ボイス関連」が有力で、例えば格闘ゲームで「(打撃音などを止めずに)同じキャラのボイスが重複して再生されないようにする」といった用途で使える状況が多いと思います。</SPAN><BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<font class=fmmg>　【隠し機能】 ファイル名の指定で「文字列変数」を指定することもできます（例：\s[1]や\cself[6]）。<BR>
+　　　その文字列変数に、複数行にかけて<BR>
+　　　　「ファイル名&lt;改行&gt;音量(%)&lt;改行&gt;周波数(%)&lt;改行&gt;ループ開始位置(ms・BGM・BGSのみ)」<BR>
+　　　　と記述した文字列を代入しておくと、エディタ側で入力した値を無視して<BR>
+　　　　文字列に書かれた数値で音量・周波数・ループ設定が行われます。<BR>
+　例：「Sound\テスト.wav<BR>
+　　　　100<BR>
+　　　　120」　と記述した文字列を指定すると、テスト.wavを音量100％、周波数120％で再生する。</font><BR>
+<br>
+<BR>
+<BR>
+<font class=fmmg>　【隠し機能】 ループ位置を「0」にした場合に限り、<BR>
+　　　OGG・MP3ファイルのLOOPSTARTタグ（※ファイルの先頭1KB内にある場合のみ）を自動で読み込み、<BR>
+　　　　その時間をループ開始位置として自動設定する機能が搭載されています。<BR>
+<BR>
+　　　　※LOOPLENGTHも読み込めます。ループ長を指定できます。<BR>
+　　　　※MP3の場合でも、作曲者情報など文字を格納できるところならどこでも<BR>
+　　　　　「LOOPSTART=123456」 と言う文字列が含まれていれば動作します。<BR>
+<BR>
+　　　　↓サウンドファイルに上記のループ設定を行えるツールも存在します</font><BR>
+<BR>
+　　　　【FOLE（FICUSEL Ogg Loop Editor）】<BR>
+　　　　<A href="http://forest.watch.impress.co.jp/docs/review/693911.html" target="_blank">http://forest.watch.impress.co.jp/docs/review/693911.html</A><BR>
+<BR>
+<BR>
+
+<HR>
+<P><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【SEの音量が大きすぎるとBGMが一時的に小さくなる？】</b>　 (2024/3/19追記)<BR>
+<br>
+　開発側としては意図してそうしているわけではないのですが、「BGM音量が大きい」ときに「200%などの大きな音量のSEを再生」した場合、音量限界の制限にかかっているのか、BGM音量が一時的に小さめになってしまう場合があります。<br>
+　上の例の場合、体験としては「SE再生中にBGM音量が小さくなり、SE終了後にBGMの音量が元に戻った」ように感じられるようです。<br>
+<br>
+　この現象は不具合ではなくライブラリ側などの都合でこういった挙動になっているようですので、もし気になる場合は音量をうまく変更してこの現象が起きないよう調整してみてください。
+
+<hr>
+<P><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【BGSのチャンネル再生は「ファイル名指定」で行う方が自由がききます】</b>　<BR>
+<BR>
+　BGSは、「<b>システムDBから直接選択</b>」や「<b>変数で指定</b>」した場合、<span style="color : #cc0000;"><b>BGMと全BGS内</b>で「<b>同じファイル名</b>」の音声を「<b>異なるタイミング</b>」で複数再生させることはできません</span>。これはシステムDBから再生する場合、内部的な再生枠を共有しているためです。<br>
+　<b>「ファイル指定」</b>で再生した場合のみ、「同じファイル名」でも時間をずらして再生可能です。<BR>
+　 
+<HR>
+<P><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【SE（効果音）の多重再生させたい場合はチャンネル別に】</b>　<BR>
+<BR>
+　同じSEを複数連続でウェイトを挟んで同時再生した場合、2つめのSEが再生され始めると、すでに鳴っている最初のSEは停止されてしまいます。<BR>
+　もし同じSEを停止させずに次々に再生したい場合は、以下の手順を取ってください。<br>
+<br>
+・<b>複数のチャンネルでそれぞれSEを再生する</b><br>
+　SEは1チャンネルごとに同じ1音を出せるので、チャンネルを変えて同じSEの同時再生を行ってみてください。<br>
+　たとえば3連射まで音を鳴らしたいSEは、1発目をチャンネル1、2発目をチャンネル2、3発目をチャンネル3、4発目をチャンネル1（1に戻る）……と順繰りで再生させることで、3重まで音を再生することができます。<BR>
+　
+
+<hr>
+<p><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【音声の全リセット】</b>　<BR>
+<br>
+　「<b>ファイル名で指定</b>」→BGM指定に「<b>INITIALIZE</b>」とだけ入れて実行すると、「<b>音声メモリの全リセット</b>」が可能です。<br>
+　その際、BGMやBGSは停止してしまうのでご注意ください。<br>
+　音声周りでバグが発生してどうしようもない場合への対策として用意されていますが、基本的には使う必要はありません。<br>
+　</p>
+<hr>
+<p><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">【<b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">BGM・BGSを</b>「ファイル名」指定で<b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);"><b style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255);">再生中、</b></b>「同じファイル名」で「再生」すると再生途中のままパラメータ変更可】</b><BR>
+<br>
+　「ファイル名」指定であるファイル名の曲を再生中、それと「<b><span style="color : #cc0000;">同じファイル名</span></b>」（BGSの場合は「<b>チャンネル</b>」も同じにする）で「<b><span style="color : #cc0000;">再生</span></b>」を行うと、<b><span style="color : #cc0000;">再生を途切れさせずに「音量」「周波数」「途中再生」「パン」を変更</span></b>できます。<br>
+<br>
+　※ただし「途中再生」だけは、再生位置によっては処理が重くなる場合があります。<br>
+　</p>
+<hr>
+<p><br>
+</p>
+</BODY>
+</HTML>

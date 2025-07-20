@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>メニュー</TITLE>
+<LINK rel="stylesheet" href="style.css">
+
+<script type="text/javascript">
+  // beforeunload でスクロール位置を保存
+  window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem('scrollPos', window.scrollY);
+  });
+
+  // 毎秒スクロール位置を保存
+  setInterval(() => {
+    sessionStorage.setItem('scrollPos_manual', window.scrollY);
+  }, 200); // 0.2秒ごとに保存
+
+  // ページ読み込み時に復元（ただし reload や back のときは除外）
+  window.addEventListener('load', () => {
+    const navEntry = performance.getEntriesByType("navigation")[0];
+    const legacyType = performance.navigation.type;
+
+    const isNavigate =
+      (navEntry && navEntry.type === "navigate") ||
+      (legacyType === 0);
+
+    if (isNavigate) {
+      const scrollY = sessionStorage.getItem('scrollPos_manual');
+      if (scrollY) window.scrollTo(0, parseInt(scrollY));
+    }
+  });
+  // navigate: 通常のリンク遷移
+  // reload: F5やリロード
+  // back_forward: 戻る・進む
+
+</script>
+
+</HEAD>
+<BODY>
+<B><A href="../" target="_top"><BR>
+←トップページに戻る</A></B><BR>
+<BR>
+■<A href="./" target="_top">ﾄｯﾌﾟ/更新履歴</A><BR>
+■<A href="01guide.html" target="_top">特徴・機能紹介</A><BR>
+■<A href="01filelist.html" target="_top">ファイルの説明(ini設定)</A><BR>
+■<A href="01control.html" target="_top">基本操作(起動時引数)</A><BR>
+■<A href="01debug.html" target="_top">デバッグコマンド一覧</A><BR>
+<BR>
+□<A href="01FAQ.html" target="_top">よくある質問<BR>
+</A>□<a href="01specifi.html" target="_top">暗黙の仕様</a><br>
+<BR>
+■<A href="02mainwindow.html" target="_top">メインウィンドウ</A><BR>
+<FONT size="-2">　</FONT>○機能解説<BR>
+　- <A href="02gamesetting.html" target="_top">ゲーム設定/ｺﾝﾌｨｸﾞ</A> <a href="02gamesetting_pro.html" target="_top" class="blue">[P]</a><br>
+　　└ <A href="02ver_ajust.html" target="_top">Gameバージョン調整</a><BR>
+　- <A href="02tileset.html" target="_top">タイルセット設定</A><BR>
+　- <A href="02mapsetting.html" target="_top">マップの基本設定</A><BR>
+　- <A href="02commonev.html" target="_top">コモンイベントの設定</A><BR>
+　- <A href="02mapselector.html" target="_top">マップ選択</A><br>
+　- <a href="02editor_option.html" target="_top">ｴﾃﾞｨﾀｰｵﾌﾟｼｮﾝ</a> <a class="blue" href="02editor_option_pro.html" target="_top">[P]</a><br>
+　- <a href="02gamemake.html" target="_top">ｹﾞｰﾑﾃﾞｰﾀの作成</a> <a href="02gamemake_pro.html" target="_top" class="blue">[P]</a><br>
+　- <a href="02_file_crypt_pro.html" target="_top" class="blue">[P]ﾌｧｲﾙ個別暗号化</a><BR>
+　- <a href="02tasklist.html" target="_top">タスクリスト</a><br>
+<BR>
+■<A href="03mapmain.html" target="_top">マップ作成の流れ</A><BR>
+　- <A href="03mapmake.html" target="_top">1.新規作成～登録</A><BR>
+　- <A href="03mapstartpos.html" target="_top">2.スタート位置の設定</A><BR>
+　- <A href="03mapautomake.html" target="_top">自動マップ生成機能</A><BR>
+<BR>
+■<A href="04eventmain.html" target="_top">イベントの作成</A><BR>
+<FONT size="-2">　</FONT>○<A href="04eventwindow.html" target="_top">イベントウィンドウ</A><BR>
+<FONT size="-2">　</FONT>○<A href="04eventinput.html" target="_top">コマンド入力ウィンドウ</A><BR>
+<FONT size="-2">　</FONT>○<A href="04ev_movesetting.html" target="_top">動作指定</A><BR>
+<FONT size="-2">　</FONT>○<A href="04ev_fileselect.html" target="_top">ファイル選択</A><BR>
+<FONT size="-2">　</FONT>○<A href="04ev_calc.html" target="_top">計算式の解説/変数</A><BR>
+<FONT size="-2">　</FONT>○イベントコマンド一覧<BR>
+　- <A href="04ev_text.html" target="_top">文章の表示</A><BR>
+　- <A href="04ev_select.html" target="_top">選択肢</A><BR>
+　- <A href="04ev_value.html" target="_top">変数操作</A><BR>
+　- <A href="04ev_db.html" target="_top">DB操作</A><BR>
+　- <A href="04ev_string.html" target="_top">文字列操作</A><br>
+　　└ <A href="04ev_string_specialcode.html" target="_top">隠しコード一覧</a><BR>
+　- <A href="04ev_valuenext.html" target="_top">変数操作+</A><BR>
+　- <A href="04ev_ifvalue.html" target="_top">条件（数値）</A><BR>
+　- <A href="04ev_ifstring.html" target="_top">条件（文字列）</A><BR>
+　- <A href="04ev_keyinput.html" target="_top">キー入力</A><BR>
+　- <A href="04ev_picture.html" target="_top">ピクチャ</A><BR>
+　- <A href="04ev_effect.html" target="_top">エフェクト</A> <a class="blue" href="04ev_effect_Pro.html" target="_top">[P]</a><BR>
+　- <A href="04ev_sound.html" target="_top">サウンド</A><BR>
+　- <A href="04ev_file.html" target="_top">セーブ・ロード操作</A><BR>
+　- <A href="04ev_party.html" target="_top">パーティ画像</A><BR>
+　- <A href="04ev_chip.html" target="_top">チップ処理</A><BR>
+　- <A href="04ev_movepos.html" target="_top">場所移動</A><BR>
+　- <A href="04ev_control.html" target="_top">イベント制御</A><BR>
+　- <A href="04ev_common.html" target="_top">コモンイベント</A><BR>
+　- <A href="04ev_download.html" target="_top">ダウンロード</A> <a href="04ev_download_Pro.html" target="_top" class="blue">[P]</a><br>
+　- <a href="04ev_pro_command.html" target="_top" class="blue">[P]プロ版機能</a><BR>
+<BR>
+■<A href="05database.html" target="_top">データベース</A><BR>
+<FONT size="-2">　</FONT>○<A href="05dbtype.html" target="_top">タイプの内容設定</A><BR>
+　- <A href="05systemdb.html" target="_top">システムデータベース</A><BR>
+　 + <A href="05systemtype.html" target="_top">各タイプの説明</A><BR>
+　- <A href="05userdb.html" target="_top">ユーザデータベース</A><BR>
+　- <A href="05changedb.html" target="_top">可変データベース</A><BR>
+<BR>
+■<A href="06material.html" target="_top">素材規格</A><BR>
+■<A href="06systemvalue.html" target="_top">ｼｽﾃﾑ変数/文字一覧</A> <a href="06systemvalue_pro.html" target="_top" class="blue">[P]</a><BR>
+■<A href="06specialword.html" target="_top">特殊文字一覧</A><BR>
+■<A href="06valueget.html" target="_top">変数呼び出し値一覧</A><BR>
+■<A href="06tools.html" target="_top">便利なツール紹介</A><BR>
+　<SMALL><span style="color : #999999;">→ ブラウザ化,ｳﾙﾌｧｰﾙGPT等!</span></SMALL><BR><BR>
+■<a href="06pro_version.html" target="_top" class="blue">[P]プロ版機能の紹介</a>
+<BR>
+　　
+　　
+</BODY>
+</HTML>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE>ユーザデータベース</TITLE><LINK rel="stylesheet" href="./style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+
+<P><BR>
+データベース<B><FONT 
+size=+1>【ユーザデータベース】</FONT></B><BR>
+<BR>
+<IMG src="./DB_user.png" border="0" width="448" height="386"><BR>
+（サンプルゲーム・ユーザデータベース）<BR>
+<BR>
+<BR>
+<B>・ユーザデータベースの使い方</B><BR>
+　RPGにおける武器や敵の戦闘開始時ステータスなど、ゲーム中に変化しない情報を保存するためのものです。基本的には、ツール利用者がゼロから作成します。<BR>
+　ゲーム中のデータの書き換えはできません。<BR>
+<BR>
+　ユーザデータベースからのデータの読み込みは、イベントコマンドの「<A href="./04ev_db.html"><B>DB操作</B></A>」などで行ってください。<BR>
+<BR>
+<BR>
+　
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>ウディタ内の暗黙の仕様</TITLE><LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>
+<B><FONT size="+1">【暗黙の仕様】</FONT></B><BR>
+<BR>
+　WOLF RPGエディターで全体にわたって影響する、最初は気付きにくい仕様について説明します。<BR>
+<BR>
+&lt;一覧&gt;　　（クリックすると詳細へ飛びます）<BR>
+【1】<a href="#1" class="glink">数値欄に100万以上の数値を入力すると「変数」が読み込まれる</a><BR>
+【2】<a href="#1.1" class="glink">それぞれのマップイベントは10個のセルフ変数を持ち、それぞれのコモンイベントは100個のセルフ変数を持つ</a><BR>
+【3】<a href="#2" class="glink">コモンイベントはマップイベントより高速処理される（＆ コモン内で±21億超えると数値が逆転する）</a><BR>
+【4】<a href="#3" class="glink">イベントが実行される順番は　並列マップEv→自動マップEv→自動コモンEv→並列コモンEvの順</a><br>
+【5】<a href="#3.1" class="glink">並列イベントはイベント途中でも起動条件が満たされなくなった直後に終了する。<br>
+　 　が、本当は「その直後のウェイト時や、ウェイトが起きそうな処理」まで処理が続く</a><br>
+【6】<a href="#4" class="glink">Dataフォルダが存在しないときにEditor.exeを起動すると新規データが作れる</a><br>
+【7】<a href="#7" class="glink">キャラクターを移動させる際、通行不能マスと1/4マスでも重なってると動けないが<br>
+　　 イベントと重なっている場合は(1移動で抜けられる場合のみ)動ける</a><br>
+【8】<a href="#8" class="glink">「ゲーム基本設定」でキャラクター移動幅を「1マス」にしてあるとイベントの接触判定が縦横に0.5マス伸びる</a><br>
+【9】<a href="#9" class="glink">「決定キーで実行」「プレイヤー接触」「イベント接触」で起動するイベントは、<br>
+　　イベント本体がある場所が「通行可能」か「通行不能」かで接触判定の仕方が変わる</a><BR>
+<HR size="1" noshade id=1>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>
+      <P><b><span style="font-size : 120%;">【1】</span></b><span style="font-size : 120%;"> 数値欄に100万以上の数値を入力すると「変数」が読み込まれる。</span></P>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="white">　<span style="color: rgb(67, 67, 85); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">ほとんどの数値欄は、1000000（100万）以上の値を入れることで「変数の値」を読み込むことができます。<br>
+      <br>
+      　以下は「ピクチャ」コマンドへの数値入力例です。<br>
+      　</span><img src="Sys_valueget.gif" border="1"><br>
+      <br>
+      　詳しいことは<b><a href="06valueget.html" target="B">【変数呼び出し値　一覧】</a></b>をご覧ください。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+　
+<hr size="1" noshade id="1.1">
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap>
+      <P><b><span style="font-size : 120%;">【2】 </span></b><span style="font-size : 120%;">それぞれのマップイベントは10個のセルフ変数を持ち、<br>
+      　　　それぞれのコモンイベントは100個のセルフ変数を持つ。</span></P>
+      </TD>
+    </TR>
+    <TR>
+      <TD class="white">　各マップイベントは、そのイベント内だけで使える「マップセルフ変数」を10個持っています。<br>
+      　「セルフ変数」は言葉の通り、「そのイベント自身が持っている変数」で、たとえば<br>
+      「マップイベント0番のセルフ変数1」の値を変更しても、他のマップイベントのセルフ変数1は変化しません。<span style="color: rgb(67, 67, 85); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"><br>
+      <br>
+      　同様に、各コモンイベントにはコモンイベント内で使える「コモンセルフ変数」を100個持っています。<br>
+      　コモンセルフ変数の「0～4番、10～100番」は<b>数値</b>だけ入れられる変数で、<br>
+      「5～9番」は<b>文字列</b>だけを入れられる変数となっています。<br>
+      <br>
+      　どうして「セルフ変数」が用意されているのかというと、「そのイベント内でしか使わない変数」がとても多いからです。<br>
+      <br>
+      　例えば、ある宝箱がすでに開かれているかを記録するなら、宝箱イベントのセルフ変数0番が「0」ならまだ開いてない、<br>
+      「1」ならもう開かれている、という前提で処理を作ればいいわけです。<br>
+      　この宝箱のようなケースでいちいち新しい｢通常変数｣(どのイベントからでも変更できる変数)を作るのは面倒ですし、<br>
+      通常変数に頼ると他の場所でうっかりその通常変数が変わってしまったとき、どこで数値が変わったのか<br>
+      分からなくなることも出てきます。セルフ変数で対応できることは、なるべくセルフ変数で処理した方が安全です。<br>
+      　<br>
+      </span></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=2>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap><span style="font-size : 120%;">【3】 コモンイベントはマップイベントより高速処理される<br>
+      　　（＆ コモン内で±21億超えると数値が逆転する）</span></TD>
+    </TR>
+    <TR>
+      <TD class="white">　実はコモンイベント内のコマンドは、マップイベントに比べて<b><span style="color : #ff0000;">平均5～10倍以上の速度</span></b>で実行されます。<br>
+      　直接「自動起動」や「並列起動」するコモンイベントだけでなく、<br>
+      「マップイベントから呼び出されるコモンイベント」も高速化されて実行されます。<br>
+      <br>
+      　これはゲーム起動時に、プログラム的に「非常に単純な処理で実行しても安全」だと判断された<br>
+      コモンイベント内のコマンドだけ「最適化」され、高速モードで実行されるためです。<BR>
+      <br>
+      　たとえば『変数操作』コマンドの場合なら、チェックボックスを全てオフにした状態ならば<br>
+      ほとんどの場合は最適化され、高速に実行されるようになります。<br>
+      （「結果を±999999に収める」や「実数計算「X番の変数呼出」など<br>
+      　　何か1つでもチェックをオンにすると高速処理されなくなります）<br>
+      <br>
+      <br>
+      <b>【コモンイベント側だけで起きる副作用】</b><br>
+      　ただし高速化されるかわりに副作用もあり、コモンイベント内で最適化された計算は、<br>
+      オプションなしだと<b>2147483647(約21.5億)より大きい値になると-2147483647</b>になる、<br>
+      といった<b><span style="color : #cc0000;">±が逆転する</span></b>現象が発生します。<br>
+      　いったん1000倍にして計算する場合などによく数値があふれがちなので注意してください。<BR>
+      <br>
+      　この現象を起こさないようにしたい場合は、「変数操作」なら何かのチェックボックスを入れて計算してください。<br>
+      高速処理モードでなければ、どんなに増減しても「±20億」で数値が止まるようになります。<BR>
+      　</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id=3>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap><span style="font-size : 120%;">【4】イベントが実行される順番は<br>
+      　　並列マップEv→自動マップEv→自動コモンEv→並列コモンEvの順</span></TD>
+    </TR>
+    <TR>
+      <TD class="white">　ややマニアックな話ですが、同時に起動条件が満たされた場合、<br>
+      イベントが実行される処理順（起動優先順）は以下のようになっています。<br>
+      <br>
+      　　<b>並列マップイベント→自動マップイベント→自動コモンイベント→並列コモンイベント</b><br>
+      　　　※それぞれ、「イベントIDが小さい方から大きい順」に起動判定が行われ、実行されます。<br>
+      　　　※『自動イベント』が1つでも実行中だと他の自動イベントは起動しません。<br>
+      　　　※『並列イベント』は他のあらゆるイベントが実行中でも、条件さえ満たせば実行されます。<br>
+      <br>
+      　なので「このフレーム中に行われた全処理数」を知りたい場合は、一番最後の処理になる<br>
+      「<b>コモンイベントの一番下のID</b>」に「<b>並列起動</b>」のコモンイベントを作り、<br>
+      その中で「<b>このフレーム中の処理数</b>」を取得すればいいわけです。<br>
+      <br>
+      　同様に、「RPG基本システム」の初期化処理（ウィンドウの表示位置などを設定しています）は<br>
+      最後の「並列コモンEv」内で行われているので、マップイベント側で1フレームのウェイトをしないと<br>
+      初期化が実行されません。<br>
+      　サンプルゲームのタイトル処理で、最初に1フレームのウェイトを入れているのはそのためです。<br>
+      <br>
+      <br>
+      <b>※おまけ　同じ場所に重ねたイベントを「接触」で起動した場合の実行順</b><br>
+      　同じ場所に2つ以上重ねたイベントを「プレイヤー/イベント接触」で起動させたときは、<br>
+      両方が同時に起動して、「IDが小さい方から大きい方」に順に実行されます。<br>
+      また、重なったイベントを「決定キーで起動」したときは、「IDが最も小さいイベント」だけ実行されます。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<br>
+<HR size="1" noshade id=3.1>
+<BR>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap><span style="font-size : 120%;">【5】並列イベントはイベント途中でも起動条件が満たされなくなった直後に終了する。<br>
+      　　が、本当は「その直後のウェイト時や、ウェイトが起きそうな処理」まで処理が続く<br>
+      </span></TD>
+    </TR>
+    <TR>
+      <TD class="white">　「並列実行」イベントは、一般的には<br>
+      「<b>イベントの途中であろうが、起動条件が満たされなくなった直後に終了する</b>」<br>
+      のですが、実はその後もちょっとだけ処理が続けられる場合があります。<br>
+      <br>
+      　というのも、高速化のために「一気にやれる処理は一気に行う」という内部処理で動作しているため、<br>
+      「変数操作」によって並列イベントの起動条件が満たされなくなったとしても、<br>
+      その後の『<b>ウェイトが発生しうる処理</b>』『<b>処理の中断可能性があるコマンド</b>』のところまでは<br>
+      実行され続ける場合があるのです。<br>
+      <br>
+      　たとえば「<b>並列実行</b>」イベントの起動条件「<b>V1 が 0 のとき</b>」で以下の処理が実行された場合……。<br>
+      <br>
+      <br>
+      ■変数操作: V1[] = 1 + 0 　　<span style="color : #999999;">←　ここでV1=1になるので起動条件が満たされなくなるが……</span><br>
+      ■変数操作: V2[] = 1 + 0 　　<span style="color : #999999;">←　実は続けてこの処理も実行される</span><br>
+      ■ウェイト：1 フレーム　　<span style="color : #999999;">←ここでようやく並列実行イベントが止まる</span><br>
+      ■変数操作: V3[] = 2 + 0 　<span style="color : #999999;">←この処理は実行されない</span><br>
+      <br>
+      <br>
+      　V1が「1」になった時点で条件が満たされなくなるのでそのタイミングで止まりそうですが、<br>
+      実際にイベントが終了するのは3つめの「ウェイト」処理のタイミングで、<br>
+      その間にある「V2 = 1」の処理は実行されます。<br>
+      　想定外の処理が行われる場合もあるので、<b><span style="color : #ff0000;">起動条件から外れる変数操作</span></b>をするときは<br>
+      安全のために、その直後に「<b><span style="color : #ff0000;">イベント処理中断</span></b>」を入れるのがよいでしょう。<br>
+      <br>
+      <br>
+      　なお「並列イベント」のこの挙動に対して、<b><span style="color : #cc0000;">「自動実行」イベントの方は途中で起動条件が<br>
+      満たされなくなってもいったん最後まで処理が実行され続けます</span></b>。</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<BR>
+<HR size="1" noshade id="4">
+<br>
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap><span style="font-size : 120%;">【6】 Dataフォルダが存在しないときにEditor.exeを起動すると新規データが作れる</span></TD>
+    </TR>
+    <TR>
+      <TD class="white">　実は、「Data」フォルダが存在しないときにEditor.exeを起動すると、<br>
+      以下のような新規データを作る画面が表示されます。<br>
+      <br>
+      　　<img src="01specifi1.png" border="0"><br>
+      <br>
+      　『RPG基本システム入り空データ』には、「RPG基本システム」関連データと、<br>
+      マップとして「タイトル画面」「スタート後画面」の2つ、そしていくらかの素材が入っています。<br>
+      この状態からテストプレイしてできることは、タイトル画面の選択肢と、スタート後にキャンセルキーで<br>
+      メニュー展開ができること、そして孤島でキャラクターを移動させることだけです。<br>
+      <br>
+      　『完全初期データ』は本当に最低限のデータだけで他に何も入っていません。<br>
+      テストプレイを実行しても、真っ暗な画面が表示されるだけで、何のキーを押しても何も起こりません。<br>
+      <br>
+      　どちらも、Data作成してすぐに編集、ならびにテストプレイが可能になっています。<br>
+      　必要な方で開発を始めてください。<br>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR size="1" noshade id=7>
+　<br>
+
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap><span style="font-size : 120%;">【7】キャラクターを移動させる際、通行不能マスと1/4マスでも重なってると動けないが<br>
+      　　イベントと重なっている場合は(1移動で抜けられる場合のみ)動ける</span></TD>
+    </TR>
+    <TR>
+      <TD class="white">　実はキャラクターを移動させる際、<br>
+      <br>
+      　●そのキャラが「通行不能マス」と1/4でも重なっていると、そのキャラは動けなくなる。<br>
+      <br>
+      　●そのキャラが「他の通行不能マップイベント」と重なっている場合、1移動で通行可能な場所に<br>
+      　　出られる場合に限り、そこから移動できる。<br>
+      　（半歩移動なら半分まで重なっても平気、全歩移動なら完全に重なっても移動できる）<br>
+      <br>
+      　という仕様の差があります。<br>
+      <br>
+      　この仕様の使い所はあまりないかもしれませんが、<br>
+      「少しでも重なると動けなくなるギミック」を作るときは「チップ処理」でマップ書き換えし、<br>
+      「半分重なっても逃げられるイベント」を作る場合は「マップイベント」で作る、<br>
+      といった使い分けができるかもしれません。<br>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<hr size="1" noshade id="8">
+　
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap><span style="font-size : 120%;">【8】「ゲーム基本設定」でキャラクター移動幅を「1マス」にしてあると<BR>
+      　　イベントの接触判定が縦横に0.5マス伸びる</span></TD>
+    </TR>
+    <TR>
+      <TD class="white">　「ゲーム基本設定」で「デフォルトのキャラクター移動幅」を「0.5マス」から「1マス」にした場合、<br>
+      マップイベントとの接触判定は、自動的に<b><span style="font-size : 120%;
+	color : #ff0000;
+">縦横に0.5マス分伸びる</span></b>ようになっています。<br>
+      <br>
+      　これは、「半歩左に設置」や「半歩上に設置」がオンにされたマップイベントがあったとき、<br>
+      「1マス」移動の主人公では「0.5マス分ずれて設置されたイベント」に<br>
+      直接接触できなくなって絶対にイベントが起動できなくなる問題があったため、<br>
+      それを避けるための暗黙の仕様です。<br>
+      <br>
+      　以下は、「デフォルトのキャラクター移動幅」が<b>「1マス」</b>のもとで<br>
+      <br>
+      <b>　・「半歩左に設置」オプションをオンにして出現させたネコ（右）　と<br>
+      　・主人公（左）</b><br>
+      <br>
+      　が接触した場面です。「0.5マス」分離れていても起動できているのが分かります。<br>
+      <br>
+      　<img src="01specifi2.png" border="1" width="400"><br>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+<hr size="1" noshade id="9">
+　
+<TABLE class="mgray" cellpadding="6" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TD class="fw" nowrap><span style="font-size : 120%;">【9】「決定キーで実行」「プレイヤー接触」「イベント接触」で起動するイベントは、<br>
+      　　イベント本体の場所が「通行可能」か「通行不能」かで接触判定が変わる</span></TD>
+    </TR>
+    <TR>
+      <TD class="white">　<br>
+      　ほとんどの場合では気にならない問題ですが、<br>
+「決定キーで起動」や「プレイヤー接触」「イベント接触」のイベントは、<br>
+      <b><span style="font-size : 120%;">イベント本体の場所が通行可能か否か</span></b>で以下のように接触判定の仕方が変わります。<br>
+      <br>
+      <br>
+      <B>●イベント本体が通行「可能」な場所にある場合は上に乗らないと起動しない。</b><br>
+      <br>
+      <b>●イベント本体が通行「不能」な場所にある場合は隣マスから起動できる。</b><br>
+      <br>
+      <b>●キャラクター画像を出す場合も同様で、通行不能なEvは隣から起動でき、<br>
+      　通行可能なら乗る必要がある。</b><br>
+      <br>
+      <br>
+      　それぞれ例を紹介していきます。<br>
+      　ここでは例として、以下のようなイベントを配置したものとします。マップ出口と本棚のイベントは<br>
+      「範囲拡張」が設定されています。どれも「<b>プレイヤー接触</b>」で起動するイベントです。<br>
+      　<img src="01specifi9A.png" border="1" width="400"><br>
+      <br>
+      <br>
+      <br>
+<span style="font-size : 120%;"><b>【イベント本体が通行「可能」な場所にある場合は上に乗る必要がある】<br>
+      </b></span><br>
+      　たとえば「<b>マップ出口</b>」のように、<b>透明(すり抜け可)なイベント本体</b>が<br>
+      <b>「通行可能な場所」</b>に配置された場合、<b><span style="color : #ff0000;">その拡張範囲も含め</span></b>、<br>
+      「<b>上に乗らないと起動しないイベント</b>」になります。<br>
+      つまりこの場合は、拡張範囲がはみ出している「横にある水地帯」に接触しても何も起きません。<br>
+      　　↓<br>
+      　<img src="01specifi9A1.png" border="1" width="400"><br>
+      <br>
+      <br>
+      <br>
+<span style="font-size : 120%;"><b>【イベント本体が通行「不能」な場所にある場合は隣から起動できる】<br>
+      </b></span><br>
+      　しかし、「<b>本棚の中</b>」のように、<b>透明(すり抜け可)なイベント本体</b>が<br>
+      「<b>通れない場所</b>」に配置されているイベントは、<br>
+      <b><span style="color : #ff0000;">拡張範囲の隣のマスから</span></b>でもイベント実行できます。<br>
+      さっきのパターンだと拡張範囲内の水に触れても何も起きなかったのにです！<br>
+      　これが、「<b>イベント本体の場所の通行設定</b>」によって挙動が変化する部分です。<br>
+      　<img src="01specifi9A2.png" border="1" width="400"><br>
+      <br>
+      <br>
+      <br>
+<span style="font-size : 120%;"><b>【キャラクター画像を出す場合も同様で、通行不能なEvは隣から起動でき、<br>
+　通行可能なら乗る必要がある】<br>
+      </b></span><br>
+      　ちなみに、「<b>マップイベントに画像をセットした場合</b>」もイベント起動の挙動は変化します。<br>
+      <b>画像あり + 「すり抜け」オフ</b>のときは隣のマスからイベント起動できますが、<br>
+      <b>画像あり + 「すり抜け」オン(または「画像なし」)</b>のときは上に乗らないとイベントが起動しません。<br>
+      <br>
+      <img src="01specifi9A3.png" border="1" width="230">　<img src="01specifi9A4.png" border="1" width="230"><br>
+      <br>
+      　<br>
+      <hr>
+      <br>
+      また、以下のような差も発生しますので注意してください。<br>
+      <br>
+      ●「プレイヤー/イベント接触」イベントのある座標が「<b>通行不能</b>」の場合は、<br>
+      　「接触拡張範囲」内のあらゆる「壁」（通行不能タイル）や「マップイベント」に向かって<br>
+      　<b>移動しようとしたとき</b>もそのイベントが起動する。<br>
+      　（元々は前述の通り「長い本棚」のイベントなどを起動させる用途を想定している仕様ですが、<br>
+      　　本棚のある場所以上に範囲拡張すると妙な挙動になってしまいます）<br>
+<br>
+      ●「プレイヤー/イベント接触」イベントのある座標が「<b>通行可能</b>」の場合は、<br>
+      　拡張範囲内の「壁」に向かって移動しようとしてもイベントは起きない。<br>
+      　（エンカウント範囲Evなどを想定した挙動です）<br>
+<br>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+
+<P><BR>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<BR>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>デバッグコマンド一覧</TITLE><LINK rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+<P><BR>
+<B><FONT size="+1">【デバッグコマンド一覧】</FONT></B><BR>
+<BR>
+テストプレイ時にはGame.exe上で次のようなコマンドが使えます。<BR>
+テストプレイとしてではなく、Game.exeを直接起動したときにはこれらのコマンドが使えないので注意してください。<BR>
+<BR>
+　・<B><a href="#dwindow" class="glink">デバッグウィンドウ</a></B><BR>
+　　- <a href="#dcommand" class="glink"><b>「デバッグ文」コマンドの裏技 ValWatch(変数監視)とPictureWatch(ピクチャ監視)</b></a><br>
+　・<B><a href="#logsave" class="glink">デバッグウィンドウ表示（F3）</a></B><BR>
+　・<B><a href="#picture" class="glink">ピクチャ詳細一覧（F7）</a></B><BR>
+　・<B><a href="#debugdata" class="glink">デバッグデータ（F8）</a></B><BR>
+　・<B><a href="#valuelist" class="glink">変数一覧（F9）</a></B><BR>
+　・<B><a href="#loaddata" class="glink">データ再読み込み（F11）</a></B><br>
+　・<B><a href="#sysS55" class="glink">SysS 55：[読]Ev実行経路</a></B><BR>
+<BR>
+<HR size="1" id="dwindow"><BR>
+<B><FONT size="+1">[ デバッグウィンドウ ]</FONT></B><BR>
+<BR>
+エディタの「ゲーム設定」→「デバッグウィンドウ使用」にチェックマークを入れると使用可能です。<br>
+<IMG src="01debug_debugicon.png" border="1"><BR>
+<br>
+オンにしていると次のようなデバッグウィンドウが表示されます。<BR>
+または、テストプレイ時にF3キーを押すことでも表示することができます。<BR>
+<BR>
+<IMG src="Game_debugwindow.png" border="0"><BR>
+<BR>
+このチェックが入っていても、Game.exeを直接起動した場合にはデバッグウィンドウは表示されません。<BR>
+デバッグウィンドウはテストプレイ時のみ機能します。<BR>
+<BR>
+　「<a href="04ev_text.html"><B>文字の表示</B></a>」でデバッグ文として書き込まれた文字列や、エラー時のレポートなどが表示されます。<br>
+メッセージの最後には、デバッグの追跡を容易にする目的で、「MapEv番号/コモンEv番号/行数」が自動付加されます。<br>
+<BR>
+<BR>
+<B>・「ログ保存」ボタン ]</B><BR>
+<BR>
+デバッグウィンドウの「ログ保存」ボタンを押すとデバッグウィンドウ内の文字列をテキストに保存できます。<BR>
+テキストはLog.txtという名前でGame.exeと同じフォルダに保存されます。<BR>
+<br>
+
+<HR size="1" id="dcommand">
+<BR>
+<B><FONT size="+1">[ 「デバッグ文」コマンドの裏技 ValWatchとPictureWatch ]</FONT></B><BR>
+<BR>
+　「文章の表示」コマンドの「デバッグ文」で以下の入力を行うと、<b>変数やピクチャの監視</b>ができます。 <BR>
+　<br>
+<b>●「デバッグ文」の隠しコマンド1　【変数監視機能　ValWatch】</b><br>
+<br>
+　たとえばデバッグ文に
+<table border="1">
+  <tbody>
+    <tr>
+      <td><b><span style="color : #ff0000;">ValWatch:ON=2000009</span></b></td>
+    </tr>
+  </tbody>
+</table>
+　と入れると、「変数操作」コマンドなどで指定した変数に直接アクセスされたとき、「デバッグウィンドウ」に以下のように表示されます。<br>
+<br>
+　【見本】　※通常変数9に4が格納されたとき<b><br>
+　# ValWatch=&gt; 2000009 = 4　<br>
+　--&gt;[MapEv14/4行]</b><br>
+<br>
+※またこの機能を使うと「コモンイベントの高速化」がオフになるので、<br>
+　<b><span style="color : #ff0000;">コモンイベントの処理時間が平均で「元の6～10倍以上」</span></b>になります。<br>
+　高負荷の状況をテストするのにも使えます。<br>
+　高速化「オフ」の状態でもEv処理時間が10ms以内におさまっていれば、他機種への移植もやりやすそうです。<br>
+<br>
+　→　【注意!!】<b>コモンイベント中のどこかに、1行でも「デバッグ文」の「ValWatch:」コマンドがあればコモンイベントの高速化処理がオフにされる</b>ので注意してください。「0回ループ内」など絶対に実行されない場所にあってもです！<br>
+<p><br>
+　<br>
+※<b><span style="color : #ff0000;">【注意！　ValWatchで数値計算が狂う場合があります！】</span></b><br>
+　ValWatchを使用中は、高速化が解除される影響で、<b>コモンイベント内</b>の変数操作などで数値が「2147483647」を超えると<br>
+　「-2147483648」に逆転してしまう現象がなくなり、<b><span style="color : #ff0000;">常に数値が±20億以内におさめられるようになります。</span></b><br>
+　±20億近くの値を使う計算を行っている場合や、あるいは計算ミスなどで知らない間に21億を超えたことによる<br>
+　数値の逆転が発生していた場合、<b><span style="color : #ff0000;
+	font-size : 120%;
+">ValWatch機能のON/OFFで<br>
+　計算結果に差が発生してしまう</span></b>場合がございますのでご注意ください。<br>
+<br>
+<br>
+<br>
+<br>
+<b>●「デバッグ文」の隠しコマンド2　【ピクチャ監視機能　PictureWatch】</b><br>
+<br>
+　たとえば「デバッグ文」機能で
+</p>
+<table border="1">
+  <tbody>
+    <tr>
+      <td><b><span style="color : #ff0000;">PictureWatch:ON=123</span></b>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+　と入れると以後ピクチャ123番を監視し、そのピクチャになにか処理が行われるたびに、「デバッグウィンドウ」にその<b>ピクチャ番号</b>と<b>処理位置、処理内容（表示(New）　移動（Move)　消去（Delete）　ディレイリセット（Delay Reset)　ピクチャエフェクト（Effect））</b>が表示されます。<br>
+　　「ON」のところを「OFF」にしてデバッグ文を実行すると監視状態をオフに出来ます。<br>
+<br>
+　【見本】　ピクチャ123を「表示」したとき<br>
+<b>　# PictureWatch=&gt; 123 &lt;New&gt;<br>
+　--&gt;[ｺﾓﾝ696/28行]</b><br>
+<br>
+<br>
+
+<BR>
+<HR size="1" id="picture"><BR>
+<B><FONT size="+1">[ ピクチャ詳細一覧（F7） ]</FONT></B><BR>
+<BR>
+　テストプレイ中にF7を押すと現在表示されているピクチャの一覧が表示されます。<BR>
+ピクチャの位置や表示形状、表示したEvを調べる際に有効です。<br>
+　また、<b><span style="color : #ff0000;">「Shiftまたは中クリック」を押しながら「F7」を押すと「マウスカーソルの座標にあるピクチャ」のみ表示</span></b>されます。<br>
+　<b>ホイール・上下キー</b>：　ページ切り替え<br>
+　<b>Esc・BS・右クリック</b>：　ピクチャ詳細一覧を抜けます<BR>
+<BR>
+<IMG src="Game_picturelist.png" border="0"><BR>
+<BR>
+<BR>
+<HR size="1" id="debugdata"><BR>
+<B><FONT size="+1">[ デバッグデータ（F8） ]</FONT></B><BR>
+<BR>
+　テストプレイ中にF8を押すと読込済みのピクチャ、サウンド、スプライト（読み込み中の画像ファイル）の名前、<br>
+表示されているピクチャ、実行中並列コモン、実行中のイベントを見ることができます。<BR>
+<BR>
+<IMG src="Game_debugdata.png" border="0">
+<BR>
+<BR>
+<HR size="1" id="valuelist"><BR>
+<B><FONT size="+1">[ 変数一覧（F9） ]</FONT></B><BR>
+<BR>
+　テストプレイ中にF9を押すと通常変数・予備変数・文字列変数・システム変数・システム文字列を見ることができます。<BR>
+<BR>
+<IMG src="Game_valuelist.png" border="0">
+<BR>
+<BR>
+<HR size="1" id="loaddata"><BR>
+<B><FONT size="+1">[ データ再読み込み（F11） ]</FONT></B><BR>
+<BR>
+　テストプレイ中にF11を押すと現在のままマップファイル・全イベント・タイルセット設定・ユーザデータベース・<br>
+システムデータベース・コモンイベントを最新の情報に更新します。<BR>
+　<b><span style="color : #cc0000;">可変データベースは更新されません</span></b>、またイベントが実行中ならばそれらも一旦終了しますますのでご注意ください。<br>
+　（イベントが一旦終了する仕様をうまく使えば、F11リセットを検出したときの処理を作ったりしてデバッグを効率化できるかもしれません）<br>
+<br>
+　特に「マップイベント」はマップ切り替え時同様に全て作り直されるので、<b><span style="color : #cc0000;">キャラに対するマスクON状態やエフェクトなども解除</span></b>されます。<br>
+<BR>
+<IMG src="Game_loaddata.png" border="0">
+<BR>
+<p><br>
+</p>
+<HR size="1" id="sysS55">
+<p><BR>
+<B><FONT size="+1">[ SysS 55：[読]Ev実行経路 ]</FONT></B><br>
+<BR>
+　システム文字列「SysS 55:[読]Ev実行経路」の内容を「文章の表示」などで表示すると、どの実行経路で実行されたか表示することができます。
+<br>
+　エラーが発生した処理内で「文章の表示」で「\sysS[55]」を表示すれば、エラー時の実行経路を容易に判別できます。 </p>
+<p><br>
+<span style="color: rgb(67, 67, 85); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">　＜マップイベント0からコモンイベント3を呼んだ場合のイベント実行経路　見本＞　line=行数</span><br style="color: rgb(67, 67, 85); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<b style="color: rgb(67, 67, 85); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">　　Ev0 line0 -&gt;<br>　　Ev0 Common3 line2 -&gt;<br>　　Ev0 Common1 line1</b><span style="color: rgb(67, 67, 85); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">　　　（コモンイベント1の1行目で 「\SysS [55]」 で「文章の表示」をした例）</span></p>
+<p><br>
+&nbsp;　</p>
+<HR size="1">
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+<BR>
+</div>
+</BODY>
+</HTML>

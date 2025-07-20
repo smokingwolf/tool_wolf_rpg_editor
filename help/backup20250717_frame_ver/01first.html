@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>はじめに</TITLE>
+<LINK rel="stylesheet" href="style.css">
+<STYLE type="text/css">
+<!--
+
+#HPB_TABLE_1_A_210228140943 th,#HPB_TABLE_1_A_210228140943 td{
+	padding-top : 2px; padding-left : 2px; padding-right : 2px; padding-bottom : 2px;
+}
+-->
+</STYLE>
+</HEAD>
+<BODY><BR>
+<B><FONT size="+1">■ はじめに</FONT></B><BR>
+<BR>
+　・WOLF RPGエディターは高度なロールプレイングゲーム開発が可能な、ゲームコンストラクションツールです。<BR>
+　・作成したゲームは、自由に配布したり、コンテストに投稿したり、販売することが可能です。<BR>
+　・完全無料で、暗号化機能を含む全ての機能が利用可能です。<BR>
+　・使いこなせば、RPGに限らずどんなゲームでも開発可能です。<BR>　　
+
+<HR size="1" noshade id=rule>
+<P><B><FONT size="+1">■ 動作環境</FONT></B><BR>
+<BR>
+　■動作OS（Ver3.00以降） ： <B>Windows7、8、10、11～</B><BR>
+　<span style="color : #999999;">■動作OS（Ver2.29以前） ： <B>Windows2000、XP、Vista、Windows7、8、10、11～</B></span><br>
+<BR>
+<font class=fmmg>　　※上記はプレイ・開発環境、両方の動作OSです。</font><BR>
+<font class=fmmg>　　※wineなどの仮想環境で動作させる場合、そのままでは起動できませんが、<BR>
+　　　 同梱のGuruguruSMF.dllを削除するとMIDI再生なしで起動できる（らしい）という情報が入っています。</font><BR>
+<BR>
+<BR>
+　■必須環境<BR>
+　 <B>エディター部</B> ： CPU 1GHz以上、メモリ128MB以上<br>
+　 <B>ゲーム部</B> ： 開発したゲームの処理量・解像度に応じて大幅に変化。<br>
+　　　3D描画可能なグラフィックボードを搭載していれば、処理が非常に高速化されます。<BR>
+<font class=fmmg>　 ※スペックが<B>CPU 1GHz</B>、<B>メモリ128MB</B>程度あれば、ノートパソコンのグラフィックチップでも<BR>
+　　　サンプルゲーム（解像度320x240作品）が最大の約70％程度の速度で動作します。</font><BR>
+<BR>
+　■必要ランタイム ： <B>DirectX 9.0、11以上 （WindowsXP SP2以降に標準搭載）</B><BR>
+<BR>
+<BR>
+<BR>
+　■ ゲームプレイ時に発生する環境依存の問題<BR>
+<BR>
+<font class=fmg>　　◆ゲームプレイの際、Windows2000でシステム内にある「<B>User.dll</B>」のバージョンが古いと<BR>
+　　　「<B>GetRawInputDeviceListが USER32.dll から見つかりませんでした</B>」 <BR>
+　　　と出て起動しないことがあります。その場合はVersion 5.1.26以上のuser32.dllを探して、<BR>
+　　　Windows\systemフォルダに上書きしてみてください。<BR>
+　　　ただし、ネットには古いuser32.dllも出回っているのでご注意下さい<BR>
+　　（Win98用：68KB・Ver4.10 / Win2000用：393KB・Ver5.0.02 / WinXP：561KB・Ver5.1.26）。</font><BR>
+<BR>
+　　<font class=fmg>◆ウィルスバスターなどのセキュリティソフトの影響により、ゲームプレイ時、<BR>
+      　　　<B>方向キーだけが反応しなくなる</B>問題が報告されています（決定・キャンセルなどは可能）。<BR>
+      　　　その場合は、ウィルスバスターの「例外設定」でWOLF RPGエディターのGame.exeを<BR>
+      　　　許可してくださることで、正常にプレイすることができます（2009/07）<BR>
+<BR>
+</font><BR>
+<BR>
+      　■ エディター側の環境依存の問題<BR>
+      <BR>
+      　<font class=fmg>◆ <B>ウィンドウサイズを変更すると、ウィンドウ下部のボタンが見えなくなる</B><BR>
+      　　Windows7（Vistaも？）にて、[コントロール パネル] → [テキストやその他の項目の大きさの変更]で<BR>
+      　　「<B>中  125％</B>」にしていると、最大化やサイズ変更したときに、下部ボタンが見えなくなるそうです。<BR>
+      　　大きさを、「<B>小 100％</B>」または「<B>大 150％</B>」にすることでこの問題を回避できるそうです。<BR>
+      <BR>
+      </font>　<font class=fmg>◆ <B>エディターのフォントが大きすぎてデザインが崩れていると思われる場合</B><BR>
+      　　WOLF RPGエディターは全てのフォントをMS UI Gothicで表示しているのですが、<BR>
+      　　このフォントが正しく設定されていない場合、表示が崩れてしまったり、<BR>
+　　一部の文字が読みにくくなります。その場合は以下のレジストリ設定を実行して、<BR>
+　　MS UI Gothicを再設定してみてください→</font>　<A href="http://www.silversecond.com/WolfRPGEditor/Data/MS_UI_Gothic_Recover.lzh">&lt;要インターネット接続&gt; MS UI Gothic再設定用データ(0.2ＫＢ）</A><BR>
+      </P>
+<HR size="1" noshade id=rule>
+<P><BR>
+<B><FONT size="+1">■ 利用規約</FONT></B><BR>
+<BR>
+<BR>
+<b class="fmg"><b class="fmg">■WOLF RPGエディターの利用について■</b><BR>
+</b>
+      　　WOLF RPGエディターによって開発された作品は、無償配布・有償配布・販売用途・<BR>
+　商用利用（規模問わず）・コンテスト応募用など、目的を問わず自由に利用することができます。<BR>
+      　また、どんな用途においても、報告は不要です。<BR>
+<BR>
+　なお「無償配布の場合」に限り、開発された作品に「Editor.exe」を添付して<BR>
+　配布することを許可しています。その際のご報告も不要です。<BR>
+<BR>
+　有償配布のデータには「Editor.exe」は添付できません。<BR>
+　 （2017/09/18修正）<BR>
+<BR>
+<BR>
+<b class="fmg">■インストールについて■</b><BR>
+　　自己解凍形式のフルパッケージを解凍すれば完了です。<BR>
+　そのまま、フォルダ内の「Editor.exe」を起動してエディットを開始したり、<BR>
+　「Game.exe」を起動してサンプルゲームを遊ぶことができます。<BR>
+　レジストリ変更などは一切行いませんので、WOLF RPGエディターのフォルダを<BR>
+　丸ごとUSBメモリにコピーすれば、開発環境をそのまま持ち運ぶことも可能です。<b class="fmg"><BR>
+<BR>
+<BR>
+<b class="fmg">■アンインストールについて■</b><BR>
+</b>　WOLF RPGエディターのフォルダを削除することで、完全にアンインストールが完了します。<BR>
+　レジストリは一切変更しておりません。<BR>
+<b class="fmg"><BR>
+<BR>
+<b class="fmg">■サポートについて■</b><br>
+</b>　バグ報告は、WOLF RPGエディター公式サイトフォーラムの「バグ報告スレッド」にて受け付けています。<BR>
+<BR>
+<BR>
+<br>
+<b class="fmg">■WOLF RPGエディターのレビュー・講座（解説）について■</b><BR>
+　　WOLF RPGエディターのレビューや解説（いわゆるウディタ講座）を書きたいんだけど！<BR>
+　という作者が鼻血を出して喜びそうな方々がおられた場合ですが、それらの作成に際して、<BR>
+　事前・事後に許可を取ったり報告する必要はありません。自由に書いてくださって結構です。<BR>
+　　その際、少しでも目に多くの人の目に触れるよう、ウディタWikiのリンク集などに<BR>
+　サイトを登録してくださると、他の皆さんも喜ぶと思います。<BR>
+<BR>
+　　またそれらの解説の際、サンプルゲームとその素材を利用したスクリーンショット、<BR>
+　およびツール画面に関しては、許可なく撮影・使用することが可能です。<BR>
+<BR>
+<BR>
+<b class="fmg">■素材について■</b><br>
+　　素材の利用規約は必ず守ってください。特に、ツクールシリーズのRTP素材、<BR>
+　およびRTP素材を改造した素材は、ツクール作品以外での使用が禁止されています。<BR>
+<BR>
+　※RTP（ランタイムパッケージ）　…<BR>
+　　　RPGツクールシリーズで開発されたゲームを遊ぶために必要な基本データ集。<BR>
+　　　規約上、ツクールシリーズ以外での使用が禁止されている。<BR>
+<BR>
+<BR>
+<b class="fmg">■プログラムのアイコン差し替えについて■</b><br>
+　　WOLF　RPGエディターの「Game.exe」および「Config.exe」は、外部ツールによって<BR>
+　プログラムアイコンを差し替えることを許可するものとします。ただし何が起きても<BR>
+　対応できませんので、アイコン差し替えは自己責任でお願いします。<BR>
+<BR>
+<BR>
+<b class="fmg">■保証・免責■</b><br>
+　　本ソフトウェアは、全ての環境で動作することを保証するものではありません。<br>
+　本ソフトウェアを使用したことにより、いかなるトラブルが発生しても<br>
+　当サイトは一切責任を負いませんのでご了承下さい。<br>
+<BR>
+<BR>
+<BR>
+</P>
+<HR size="1" noshade id=rule>
+<P>
+<BR>
+<B><FONT size="+1">■利用ライブラリ著作権表記</FONT></B>　2021/2/27更新<BR>
+<BR>
+　下部のボックスにDXライブラリの著作権表示を記載しています。<BR>
+<BR>　場合によっては<B><A href="https://dxlib.xsrv.jp/" target="_blank">DXライブラリ</A></B>側の著作権表示が更新されている可能性がありますので、慎重な方はそちらをご確認ください<BR>
+　（DXライブラリ公式のトップ画面→「DXライブラリの仕様と特徴」 → 「著作権について」あたりで確認できます）。<BR>
+<BR>
+　現在使用しているGame.exeの「DXライブラリのバージョン」を知りたい場合は、テストプレイすると出てくる「<B>Log.txt</B>」の中をご覧ください。<BR>
+　<BR>
+<BR>
+・DXライブラリ<BR>
+　山田　巧（Takumi Yamada） 様<BR>
+</P>
+<TABLE border="1" style="border-spacing : 0px 0px;" cellpadding="6" cellspacing="0">
+  <TBODY>
+    <TR>
+      <TD>ibjpeg　Copyright (C) 1991-2013, Thomas G. Lane, Guido Vollbeding.<BR>
+this software is based in part on the work of the Independent JPEG Group<BR>
+<BR>
+<BR>
+libpng　Copyright (C) 2004, 2006-2012 Glenn Randers-Pehrson.<BR>
+zlib　Copyright (C) 1995-2012 Jean-loup Gailly and Mark Adler.<BR>
+<BR>
+<BR>
+libtiff　Copyright (c) 1988-1997 Sam Leffler<BR>
+libtiff　Copyright (c) 1991-1997 Silicon Graphics, Inc.<BR>
+<BR>
+Permission to use, copy, modify, distribute, and sell this software and<BR>
+its documentation for any purpose is hereby granted without fee, provided<BR>
+that (i) the above copyright notices and this permission notice appear in<BR>
+all copies of the software and related documentation, and (ii) the names of<BR>
+Sam Leffler and Silicon Graphics may not be used in any advertising or<BR>
+publicity relating to the software without the specific, prior written<BR>
+permission of Sam Leffler and Silicon Graphics.<BR>
+<BR>
+THE SOFTWARE IS PROVIDED &quot;AS-IS&quot; AND WITHOUT WARRANTY OF ANY KIND,<BR>
+EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY<BR>
+WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.<BR>
+<BR>
+IN NO EVENT SHALL SAM LEFFLER OR SILICON GRAPHICS BE LIABLE FOR<BR>
+ANY SPECIAL, INCIDENTAL, INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND,<BR>
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,<BR>
+WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF<BR>
+LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE<BR>
+OF THIS SOFTWARE.<BR>
+<BR>
+<BR>
+libogg　Copyright (C) 2002-2009 Xiph.org Foundation<BR>
+<BR>
+Redistribution and use in source and binary forms, with or without<BR>
+modification, are permitted provided that the following conditions<BR>
+are met:<BR>
+<BR>
+- Redistributions of source code must retain the above copyright<BR>
+notice, this list of conditions and the following disclaimer.<BR>
+<BR>
+- Redistributions in binary form must reproduce the above copyright<BR>
+notice, this list of conditions and the following disclaimer in the<BR>
+documentation and/or other materials provided with the distribution.<BR>
+<BR>
+- Neither the name of the Xiph.org Foundation nor the names of its<BR>
+contributors may be used to endorse or promote products derived from<BR>
+this software without specific prior written permission.<BR>
+<BR>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<BR>
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<BR>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<BR>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FOUNDATION<BR>
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<BR>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<BR>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<BR>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<BR>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<BR>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<BR>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR>
+<BR>
+<BR>
+Opus audio codec<BR>
+Copyright 2001-2011 Xiph.Org, Skype Limited, Octasic,<BR>
+ Jean-Marc Valin, Timothy B. Terriberry,<BR>
+ CSIRO, Gregory Maxwell, Mark Borgerding,<BR>
+ Erik de Castro Lopo<BR>
+<BR>
+Redistribution and use in source and binary forms, with or without<BR>
+modification, are permitted provided that the following conditions<BR>
+are met:<BR>
+<BR>
+- Redistributions of source code must retain the above copyright<BR>
+notice, this list of conditions and the following disclaimer.<BR>
+<BR>
+- Redistributions in binary form must reproduce the above copyright<BR>
+notice, this list of conditions and the following disclaimer in the<BR>
+documentation and/or other materials provided with the distribution.<BR>
+<BR>
+- Neither the name of Internet Society, IETF or IETF Trust, nor the<BR>
+names of specific contributors, may be used to endorse or promote<BR>
+products derived from this software without specific prior written<BR>
+permission.<BR>
+<BR>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<BR>
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<BR>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<BR>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER<BR>
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,<BR>
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,<BR>
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR<BR>
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF<BR>
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING<BR>
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS<BR>
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR>
+<BR>
+<BR>
+Opusfile<BR>
+Copyright (c) 1994-2013 Xiph.Org Foundation and contributors<BR>
+<BR>
+Redistribution and use in source and binary forms, with or without<BR>
+modification, are permitted provided that the following conditions<BR>
+are met:<BR>
+<BR>
+- Redistributions of source code must retain the above copyright<BR>
+notice, this list of conditions and the following disclaimer.<BR>
+<BR>
+- Redistributions in binary form must reproduce the above copyright<BR>
+notice, this list of conditions and the following disclaimer in the<BR>
+documentation and/or other materials provided with the distribution.<BR>
+<BR>
+- Neither the name of the Xiph.Org Foundation nor the names of its<BR>
+contributors may be used to endorse or promote products derived from<BR>
+this software without specific prior written permission.<BR>
+<BR>
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS<BR>
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT<BR>
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR<BR>
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FOUNDATION<BR>
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,<BR>
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT<BR>
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<BR>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<BR>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<BR>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE<BR>
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR>
+<BR>
+<BR>
+Mersenne Twister<BR>
+Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,<BR>
+All rights reserved.<BR>
+<BR>
+Redistribution and use in source and binary forms, with or without<BR>
+modification, are permitted provided that the following conditions<BR>
+are met:<BR>
+<BR>
+1. Redistributions of source code must retain the above copyright<BR>
+notice, this list of conditions and the following disclaimer.<BR>
+<BR>
+2. Redistributions in binary form must reproduce the above copyright<BR>
+notice, this list of conditions and the following disclaimer in the<BR>
+documentation and/or other materials provided with the distribution.<BR>
+<BR>
+3. The name of the author may not be used to endorse or promote products<BR>
+derived from this software without specific prior written permission.<BR>
+<BR>
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR<BR>
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES<BR>
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.<BR>
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,<BR>
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT<BR>
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,<BR>
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY<BR>
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT<BR>
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF<BR>
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.<BR>
+<BR>
+<BR>
+Bullet　Copyright (c) 2003-2006 Erwin Coumans.</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<P><BR>
+</P>
+<BR>
+<BR>
+
+<HR>
+<BR>
+　　Copyright(C)　SmokingWOLF　All rights reserved</BODY>
+</HTML>

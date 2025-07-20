@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>可変データベース</TITLE>
+<link rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>
+データベース <B><FONT 
+size=+1>【可変データベース】</FONT></B><BR>
+<BR>
+<img src="DB_ex.png" border="0" width="446" height="394"><BR>
+（サンプルゲーム・可変データベース）<BR>
+<BR>
+<BR>
+<B>・可変データベースの使い方</B><BR>
+　キャラクターのステータスや戦闘中の敵味方の状態（HP）など、ゲーム中に変化する情報を保存するためのデータベースで、ゲーム中に書き換えが可能です。基本的には、ツール利用者がゼロから作成します。<BR>
+　なお可変データベースに入力されている値は、ゲーム開始時の値として使用されます。<BR>
+<BR>
+<BR>
+　可変データベースへのデータの書き込みは、イベントコマンドの「<B><a href="04ev_value.html">変数操作</a></B>」や「<B><a href="04ev_db.html">DB操作</a></B>」から行うことができます。読み込みは、イベントコマンドの「<a href="04ev_db.html"><B>DB操作</B></a>」で行ってください。<BR>
+<BR>
+<br>
+
+<hr>
+<P><b><span style="font-size : 120%;">【ゲームを更新する場合の、可変データベース拡張時の重要な話】</span></b><br>
+<br>
+　ゲームのバージョンアップ（更新）によって、可変データベースに新たに「<b>タイプを追加</b>」したくなったり、「<b>項目を変更</b>」したくなったりすることがあるでしょう。<br>
+　その場合は、必ず<br>
+<b><span style="color : #cc0000;
+	font-size : 120%;
+">　「新しい【タイプ】は、タイプの【最後尾】に追加」<br>
+　「新しい【項目】は、項目の【最後尾】に追加」</span></b><br>
+　するようにしてください。<br>
+<br>
+　新たなタイプが途中に挟まったり、新たな項目がこれまであった項目の間に挟まったりした場合、<b><span style="color : #cc0000;">過去バージョンのセーブデータを正しく引き継ぐことができなくなってしまいます</span></b>。<br>
+<br>
+<br>
+<b>【例】 </b>過去バージョンのゲームのセーブデータを維持できる「項目」の増やし方<br>
+　例えば古いゲームデータのタイプ0の可変DB項目が、<br>
+　●<b>項目0:名前(文字) / 項目1:HP(数)/ 項目2:MP(数)</b>　<br>
+　だったとします。<BR>
+<br>
+　もし新しいバージョンのゲームでタイプ0に「<b>異名</b>」という項目を新たに追加する場合、入れる場所によっては、古いバージョンのセーブデータを読み込んだときの挙動が以下のように変化します。<br>
+<BR>
+<span style="font-size : 120%;
+	color : #cc0000;
+">×</span><span><b>　項目0:名前(文字) / </b></span><span style="color : #cc0000;"><b>項目1:異名(文字) </b></span><span><b>/ 項目2:HP(数) / 項目3:MP(数)</b><br>
+　→ 項目0と1の間に新たに「異名」項目を増やしてしまったので、新しいバージョンのゲームで古いセーブデータを読み込むとエラーが出る。</span><br>
+<BR>
+<span style="font-size : 120%;
+	color : #0000ff;
+"><b>○</b></span><span><b>　項目0:名前(文字) / 項目1:HP(数) / 項目2:MP(数) / </b></span><span style="color : #cc0000;"><b>項目3:異名(文字)</b></span><span><br>
+　→</span><span style="color : #0000ff;">最後に「異名」項目を足したので、新しいゲーム内でも古いセーブデータが正常に読み込み可</span><span>。ただし「異名」は空の文字列なので注意。</span><br>
+　
+<hr>
+<p>　</p>
+</BODY>
+</HTML>

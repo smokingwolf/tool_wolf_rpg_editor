@@ -1,0 +1,247 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>基本操作</TITLE>
+<LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<BR>
+<B><FONT size="+1">【基本操作】</FONT></B>
+<P>　・<b><a href="#BASE" class="glink">基本的な操作</a></b><br>
+<br>
+　・<b><a href="#GAME_ARGV" class="glink">Game.exeの起動時引数</a></b><br>
+<br>
+　・<b><a href="#EDITOR_ARGV" class="glink">Editor.exeの起動時引数</a></b><hr><a id="BASE"></a>
+<P><b><span style="font-size : 150%;">【基本的な操作】</span></b><br>
+<BR>
+<B>■エディターの起動と終了</B><BR>
+<BR>
+・エディターを起動するには、WOLF RPGエディターを解凍したフォルダ内にあるEditor.exeを起動してください。<BR>
+・エディターの終了は、ウィンドウ右上の[×]ボタンを押すことで終了できます。<BR>
+<br>
+　<b>【テストプレイ開始】</b><br>
+　　<b>Ctrl+T</b>：エディター内の「メインウィンドウ」「マップイベントウィンドウ」「コモンイベントウィンドウ」「データベースウィンドウ」「コマンド入力ウィンドウ」から直接テストプレイを開始できます。<br>
+　　　　　※「メインウィンドウ」「マップイベントウィンドウ」「コモンイベントウィンドウ」なら<b>F9</b>でもテストプレイ開始可能です。<br>
+<BR>
+<BR>
+<B>■ゲームの起動と終了</B><BR>
+<BR>
+・ゲームを起動するには、WOLF RPGエディターを解凍したフォルダ内にあるGame.exeを起動してください。<BR>
+・ゲームの終了は、キーボードのAltキーを押しながらF4キーを押すことでいつでも可能です。ウィンドウモードの場合は、ウィンドウのタイトルバーにある[×]ボタンを押すことでも終了できます。<BR>
+<br>
+　→　<b><a href="#DLL" class="glink">『読み込まれた以下のDLLに正規の署名がありません』と出る場合について</a></b><BR>
+<br>
+<BR>
+<B>■ゲームの操作</B><BR>
+<BR>
+・ゲームの操作は基本的に、方向キー、決定キー、キャンセル（取り消し）キー、サブキーの4種類で行います。<BR>
+　これらそれぞれの入力は、以下のキーを押すことで行います。<BR>
+<BR>
+　　　操作　　　　　　対応するキー<BR>
+　<B>方向キー 上</B>： [↑] [8(テンキー)]<BR>
+　<B>方向キー 下</B>： [↓] [2(テンキー)]<BR>
+　<B>方向キー 左</B>： [←] [4(テンキー)]<BR>
+　<B>方向キー 右</B>： [→] [6(テンキー)]<BR>
+　<B>決定キー</B>　：[Space] [Zキー] [Enter]<BR>
+　<B>キャンセルキー</B>： [Esc] [Xキー] [0(テンキー)] [BackSpace] [Insert]<BR>
+　<B>サブキー</B>　： [Shift] [Cキー]<BR>
+<BR>
+<BR>
+ゲーム中における各キーの主な役割は以下の通りです、開発されたゲームのシステムによっては当てはまらないこともあります。<BR>
+<BR>
+　<B>方向キー</B> ： キャラクターを移動させる。<BR>
+　<B>決定キー</B> ： 選択肢を決定する。主人公の足下の位置、または目の前にあるイベントをチェックする（話す・調べる）<BR>
+　<B>キャンセルキー</B>：選択肢を取り消す。基本システムではメニューを表示する。<BR>
+　<B>サブキー</B>：上記以外の機能を持つ（ダッシュなど）。基本システムでは戦闘時に押したままで戦闘速度アップ。<BR>
+<BR>
+<BR>
+・ファンクションキーの一部が特殊な操作に対応しています。<BR>
+<BR>
+　<B>F4</B>：画面サイズ変更（ウィンドウモード時のみ）。順に、以下の3種類の画面サイズに切り替えることができます。<BR>
+　　　・100％表示（デフォルト）<BR>
+　　　・押すたびにさらに+100％して表示<BR>
+　　　・ディスプレイサイズを超えたら疑似フルスクリーン化<BR>
+　<s><B>F5</B>：フレームスキップレベル変更。画面描写速度が遅い時に変更すると動作が速くなります（ただし動きはカクカクになります）。</s>(Ver3.157以前のみ有効)<BR>
+　<B>F11</B>：ゲーム画面を最大化します。もう一度押すと元に戻ります。<BR>
+　<B>F12</B>：タイトル画面に戻ります。<BR>
+　<br>
+　また、テストプレイ時にはさらに追加の機能が使えます。詳細は「<a href="01debug.html"><B>デバッグコマンド一覧</B></a>」を参照。<br>
+<BR>
+<BR>
+・その他のキーの一部が特殊な操作に対応しています。<BR>
+　<B>PrintScreen、ScrollLock、Pause</B> ： スクリーンショットを撮影します。一部環境ではPrintScreenが機能しない場合があります。<br>
+　<span style="color : #cc0000;">※これに限らず、外部のソフトにキーショートカットが設定されている場合、ウディタ側でキー受付されない場合があります。</span><BR>
+<br>
+<BR>
+<B>◆方向キーの仕様について</B><BR>
+　キー入力は、180度反対のキーを入力したときにはそちらが優先されますが、<BR>
+　4方向移動時などにおいて上下と左右キーを組み合わせて押した場合、「最後に押したキー」が優先されます。<BR>
+
+<hr width="50%">
+<a id="DLL"></a>
+<P><b><span style="font-size : 120%;">【『読み込まれた以下のDLLに正規の署名がありません』と出る場合について】</span></b><br>
+<br>
+　暗号化ファイルが存在する場合、ゲーム中のセキュリティ対策として「DLLインジェクション」という攻撃への対策が実行されます。<br>
+　「DLLインジェクション」はゲームの内部データや動作を変更したり、秘密情報を抜き取ったりする攻撃です。<br>
+<br>
+　なんらかの「実行中のアプリから情報を取得するソフト」が正規の署名なしのDLLを使って実行されている場合、それが安全・危険にかかわらずゲーム起動時に以下のエラーが表示されます。<br>
+<br>
+<span style="color : #cc0000;"><b>『読み込まれた以下のDLLに正規の署名がありません。<br>
+　セキュリティ上の安全のため実行を中止します。<br>
+　C:\～～～\&lt;DLL名&gt;.dll<br>
+　* 上記DLLを使用しているソフトウェアを終了して<br>
+　　ゲームを再起動することでプレイ可能になる場合があります』</b></span><br>
+<br>
+　このエラーが出た場合は、上記に書かれている通り、そのDLLを使用するソフトウェアを起動前にいったん停止させていただく必要がございますので、あらかじめご了承ください。<br>
+<br>
+<br>
+　※この文面はプレイヤーの皆さまへの説明として引用したり、改変して掲載してくださって構いません。<br>
+
+<hr><a id="GAME_ARGV"></a>
+<p><b><span style="font-size : 150%;">【Game.exeの起動時引数】</span></b><br>
+<br>
+　batファイルやショートカットなどを使うことで、「引数」を付けてGame.exeを起動することができます（詳しいやり方はここでは説明しませんので調べてみてください）。<br>
+<br>
+　たとえばbatファイル上なら、<br>
+　　<b>Game.exe <span style="color : #cc0000;">-basic &quot;BasicD2&quot; Test_Of_Main</span></b><br>
+　のような感じで指定して実行します。赤文字の部分が「引数」です。<br>
+<br>
+<br>
+　<b>Test_Of_Main</b>：テストプレイモードで起動します。<br>
+<br>
+<br>
+　<b>Use_Debug_Window</b>：起動時にデバッグウィンドウを表示します。<b>Test_Of_Main</b>がある場合のみ有効。<br>
+<br>
+<br>
+　<b>-basic &quot;&lt;基本データフォルダ名&gt;&quot;</b><br>
+　　基本データフォルダ変更機能です。「BasicData」フォルダの代わりに、指定した<b>&lt;基本データフォルダ名&gt;</b>の基本データフォルダ(※)を使って起動します。<br>
+　　<b>&lt;基本データフォルダ名&gt;</b>は<b>&quot;&quot;</b>で挟んで指定することもできます<span style="font-size : 80%;">（</span><b><span style="font-size : 80%;">&quot;&quot;</span></b><span style="font-size : 80%;">を挟まなくても動作しますが、「半角スペース」を含むフォルダを指定したい場合は</span><b><span style="font-size : 80%;">&quot;Basic Data&quot;</span></b><span style="font-size : 80%;">のように&quot;&quot;で挟んで指定せねばなりません）</span><br>
+<span style="color : #999999;"><br>
+　※基本データフォルダとは？：ゲーム基本設定、コモンイベント、各データベース、タイル設定などを含むフォルダです。</span><br>
+<br>
+<br>
+　<b>-basic2 &quot;&lt;基本データフォルダ名2&gt;&quot;</b><br>
+　　-basicより弱い基本フォルダ変更機能です。もし-basicで指定した基本データフォルダがなかった場合、「BasicData」フォルダの代わりにこちらで指定された<b>&lt;基本データフォルダ名2&gt;</b>の基本データフォルダを使って起動します。もし-basicと-basic2で指定されたフォルダが両方ともなかった場合は「BasicData」を読み込みます。<br>
+　　-basicと-basic2をうまく活用すれば、「ユーザが手動で入れるパッチの方を優先して起動させたい」という場合などで利用できるでしょう。<br>
+　　-basicと同様、<b>&lt;基本データフォルダ名2&gt;</b>は<b>&quot;&quot;</b>で挟んで指定することもできます。<br>
+<br>
+<span style="font-size : 80%;">　</span><span style="color : #999999;
+	font-size : 80%;
+">※前終了時にプロ版の「SysS74：[P]次起動Basicﾃﾞｰﾀﾌｫﾙﾀﾞ」にフォルダ名が格納されていた場合は、-basic、-basic2の方が優先されてチェックされ、どちらもなかった場合にSysS74のフォルダが採用されます。全てのフォルダがなかった場合は「BasicData」を読み込みます。</span><br>
+<br>
+<br>
+　<b>-f &quot;&lt;データフォルダ名&gt;&quot;</b>：「Data」フォルダの代わりに、「<b>&lt;データフォルダ名&gt;</b>」フォルダのゲームを読み込んで起動できます。<br>
+<br>
+<br>
+　</p>
+<hr>
+<a id="EDITOR_ARGV"></a>
+<p><b><span style="font-size : 150%;">【Editor.exeの起動時引数】</span></b><br>
+<br>
+　batファイルやショートカットなどを使うことで、「引数」を付けてEditor.exeを起動することができます（詳しいやり方はここでは説明しませんので調べてみてください）。<br>
+<br>
+　たとえばbatファイル上なら、<br>
+　　<b>Editor.exe <span style="color : #cc0000;">-f &quot;Data3&quot; -basic &quot;BasicD2&quot;</span></b><br>
+　のような感じで指定して実行します。赤文字の部分が「引数」です。<br>
+<br>
+<br>
+　<b>-basic &quot;&lt;基本データフォルダ名&gt;&quot;</b>：基本データフォルダ変更機能です。「BasicData」フォルダの代わりに、指定した<b>&lt;基本データフォルダ名&gt;</b>の基本データフォルダを使ってEditorを起動します。<span style="color : #999999;"><br>
+　※基本データフォルダとは？：ゲーム基本設定、コモンイベント、各データベース、タイル設定などを含むフォルダです。</span><br>
+　　→　なお、これを使ったEditor上から「テストプレイ」を行った場合、Game.exeにも-basicで同じ&lt;基本データフォルダ名&gt;が指定されてゲームが起動します。<br>
+<br>
+<br>
+　<b>-f &quot;&lt;データフォルダ名&gt;&quot;</b>：「Data」フォルダの代わりに、「<b>&lt;データフォルダ名&gt;</b>」フォルダのゲームを読み込んで起動できます。</p>
+<P><br>
+<b style="">　-gamedata</b> : 「ゲームデータ作成モード」でEditor.exeを実行します。<br>
+<span style="">　　　　たとえばコマンドプロンプトから「</span><b>Editor.exe -gamedata</b>」と実行すればエディタを起動せず「前に作ったゲームデータ」と同じ設定でゲームデータを作成することができます。<br>
+　　　　追加のコマンド指定を付けて「ゲームフォルダ名」や「出力先フォルダ」、「暗号化の方法」などを詳しく設定することもできます。<br>
+　　　例：<b>Editor.exe -gamedata -name "サンプルゲーム" -output "D:\temp\" -crypt DIR -c_dir "BasicData/BGM/Picture" -c_ver 331</b><span><br>
+　　　　各コマンドの意味は以下の通りです。</span>
+<br>
+　<table border="0" style="font-size: 9pt;">
+  <tbody>
+    <tr>
+      <td style="width: 36px;">&nbsp;</td>
+      <td style="width: 547.891px; font-size: 10.8px;">
+      <table border="1" style="font-size: 9pt; line-height: 16.2px;" cellpadding="3">
+        <tbody>
+          <tr>
+            <td style="font-size: 11px;"><b>【ゲームデータ作成モードのコマンド】</b><br>
+            <br>
+            &nbsp; <b>-gamedata</b>：Editorを「ゲームデータ作成」モードで実行します。<br>
+            　　　以降のコマンドは、<b>未記入</b>なら「<b>最後にEditor内で実行した内容</b>」が<br>
+            　　　そのまま使われるため、いつも通りに暗号化するだけなら<br>
+            　　　「Editor.exe -gamedata」だけ実行すればOKです。<br>
+            <br>　<b>-name "ゲームフォルダ名"</b>：ゲームデータのフォルダ名を変更します。<br>
+            <br>　<b>-output "出力先"</b>：<br>
+            　　　　<b>-output &quot;D:\temp\&quot;</b>など、出力先を変更します。<br>
+            　　　　この下に「ゲームフォルダ名」のゲームフォルダが作られます。<br>
+            <br>
+            　<b>-crypt &lt;NO/ALL/DIR/DIR_ALL&gt;</b>：<br>　　　　 どう暗号化するかを変更します。&lt;&gt;内のいずれか1つを記入します。<br>　　　　<span>&nbsp;</span><b>NO</b>：暗号化なし<br>　　　　<span>&nbsp;</span><b>ALL</b>：Dataフォルダを丸ごとData.wolfに暗号化します。<br>　　　　<span>&nbsp;</span><b>DIR_ALL</b>：Data内のフォルダを「個別」に「全て」暗号化します。<br>　　　　<span>&nbsp;</span><b>DIR</b>：フォルダごとに暗号化するか否かを決定します。<br>
+            　　　　 　　 続けて「-c_dir」コマンドを入力する必要があります。<br>
+            <br>　<b>-c_dir "Data内の各フォルダ名を/で区切って記入"</b>：<br>　　　　 「-crypt DIR」をした際のみ記入します。<br>　　　　 「<b>-c_dir "BasicData/BGM/Picture"</b>」のように<br>　　　　 暗号化したいフォルダを「/」区切りで記入してください。<br>
+            <br>　<b>-c_ver &lt;バージョン番号を数値で&gt;</b><span>&nbsp;</span>：<br>　　　　 暗号化バージョンを変更したい場合に記入します。<br>　　　　 「331」なら「Ver3.31時点の暗号化」です。<br>　　　　 「1000」は「プロテクトキー使用暗号化Ver1.0」、<br>　　　　 「1010」が「プロテクトキー使用暗号化Ver1.1」相当になります。<br>　　　　 「10000」を記入すると常に「最新の暗号化」が使用されます。<br>　　　 ※存在しないバージョンだとそれ以下の一番近いバージョンが使われます。<br>
+            　　　　 　(399など指定した場合、今の最新版が331ならそれで暗号化されます）<br>
+            　　　 ※異なるバージョンで暗号化したファイルが混ざっていると起動時に<br>　　　　　データが読めなくなるので、オンライン更新など取り入れている人は<br>　　　　　特に注意して下さい。<br>
+            <br>　<b>-icon "アイコンファイル名"</b>：　※プロ版専用<br>　　　　-icon "gameicon.ico" (gameicon.icoがEditorPro.exeと同じ場所にある前提)<br>　　　　のように指定するとゲームデータ出力時にGamePro.exeのアイコンを<br>　　　　指定したアイコンに変更します。この機能はプロ版専用です。</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<P><br>
+<br style="color: rgb(67, 67, 149); font-family: &quot;Meiryo UI&quot;, &quot;MS PGothic&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal;  text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+　<b>-txtoutput</b> または <b>-txtinput</b>：「テキスト入出力」モードでEditor.exeを起動します。<br>
+　　　基幹データやマップファイルをテキストに出力したり、テキストからファイルを復元できます。<br>
+<span style="font-size : 80%;">　　　例：</span><b><span style="font-size : 80%;">Editor.exe -txtoutput -txt_folder Data_AutoTXT -target ALL -wait</span></b><br>
+　
+<table border="0" style="font-size: 9pt;">
+  <tbody>
+    <tr>
+      <td style="width: 36px;">&nbsp;</td>
+      <td style="width: 547.891px; font-size: 10.8px;">
+      <table border="1" style="font-size: 9pt; line-height: 16.2px;" cellpadding="3">
+        <tbody>
+          <tr>
+            <td style="font-size: 11px;"><b>【テキスト入出力モードのコマンド】</b><br>
+            <br>
+            <b>-txtinput</b> : 「テキストファイルからゲームデータを復元する」モードで実行します。<br>
+            <b>-txtoutput </b>: 「ゲームデータをテキストファイルに出力する」モードで実行します。<br>
+　　　　　　-txtinputと同時には使えません。<br>
+<br>
+            <b>-txt_folder (フォルダ名)</b>: <br>
+　テキストの入出力先をEditor.exeからの相対フォルダで指定します。<br>
+　未指定なら「Data_AutoTXT」が指定されます。<br>
+　<br>
+            <b>-target (ALL/BASIC/MAPのいずれか)</b>: 処理する対象を指定します。<br>
+　　　　　　　　　　　　　　　　　未指定なら「ALL」となります。<br>
+            　<b>ALL</b>: 基本データと全マップファイル両方<br>
+            　<b>BASIC</b>: 基本データ(ゲーム基本設定･各DB･コモンイベント･タイル設定)のみ<br>
+            　<b>MAP</b>: 全マップファイルのみ(.mpsファイル)<br>
+　<br>
+            <b>-wait</b>: 処理終了時にキー待ちを行います。-waitがなければ自動で画面が閉じます。<br>
+            <br>
+            <br>
+            <b>[このテキスト入出力モード、どういう場面で使うの？]</b><br>
+            　普段から「エディターオプション」の「保存時の自動テキスト出力」をオンにすると<br>
+            　保存時のレスポンスが下がる場合があるため、Gitのバージョン管理などを行う直前にだけ<br>
+            　このコマンドライン処理を使って、必要なときだけテキスト出力してからGitで操作する、<br>
+            　という利用法を想定しています。</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<P><br>
+<br>
+<br>
+　<BR>
+
+</BODY>
+</HTML>

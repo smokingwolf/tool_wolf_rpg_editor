@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>データベース</TITLE><LINK rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+
+<P><BR>
+<B><FONT 
+size=+1>【データベース】</FONT></B><BR>
+<BR>
+<IMG src="DB_ex.png" border="0" width="446" height="394"><BR>
+（サンプルゲーム・可変データベース）<BR>
+<BR>
+<BR>
+<B>・データベース（DB）とは？</B><BR>
+　DBは、タイプ内容として「変数」か「文字列」のどちらかを入力できるボックスを最大100個並べて構成することが可能な「データの入れ物」です。各々の項目には名前を付けることができます。<BR>
+<BR>
+<BR>
+<B>・各部の説明</B><BR>
+<BR>
+　- <B>「タイプ数の設定」ボタン</B><BR>
+　　データベースの最大タイプ数を変更します。<BR>
+<BR>
+　- <B>「<A href="05dbtype.html">タイプの内容設定</A>」ボタン</B><BR>
+　　データベースのタイプの項目を設定します。<BR>
+<BR>
+　- <B>「データ数の設定」ボタン</B><BR>
+　　現在選択されているタイプのデータ数を変更します。<BR>
+<BR>
+　- <B>「ページ1～5」ボタン</B><BR>
+　　項目のページ数を変更します、1ページあたり同時に20項目確認できます。<BR>
+<BR>
+　- <B>下部の 「ファイルの出力」「ファイル読込」 欄</B><BR>
+　　タイプ設定やデータをファイルに保存したり、保存したそれらのファイルを読み込む機能です。<BR>
+<BR>
+<BR>
+<B>・ドラッグ＆ドロップ</B><BR>
+　ファイルの出力で出力したデータベース用のタイプ･データファイルをウィンドウにドラッグ＆ドロップすると、<BR>
+　そのファイルを読み込むことができます。<BR>
+　（読み込む内容は出力されたファイルの種類によります）<BR>
+<BR>
+<BR>
+<BR>
+<B>・ショートカットキー</B><BR>
+　　<B>Tab ・ Shift+Tab</B>：DBの項目を移動<BR>
+　　<B>Ctrl+↑↓</B>：DBのデータ位置を上下移動<BR>
+　　<B>Ctrl+Alt+↑↓</B>：DBのタイプ位置を上下移動<BR>
+　　<B>Ctrl+S</B>：DBを保存<br>
+　　<B>Ctrl+R</B>：直前のタイプ番号へ戻る（データ番号も戻る）<br>
+　　<B>Ctrl+Shitf+R</B>：直前のデータ番号へ戻る<br>
+<BR>
+　　<B>Xキー</B>：切り取り<BR>
+　　<B>Cキー</B>：コピー<BR>
+　　<B>Mキー</B>：複数コピー<BR>
+　　<B>Vキー</B>：貼り付け<BR>
+　　<B>Delキー</B>：削除<BR>
+<br>　　<B>Ctrlを押しながらタイプ変更</B>：データ番号を維持したままタイプを切り替える<br>
+<br>
+<BR>
+<BR>
+<B>・右クリックメニュー</B><BR>
+<BR>
+<IMG src="DB_rclick1.png" border="0"><BR>
+<BR>
+<IMG src="DB_rclick2.png" border="0"><BR>
+<BR>
+それぞれショートカットキー・「ファイルの出力」部の各ボタンと対応してます。<BR>
+<BR>
+<BR>
+<B>・データベースには以下の三種類があります。</B><BR>
+　
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD valign="top">-</TD>
+<TD><B><A href="05systemdb.html">システムＤＢ</A></B> … ツール開発者(SmokingWOLF)側で設定したＤＢです。 マップやBGM設定など、ゲームで使われる主情報を登録するために使います。「タイプ内容」の変更は推奨いたしません、ゲームが動作しないことがあります。<BR>
+　</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD valign="top">-</TD>
+<TD><B><A href="05userdb.html">ユーザーＤＢ</A></B> … 基本的にゲーム中に変化しない情報（装備の攻撃・防御力など）をツール利用者が保存するためのＤＢです。当然ながら、ツール利用者が全て「タイプ内容」を設定する必要があります。<BR>
+　</TD>
+</TR>
+</TBODY>
+</TABLE>
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD valign="top">-</TD>
+<TD><B><A href="05changedb.html">可変ＤＢ</A></B> … HPやMPなどといった、ゲーム中に変化する情報を整理するためのＤＢです。
+ユーザーＤＢとの違いは、ＤＢの各値をゲーム中に変更できるという点で、 キャラクターのステータスなどを保存するのに非常に便利です。
+Ｃプログラムが分かる人には、構造体と同じといえば分かると思います。<BR>
+　<BR>
+　</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P><BR>
+</P>
+<HR>
+<P><BR>
+<B>【隠しコマンド】</B><BR>
+　タイプまたはデータの一覧を選択中、以下の入力で新規タイプ、またはデータの挿入・抜き出しが可能です。<BR>
+　　・<B>CTRL+Shift+F6</B>　：　新規のタイプまたはデータを挿入する。<BR>
+　　・<B>CTRL+Shift+F7</B>　：　選択中のタイプまたはデータを抜き取る。<BR>
+　ただし、この機能を使うと、以降のタイプ・データ番号が全てずれてしまいます。<BR>
+　使用することで、ゲーム全体の整合が取れなくなる可能性が極めて高い機能なので、使用にはくれぐれも注意して下さい。<BR>
+<BR>　もう一点、熟練者向けの隠しショートカットがあります。<BR>　・<B>CTRL+R</B>　：　1つ前に選択していたタイプ・データ番号へ戻る。連続で押すと行ったり来たりする。<BR>
+　　　　　　　　　　→　他の部分からコピーしてくる場合などに、このショートカットが便利です。<br>
+
+<p>
+</p>
+<hr>
+<P>
+<br>
+<b><span style="font-size : 120%;">【セーブしたら可変データベースはどう保存されるの？　後からエディター側で【項目】の「変数」と「文字列を切り替えたらどうなる？】</span></b><br>
+<br>
+　<b><span style="color : #cc0000;">セーブした場合、可変DBは「今のエディターで設定されている内容」で「項目の個数」や「変数/文字列」タイプが保存</span></b>されます。<br>
+<br>
+　1.たとえば「<b>数値・数値・<span style="color : #0000cc;">文字列</span></b>」の項目を持つタイプがある状態でゲームをセーブした後<br>
+　　↓<br>
+　2.エディターでそのタイプの項目を「<b>数値・数値・<span style="color : #0000cc;">数値</span></b>」に変えたとしても<br>
+　　↓<br>
+　3.「ロード」された1のセーブデータ内のDBでは「数値・数値・<span style="color : #cc0000;"><b>文字列</b></span>」の項目のままになっているのです！<br>
+<br>
+　そのため、<b><span style="color : #cc0000;
+	font-size : 120%;
+">公開後のゲームデータの「変数・文字列」を切り替えるのは、絶対に避けてください。</span></b><br>
+<br>
+<br>
+<br>
+<br>
+<b><span style="font-size : 120%;">【では「項目」や「タイプ」を後ろに増やすのは安全？】</span></b><br>
+<br>
+　はい、<b><span style="color : #cc0000;">「セーブされた後に最後尾に【項目】が増える」</span></b>ことについては、実は問題なく処理されます。<br>
+<br>
+　1.たとえば「<b>数値・数値・文字列</b>」が設定されたタイプがある状態でセーブされ<br>
+　　↓<br>
+　2. その後にエディター側で「<b>数値・数値・文字列・<span style="color : #0000ff;">数値</span></b>」のように<b>4項目め</b>が追加されて1のセーブがロードされたとしても<br>
+　　↓<br>
+　3. <span style="color : #cc0000;"><b>ゲーム側では自動で項目が3つから4つになり、最後に数値が増えたものとしてロードされます。</b></span><br>
+　　（ただし最後に増えた「数値」項目はたぶん「DB設定の初期値」になります）。<br>
+<br>
+<br>
+　同様に、<b><span style="color : #cc0000;">「セーブされた後に最後尾に【新たなタイプ】が増える」</span></b>ことも問題ありません。<br>
+
+
+</div>
+</BODY>
+</HTML>

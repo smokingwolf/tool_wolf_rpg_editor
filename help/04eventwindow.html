@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>イベントウィンドウ</TITLE><LINK rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 上下分かれフレームの場合だけここを使用 */
+    .top-frame {
+      height: 325px;
+      min-height: 325px;
+      max-height: 325px;
+      border: none;
+      width: 100%;
+      border-bottom:1px solid #aaa;
+    }
+    .bottom-frame {
+      flex: 1;
+      border: none;
+      width: 100%;
+    }
+    #right-frame {
+	  display: flex;
+	  flex-direction: column;
+	  flex-grow: 1;
+	  height: 100%;
+	}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+
+<div id="right-frame">
+  <iframe class="top-frame" src="04eventwindowA.html" name="eventA"></iframe>
+  <iframe class="bottom-frame" src="04eventwindowB.html" name="eventB"></iframe>
+</div>
+
+
+</BODY>
+</HTML>

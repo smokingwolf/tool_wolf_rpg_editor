@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>キー入力</TITLE><LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>イベントコマンド　<B><FONT size="+1">【キー入力】</FONT></B><BR>
+<BR>
+　キーの入力を取得したり、ゲーム内から自動でキー入力させたり、キーの禁止・許可状態を変化させられます。<BR>
+<BR>
+<!--SmokingWOLF 11/22　ページだけ作りましたが、まだ画像その他はありません！よかったら撮影＆アップロードまたは執筆の方、よろしくお願いします-->
+<IMG src="Ev_keyinput.png" border="0"><BR>
+<BR>
+<b>【ショートカット】<br>
+・<a class="glink" href="#keycode">キーボードのキーコード一覧</a><br>
+・<a class="glink" href="#buttoncode">ゲームパッドのボタン一覧</a></b><br>
+<br>
+<BR>
+<br>
+<b><span style="font-size : 120%;">【注意点】</span></b><br>
+　<span style="font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display : inline; float: none;">・「</span><b style="color: rgb(204, 0, 0); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><span style="font-size : 120%;">PrtScr(PrintScreen)</span></b><span style="font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display : inline; float: none;">」キーはウディタ上で受付できないことが多いです。</span><br style="color: rgb(204, 0, 0); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<span style="font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display : inline; float: none;">　　これは外部のソフトにキー入力が吸われてしまうことで発生し、ウディタ側でPrtScrを押しても受付されなくなります。<br>
+　一時期、非常に利用者が多いであろう『OneDrive』というアプリにPrintScreenキーが吸われることがあり、ウディタ側での対応が困難でした。<br>
+<br>
+　　→　こういった事情があるため、</span><span style="font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color : #fafaff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display : inline; float: none;
+	color : #cc0000;
+"><span style="font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display : inline; float: none;
+	color : #cc0000;
+"><b>ScrollLockやPauseキーでもスクリーンショット撮影を可能にしてあります</b></span></span><span style="font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display : inline; float: none;">。<br>
+　　　　プレイヤーには、PrintScreenの挙動がおかしいときはこの2キーを使うようにうながすのがよいでしょう。<br>
+<br>
+</span><br style="color: rgb(204, 0, 0); font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+<span style="font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display : inline; float: none;">　・キーボードによっては3～4キー以上同時受け付けできない、あるいは特定キーの組み合わせだけ受付されない場合があります。<br>
+　　これはデバイスに依存する問題なので、多くのユーザに遊んでもらう場合、多キーの同時押しを要求することは推奨できません。</span><br>
+　　 <b>【よくある状況】<span style="color : #cc0000;">「←+↑」</span></b><span style="color : #cc0000;">を押したままだと<b>「ESC」「F6」「G」「H」「＊」「B」「N」「/」「＼」「テンキー0」「テンキー . (ドット/Del)」</b> が反応しない</span>、など。<br>
+　　　　　　　　　　　　特に「左上+ESC」を要求すると問題になる可能性が高そうです。<br>
+<br>
+<br>
+<br>
+<BR>
+<B><FONT size="+1">【各機能の説明】</FONT></B><BR>
+<BR>
+<BR>
+<B>[キー入力受け付け]</B><BR>
+　このコマンドが実行された瞬間に押されているキーをチェックし、その対応した番号を変数に代入します。何もなければ0が代入されます。各部の説明は以下の通りです。<BR>
+<BR>
+　・<B>キー種</B> … ３種類あり、それぞれ受け付けるキーが異なります。<BR>
+<BR>
+<TABLE cellpadding="10" cellspacing="1" border="1">
+	<TR>
+		<TD>・<B>基本（方向/決定/ｷｬﾝｾﾙ/ｻﾌﾞ）</B><BR>
+		<BR>
+		<IMG src="Ev_key_getkey1.png" border="1"><BR>
+		<BR>
+		　キーボード/パッドの方向キーおよび、決定キー(Enter/スペース)、キャンセルキー(Esc/Backspace/Delete)、サブキー(Shift)、<BR>
+		　システム変数52～57で決定キー/キャンセルキー/サブキーに設定したキーコードのキーを受け付けます。<BR>
+		　<BR>
+		　・<B>方向キー</B> … 受け付け可能な方向キーを設定します。各方向の値は、以下のようにテンキーの番号と対応しています。<BR>
+		<TABLE border="0">
+			<TBODY>
+			<TR>
+				<TD width="16"></TD>
+				<TD width="55">
+					<TABLE border="1" width="61">
+					<TBODY>
+						<TR>
+							<TD align="center" width="13">7</TD>
+							<TD align="center" width="11">8</TD>
+							<TD align="center" width="15">9</TD>
+						</TR>
+						<TR>
+							<TD align="center" width="13">4</TD>
+							<TD align="center" width="11"><BR></TD>
+							<TD align="center" width="15">6</TD>
+						</TR>
+						<TR>
+							<TD align="center" width="13">1</TD>
+							<TD align="center" width="11">2</TD>
+							<TD align="center" width="15">3</TD>
+						</TR>
+					</TBODY>
+					</TABLE>
+				</TD>
+			</TR>
+			</TBODY>
+		</TABLE><BR>
+		<BR>
+		　・<B>決定キー/キャンセルキー/サブキー</B> … 各々のキー入力を受け付けるかどうかを指定します。<BR>
+    　<br>
+    　<BR>
+		　・<B>通常の押し状態を取得 / 押されるまで【待つ】 / 新押し時のみ取得 / 離した時のみ取得 / 押し続けフレームを得る</B> … どのモードで取得するか選択します。 (Ver3.50より)<br>
+    　- <b>通常の押し状態を取得 </b>… キーが押されているときはそのキー値を返し、それ以外は0を返します。<b><br>
+    　- 押されるまで【待つ】 </b>… キーが押されるまでコマンド処理を進めません。指定キーが押されるとそのキー値を返します。<b><br>
+    　- 新押し時のみ取得 </b>… キーが新たに押されたフレーム中だけそのキー値を返し、それ以外は0を返します。<b><br>
+    　- 離した時のみ取得 </b>… キーが新たに離されたフレーム中だけそのキー値を返し、それ以外は0を返します。<b><br>
+    　- 押し続けフレームを得る </b>… キーが続けて押されている長さをフレーム数として返します。複数のキーが指定されている場合、一番長く押されているキーの「押し続けフレーム」を取得します。<BR>
+    </TD>
+	</TR>
+	<TR>
+		<TD>
+		・<B>キーボード全キー （100～）</B><BR>
+		<BR>
+		<IMG src="Ev_key_getkey2.png" border="1"><BR>
+		<BR>
+      　キーボードの全文字キーを受け付けます（基本は、下記画像で <font color=#3333ff>●</font>&nbsp;が付いてるキーのみ）。　受け付けたキーコードをシステム変数52～54のどれかに代入すると、システム文字列1～3を使ってキー名が確認できます。<BR>
+      <BR>
+      <BR>
+      ・<B>特定キーのみ判定</B> …<BR>
+      　　ここにチェックを入れると、キーコードで指定したコードのキーのみ受け付けます。<BR>
+      　　通常のキーボード全キー受付で取得できないキーコードも取得可能です　（下記画像で
+      <font color=#3333ff>●</font>&nbsp;が付いてないキー）<BR>
+      <BR>
+      <HR>
+      <BR><a id="keycode"></a>
+      　キーボードとキーコードの対応は以下の図のようになります。<BR>
+      　<BR>
+      ※メインとテンキーのEnter共に本来は「128」だが、同時押しした後にメインのEnterのみ離すと「256」になる。<BR>
+    　 半角全角は「248」、ただしカナキーと同じく一度押すと常時押しっぱしになる。<BR>
+      <BR>
+      　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　PrtScrは「283」、Homeキーが「299」<BR>
+		<IMG src="Ev_key_getkey_nanami.png"><BR>
+    ○調査・画像提供　：　ナナミ 様<br>
+    <br>
+    <span style="color : #cc0000;">※外部のソフトにキーショートカットが設定されている場合、ウディタ側でキー受付されない場合があります。特に「<b>PrtScr</b>」キーは他のソフトに入力を吸われてウディタ上で機能しない状況が多くなりがちです。<br>
+    <br>
+    ※キーボードによっては3～4キー以上同時受け付けできない、あるいは特定キーの組み合わせが受付できない場合があります。</span><BR>　 <b>【よくある状況】<span style="color : #cc0000;">「←+↑」</span></b><span style="color : #cc0000;">を押したままだと<b>「ESC」「F6」「G」「H」「＊」「B」「N」「/」「＼」「テンキー0」「テンキー . (ドット/Del)」</b> が反応しない</span>、など。<br>
+    　　　　　　　特に「<b>左上+ESC</b>」は通常のプレイでも使用する可能性がありながら一般的なキーボードでは受付されないので、説明書などでそれを周知する必要があるかもしれません。</TD>
+	</TR>
+	<TR>
+		<TD>
+		・<B>マウスクリック・座標</B><BR>
+		<BR>
+		<IMG src="Ev_key_getkey4.png" border="1"><BR>
+		<BR>
+      　マウスの各種クリックの受付や座標の取得を行います。<BR>
+      　・<B>クリック状態</B>：　左・右・中クリックを受け付けます。<BR>
+      　・<B>マウスX座標</B>：　マウスの画面内X座標を取得します。<BR>
+      　・<B>マウスY座標</B>：　マウスの画面内Y座標を取得します。<BR>
+      　・<B>ホイール回転</B>：　マウスの１フレーム中のホイール回転量を取得します。基本は-1～2、0、+1～2くらいの数値が入ります。<BR>
+      　　　※ただ一部のPC機種ではホイールに-100や+100以上の数値が入り続けてしまうケースがあるそうです。<BR>
+      　</TD>
+	</TR>
+    <TR>
+      <TD><a id="buttoncode"></a>
+		・<B>パッドボタン（301～）</B><BR>
+      <BR>
+		<IMG src="Ev_key_getkey3.png" border="1"><BR>
+		<BR>
+    　ゲームパッドの全ボタンを受け付けます。受け付けたキーコードをシステム変数55～57のどれかに代入すると、システム文字列4～6を使って「ボタン0～20」というキー名が確認できます。キーコード「301」なら「ボタン1」です。<BR>
+    <br>
+    <br>
+    <b>【パッドの種類別の対応ボタン】</b>　2024/01/17時点<br>
+    <table id="gray" cellspacing="1" bgcolor="#666666" cellpadding="4">
+      <tbody>
+        <tr>
+          <td bgcolor="#ffffff">&nbsp;</td>
+          <td bgcolor="#ffffff"><b>Xboxコントローラー&nbsp;</b></td>
+          <td bgcolor="#ffffff"><b>PSコントローラー<br>
+          (Dualshockなど)&nbsp;</b></td>
+          <td class="white" nowrap bgcolor="#ffffff"><b>Nintendo Switch用</b><b><br>
+          (プロコントローラー・Joy-Con)</b></td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン1</b>(301)</td>
+          <td bgcolor="#ffffff">Aボタン</td>
+          <td bgcolor="#ffffff">□ボタン</td>
+          <td nowrap bgcolor="#ffffff">Bボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン2</b>(302)</td>
+          <td bgcolor="#ffffff">Bボタン</td>
+          <td bgcolor="#ffffff">×ボタン</td>
+          <td nowrap bgcolor="#ffffff">Aボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン3</b>(303)</td>
+          <td bgcolor="#ffffff">Xボタン</td>
+          <td bgcolor="#ffffff">○ボタン</td>
+          <td nowrap bgcolor="#ffffff">Yボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン4</b>(304)</td>
+          <td bgcolor="#ffffff">Yボタン</td>
+          <td bgcolor="#ffffff">△ボタン</td>
+          <td nowrap bgcolor="#ffffff">Xボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン5</b>(305)</td>
+          <td bgcolor="#ffffff">LBボタン</td>
+          <td bgcolor="#ffffff">L1ボタン</td>
+          <td nowrap bgcolor="#ffffff">Lボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン6</b>(306)</td>
+          <td bgcolor="#ffffff">RBボタン</td>
+          <td bgcolor="#ffffff">R1ボタン</td>
+          <td nowrap bgcolor="#ffffff">Rボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン7</b>(307)</td>
+          <td bgcolor="#ffffff">BACKボタン(Xbox 360)<br>
+          ビューボタン(Xbox One)</td>
+          <td bgcolor="#ffffff">L2トリガー</td>
+          <td nowrap bgcolor="#ffffff">ZLボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン8</b>(308)</td>
+          <td bgcolor="#ffffff">STARTボタン(Xbox 360)<br>
+          メニューボタン(Xbox One)</td>
+          <td bgcolor="#ffffff">R2トリガー</td>
+          <td nowrap bgcolor="#ffffff">ZRボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン9</b>(309)</td>
+          <td bgcolor="#ffffff">左スティック押し込み</td>
+          <td bgcolor="#ffffff">SHAREボタン</td>
+          <td nowrap bgcolor="#ffffff">－ボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン10</b>(310)</td>
+          <td bgcolor="#ffffff">右スティック押し込み</td>
+          <td bgcolor="#ffffff">OPTIONSボタン</td>
+          <td nowrap bgcolor="#ffffff">+ボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン11</b>(311)</td>
+          <td bgcolor="#ffffff">LT（左トリガー）</td>
+          <td bgcolor="#ffffff">左スティック押し込み</td>
+          <td nowrap bgcolor="#ffffff">左スティック押し込み</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン12</b>(312)</td>
+          <td bgcolor="#ffffff">RT（右トリガー）</td>
+          <td bgcolor="#ffffff">右スティック押し込み</td>
+          <td nowrap bgcolor="#ffffff">右スティック押し込み</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン13</b>(313)</td>
+          <td bgcolor="#ffffff">なし</td>
+          <td bgcolor="#ffffff">PSボタン</td>
+          <td nowrap bgcolor="#ffffff">ホームボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff"><b>&nbsp;ボタン14</b>(314)</td>
+          <td bgcolor="#ffffff">なし</td>
+          <td bgcolor="#ffffff">タッチパネル押し込み</td>
+          <td nowrap bgcolor="#ffffff">スクリーンショットボタン</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ffffff">&nbsp;<b>ボタン15</b>(315)</td>
+          <td bgcolor="#ffffff">なし&nbsp;</td>
+          <td bgcolor="#ffffff">ミュートボタン&nbsp;</td>
+          <td nowrap bgcolor="#ffffff">なし&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    　※「<b>SysS71：[読]ゲームパッドの種別</b>」（<b><a href="06systemvalue.html#string" target="_self">システム文字列</a></b>）で上記のパッドの種類を得ることが可能です。<br>
+    　　ユーザーのゲームパッドに合ったキー表記で表示することで、より直感的に操作しやすくなるでしょう。<br>
+    <br>
+    　※ゲームストアのSteamには「AとB」、「XとY」のボタンを入れ替えるオプションがあり、それがオンになっているプレイヤーにはこの通りに表記されない場合がありました。<br>
+    <br>
+    　※Xboxコントローラーの「Xboxボタン」は、Xbox 360コントローラーの場合はどのボタンとしても認識しませんでした。<br>
+    </TD>
+    </TR><TR>
+    <TD>・<B>アナログスティック</B><BR>
+    <img src="Ev_key_getkey5.png" border="1"><br>
+    <br>
+    　ゲームパッドの左右アナログスティックの状態受付を行います。<br>
+    　・<b>（左/右）スティック上下[±1000]：</b>　スティックの上下傾き度合いを-1000～+1000で得られます。<br>
+    　・<b>（左/右）スティック左右[±1000]：</b>　スティックの左右傾き度合いを-1000～+1000で得られます。<br>
+    　・<b>（左/右）スティック角度[0-3600/右が0]：</b>　スティックが傾いている方向を0～3600で得られます。右方向が0、時計回りで増えます。<br>
+    　・<b>（左/右）スティック傾き[0-1000]：</b>　方向関わらず、スティックが傾いている量を0-1000で得られます。<br>
+    　　　　Xboxコントローラなど、「斜めの最大の傾き」が900くらいにしかならない場合がありますので注意してください。<br>
+    　・<b>ZL/ZRトリガー[0-1000/一部非対応]：</b>　背面トリガーを押し込んだ量を得られます。<s>DirectInputには対応していないそうです。</s> Ver3.23よりDirectInputにも対応しました。<br>
+    　・<b>Z軸値[±1000/Direct/XInput両用]：</b> パッドの生パラメータです。XInputなら背面トリガー「両方」を押し込んだ量を足した値を±1000内で得られます。片方をいっぱい引くと+1000、もう片方いっぱい引くと-1000になり、両トリガーを同時にいっぱいまで引くと0になります。<br>
+    　　　　DirectInputでは下のX/Y/Z回転と合わせ、各社別々の使い方をしていることがあります。<br>
+    　・<b>X/Y/Z回転[±1000/Direct/XInput両用]：</b> パッドの生パラメータです。DirectInputではZ軸とこのXYZ回転を各社「右スティック」に割り当てていたり、「トリガー」に割り当てたりと別々の使い方をしています(Ver3.230より実装)。<br>
+    <br>
+    <br>
+    ※Ver3.230より、システム変数<b>「Sys146:DirectInputならPS/Swiｺﾝ準拠?=1(1推奨)」</b>が1(デフォルト値)になっているときは「Xbox、PS4、PS5、Switchプロコン」などほとんどのコントローラで<b>右スティック</b>や<b>トリガー</b>が正常に読み込めるようになりました。<br>
+    　実は右スティックやZトリガー値は、「Z軸、XYZ回転」の4つの値を各社別々に割り当てています。それをウディタ側で自動で判別し、「右スティック」情報や「ZL/ZRトリガー値」として得られるようにしています。</TD>
+  </TR><TR>
+    <TD>&nbsp;・<B>POV十字キー</B><BR>
+    <img src="Ev_key_getkey6.png" border="1"><br>
+    <br>
+    　ゲームパッドの十字キー（POVキー）の状態受付を行います。<br>
+    <br>
+		　・<B>方向キー</B> … 受け付け可能な方向キーを設定します。各方向の値は、以下のようにテンキーの番号と対応しています。<BR>
+		<TABLE border="0">
+			<TBODY>
+			<TR>
+				<TD width="16"></TD>
+				<TD width="55">
+					<TABLE border="1" width="61">
+					<TBODY>
+						<TR>
+							<TD align="center" width="13">7</TD>
+							<TD align="center" width="11">8</TD>
+							<TD align="center" width="15">9</TD>
+						</TR>
+						<TR>
+							<TD align="center" width="13">4</TD>
+							<TD align="center" width="11"><BR>
+                </TD>
+							<TD align="center" width="15">6</TD>
+						</TR>
+						<TR>
+							<TD align="center" width="13">1</TD>
+							<TD align="center" width="11">2</TD>
+							<TD align="center" width="15">3</TD>
+						</TR>
+					</TBODY>
+					</TABLE>
+				</TD>
+			</TR>
+			</TBODY>
+		</TABLE>
+    </TD>
+  </TR><TR>
+    <TD>&nbsp;&nbsp;・<B>複数タッチ認識</B><BR>
+    <img src="Ev_key_getkey7.png" border="1"><br>
+    <br>
+    　タブレット端末などでタッチ受け付けをするための機能でです。<br>
+    <br>
+    　<b>・タッチ何番？：</b> 同時タッチのうち、「何番目」の値を取得するか指定します。1つめのタッチが「0番」となり、タッチされてない場合は-1の値が返されます。<br>
+    <br>
+    　<b>【読込対象】</b><br>
+    　<b>・X座標（-1：なし)：</b>　タッチされたX座標を取得します。タッチがない場合は-1が返されます。<br>
+    　<b>・Y座標（-1：なし)：</b>　タッチされたY座標を取得します。タッチがない場合は-1が返されます。　<br>
+    　<b>・追跡用ID（-1：なし)：</b>　1タッチごとに1つの番号が割り振られ、タッチが離さない限り同じ追跡用IDを返します。<br>
+    　　　　　たとえば同じ「タッチ0番」でも、先にタッチした手を離したりすると順番が変わるため、そういった場合に同じタッチを識別するために使います。<br>
+    　　　　　追跡用IDは端末によって「0～押された順の数が常に返る、全部離すとまた0から」「9億から1ずつ減っていく」「数が増える」「値が循環する」など寄せられる情報がまちまちなので、とにかく「タッチしたら離すまでは同じ固有のIDが返される」と考えてください。<br>
+    　</TD>
+  </TR></TABLE>
+<BR>
+<BR>
+<B>【自動キー入力】</B><BR>
+　　「次のフレーム」のキー入力として、各種キー・マウス操作を自動で行うことが出来ます。<BR>
+　　この機能の使用例としては、リプレイ機能を作りたいときや、ゲームのデモ画面を作りたいとき、<BR>
+　　RPGをマウスでも操作させたいとき（※ただし受け付けは1フレーム=約0.017秒(FPSによる)遅れる）などに利用可能です。<BR>
+<BR>
+　　なお、この機能で「キーボード」を入力すると、後述する「禁止」にしたキーでも入力を受け付けられますので、<BR>
+　　ご注意下さい。プレイヤーの入力を不能にしつつ、ウディタ側だけでキー入力できるようにする目的です。<BR>
+　　ちなみに「基本入力」を禁止した場合は、「自動キー入力」による基本入力も効かなくなります。<BR>
+<BR>
+　・<B>キー種</B> … ３種類あり、それぞれ出力するキーが異なります。<BR>
+<BR>
+<TABLE cellpadding="10" cellspacing="1" border="1">
+	<TR>
+		<TD>・<B>基本入力</B><BR>
+		<BR>
+		<IMG src="Ev_key_setkey1.png" border="0"><BR>
+		<BR>
+		　上記のキー入力（基本（方向/決定/ｷｬﾝｾﾙ/ｻﾌﾞ））と同等の出力版です。<BR>
+	</TR>
+	<TR>
+		<TD>
+		・<B>キーボード</B><BR>
+		<BR>
+		<IMG src="Ev_key_setkey2.png" border="0"><BR>
+		<BR>
+    　上記のキー入力（キーボード全キー（100～））と同等の出力版です。<br>
+    <br>
+    <span style="font-size : 80%;">　※【裏技】　『文字列操作』の「キーボード入力」中に「キーコード 128（Enter）」を自動キー入力すると</span><br>
+    　　　　　<span style="font-size : 80%;">　　途中でキーボード入力を完了させることができます。</span></TR>
+	<TR>
+		<TD>
+		・<B>マウス左・中・右クリック・座標</B><BR>
+		<BR>
+		<IMG src="Ev_key_setkey3.png" border="0"><BR>
+		<BR>
+    　マウスの左・中・右クリックを自動で行う機能です。また、指定座標へマウスを移動することもできます。</TD>
+	</TR>
+</TABLE>
+<BR>
+<BR>
+<B>【キー入力の許可/禁止】</B><BR>
+　　決定・キャンセル・サブキー上下左右、および、キーボード/マウス/パッド入力のそれぞれの許可・禁止状態を切り替えることができます。<BR>
+<BR>
+<TABLE cellpadding="10" cellspacing="1" border="1">
+	<TR>
+		<TD>・<B>基本入力</B><BR>
+		<BR>
+		<IMG src="Ev_key_AorD1.png" border="0"><BR>
+		<BR>
+                　選択したキーに対し「常に受け付ける(ﾃﾞﾌｫﾙﾄ)」「移動時禁止・キー入力時だけ許可」「移動時もキー入力時も禁止」 の設定が可能です。<BR>
+                たとえば主人公のカーソルキーによる移動を禁止したいときは、<BR>
+                「上下左右」を選択し、「移動時禁止・キー入力時だけ許可」にすることで実現できます。<BR>
+	</TR>
+	<TR>
+		<TD>
+		・<B>入力デバイス</B><BR>
+		<BR>
+		<IMG src="Ev_key_AorD2.png" border="0"><BR>
+		<BR>	
+		キーボードの各キー（1つずつ設定可）・マウス全部・パッド全部・全てのデバイスの入力を許可・禁止にできます。<BR>
+	</TR>
+</TABLE>
+<BR>
+<BR>
+<BR>
+　<BR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>便利なツール紹介</TITLE><LINK rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+
+<P><BR>
+<B><FONT 
+size=+1>【便利なツール紹介】</FONT></B><BR>
+<BR>
+　ここではWOLF RPGエディターに関する便利なツールをご紹介します。<BR>
+　<br>
+<BR>
+　・ <B><a href="#boditor" class="glink">ウディタ作品のブラウザゲーム化ツール　 『ブラウザウディタ』</a></B><BR>
+<br>
+　・ <B><a href="#wodistant" class="glink">ウディタに便利な機能を追加するツール　 『Wodistant』</a></B><br>
+<BR>
+　・ <B><a href="#tkool2wolf" class="glink">RPGツクール用チップ ⇒ ウディタ用チップ変換ツール　『tkool2WOLF』</a></B><BR>
+<BR>
+　・ <B><a href="#gramaker" class="glink">（キャラクター）グラフィック合成ツール</a></B><br>
+<br>
+　・ <b><a href="#wolfarlGPT" class="glink">チャット形式でウディタの相談に乗ってくれる『ウルファールGPT』（ChatGPT）</a></b><BR>
+<br>
+　・ <b><a href="#Translation" class="glink">ゲームデータの全文字列抽出や翻訳ができる『ウディタ翻訳サポートツール』</a></b><BR>
+
+<HR>　　
+<TABLE border="1" cellpadding="3" cellspacing="1" class="glink">
+<TBODY>
+<TR>
+      <TD nowrap><B><FONT size="+1" id="boditor">【ウディタ作品のブラウザゲーム化ツール　『ブラウザウディタ』】</FONT></B><BR>
+<BR>
+      　これはWOLF RPGエディター作品を<b><span style="color : #cc0000;
+	font-size : 120%;
+">ブラウザゲーム化</span></b>できるツールです。<br>
+      <br>
+      　これによって、<b><span style="font-size : 150%;">スマートフォンからのプレイも可能</span></b>になるほか、<br>
+      　いくらかの手順を踏めばスマートフォン<b><span style="font-size : 120%;">アプリ化</span></b>も実現可能です！<a href="https://sils.fc2.net/blog-entry-819.html" target="_blank">(ウディタ作者のアプリ化検証記事)</a><br>
+      <br>
+      　素晴らしいツールを作ってくださったruka様、誠にありがとうございます！<br>
+      <span style="color : #999999;">　（ただし本体側が新しくなるたびにブラウザウディタも最新化していかねばならない都合上、<br>
+      　　本体側のウディタと同様の機能が使えるとは限りませんのでその点はご注意ください。<br>
+      　　サポート続けてくださるのも、とても大変ですからね！）</span><BR>
+<BR>
+<HR>
+<BR>
+・「<B>ブラウザウディタ開発ページ</B>（Ci-en 日本語）」 <BR>
+　<A href="https://ci-en.net/creator/12702" target="_blank"><span style="font-size : 120%;"><b>https://ci-en.net/creator/12702</b></span></A> （配布/開発ページ）<BR>
+<BR>
+　<B>[ブラウザゲーム化する方法]</B>（ソフトをダウンロードして解凍した後の操作）<br>
+      <BR>
+      　　1．ソフトに同梱されている「<b><span style="color : #cc0000;">BrowserWoditor.dat</span></b>」ファイルを<br>　　　　<b><span style="color : #cc0000;">自作ゲームのBasicDataフォルダ内</span></b>に入れる。<br>
+      <br>
+      　　2．WOLF RPGエディター本体の「<b>ゲームデータ作成</b>」から自作ゲームを「<b>Data.wolf」</b>に暗号化する<br>
+      　　　　（フォルダ個別暗号化もできますがData.wolfにするのが一番設定が少なくて簡単です）<br>
+      <BR>
+      　　3．ファイル内の「<b>public</b>」フォルダ内のData.wolfに上書き<br>
+      　　　　(publicフォルダの中に、index.htmlやwoditor.jp、woditor.wasmなど<br>
+      　　　　　ブラウザ上で動作させるためのプログラムが入っています)<br>
+      <br>
+      　　4． 「<b>public</b>」内にある「<b>setting.js</b>」を開いてゲームタイトルなどを設定する<br>
+      <br>
+      　　5．「<b>public</b>」フォルダの中味をレンタルサーバーなどにまとめてアップロードする。<br>
+      　　　　レンタルサーバーがなければ、↓で紹介されている「<b><a href="#wodistant" class="glink">Wodistant</a></b>」にも<br>
+      　　　　ブラウザウディタ作品のテスト機能があります。<br>
+      <br>
+      　　6．アップしたURLを開けばゲームがプレイ可能！　セーブデータはブラウザのキャッシュに保存されます。<br>
+      <BR>
+      　　　動作見本ページ→ <b><a href="https://rikka-gamedev.itch.io/woditor-in-browser" target="_blank"><span style="font-size : 120%;">https://rikka-gamedev.itch.io/woditor-in-browser </span></a></b><BR>
+      <br>
+      <b>　【起動画面】</b><br>　<img src="06tools_boditor1.png" border="1" style="width : 341px;height : 210px;"><br>
+      <br>
+      <b>　【ゲーム中画面】</b>　スマートフォンからでもプレイ可能！<br>　<img src="06tools_boditor2.png" border="1" style="width : 517px;height : 323px;"><BR>
+      </TD>
+    </TR>
+</TBODY>
+</TABLE>
+<p><br>
+<b><font size="+1" id="boditor">　</font></b></p>
+<br>
+<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+      <td nowrap style="width : 539px;"><B><FONT size="+1" id="wodistant">【ウディタに便利な機能を追加するツール　　Wodistant】</FONT></B><BR>
+<BR>
+      　『Wodistant(ウディスタント)』はWOLF RPGエディターに便利な機能を追加するツールです！<br>
+      <br>
+      　「コモンイベントの高速一括検索機能」や「全体マップ撮影機能」<br>
+      　「ゲーム中30秒さかのぼり動画確認機能」、<br>
+      　「ブラウザウディタ用のテストプレイ機能（ローカルサーバー）」など<br>
+      　本体側でサポートできない様々なことが行えます！<br>
+      <br>
+      <span style="color : #999999;">　（一部、本体側にも搭載できそうなものは取り入れさせていただいております！<br>
+      　　　様々な便利機能搭載のきっかけはこのツールのおかげなのです！）</span><br>
+      <br>
+      　素晴らしいツールを作ってくださったK-Shin07様、誠にありがとうございます！<BR>
+<BR>
+<HR>
+<BR>
+・「<B>Wodistant公式ページ</B>」 <BR>
+　<a href="https://alpha-stella.com/tool/wodistant/" target="_blank"><span style="font-size : 120%;"><b>https://alpha-stella.com/tool/wodistant/</b></span></a> （配布ページ）<BR>
+      <br>
+      <BR>
+　<B>[使い方]</B> （ソフトをダウンロードして解凍した後の操作）<br>
+      <BR>
+      　　1．あらかじめウディタを起動しておく。<br>
+      <br>
+      　　2．「Wodistant.exe」を実行すると以下のメニューが開きます。<br>
+      　　　　「ウディタと接続する」ボタンをクリックすると、起動中のウディタが1つなら自動で接続してくれます。<br>
+      <br>
+      <b>　　【メニュー画面】</b> なんとワンボタンでオンラインアップデートもできて非常に便利です！<br>
+      　　　<img src="06tools_wodistant1.png" width="479" height="135" border="0"><br>
+      <br>
+      <br>
+      　　3．接続が完了すれば、以下のような様々な便利機能が使えるようになります！<br>
+      <br>
+      <br>
+      　　●メニューの「<b>ウディタ</b>」→「<b><span style="color : #cc0000;">全体マップ撮影</span></b>」から、なんと<b><span style="color : #cc0000;">マップを画像で出力</span></b>できます！<br>
+      　　　<b>全体レイヤー撮影はもちろん、1レイヤーごとに撮影</b>したり、<br>
+      　　　<b>イベント画像も含めて撮影</b>したりもできるので、<br>
+      　　　画像で1レイヤー分を代替したいときや、自分で攻略記事を書くときにも非常に便利です！<br>
+      <br>
+      　　●テストプレイ中いつでも、<b><span style="color : #cc0000;">Ctrl+M</span></b>を押すと<b><span style="color : #cc0000;">30秒前までさかのぼって<br>
+      　　　 直前の映像を確認</span></b>することができます！<br>
+      　　 　1フレームごとの状況を見直したいようなバグ取りにおいても非常に便利です！<br>
+      <br>
+      　　●メニューの「ツール」から「<b><span style="color : #cc0000;">ブラウザウディタ起動用ローカルサーバー</span></b>」を選ぶと<br>
+      　　　　開かれるウィンドウ内に色々指定することで<b>ブラウザウディタのテスト実行</b>ができます！<br>
+      <br>
+      　　●メニューの「ウディタ」→「コモン」→「コモンイベント呼び出しツリー分析」で<br>
+      　　　どういう風にコモンが呼び出されているか見られるのでデバッグで困ったときに便利！<br>
+      <br>
+      　　●メニューの「ウディタ」→「コモン」→「コモンイベントバグチェッカー」なんてのも！<br>
+      　　　詳しい解説付きで何が悪いかを教えてくれます。<br>
+      <br>
+      　　●メニューの「ウディタ」→「コモン」→「バージョン移行補助機能」も便利！<br>
+      　　　新たに付いた便利設定に書き換える際にチェック漏れがなくなります！<br>
+      <span style="font-size : 80%;">　　　　（たとえばDBのデータ名指定で「別DBのタイプ番号」でなく「別DBのタイプ『名』」を</span><br>
+      <span style="font-size : 80%;">　　　 　　選べるようになったので、それに全切り替えする際の切り替え漏れチェックができます）</span><br>
+      <br>
+      　　●コモンイベント内でF2キーを押すとすぐコメント文入力ができます。<br>
+      <br>
+      <br>
+      　などなど！<br>
+      　その他の詳しい機能紹介は<b><a href="https://alpha-stella.com/tool/wodistant/manual" target="_blank">Wodistantの機能説明書</a></b>にも載ってますよ！<br>
+      </td>
+    </TR>
+  </TBODY>
+</TABLE>
+<p><br>
+</p>
+<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+      <TD nowrap><B><FONT size="+1" id="tkool2wolf">【RPGツクール用チップ ⇒ ウディタ用チップ変換ツール　tkool2WOLF】</FONT></B><BR>
+<BR>
+      　RPGツクール2000、2003、XP、VX用規格の<B>マップチップ、キャラチップを<BR>
+      　WOLF RPGエディター対応のチップに簡単に変換</B>するツールです。<BR>
+      　<B>RPGツクール2000、2003、VXの顔グラフィック画像素材を切り分ける</B>機能や、<BR>
+      　<B>画像に透過を設定</B>する機能、<B>繋げたいマップチップを結合する機能</B>も持っており、非常に多機能です。<BR>
+<BR>
+      　このような素晴らしいツールを作ってくださった六花様には深く感謝しています。<BR>
+<BR>
+<HR>
+<BR>
+・「<B>tkool2WOLF</B>（日本語）」 <BR>
+　<A href="http://www.silversecond.com/WolfRPGEditor/Data/Rikka/" target="_blank"><span style="font-size : 120%;"><b>http://www.silversecond.com/WolfRPGEditor/Data/Rikka/</b></span></A> （配布ページ）<BR>
+<BR>
+　<B>[使い方]</B><BR>
+　　起動後、変換したいRPGツクール用チップをドラッグ＆ドロップするだけ。<BR>
+      　　具体的な機能の例は、以下の画像を参考にしてください。<BR>
+<BR>
+<BR><IMG src=Tool_tkool2WOLF1.gif border=1>  <IMG src=Tool_tkool2WOLF2.gif border=1>
+</TD>
+    </TR>
+</TBODY>
+</TABLE>
+<P><BR>
+</P>
+<!--
+<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+<TD><FONT size="+1" id="PNGOGG">【<B>透過PNG作成ツール / OGGファイル作成ツール</B>】</FONT><BR>
+<BR>
+　あまり耳慣れない<B>透過PNG</B>と<B>OGG</B>のデータを簡単に作成できるツールです。<BR>
+<BR>
+<HR>
+<BR>
+【画像関連】<BR>
+<BR>
+・「<B>BTJ32</B>（日本語）」 BMPやPNGファイルから、透過PNGファイルを簡単に作成<BR>
+　<A href="http://www.vector.co.jp/soft/win95/art/se074357.html" target="_blank"><b><span style="font-size : 120%;">http://www.vector.co.jp/soft/win95/art/se074357.html</span></b></A> （Vector）<BR>
+<BR>
+　<B>[使い方]</B><BR>
+　　1.起動後、BMP・PNGファイルを画面にドラッグする（「ファイルを開く」でも可）<BR>
+　　1.上部の「<B>P</B>」アイコンを押し、次に、現れた「<B>背景透過</B>」にチェックを入れる。<BR>
+　　2.「<B>透過色</B>」ボタンを押す→「<B>画像から選択</B>」を選択。<BR>
+　　3.出てきたウィンドウ内に現在読み込み中の画像が出るので、<BR>
+　　　透過させたい色を「<B>右クリック</B>」で選択し「<B>OK</B>」<BR>
+　　4.「<B>名前を付けて保存</B>」する。　　　　…　　　これで透過PNGが完成です。<BR>
+<BR>
+<HR>
+<BR>
+【音声関連】<BR>
+<BR>
+・「<B>Rip！AudiCO</B>（日本語）」MP3やWAV形式　→　OGG形式への変換ツール<BR>
+　<A href="http://www.vector.co.jp/soft/win95/art/se202196.html" target="_blank">http://www.vector.co.jp/soft/win95/art/se202196.html</A> （Vector）<BR>
+　→　起動すると「若葉ウィザード」が出るので、MP3、WAVファイルを<BR>
+　　　「<B>OGG変換</B>」のボックスにドロップするだけでOKです。<BR>
+<BR>
+・「<B>KbMedia Player</B>（日本語）」 OGG形式の音声が再生可能なプレイヤー<BR>
+　<A href="http://www.vector.co.jp/soft/win95/art/se175675.html" target="_blank">http://www.vector.co.jp/soft/win95/art/se175675.html</A>（Vector）<BR>
+<BR>
+　※Win95,98のみと書いてあるソフトでも、Win2000、XPで動作します。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P><BR>
+-->
+<P><BR>
+</P>
+<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+<TD><B><FONT size="+1" id="gramaker">【（キャラクター）グラフィック合成ツール】</FONT></B><BR>
+<BR>
+      　パーツを組み合わせて一枚のグラフィックを作成するツールです。<BR>
+<BR>
+<HR>
+      <BR>
+      ・「<B>グラフィック合成器</B>（日本語）」<BR>
+      　最新の<B><a href=http://www.silversecond.com/WolfRPGEditor/Download.html>WOLF RPGエディターフルパッケージ</a></B>に同梱されています。<BR>
+      <BR>
+      <BR>
+　<B>[使い方]</B><BR>
+      　　起動後、「画像セット」を選択し、好きなパーツを選んで画像を作成します。<BR>
+      　　完成したら「画像生成」ボタンを押して保存してください。<BR>
+<BR>
+<IMG src=Tool_GraMaker.gif border=1>
+<BR>
+      </TD>
+</TR>
+</TBODY>
+</TABLE>
+<P><br>
+<br>
+<br>
+<br>
+<br>
+</P>
+<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+      <td nowrap style="width : 539px;"><B><FONT size="+1" id="wolfarlGPT">【チャット形式でウディタの相談に乗ってくれる<br>
+      　『ウルファールGPT』（ChatGPT）】</FONT></B><BR>
+<BR>
+      　これはWOLF RPGエディターの質問に答えてくれるChatGPTのGPTs（専用化AI）です。<br>
+      　このマニュアルの「知識」が搭載されており、質問にそれっぽく答えてくれます。<br>
+      　（※ただし、正しく答えてくれないこともたびたびあります！！）<br>
+      <BR>
+<HR>
+<BR>
+・「<B>ウルファールGPTページ</B>」 <BR>
+　<a href="https://chatgpt.com/g/g-sqiNurH0n-uruhuarugpt-uteitanoatohaisu" target="_blank"><b><span style="font-size : 80%;">https://chatgpt.com/g/g-sqiNurH0n-uruhuarugpt-uteitanoatohaisu</span></b></a> <br>
+      （<b>ChatGPT</b>のアカウントが必要です。Googleアカウントなどで代用可）<BR>
+      <br>
+      <BR>
+　<B>[使い方]</B> <br>
+      <BR>
+      　　1．上記URLにアクセスしてください。<br>
+      　　　　アカウントが必要ですが、もし持っていない場合は<br>
+      　　　　Googleアカウントなどでもすぐログイン可能です。<br>
+      <br>
+      　　2．以下のように、チャット形式でウディタの質問や相談ができます。<br>
+      <br>
+      <br>
+      　<b>【「どうやって新しいマップを作ればいいですか？」と質問した例】</b><br>
+      　<img src="06tools_wolfarlGPT.png" width="526" height="674" border="1"><br>
+      <br>
+      </td>
+    </TR>
+  </TBODY>
+</TABLE>
+<P><BR>
+</P>
+<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+      <td nowrap style="width : 539px;"><B><FONT size="+1" id="Translation">【ゲームデータの全文字列抽出や翻訳ができる<br>
+      　『ウディタ翻訳サポートツール』】</FONT></B><BR>
+<BR>
+      　これはWOLF RPGエディターゲームデータから全ての文字列をExcelに抽出し、<br>
+      　それに翻訳文を（手動で）書き込んでボタンをいくつか押すだけで<br>
+      　簡単に翻訳済みゲームデータが作成できるというツールです。<br>
+      <br>
+      　翻訳だけでなく、ゲーム内の文字列をまとめて置換するのにも使えます。<br>
+      　これはウディタ公式の有料ソフトです。<br>
+      <BR>
+<HR>
+<BR>
+・「<B>WOLF RPGエディター翻訳サポートツール</B>」 販売ページ<BR>
+　<a href="https://silversecond.booth.pm/items/5151747" target="_blank"><b>https://silversecond.booth.pm/items/5151747</b></a> （BOOTH）<br>
+      <br>
+      <BR>
+      <BR>
+　<B>[簡単な使い方]</B> (購入またはダウンロードしていることを前提に）<br>
+      <BR>
+      　1. ツールを起動すると以下のような画面が表示されます。<br>
+      　　ゲームデータを読み込んだ後、上から順に翻訳処理していくと「<b>翻訳済みゲームデータ</b>」が新たに出力されます。<br>
+      　<b><span style="color : #cc0000;">元のゲームデータは全く変更されませんので安心です。</span></b><br>
+      　<img src="06tools_translation.jpg" width="500" height="500" border="1"><br>
+      <br>
+      <br>
+      　2．ゲームデータから文字列抽出したExcelファイルは以下のようになっています。<br>
+      　　　これに各言語の訳文を記述して、最後にボタン1つで翻訳済ゲームデータを出力できます。<br>
+      　　（なお、Excelをお持ちでなくとも、Googleスプレッドシートでの作業も可能です）<br>
+      　<img src="06tools_translation2.jpg" width="500" height="500" border="1"><br>
+      <br>
+      <br>
+      <br>
+      　3．このツールはExcelデータの一番左列の「位置コード」でゲームデータの翻訳箇所を判断していますすが、<br>
+      　　　もしゲームデータが修正された場合、そのIDも修正が必要です。<br>
+      　　　ですが、ボタン1つでゲームデータの修正に合わせてExcelのIDを<br>
+      　　　自動で書き換えてくれる機能があります！<br>
+      　　　新たに追加された文字列も自動で追加可能！<br>
+      　<img src="06tools_translation3.jpg" width="500" height="500" border="1"><br>
+      <br>
+      </td>
+    </TR>
+  </TBODY>
+</TABLE>
+<P><BR>
+<BR>
+<BR>
+</P>
+</div>
+</BODY>
+</html>

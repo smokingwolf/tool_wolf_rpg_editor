@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>エフェクト</TITLE><LINK rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+
+<P><BR>イベントコマンド　<B><FONT size="+1">【エフェクト】</FONT></B>　プロ版の追加機能<BR>
+<BR>
+　プロ版では「<b>マップ</b>」エフェクト内に追加の<b>[P]</b>エフェクトが搭載されています。<br>
+　マップ、あるいは最終画面全体に対して、リアルタイムに色彩補正やぼかしをかけることができますが、どれも負荷は非常に大きいです。<br>
+　注意してご利用ください。<BR>
+<BR>
+　　<IMG src="04ev_effect_Pro1.png" border="0"><BR>
+<BR>
+<BR>
+<B><FONT size="+1">【プロ版専用機能の説明】</FONT></B><BR>
+<BR>
+- <b>「マップ」のプロ版エフェクト</b> <BR>
+　　<font class=fred>[重!]と書いてあるものは非常に負荷が大きいことを表します。<br>
+　　下記フィルタを実行してConfigで「ソフトウェアモード」でゲームを実行すると60fpsから10fpsまで実行速度が下がるケースがあります。</font><br>
+<br>
+　　+ [P]フィルタ(F)を全リセット … 以下の「F」が付いたエフェクトを全て解除します。<br>
+<br>
+　　+ [P]ﾏｯﾌﾟF/色彩明[重!] … <span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">リアルタイムで</span>「現在のマップとマップイベント画像」<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">の</span><B>色相・彩度・明度</B>を補正します。<BR>
+　　　　　　　<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">　　　色相は±で設定でき360で一周(0：赤　120：緑　240：青)、彩度は-255～で指定、明度は-255～255の範囲で有効です。</span><br>
+<br>
+　　+ [P]ﾏｯﾌﾟF/モノトーン[重!] … <span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">リアルタイムで「</span>現在のマップとマップイベント画像<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">」をモノトーン（1色）に変換します。<br>
+　　　　　　　　　　色相は「色彩明」と同じで、65くらいでセピア色になります。</span><br>
+<br>
+　　+ [P]ﾏｯﾌﾟF/ぼかし[超重!!] … リアルタイムで「現在のマップとマップイベント画像」を<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">ぼかします。ぼかし量は1～16で指定できます。</span><br>
+<br>
+　　+ [P]全体F/色彩明[重!] … <span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">リアルタイムで</span>「表示される最終画面」<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">の</span><B>色相・彩度・明度</B>を補正します。<BR>
+　　　　　　　　　　<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">色相は±で設定でき360で一周(0：赤　120：緑　240：青)、彩度は-255～で指定、明度は-255～255の範囲で有効です。</span><br>
+<br>
+　　+ [P]全体F/モノトーン[重!] … <span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">リアルタイムで「</span>表示される最終画面<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">」をモノトーン（1色）に変換します。<br>
+　　　　　　　　　　色相は「色彩明」と同じで、65くらいでセピア色になります。</span><br>
+<br>
+　　+ [P]全体F/ぼかし[超重!!] … リアルタイムで「表示される最終画面」を<span style="color: rgb(67, 67, 85); font-family: &quot;ＭＳ Ｐゴシック&quot;; font-size: 13.3333px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">ぼかします。ぼかし量は1～16で指定できます。</span><br>
+　　　　　　　　最終画面に対しておこなわれるエフェクトなので、文字もぼかされます。<br>
+<br>
+<br>
+<br>
+　※「マップF」に関しては、将来的にプロ版でないのWOLF RPGエディターでも同等の表現ができるようになる可能性がございます。<br>
+　　 たとえば、「キャラやタイル画像そのもの」に対して色相変化ができる機能などが実装されるかもしれません。<br>
+<span style="font-size : 80%;">　　（このページのマップ・全体F機能は気軽に使うには負荷が大きすぎることを理由にプロ版の方に入れていますので、問題がなければ同等の機能でも無料版に搭載されます）</span>
+<br>
+<br>
+　※描画順の都合で、「<b>マップF</b>」機能は<b><span style="color : #ff0000;">IDが「-1～-999999」「-10万以下」のピクチャ</span></b>に対してもエフェクト効果を与えてしまいますので注意してください。<br>
+　　IDが0以上のピクチャには影響を与えません。<P><BR>
+<BR>
+<BR>
+　<BR>
+
+</div>
+</BODY>
+</HTML>

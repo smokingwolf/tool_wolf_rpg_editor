@@ -1,0 +1,65 @@
+BODY{background-color : #fafaff;
+font-family : "Meiryo UI","ÇlÇr ÇoÉSÉVÉbÉN" ;
+  font-size : 10pt;
+  color : #434355;
+  margin: 0px 5px 0px 10px;
+}
+
+A:LINK,A:VISITED{color:#e6282c;text-decoration : underline;}
+A:HOVER,A:ACTIVE{color : #f6888c;text-decoration : underline;}
+
+A.red:LINK,A.red:VISITED{color:#c6385c;}
+A.red:HOVER,A.red:ACTIVE{color : #f6688c;text-decoration : underline;}
+
+A.blue:LINK,A.blue:VISITED{color:#5658a6;}
+A.blue:HOVER,A.blue:ACTIVE{color : #9698e6;text-decoration : underline;}
+
+A.siro:LINK,A.siro:VISITED{color:#ffffff;}
+A.siro:HOVER,A.siro:ACTIVE{color : #bbbbcf;text-decoration : underline;}
+
+
+A.bl2:LINK,A.bl2:VISITED{color:#ccccff;}
+A.bl2:HOVER,A.bl2:ACTIVE{color : #ddddff;text-decoration : underline;}
+
+
+A.glink:LINK,A.glink:VISITED{color:#4cAc7f;}
+A.glink:HOVER,A.glink:ACTIVE{color : #afBfCf;text-decoration : underline;}
+
+A{text-decoration : none;}
+
+
+/*--√∞ÃﬁŸ--*/
+TABLE{
+  font-size : 10pt;
+}
+.black{background-color:#000000;}
+.gray{background:#535365;}
+.white{background:#fafaff;}
+.mwhite{background:#fefeff;}
+.veryusui{background:#f0f0fa;}
+.mgray{background:#636375;}
+.mmgray{background:#838395;}
+.mbgray{background:#7373a5;}
+.fullwhite{background:#ffffff;}
+
+
+/*---FONT---*/
+.fb{color:#000000;}
+.fw{color:#ffffff;}
+.fmw{color:#d2d2dd;}
+.fg{color:#434355;}
+.fmg{color:#636375;}
+.flink{color:#737385;}
+.fmmg{color:#b3b3c5;}
+.fmbg{color:#7373a5;}
+.fred{color:#c6585c;}
+.flred{color:#f6a8ac;}
+.f_toplink{color:#fafaff;font-size : 1pt;}
+
+.ten{font-size:10pt;}
+.elev{font-size:12pt;}
+.plus{font-size:14pt;}
+
+/*--ê¸êF--*/
+.line{color:#c3c3d5;}
+.dline{color:#60609b;}

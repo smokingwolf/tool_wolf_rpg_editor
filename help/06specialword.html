@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>特殊文字 一覧</TITLE>
+<LINK rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+
+<P><BR>
+<B><FONT 
+size=+1>【特殊文字 一覧】</FONT></B><BR>
+<BR>
+　イベントや文字列ピクチャ内で使用できる特殊文字の一覧を記載します。なお、特殊文字は全て半角で入力する必要があり、大文字、小文字を区別しますのでご注意下さい。<br>
+<BR>
+※<span style="color: oklab(0.89908 -0.00192907 -0.0048306); font-family: &quot;gg sans&quot;, &quot;Hiragino Sans&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, メイリオ, Meiryo, Osaka, &quot;MS PGothic&quot;, &quot;Noto Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: break-spaces; background-color: oklab(0.321044 -0.000249296 -0.00927344); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">これらは「文字列」内の変数表示や文字制御にしか使用できず、計算には利用できません。</span><BR>
+
+<TABLE border="1" cellpadding="3" cellspacing="1">
+<TBODY>
+<TR>
+<TD><B>【数値・文字列代入】</B><BR>
+<BR>
+<B>\v[XXX] </B>：XXX番の通常変数の値に置き換えます。<BR>
+<B>\v？[XXX]</B> 予備変数？のXXX番の変数の値に置き換えます。（例：\v1[30]）<BR>
+<B>\s[XXX]</B> ：XXX番の文字列変数の値に置き換えます。<BR>
+<B>\self[X] </B>(※Xは0～9までの数値）： <BR>
+　このマップイベントのセルフ変数X番の値に置き換えます。 <br>
+<B>\cself[XX] </B>(※XXは0～99までの数値）： <br>
+　このコモンイベントのセルフ変数X番の値を表示します <br>
+      　（X=0～4、10～99なら数値、X=5～9なら文字列を返す） <br>
+      <br>
+<B>\udb[A:B:C] </B>(※A～Cは数値）： <br>
+　ユーザDBの「タイプA番・データB番・項目C番」の内容に置き換えます。 <br>
+<B>\cdb[A:B:C] </B>(※A～Cは数値）： <br>
+　可変DBの「タイプA番・データB番・項目C番」の内容に置き換えます。<br>
+<B>\sdb[A:B:C] </B>(※A～Cは数値）： <br>
+      　システムDBの「タイプA番・データB番・項目C番」の内容に置き換えます。<br>
+      <span style="font-size : 80%;">　→ <b>\cdb[A:B]</b>のように2つだけ数値指定すると「<b>可変DBのタイプA、データBのデータ名</b>」を表示します。</span><br>
+      <span style="font-size : 80%;">　→ <b>\cdb[A]</b>のように1つだけ数値指定すると「<b>可変DBのタイプAのタイプ名</b>」を表示します。</span><br>
+      <BR>
+      <B>\sys[XXX]</B> ： XXX番のシステム変数の値に置き換えます。<BR>
+      <B>\sysS[XXX]</B> ： XXX番のシステム文字列の値に置き換えます。<br>
+      <BR>
+      <b>\xy[?:?:?]</b>： 「数値呼び出し」のXY配列の、指定項目の数値を表示します。?には数値で「配列番号・X列番号・Y列番号」を指定します。<br>
+      <b>\xyN[!:?:?]</b>：「名前呼び出し」のXY配列の、指定項目の数値を表示します。 !には文字列で「配列名」、?には数値で「X列番号・Y列番号」を指定します。<br>
+      <span style="font-size : 80%;">　→ <b>\xy[?:?]</b>や<b>\xyN[!:?]</b>を指定すると「<b>Y列1列分の数値</b>」を[改行]区切りで表示します。</span><br>
+      <span style="font-size : 80%;">　→ \<b>xy[?]</b>や<b>\xyN[!]</b>で指定すると<b>そのXY配列番号/名の内容を全て</b>表示できます。</span><br>
+      <br>
+      <br>
+      ※これら代入特殊文字は、最大100層まで入れ子になっていても変換可能です（Ver3.50より)<br>
+      <br>
+      <br>
+      <s><span style="font-size : 80%;">（2009/01/13追加）<BR>
+      ※代入特殊文字には<font class=fred>優先順位</font>があり、それに従えば入れ子構造にすることも可能です。<BR>
+      　特殊文字の優先順位は、<br>
+      <B class=fred>　　通常変数\v ＜ 予備変数\v? ＜ セルフ変数\self ＜ コモンセルフ\cself
+      <B class=fred>＜ システム変数\sys </B>＜<BR>
+      　　 <B class=fred>ユーザDB \udb ＜</B> 可変DB\cdb ＜ システムDB \sdb ＜ 文字列変数\s ＜ システム文字列\sysS<br>
+      </B>　の順になっており、各特殊文字の[ ]内には、それより順位の低い特殊文字を記述することができます。<BR>
+      　たとえば、<B>\cself[\v[12]]</B> （\v＜\cself）なら、\v[12]番のコモンセルフを正常に呼び出すことができます。<BR>
+      　しかし、逆の<B>\v[\cself[2]]</B>は、\vより\cselfの方が順位が高いので、正常に処理されません。<BR>
+      <BR>
+      <BR>
+      ※優先順位の都合上、DB読み込み用特殊文字に関しては、変数読み込み文字を使って
+      <br>
+      　「<B>\udb[</B>3:\v[4]:\self[1]<B>]</B> 」という風に入れても機能します。 <BR>
+      　ただし、<B>\udb[</B>\cdb[1:1:1]:2:3<B>]</B>（※\udb＜\cdbなのにcdbが内側に入っている）という具合に、<BR>
+      　<font class=fred>DB読み込み用文字の内部に優先順位の高いDB読み込み用文字を入れると<BR>
+      　動作が不安定になります</font>ので注意してください。</span></s><BR>
+      <br>
+      ※ 上記の問題はすでに解消されている気がします。<br>
+      <br>
+      <BR>
+<HR>
+<B>【文字の性質変化】</B><BR>
+<BR>
+<B>\f[XX]</B> ：フォントサイズをXXに変更します。<br>
+      <b>\f+[XX]</b> ： フォントサイズをXXだけ加算します。<br>
+      <b>\fR[XX]</b> ： ルビのフォントサイズをXXに変更します。<BR>
+<B>\m[XX]</B> ：その行の最大フォントサイズを指定します、行頭に入れて下さい。<BR>
+　　　　文字のタテ位置がガタガタになるときに使ってください。<BR>
+<B>\c[XX]</B> ：フォントカラーを変更します、色はシステムDBタイプ12から読み込まれます。<BR>
+<B>\E</B> ： 以降の文字列をフチ（=エッジ,E）付きにします<br>
+      <b>\wE[XX] </b>： 太さXXのフチ付きにする。<b>1～5</b>まで有効。<br>
+      <b>\cE[XX]</b> ： フチの色をXX番にする。色はシステムDBタイプ12から読み込まれます。<br>
+      <b>\cS[XX] </b>： フォントの影色をXX番にする。色はシステムDBタイプ12から読み込まれます。<br>
+      <b>\cR[XX] </b>： ルビの色をXX番にする。色はシステムDBタイプ12から読み込まれます。<BR>
+<B>\N</B> ： 以降の文字列をフチ無し（=ノーマル,N）にします（※こちらがデフォルト状態）<BR>
+<B>\-[XX]</B> ：XXピクセル分、以降の文字幅を詰めます。<BR>
+　　　　XXにマイナスの値を入れると文字が広がります。<BR>
+<B>\font[X]</B> ：フォントをサブフォントXに変更します。\font[0]で基本フォントに戻せます。<BR>
+      <B>\A+</B> … 以後の文字にアンチエイリアスを付与します。文字がなめらかに見えます。<BR>
+      <B>\A-</B> … 以後の文字からアンチエイリアスを解除します。<BR>
+<HR>
+<B>【文字表示の制御】</B><BR>
+      <BR>
+      <B>\\</B> … 半角の\に変換されます。<BR>
+<B>\!</B> … 次のキー入力まで文章表示を停止。<br>
+<B>\.</B> … 0.25秒ウェイト。<br>
+<B>\^</B> … キー入力を待たずに文章表示を終了する。<br>
+<B>\&gt;</B> … 次以降の文章を瞬間表示する<br>
+<B>\&lt;</B> … \&gt;による瞬間表示を中断する<BR>
+<br>
+<B>\mx[??] </B>(※??は数値）… 次に表示する文字のX座標を、??ピクセルだけずらします。<B>改行で解除</B>されます。<br>
+<B>\my[??] </B>(※??は数値）… 次に表示する文字のY座標を、??ピクセルだけずらします。<br>
+      <b>\bx[??]</b> (※??は数値）： 次行からの開始X座標を??ピクセルだけずらします。<br>
+<B>\ax[??] </B>(※??は数値）… 次に表示する文字のX座標を、強制的に??ピクセルにします。<B>改行で解除</B>されます。<br>
+<B>\ay[??] </B>(※??は数値）… 次に表示する文字のY座標を、強制的に??ピクセルにします。<br>
+　同じ文字を重ねたい場合など、「■\ax[0]\ay[0]◆」と入力することで、<br>
+　二つの文字を重ねることができます。<br>
+<br>
+<B>\sp[??] </B>(※??は数値）… 以降の文字速度を秒間??文字に変更する <br>
+<B>\space[??] </B>(※??は数値）… 以降の改行間隔を??ピクセルに変更します <br>
+<B>\r[文字,ルビ内容] </B>… 「<B>文字</B>」に「<B>ルビ内容</B>」のルビを付けて表示する。 <br>
+　ルビの文字色はシステムDBタイプ12（文字色）のデータ13番目の色を使用。<BR>
+<BR>
+      <b>\i[番号] \iS[番号]</b>（※<B>番号</B>は0～9999までの数値） … <B>Data内のBasicDataフォルダ</B>にある<BR>
+　　「icon<B>番号</B>.png」の画像を文章中に表示することができます。アイテム名の先頭に<BR>
+　　アイコンを付けたり、文章中に特殊な記号を入れたいときに使えます（Ver1.03で実装）。<BR>
+　※ファイル名には、「icon<B>002</B>.png」のようにiconに続けて3桁、1000以上なら4桁の数値を入れてください。<BR>
+      　※iconファイルをBasicDataに入れてない場合は何も出ません。<br>
+      　※<b>\iS</b>は\iと違い、拡大縮小しても常に<b>『ガタガタ＆くっきり』</b>になります。<BR>
+<BR>
+　　＜使用例＞<BR>
+　　　<IMG src="Sys_iconword.gif"> <BR>
+　　　　<B>ココ↑</B><BR>
+      <BR>
+      <B>\img[ファイル名]</B> （「ファイル名」はData以下のアドレスを記述） … <BR>
+      　　Data内にある「ファイル名」の画像を文章中に表示することができます。<BR>
+      　　<B>\img[ピクチャ\Test1.png]</B>という具合に指定します（読み込まれるのはData\ピクチャ\Test1.png）。<BR>
+      　　表示時の仕様は上記のアイコン\i[ ]と同じですが、アイコンより少し処理が重い可能性があります。<BR>
+      　※ファイルがない場合はエラーメッセージが出るので注意してください。<br>
+      　※<b>\imgS</b>は\imgと違い、拡大縮小しても常に<b>『ガタガタ＆くっきり』</b>になります。<br>
+      　※「<b>\img[</b>」の後に「<b>]</b>」が出てくるとそこをファイル名の終了と判断するので、<b><span style="color : #ff0000;">ファイル名に「]」が含まれる場合は正常に読み込むことができません</span></b>。その場合は、ファイル名を変更して「]」が入らないようにしてください。<BR>
+      <table border="0" style="width : 542px;">
+        <tbody>
+          <tr>
+            <td style="width : 31px;"></td>
+            <td style="width : 501px;"><span style="font-size : 80%;">　</span><br>
+            <b><span style="font-size : 80%;">【\img(S)の裏技】 </span></b><span style="font-size : 80%;">(Ver3.50より)</span> <br>
+            <span style="font-size : 80%;">　「<b>\img(S)[</b>」の後に「<b>&lt;DIV/</b>」「<b>&lt;CUT/</b>」「<b>&lt;ANIME/</b>」から始まるコードを記入すると、画像を特別な方法で表示することができます。見本は以下の通りです。</span><br>
+            <br>
+            <span style="font-size : 80%;">- 分割表示 DIV　</span><b><span style="font-size : 80%;">\img[<span style="color : #cc0000;">&lt;DIV/X3/Y4/5&gt;</span>Pic/Test.jpg]</span></b><br>
+            <span style="font-size : 80%;">　　「Pic/Test.jpg」を</span><span style="color : #cc0000;
+	font-size : 80%;
+">横3、縦4</span><span style="font-size : 80%;">パターンで分割し、パターン</span><span style="color : #cc0000;
+	font-size : 80%;
+">5</span><span style="font-size : 80%;">を表示します。</span><br>
+            <span style="font-size : 80%;">　　パターン番号はピクチャと同じで、「1」から始まります。</span><br>
+<br>
+            <span style="font-size : 80%;">- 部分切り出し CUT　</span><b><span style="font-size : 80%;">\img[<span style="color : #cc0000;">&lt;CUT/X123-150/Y200-300&gt;</span>Pic/Test.jpg]</span></b><br>
+            <span style="font-size : 80%;">　「Pic/Test.jpg」の </span><span style="color : #cc0000;
+	font-size : 80%;
+">X123～150、Y200～300px</span><span style="font-size : 80%;">の範囲だけ切り出して表示します。</span><br>
+            <span style="font-size : 80%;">　 X0-2なら左端の1ピクセル目から幅2ピクセル分だけ表示されます。</span><br>
+<br>
+            <span style="font-size : 80%;">- アニメアイコン ANIME　</span><b><span style="font-size : 80%;">\img[<span style="color : #cc0000;">&lt;ANIME/X3/Y5/12&gt;</span>Pic/Test.jpg]</span></b><br>
+            <span style="font-size : 80%;">　「Pic/Test.jpg」を</span><span style="color : #cc0000;
+	font-size : 80%;
+">横3、縦5パターン</span><span style="font-size : 80%;">で分割し、</span><span style="color : #cc0000;
+	font-size : 80%;
+">12フレーム</span><span style="font-size : 80%;">ごとにアニメーションします</span><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+      <b>\isize[XX] <br>
+      　</b>以後の画像（\i、\iS、\img、\imgS）のサイズを<b>XX％</b>に変えます。<br>
+      <br>
+      <br>
+      <b>\se[(音声ファイル名)]</b><br>
+      　（音声ファイル名）の音声を再生します。<br>
+      　たとえば<b>\se[SE/test.ogg]</b>と指定すると、その位置まで文章が達した瞬間に「SE/test.ogg」が再生されます。<br>
+      　また裏技として、「<b>\se[</b>」の直後に「<b>&lt;VOL=(音量)/FREQ=(周波数)&gt;</b>」を入力すると音量と周波数を変更して再生できます。<br>
+      <span style="font-size : 80%;">　　見本：</span><b><span style="font-size : 80%;">\se[&lt;VOL=80/FREQ=90&gt;SE/test.ogg]</span></b><span style="font-size : 80%;">　→　音量80%、周波数90%でSE/test.oggを再生</span><BR>
+      <br>
+      <BR>
+<B>&lt;L&gt;</B> … 以降の文字列を左寄せ（※デフォルト）に表示します。<BR>
+<B>&lt;C&gt;</B> … 以降の文字列を中央寄せに表示します。<BR>
+<B>&lt;R&gt;</B> … 以降の文字列を右寄せに表示します。</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P><BR>
+</P>
+<HR>
+<P><BR>
+
+<P><B><FONT size="+1">【データベースのデータ名にのみ使用できる特殊文字】</FONT></B><BR>
+<BR>
+　以下は、データベース「<B><A href="05dbtype.html">タイプの内容設定</A></B>」時の「データ名」において利用可能な特殊文字一覧です。<BR>
+イベントや文字列ピクチャ内で使用できる特殊文字と多少異なる部分がありますので、注意してください。<BR>
+<BR>
+　　 <IMG src="Sys_dbspecialword.png">　←矢印の付いた欄で使用可能です</P>
+<TABLE border="1">
+  <TBODY>
+    <TR>
+      <TD><B>【数値・文字列代入】</B><BR>
+      <br>
+<B>\udb[A:B:C] </B>(※A～Cは数値）： <br>
+　ユーザDBの「タイプA番・データB番・項目C番」の内容に置き換えます。 <br>
+<B>\cdb[A:B:C] </B>(※A～Cは数値）： <br>
+　可変DBの「タイプA番・データB番・項目C番」の内容に置き換えます。<br>
+<B>\sdb[A:B:C] </B>(※A～Cは数値）： <br>
+　システムDBの「タイプA番・データB番・項目C番」の内容に置き換えます。<BR>
+      <BR>
+      <BR>
+      <B>\udb[A:B]</B>(※A,Bは数値）：<BR>
+      　ユーザDBの「タイプA番・データB番」のデータID名に置き換えます。<BR>
+      <B>\cdb[A:B]</B>(※A,Bは数値）：<BR>
+      　可変DBの「タイプA番・データB番」のデータID名に置き換えます。<BR>
+      <B>\sdb[A:B]</B>(※A,Bは数値）：<BR>
+      　システムDBの「タイプA番・データB番」のデータID名に置き換えます。<BR>
+      <BR>
+      <B>\d[X]</B>(※Xは数値）：データ項目の内容番号+Xの値に置き換えます。<BR>
+      　（例えばデータ名12の入力欄に\d[4]と入れると、16になります。）<BR>
+      <BR>
+      <BR>
+      ※これらDB読み込み用特殊文字に関しては、<B>\d[X]</B>を使って <br>
+　「<B>\udb[</B>3:<B class=fred>\d[0]</B><B>]</B> 」という風に入れても機能します。 <BR>
+　ただし、<B>\udb[</B>\cdb[1:1:1]:2:3<B>]</B>という具合に、<font class=fred>DB読み込み用文字の内部に<BR>
+　DB読み込み用文字を入れると動作が不安定になります</font>ので使用しないでください。<BR>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<P><BR>
+　
+</div>
+</BODY>
+</HTML>

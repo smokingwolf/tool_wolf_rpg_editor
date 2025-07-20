@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>ゲームデータの作成</TITLE><LINK rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+
+<P><BR>
+<B><FONT size="+1">【ゲームデータの作成】</FONT></B><BR>
+<BR>
+<IMG src="Main_game_make.png" border="0"><BR>
+<BR>
+ゲームデータの作成は、「ファイル」→「ゲームデータの作成」から実行することができます。実行時には以下のウィンドウが表示されます。<br>
+<BR>
+　
+<IMG src="Main_game_make2.png" border="0" style="width:95%;max-width:753px;">
+<P>「作成するゲームフォルダ名」、「出力フォルダ」はその名の通りですので説明を省きます。<BR>ここでは暗号化設定について詳細に説明します。<BR>
+<br>
+<BR>
+<B>【暗号化設定】</B><BR>
+<BR>
+<B>・暗号化なし</B><BR>
+      　暗号化なしで、ゲームの動作に必要なファイル群（Game.exeやDataフォルダ内の中身）を全てコピーします。<BR>
+<BR>
+<B>・Dataフォルダまるごと暗号化</B><BR>
+　Dataフォルダ内のデータを全て暗号化して1ファイルにします、その他の必要なファイル群もコピーします。なお、<B class="fred">フォントファイルを同梱する場合は事前にGame.exeと同じフォルダに移動してください。</B><BR>
+<BR>
+<B>・暗号化フォルダを限定する</B><BR>
+　Dataフォルダ内のデータのうち、下のリストボックスで選択した特定フォルダだけを暗号化してコピーします。今後アップデートの可能性がある場合はこちらが便利です。<br>
+<br>
+<br>
+<br>
+<B>【暗号化バージョンの設定】<br>
+　</B>ゲームデータ暗号化のバージョンを選択します。通常は「最新」で問題ありません。<br>
+　オンラインアップデート機能などを搭載した際、部分的に暗号化のバージョンが異なるファイルが混ざってしまうと読み込めなくなってしまうため、そういった場合は元の暗号化バージョンと同じバージョンを選択してください。<B><br>
+</B><br>
+<b><span style="font-size : 80%;">　※ChaCha20暗号化について　</span></b><span style="font-size : 80%;">(Ver3.50より)</span>　<br>
+<span style="font-size : 80%;"> 　　「<b>ChaCha20暗号化</b>」は、(他のツールなどを利用して行う)スマートフォンアプリへの展開時にも問題が起きにくい「<b>標準的な暗号化アルゴリズム</b>」による暗号化方式です。</span><br>
+<span style="font-size : 80%;">　　 この暗号化使用時は、「<b>セーブデータ保存時の暗号化</b>」もChaCha20に変わります。</span><br>
+<span style="font-size : 80%;">　（アプリをリリースする際、暗号化の種類を答えなければならない場合に、この「ChaCha20」使用時なら「標準的な暗号化アルゴリズムのみ」であると申告できます）</span><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<B>【動作バージョンを【最新】から【VerX.XX】に固定化する】</B><br>
+　このチェックを入れると「ゲーム基本設定」内の「Game.exe動作バージョン調整」を今の最新バージョンに変更します。<br>
+　このチェックを入れておくと、将来的にGame.exeのバージョンを差し替えても、開発当時の挙動で動作するため安定します（どうしようもない仕様変更があった場合は動作しなくなる場合もあります）。<br>
+　<br>
+</P>
+<P><br>
+<BR>
+</P>
+
+</div>
+</BODY>
+</HTML>

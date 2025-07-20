@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>場所移動</TITLE><LINK rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+<P><BR>イベントコマンド　<B><FONT size=+1>【場所移動】</FONT></B><BR>
+<BR>
+　プレイヤーキャラクター（主人公）やイベントの場所移動を行います。<BR>
+<BR>
+<IMG src="Ev_move.png" border="0"><BR>
+<BR>
+<B><FONT size=+1>【各部の説明】</FONT></B><BR>
+<BR>
+<B>1.対象</B><BR>
+　場所移動させる対象を選択します。変数による指定も可能です。変数の内容を-1にした場合、移動対象はこのイベント（コモンなら呼び出し元イベント）になります。<BR>
+<BR>
+<BR>
+<B>2.移動先を手動で入力する</B><BR>
+　移動先を手動で入力します。マップ番号や座標の指定には変数（例：2000000=通常変数0番）も使用可能です。<BR>
+<BR>
+<BR>
+<B>3.移動先を登録した位置から選択</B><BR>
+　移動先を、「<B><A href="03mappossave.html">移動先の登録機能</A></B>」で登録した位置から選択します。<BR>
+<BR>
+　　※旧Verでは移動先を見ながら選択することができなかったため、その代替的な措置としてこのような機能（移動先登録）が入っています。そのため、現在では使用する意味が薄くなっています。<BR>
+<BR>
+<BR>
+<B>4.移動先を見ながら選択</B><BR>
+　移動先を、マップを見ながら設定できます。このボタンをクリックすると、以下のようなウィンドウが表示されます。<BR>
+<BR>
+<BR>
+　<B>【場所移動地点の選択　ウィンドウ】</B><BR>
+　　移動させたいマップ/地点をマウスで選択し、「OK」を押すだけで「マップ番号」「X,Y座標」および各オプションが簡単にセットできます。<br>
+　なお、ここに表示されるマップは技術的な都合により<b><span style="color : #cc0000;">「保存」された時点のマップ</span></b>となっています。編集途中のマップがすぐここに反映されたりしないので注意してください。<BR>
+<BR>
+　　<IMG src="Ev_move2.png" border="0"><BR>
+<BR>
+<BR>
+<B>5.場所移動時オプション</B><br>
+　移動後の向きと、場所移動中のトランジションの有無を指定できます。<br>
+<br>
+　<b>【移動後の向き】</b>　(Ver3.50より)<br>
+　　移動後の向きを選択できます。<br>
+　　「<b>向きを変えない(0)</b>」のほか「<b>向き指定（1～9・テンキーに対応）</b>」、あるいは向きを「<b>変数（セルフ変数・通常変数・予備変数）</b>」で指定可能です。
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD width="16"></TD>
+<TD width="55">
+<TABLE border="1" width="61">
+<TBODY>
+<TR>
+<TD align="center" width="13">7</TD>
+<TD align="center" width="11">8</TD>
+<TD align="center" width="15">9</TD>
+</TR>
+<TR>
+<TD align="center" width="13">4</TD>
+<TD align="center" width="11"></TD>
+<TD align="center" width="15">6</TD>
+</TR>
+<TR>
+<TD align="center" width="13">1</TD>
+<TD align="center" width="11">2</TD>
+<TD align="center" width="15">3</TD>
+</TR>
+</TBODY>
+</TABLE>
+　　<B>向き</B></TD>
+</TR>
+  </TBODY>
+</TABLE>
+<P><br>
+　<b>【トランジション】</b><BR>
+　　「トランジションを行わない [最高速]」　…　実行した瞬間に移動を実行します。<BR>
+　　「トランジションを行う　[暗転なし・高速]」　…　移動時にトランジションを実行します。<BR>
+　　「トランジションを行う　[暗転有り・遅い]」　…　移動時に暗転・トランジションを挟みます。<BR>
+<BR>
+　※トランジション画像は「<A href="04ev_control.html">イベント制御</A>」の「トランジションの指定」で指定されたものが使用されます。<BR>
+　　 （なければただの暗転やフェード切りかえ）<BR>
+<BR>
+
+</div>
+</BODY>
+</HTML>

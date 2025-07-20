@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>メインウィンドウ</TITLE><LINK rel="stylesheet" href="style.css">
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+<P><BR>
+<B><FONT size="+1">【メインウィンドウ】</FONT></B><BR>
+<BR>
+<IMG src="MainWindow.png" border="0" style="width:95%;max-width:633px;">
+<BR>
+
+
+<P><FONT size="+1"><B>【操作方法】</B></FONT>　<span style="color : #7b82ff;">（プロ版ではレイヤー4～5も選択可能ですので置き換えて読んでください）</span><BR>
+<BR>
+・②の「レイヤー1～3」選択時<BR>
+　<B>左クリック</B> … 指定したマスにチップを描く<BR>
+　<B>右クリック</B> … スポイト（コピー）機能。ドラッグすると範囲内のチップ配置をコピーできる。<BR>
+　<B>Ctrl+右クリック</B> … まとめコピー機能。ドラッグすると、範囲内のレイヤー1～3全てのチップ配置を取得でき、その後<b><span style="color : #cc0000;">Ctrl+左クリック</span></b>でまとめ貼り付け可能。<BR>
+　<B>Ctrl+左クリック </B>… まとめ貼り付け機能。Ctrl＋右クリック時に取得したレイヤー1～3全てのチップ配置を貼り付ける。<BR>
+　<B>Shift+左クリック </B>… オートタイル機能（例：水辺を繋げて表示させる処理）を無効にしてチップを描く。<br>
+　<b>Ctrl+Z</b> … マップ編集の「一つ戻る」を行います。<BR>
+<br>
+<BR>
+・②の「イベントレイヤー(Ev)」選択時<BR>
+　<B>左クリック</B> … イベント選択<BR>
+　<B>左ダブルクリック</B> … イベント作成/編集<BR>
+　<B>右クリック</B> … サブメニュー表示<BR>
+<BR>
+<BR>
+・②の「レイヤー1～3,イベントレイヤー(Ev)」共通<BR>
+　<B>中ボタンをドラッグ、SPACE+マウス移動</B> … マップ画面をスクロール<BR>
+　<B>Ctrl+Shift+カーソルキー(上下左右)</B> … 全レイヤーのチップ・イベント配置をシフト<BR>
+<BR>
+・ショートカットキー<BR>
+　　<B>1～4</B>：レイヤー変更　（1～3＝レイヤー1～3　・　4＝イベントレイヤー）<br>
+　　　　　　　<span style="color : #7b82ff;"> [P]プロ版では最大マップレイヤー数に応じて対応キーが最大「<b>1～6</b>」に変化します</span><BR>
+　　<B>Ctrl+S</B>：マップ上書き保存<br>
+　　<b>Ctrl+マウスホイール</b> … 拡大率の変更<br>
+<br>
+　[イベントレイヤー編集時のみ] <BR>
+　　<B>X</B>：イベント切り取り<BR>
+　　<B>C</B>：イベントコピー<BR>
+　　<B>V</B>：イベント貼り付け<BR>
+　　<B>Del or BS</B>：削除<br>
+<br>
+　[マップレイヤー編集時のみ] <br>
+　　<b>Q</b>：鉛筆ツールに切り替え<br>
+　　<b>W</b>：塗りつぶしツールに切り替え<br>
+　　<b>E</b>：四角描画ツールに切り替え<BR>
+　　<b>X</b>：マウスカーソルのある1マスだけ透明マスで上書き（消しゴム）<BR>
+<br>
+<BR>
+<BR>
+<B><FONT size="+1">【各部の説明】</FONT></B></P>
+<P><B>１</B>：マップの新規作成<!--・読み込み-->・保存ボタンです<BR>
+<BR>
+<B>２</B>：マップエディットのレイヤー選択（1～3）ボタンと、イベントエディット（Ev）ボタンです。エディットしたい対象に切り替えてください。レイヤー選択ボタンを押すとマップチップウィンドウが表示されます。<BR>
+<BR>
+<B>３</B>：それぞれ、マップの縮尺をx2、1/1～1/8にします。全体を見渡したいときなどに使います。<BR>
+<BR>
+<B>４</B>：マップ作成時に使える描画ツールです、<IMG src="Main_Maptool.jpg" border="0">左から順に「鉛筆ツール」「塗りつぶしツール」「四角描画ツール」「マップ自動生成ツール」「一つ戻る」のボタンを表します。<BR>
+<BR>
+<B>５</B>：各種データベースを開くボタンです。左から、青＝ユーザデータベース、黄＝可変データベース、赤＝システムデータベースを表します。<BR>
+<BR>
+<B>６</B>：マップに関する特殊ツールです。左からそれぞれ「タイルセット設定」「マップの基本設定」「コモンイベントの設定」「マップ選択」ツールを表します。<BR>
+<BR>
+<B>７</B>：テストプレイを開始します。テストプレイ時にはF8キーによる読み込みファイル・使用ピクチャの確認とF9キーによる変数確認が可能です。<BR>
+<BR>
+<B>８</B>：マップエディット部です、ここに絵を描くようにチップを配置することでマップを作成することができます。<BR>
+<BR>
+<br>
+<BR>
+<B><FONT size="+1">【マップチップウィンドウ】</FONT></B><BR>
+<BR>
+・1～3どれでも、「レイヤー選択ボタン」を押すと自動的に表示されます。</P>
+<P>　左クリックで使用するチップを選択し、メインウィンドウのマップに書き込んでください。このとき、ドラッグすることで複数マスのチップをまとめて選択することができます。単体チップを選択すると、チップ番号、チップのタグ番号、通行設定が表示されます。</P>
+<P>　　<IMG src="Main_mapchip.png" border="0">　<br>
+<br>
+【特殊な操作】<br>
+　<B>中ボタンをドラッグ</B> … マップチップ選択画面をスクロールできます。<br>
+<br>
+<BR>
+<BR>
+　</P>
+
+</div>
+</BODY>
+</HTML>

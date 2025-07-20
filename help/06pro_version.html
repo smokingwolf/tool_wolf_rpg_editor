@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ja">
+<HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>デバッグコマンド一覧</TITLE><LINK rel="stylesheet" href="style.css">
+
+
+<style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+#menu-frame {
+  width: 185px;
+  min-width: 185px;
+  max-width: 185px;
+  border-right: 1px solid #aaa;
+  height: 100%;
+}
+#content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</HEAD>
+<BODY>
+<!-- 左：メニュー -->
+<div id="menu-frame">
+<iframe src="00_menu.html" title="メニュー"></iframe>
+</div>
+<!--ここから右欄-->
+<div id="content" id="scroll-target">
+
+
+<P><BR>
+<B><FONT size="+1">【[P]プロ版で使える機能】</FONT></B><BR>
+<BR>
+　WOLF RPGエディターは無料のソフトですが、上級者向け機能を使用したい人向けの<b><a href="https://silversecond.booth.pm/items/4302198" target="_blank">有料のプロ版</a></b>も存在します。<BR>
+　プロ版では一例として、以下のような機能が解放されます。<BR>
+<br>
+<br>
+<b>プロ版専用の「設定」</b><br>
+　・<B><a href="#1-1" class="glink">画面サイズが1920×1440まで自由に設定可 ＆ 1～3倍サイズに</a></B><br>
+　・<B><a href="#1-2" class="glink">マップレイヤー5まで使用可能に</a></B>　(Ver3.50より)<br>
+　・<B><a href="#1-3" class="glink">起動中に好きなローディング画像を表示できる！</a></B><br>
+　・<B><a href="#1-4" class="glink">ウディタ標準のファンクションキー（F4~F12）の機能をON/OFFできる！自作機能で上書きも！</a></B><br>
+<br>
+<b>プロ版専用の「コマンド」</b><br>
+　・<B><a href="#2-1" class="glink">JPG/PNGスクリーンショット保存機能</a></B><br>
+　・<B><a href="#2-2" class="glink">実行中のメインイベントを強制中断できる機能！イベントスキップに</a></B><br>
+　・<B><a href="#2-3" class="glink">ファイルコピー・削除・フォルダ作成可能に</a></B><br>
+　・<B><a href="#2-3.5" class="glink">ゲームの再起動が可能に</a></B><br>
+　・<B><a href="#2-4" class="glink">ダウンロード機能の強化！　Zip解凍や指定URLをブラウザで開くことも！</a></B><br>
+<br>
+<b>ゲームデータ作成関連</b><br>
+　・<B><a href="#3-1" class="glink">ゲームデータ出力時にGamePro.exeのアイコンを変更可能</a></B><br>
+　・<B><a href="#3-2" class="glink">暗号化ファイルの拡張子やファイル名を指定された中から変えられる！</a></B><br>
+　・<B><a href="#3-3" class="glink">「個別ファイル暗号化」が可能に。フォントやマップファイルも暗号化可能</a></B><br>
+<br>
+<b>システム変数・システム文字列</b><br>
+　・<B><a href="#4-1" class="glink">タイトルバーに表示する内容を設定可能</a></B><br>
+　・<B><a href="#4-2" class="glink">プレイ中のフォント変更が可能！</a></B><br>
+　・<B><a href="#4-3" class="glink">クリップボードへの読み書き可能</a></B><br>
+　・<B><a href="#4-4" class="glink">マップをより広い範囲までズームアウト可能！</a></B><br>
+　・<B><a href="#4-5" class="glink">次回起動時のBasicDataフォルダを変更機能！1ゲーム内での言語切り替え用に！</a></B><br>
+<br>
+<b>入手先</b><br>
+　・<b><a href="#final" class="glink">WOLF RPGエディターのプロ版はどこで入手可能？</a></b><HR size="1" id="dwindow">
+<p><span style="font-size : 150%;"><b>&lt;プロ版専用の「設定」&gt;</b></span><br>
+<br>
+<br>
+<B><a id="1-1"></a><span style="font-size : 120%;">【画面サイズが1920×1440まで自由に設定可 ＆ 1～3倍サイズに】</span></B><br>
+　　<img src="02gamesetting_Pro1.png" border="1"><br>
+　<b><a href="02gamesetting_Pro.html" target="B">プロ版の「ゲーム基本設定」</a></b>では、ゲーム画面をピクセル単位で1920×1440までの大きさまで、1ピクセル単位で自由に設定可能になります。<br>
+　スマホ展開向けに<b><span style="color : #cc0000;">縦長の画面</span></b>にしたりすることも！<span style="font-size : 80%;">（※</span><b><span style="font-size : 80%;"><a href="https://ci-en.net/creator/12702" target="_blank">ブラウザウディタ(開発Ci-enページへ)</a></span></b><span style="font-size : 80%;">を利用すればブラウザ化が可能で、その</span><b><span style="font-size : 80%;"><a href="https://sils.fc2.net/blog-entry-819.html" target="_blank">ブラウザ化ファイルからスマホアプリ化(ウディタ作者の記事)</a></span></b><span style="font-size : 80%;">ができます）</span><br>
+<br>
+　また、1～3倍の間でデフォルトの画面サイズ倍率を選ぶことも可能です（無料版での320×240が「2倍」の倍率にあたります）。<br>
+<br>
+<br>
+<br>
+<B><a id="1-2"></a><span style="font-size : 120%;">【マップレイヤー5まで使用可能に】</span></B>　(Ver3.50より)<br>
+　<b><a href="02gamesetting_Pro.html#settingPro" target="B">「ゲーム基本設定Pro」</a></b>から、通常3レイヤーまでのマップレイヤーを最大<b><span style="color : #cc0000;">5レイヤー</span></b>まで拡張することができます。<br>
+　より複雑なマップが作成可能になります！<br>
+<br>
+<br>
+<br>
+<B><a id="1-3"></a><span style="font-size : 120%;">【起動中に好きなローディング画像を表示できる！】</span></B><br>　<b><a href="02gamesetting_Pro.html#settingPro" target="B">「ゲーム基本設定Pro」</a></b>から、普通のゲーム起動時には真っ暗な画面のかわりに、好きなローディング画像を表示することができます。<br>
+　左から右側へ増えるものでよければゲージ画像も表示可能！<br>
+<br>
+<br>
+<br>
+<B><a id="1-4"></a><span style="font-size : 120%;">【ウディタ標準のファンクションキー（F4~F12）の機能をON/OFFできる！自作機能で上書きも！】</span></B><br>
+　<b><a href="02gamesetting_Pro.html#settingPro" target="B">「ゲーム基本設定Pro」</a></b>から、ファンクションキーの機能をそれぞれON/OFFすることができます！<br>
+　スクリーンショット撮影キー（PrtSrc/ScrLock/Pause）をOFFにして、これらのキーが押されたときに自作のスクリーンショット撮影処理を行う、といった風にすることも可能です。<br>
+　<br>
+<img src="02gamesetting_Pro2.png" border="0"><br>
+</p>
+<hr size="1" id="dwindow">
+<p><b><span style="font-size : 150%;">&lt;プロ版専用の「コマンド」&gt;</span></b><br>
+<br>
+<br>
+<b><a id="2-1"></a><span style="font-size : 120%;">【JPG/PNGスクリーンショット保存機能】</span></b><br>
+<br>
+　今のゲーム画像を撮影してファイルに保存することが可能です！<br>
+　緑帯なども出ないので、プレイヤーが気付かないタイミングでこっそり保存することも可能です。<br>
+<br>
+<br>
+<br>
+<b><a id="2-2"></a><span style="font-size : 120%;">【実行中のメインイベントを強制中断できる機能！イベントスキップに】</span></b><br>
+<br>
+　「決定キー起動・プレイヤーから接触・イベントと接触・自動実行」（つまり並列実行以外）によって起動された「メインイベント」を強制中断する機能が使えます。<br>
+　イベントの先頭で必要なフラグ処理を行ってこの強制中断処理を許可すれば、イベントスキップが比較的簡単に実装できるかもしれません。<br>
+<br>
+<br>
+<br>
+<b><a id="2-3"></a><span style="font-size : 120%;">【ファイルコピー・削除・フォルダ作成可能に】</span></b><br>
+<br>
+　ファイルのコピー・削除・フォルダ作成が可能です。<br>
+　ただし、Dataフォルダ内の操作はできません（事故で編集中のファイルが消滅したりするのを防ぐ目的です）<br>
+<br>
+<br>
+<br>
+<b><a id="2-3.5"></a><span style="font-size : 120%;">【ゲームの再起動が可能に】</span></b><br>
+<br>
+　無料版ではゲームを終了させることしかできませんでしたが、プロ版のコマンドでは、「<b>ゲームをいったん終了させ、すぐ再起動させる</b>」ことができます。<br>
+　<b>ダウンロード機能の裏技のオンラインアップデート用ファイル</b>を自然に取り入れることができますし、後述の<b>1ゲームデータ内での言語切り替え</b>を目的に再起動させることもできます。<br>
+<br>
+<br>
+<br>
+<b><a id="2-4"></a><span style="font-size : 120%;">【ダウンロード機能の強化！　Zip解凍や指定URLをブラウザで開くことも！】</span></b><br>
+<br>
+　「ダウンロード」機能が拡張されます！<br>
+　「無料版に存在する、連続接続時の待ち時間が消滅」したり、「ダウンロードしたZipファイルをそのまま解凍」したり、「指定URLをブラウザで開く」ことが可能になります。<br>
+<br>
+　</p>
+<hr size="1" id="dwindow">
+<p><b><span style="font-size : 150%;">&lt;ゲームデータ作成関連&gt;</span></b><br>
+<br>
+<B><a id="3-1"></a><span style="font-size : 120%;">【ゲームデータ出力時にGamePro.exeのアイコンを変更可能】</span></B><br>
+<br>
+　GamePro.exeのアイコンをゲームデータ出力時に変更することができます。<br>
+　アイコン切り替えするとGamePro.exeの著作権情報も消去されるため、WOLF RPGエディター製らしさが減らせます。<br>
+<br>
+<br>
+<br>
+<b><a id="3-2"></a><span style="font-size : 120%;">【暗号化ファイルの拡張子やファイル名を変えられる！】</span></b><br>
+<br>
+　暗号化ファイルの拡張子は通常は「.wolf」ですが、これを「.assets」にしたりすることができます。<br>
+　少しだけですが、ファイル構成のWOLF RPGエディター製らしさを減らすことができます。<br>
+<br>
+<br>
+<br>
+<b><a id="3-3"></a><span style="font-size : 120%;">【「個別ファイル暗号化」が可能に。フォントやマップファイルも暗号化可能】</span></b><br>
+　　<br>
+　ファイルの「個別暗号化」が可能になります！<br>
+　画像やテキストはもちろん、なんとマップファイルや<b><span style="color : #cc0000;">フォントファイル</span></b>も暗号化可能！<br>
+　<b><span style="color : #cc0000;">「二次配布可能な形での同梱」が禁止されているフォント</span></b>も、これで利用できます！<br>
+<br>
+　さらには、あるタイミングでの「文字列変数」や「数値変数」が一定の値でないとその暗号化ファイルが読めないようにすることも可能です！<br>
+　これにより、「解析ツールでファイルを一発解凍」ということを非常に困難にできます。<br>
+（少なくとも解析者にとって、各キーを知るためにはコモンイベントやマップイベント内をじっくり調べなければならなくなります）<br>
+　これでファイルのセキュリティも大幅アップ！<br>
+　<br>
+<img src="02_file_crypt_pro.png" border="0"><br>
+<br>
+<br>
+</p>
+<hr size="1" id="dwindow">
+<p><b><span style="font-size : 150%;">&lt;システム変数・システム文字列&gt;</span></b><br>
+<br>
+　<b><a href="06systemvalue_Pro.html" target="B">プロ版専用のシステム変数・システム文字列はこちら</a></b>から見られます。ここでは特徴的なものをご紹介します。<br>
+<br>
+<br>
+<br>
+<B><a id="4-1"></a><span style="font-size : 120%;">【タイトルバーに表示する内容をゲーム中に自由に変更可能】<br>
+</span></B><br>
+　「SysS60：[P]タイトルバー上書き」に文字列を格納すると、ゲーム中にタイトルバーの表示を自由に書き換え可能です！<br>
+　全画面にすると見えなくなるので多用は禁物ですが、何かのお遊びや情報提供に使えるかもしれません。<br>
+<br>
+<br>
+<br>
+<b><a id="4-2"></a><span style="font-size : 120%;">【マップをより広い範囲までズームアウト可能！】</span></b><br>
+<br>
+　通常、「エフェクト」の「マップ」にある「ズーム」でズームアウトすると元の画面外部分は真っ暗になります（下図、左）。<br>
+　ですがプロ版では、Sys139「<b>[P]ｽﾞｰﾑｱｳﾄ時ﾏｯﾌﾟ拡張表示 1:ON</b>」を「<b>1</b>」にするともっと広範囲のマップを表示することができます（下図・右。ただし制限があり、表示可能なのは縦横最大100～150マス分までです）。<br>
+　柔軟にマップを拡大縮小するようなゲームで活用できるでしょう。</p>
+<table border="0" style="font-size: 10pt; font-family: &quot;Meiryo UI&quot;, &quot;ＭＳ Ｐゴシック&quot;; letter-spacing: normal; orphans: 2; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+  <tbody>
+    <tr>
+      <td style="width: 38px; height: 204px;">&nbsp;</td>
+      <td style="height: 204px;">
+      <table border="1" style="font-size: 10pt;">
+        <tbody>
+          <tr>
+            <td><b>Sys139が「0」の場合<br>
+            <img src="06systemvalue_Pro1.png" border="1" style="width: 286px;"><br>
+            </b></td>
+            <td><b>Sys139が「1」の場合<br>
+            </b><img src="06systemvalue_Pro2.png" border="1" style="width: 286px;"></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+<br>
+<br>
+<br>
+<b><a id="4-3"></a><span style="font-size : 120%;">【クリップボードへの読み書き可能】</span></b><br>
+<br>
+　クリップボードへ書き込んだり、内容を読み込んだりすることが可能になります！（ただし起動時点のクリップボードの内容は読めません）<br>
+　クリップボード読み上げソフトを使ってゲーム内文章を読み上げさせるような連動を行ったり、何らかのコードをコピーさせることも簡単にできます。<br>
+<br>
+<br>
+<br>
+<b><a id="4-4"></a><span style="font-size : 120%;">【プレイ中のフォント変更が可能！】</span></b><br>
+<br>
+　主に多言語対応向けに用意されている機能ですが、プロ版はシステム文字列にフォントを指定することで、<b><span style="color : #cc0000;">プレイ中のフォント切り替え</span></b>が可能です。<br>
+　中国語や英語フォントへの切り替えをゲーム中に行うことができます！<br>
+　<img src="https://booth.pximg.net/052c0ca2-af5e-409b-9851-0272f0528afb/i/4302198/8a47d83e-1fe9-4bf7-be97-4dcfad148fb0_base_resized.jpg" border="0" width="400" height="400"><br>
+<br>
+<br>
+<br>
+<br>
+<b><a id="4-5"></a><span style="font-size : 120%;">【次回起動時のBasicDataフォルダを変更機能！ 1ゲーム内での言語切り替え用に！】</span></b><br>
+<br>
+　システム文字列SysS74「<b>[P]次起動Basicﾃﾞｰﾀﾌｫﾙﾀﾞ</b>」に「次起動時に読ませたいフォルダ名」をセットしておくことで、次回起動時にBasicDataフォルダでなく<b><span style="color : #cc0000;">別の基本データフォルダ</span></b>を読ませることが可能です。<br>
+　これができると何がいいかというと、たとえば別言語版の基本データフォルダを読み込みさせやすくなります。<br>
+　　※基本データフォルダ：コモンイベントやゲーム基本設定、データベース情報などを含むフォルダのこと。通常は「BasicData」フォルダがそれにあたる。<br>
+<br>
+<br>
+　このシステム文字列は、たとえば1ゲームデータで複数言語を切り替えられるゲームを作る際、以下のように使用できます。<br>
+　　※言語切り替え時には「再起動」が挟まる前提です（つまりゲーム中に動的に言語切り替えせず、起動時に切り替わる方式です）。<br>
+<br>
+1.複数の言語を入れるデータを「<b>主データ</b>」と呼ぶことにします。主データにはいま、「日本語版」の暗号化データだけ入ってるとします。<br>
+　このゲームデータには「<b>言語切り替え機能（処理4で具体的に説明します）</b>」が搭載済みであると仮定します。<br>
+<br>
+2.<b><a href="https://silversecond.booth.pm/items/5151747" target="_blank">ウディタ翻訳サポートツール(新ウィンドウ/公式の有料ソフト)</a></b>などを利用し、別言語に翻訳されたゲームデータを別の場所に出力します。<br>
+<br>
+3.「2」のゲームデータ内に「<b>英語に翻訳されたBasicData.wolf</b>」が作れたとしたら、それを「<b>BasicData_EN.wolf</b>」にファイル名変更して、「<b>主データ</b>」に入れます。<br>
+　このとき、「<b>主データ</b>」には日本語版の「<b>BasicData.wolf</b>」と、英語版の「<b>BasicData_EN.wolf</b>」が一緒に入っていることになります。<br>
+<br>
+4.<span style="color : #cc0000;">主データを起動した際、日本語版のプレイ中にプレイヤーが言語を「<b>英語</b>」に切り替えたら<b>、</b></span><b><span style="font-size : 120%;
+	color : #cc0000;
+">SysS74「[P]次起動Basicﾃﾞｰﾀﾌｫﾙﾀﾞ」</span></b><span style="color : #cc0000;">に「<b>BasicData_EN</b>」を代入して「<b>ゲーム再起動</b>」させるように処理を組みます（「<b>ゲーム再起動</b>」は「<b><a href="04ev_pro_command.html" target="B">プロ版機能</a></b>」コマンド内にあります）。</span><br>
+<br>
+5.すると、「<b>英語</b>」に切り替えた後に次は英語版の「<b>BasicData_EN.wolf</b>」が読み込まれてゲームが起動するので、<b>英語版をプレイ</b>できるようになります。<br>
+<span style="color : #cc0000;">　英語版の起動直後にまたSysS74「<b>[P]次起動Basicﾃﾞｰﾀﾌｫﾙﾀﾞ</b>」に「<b>BasicData_EN</b>」を代入しておくと、次もまた同じフォルダの基本データを使って英語版で起動可能です。</span><br>
+<br>
+<br>
+※もし<b>セーブデータを言語別に切り替えたい</b>場合は、「<b>セーブ先フォルダ</b>」も言語別で切り替えるようにすると良いでしょう。<br>
+（たとえば「Save_JP」フォルダと「Save_EN」フォルダに保存するようにするなど。「主人公の名前」などが自由に付けられるゲームの場合、プレイ途中で別言語版に切り替えられるままだと文字列が正常に表示されないことも多いため、こういった対策が必要になります）<br>
+<br>
+※マップファイルも言語別に違うフォルダに出力するのがおすすめです（例：「MapData_EN」など）。<br>
+　ウディタ翻訳サポートツールの最新版では、システムDB内の<span style="color : #cc0000;">「マップファイル名」を翻訳すれば、翻訳されたマップファイルの出力名も変更されます。<br>
+　（[Original Message]<b>MapData/Test.mps</b> → [English]<b>MapData_EN/Test.mps</b> のように翻訳する）</span><br>
+<br>
+</p>
+<hr size="1" id="dwindow">
+<p><br>
+<br>
+<b><a id="final"></a><span style="font-size : 120%;">【WOLF RPGエディターのプロ版はどこで入手可能？】</span></b><br>
+<br>
+　<b><a href="https://silversecond.booth.pm/items/4302198" target="_blank"><span style="font-size : 120%;">【『WOLF RPGエディタープロ版』　BOOTH販売ページ】</span>(新ウィンドウ)</a></b>にて有料で発売中です。<br>
+<br>
+<br>
+<br>
+　　 </p>
+<hr size="1" id="dwindow">
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<BR>
+</p>
+</div>
+</BODY>
+</HTML>

@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
+<TITLE>文字列操作</TITLE><LINK rel="stylesheet" href="style.css">
+</HEAD>
+<BODY>
+<P><BR>
+イベントコマンド　<B><FONT size=+1>【文字列操作・隠しコード一覧】</FONT></B><BR>
+<BR>
+　このページでは文字列変数の「隠しコード実行」で指定可能なコードを紹介しています。<BR>
+<BR>
+<IMG src="04ev_string_specialcode.png" border="0"><BR>
+<br>
+　隠しコードを使うと、特殊なパラメータを取得したり、特殊な処理を行うことができます。<br>
+　隠しコードを使用する場合は、『文字列操作』コマンドを「<b>隠しコード実行（&lt;&lt;から始まる）</b>」にセットし、文字列として以下の文章を指定してください。 
+<P id="secret_code"><br>
+<b><a href="#F0" class="glink">【共通の仕様】<br>
+</a></b><br>
+<b>【ファイル系】</b><br>
+- <b><a href="#F1" class="glink">1.ファイルまたはフォルダが存在するか確認する　&lt;&lt;GET_FILE_EXIST&gt;&gt;(ファイル名[※Data/から指定])</a></b><br>
+- <b><a href="#F2" class="glink">2.フォルダが存在するか確認する　&lt;&lt;GET_DIRECTORY_EXIST&gt;&gt;(フォルダ名[※Data/から指定])</a></b><br>
+- <b><a href="#F3" class="glink">3.wolfx暗号化ファイルの読込チェック &lt;&lt;LOAD_CHECK_WOLFX_FILE&gt;&gt;(ファイル名[※Data/から指定])</a></b><br>
+<br>
+<b>【文字列系】</b><br>
+- <a href="#STR1" class="glink"><b>1.文字列の長さを半角1、全角2換算で得る　&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;(文字列)</b></a><br>
+- <a href="#STR2" class="glink"><b>2.(数値)の横幅分で文字列をカットして得る (横幅は半角1、全角2)　&lt;&lt;CUT_STRING_WIDTH_COUNT=(数値)&gt;&gt;(文字列)</b></a><br>
+- <a href="#STR3" class="glink"><b>3.指定バイトで文字列をカット　&lt;&lt;CUT_STRING_(数値1)_(数値2)&gt;&gt;(文字列)</b></a><br>
+      - <a href="#STR4" class="glink"><b>4.文字列のバイト数を得る　&lt;&lt;GET_STRING_BYTE_COUNT&gt;&gt;(文字列)</b></a><br>
+- <a href="#STR5" class="glink"><b>5.指定行でカット　&lt;&lt;CUT_LINE_STRING_(数値1)_(数値2)&gt;&gt;(文字列)</b></a><BR>
+- <a href="#STR6" class="glink"><b>6.指定幅で自動改行する　&lt;&lt;AUTO_RETURN_STRING_WIDTH_COUNT=(数値)&gt;&gt;(文字列)</b></a><BR>
+<br>
+<b>【イベント系】</b><br>
+- <a href="#EV1" class="glink"><b>1.[マップイベント名]からマップイベント番号を得る　&lt;&lt;GET_MAPEVENT_ID_FROM_NAME&gt;&gt;(イベント名)</b></a><br>
+- <a href="#EV2" class="glink"><b>2.[マップイベントID]からマップイベント名を得る　&lt;&lt;GET_MAPEVENT_NAME_FROM_ID&gt;&gt;(イベントID)</b></a><br>
+- <a href="#EV3" class="glink"><b>3.[コモンイベント名]からコモンイベント番号を得る　&lt;&lt;GET_COMMONEVENT_ID_FROM_NAME&gt;&gt;(イベント名)</b></a><br>
+- <a href="#EV4" class="glink"><b>4.[マップイベントID]からマップイベントの画像ファイル名を得る　&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;(イベントID)</b></a><br>
+- <a href="#EV5" class="glink"><b>5.空イベント作成　&lt;&lt;MAKE_EVENT_X=(数値1)/Y=(数値2)&gt;&gt;(画像ファイル)</b></a><br>
+- <a href="#EV6" class="glink"><b>6.空イベントの削除 &lt;&lt;DELETE_EVENT_ID&gt;&gt;(イベントID)</b></a><br>
+- <a href="#EV7" class="glink"><b>7.イベント名を変更　&lt;&lt;SET_EVENT_NAME_ID=(数値)&gt;&gt;(新イベント名)</b></a><br>
+- <a href="#EV8" class="glink"><b>8.コモンイベント番号から名前を得る　&lt;&lt;GET_COMMONEVENT_NAME_FROM_ID&gt;&gt;(コモンイベントID)</b></a><br>
+<br>
+<b>【画像系】</b><br>
+- <a href="#IMG1" class="glink"><b>1.[タイル番号の数値]番のタイルファイル名を得る　&lt;&lt;GET_TILE_FILENAME&gt;&gt;(タイルセット番号)</b></a><br>
+- <a href="#IMG2" class="glink"><b>2.ピクチャの画像ファイル名を得る　&lt;&lt;GET_FILENAME_FROM_PICTURE&gt;&gt;(ピクチャIDの数値)</b></a><br>
+- <a href="#IMG3" class="glink"><b>3.画像のX、Y座標の不透明度、RGB値を得る &lt;&lt;GET_IMAGE_ARGB_X=(数値1)/Y=(数値2)&gt;&gt;(ﾌｧｲﾙ名[Data/は不要])</b></a><br>
+- <a href="#IMG4" class="glink"><b>4.画像の横、縦サイズを得る &lt;&lt;GET_IMAGE_SIZE&gt;&gt;(ファイル名[Data/は不要])</b></a><br>
+- <a href="#IMG5" class="glink"><b>5.4つのXY配列に画像を読み込む(画像全体の不透明度、RGB値を得る)　&lt;&lt;LOAD_IMAGE_TO_XY(N)/A=(配列1)/R=(配列2)/G=(配列3)/B=(配列4)&gt;&gt;(ファイル名[Data/は不要])</b></a><br>
+- <a href="#IMG6" class="glink"><b>6.4つのXY配列(ARGB)から画像出力　&lt;&lt;SAVE_PNG_FROM_XY(N)/A=(配列1)/R=(配列2)/G=(配列3)/B=(配列4)/XSIZE=(数値1)/YSIZE=(数値2)&gt;&gt;(ファイル名[Data/は不要])</b></a><br>
+<br>
+<b>【サウンド系】</b><br>
+- <a href="#SOUND1" class="glink"><b>1.音声ファイルの再生時間をミリ秒で得る <span>&lt;&lt;GET_SOUNDTIME&gt;&gt;(ファイル名[Data/から指定])</span></b><br>
+</a><br>
+<b>【経路探索系】</b><br>
+- <a href="#FIND1" class="glink"><b>1.経路を探索する　&lt;&lt;FIND_PATH_DIR??_SX=(数値1)/SY=(数値2)/EX=(数値3)/EY=(数値4)&gt;&gt;</b></a><br>
+<br>
+<b>【システム系】</b><BR>
+- <a href="#SYS1" class="glink"><b>1.ゲーム名の「メイン」を得る　&lt;&lt;GET_TITLE&gt;&gt;</b></a><br>
+- <a href="#SYS2" class="glink"><b>2.ゲーム名の「追記」を得る　&lt;&lt;GET_TITLE_PLUS&gt;&gt;</b></a><br>
+- <a href="#SYS3" class="glink"><b>3.DBのタイプAの項目Bが「文字列」項目なら0、「数値」項目なら1を返す</b><b><span style="font-size : 80%;"><br>
+　　 &lt;&lt;GET_ISNUMBER_(C/U/S)DB_ITEM/TYPE=(数値1)/ITEM=(数値2)&gt;&gt;</span></b></a><br>
+<hr>
+<p><b id="F0"><span style="font-size : 120%;">【共通の仕様】</span></b></p>
+<p>　●<b><span style="color : #0000ff;">(数値)</span></b>を入力すべき場所に「<b>数値以外の文字</b>」を入力すると、基本的には自動で「<b>0</b>」として認識されます。<br>
+<br>
+　●隠しコード先頭の「<b>&lt;&lt;</b>」や末尾の「<b>&gt;&gt;</b>」が抜けていると、文字列変数に「<b><span style="color : #cc0000;">&lt;&lt;Error&gt;&gt; Missing &quot;&lt;&lt;&quot;</span></b>」や「<b><span style="color : #cc0000;">&lt;&lt;Error&gt;&gt; Missing &quot;&lt;&lt;&quot;</span></b>」が返されます。<br>
+　　この他にも、パラメータの指定が足りなかった場合は 「<b><span style="color : #cc0000;">&lt;&lt;Error&gt;&gt; Missing ■■</span></b>」が返されます。<br>
+</p>
+<hr>
+<P id="secret_code"><b><span style="font-size : 150%;">【ファイル系】<br>
+</span></b>　<br>
+<BR>
+　 <a id="F1"></a><B>【1】.ファイルまたはフォルダが存在するか確認する　<span style="color : #cc0000;">&lt;&lt;GET_FILE_EXIST&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/から指定])</span></B>　（Ver2.271以降)<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_FILE_EXIST&gt;&gt;</span><SPAN>Data/Graphic/Edy.png</SPAN></B>」と指定します。<BR>
+　　実行されると、「<B><SPAN>Data/Graphic/Edy.png</SPAN></B>」が存在すれば格納先の「文字列変数」に「<B>1</B>」が、存在しなければ「<B>0</B>」が文字列として格納されます。<br>
+　　このコマンドは<b>フォルダ</b>に対しても1が返されます（ただし、<b>末尾に「/」や「\」が入っていると0が返されます</b>。「<b>Data/Graphic</b>」などと指定してあれば「<b>1</b>」が返ります）。<br>
+　　「<b>?</b>」は任意の半角1文字、「<b>*</b>」は任意の文字列として、ワイルドカード指定が可能です。<br>
+<br>
+<br>
+<br>
+　 <a id="F2"></a><B>【2】.<span>フォルダが存在するか確認する　</span><span style="color : #cc0000;">&lt;&lt;GET_DIRECTORY_EXIST&gt;&gt;</span><span style="color : #0000ff;">(フォルダ名[Data/から指定])</span></B> （Ver3.241以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_DIRECTORY_EXIST&gt;&gt;</span><SPAN>Data/Graphic</SPAN></B>」と指定します。<BR>
+　　実行されると、「<B><SPAN>Data/Graphic</SPAN></B>」が<b>フォルダとして存在していれば</b>格納先の「文字列変数」に「<B>1</B>」が、存在しなければ「<B>0</B>」が文字列として格納されます。<br>
+　　このコマンドでファイルを指定した場合は「<b>0</b>」が返るため、「<b>&lt;&lt;GET_FILE_EXIST&gt;&gt;</b>」とうまく使い分けてください。<br>
+<br>
+<br>
+<br>
+　<a id="F3"></a><b>【3】.wolfx暗号化ファイルの読込チェック <span style="color : #cc0000;">&lt;&lt;LOAD_CHECK_WOLFX_FILE&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/から指定])</span></b><br>
+　　.wolfx暗号化した(ファイル名)を「<b>Data/～</b>」として指定すると今の状態でその.wolfxファイルが正常に読み込みできるか判定できます。<br>
+　　 + キーが正しく、正常に読み込める場合は「1」が返されます。<br>
+　　 + キーが正しくない場合、「<b>&lt;&lt;Failed&gt;&gt;</b>」が返されます。<br>
+　　 + .wolfxファイルがなかった場合「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+　　 + 「.wolfx」を付けずにファイル名を指定しても自動で.wolfxを付けて判定されます。<br>
+　<hr>
+<P id="secret_code"><b><span style="font-size : 150%;">【文字列系】<br>
+<br>
+</span></b>　<a id="STR1"></a><B>【1】.文字列の長さを半角1、全角2換算で得る　<span style="color : #cc0000;">&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;</span><span style="color : #0000ff;">(文字列)</span> </B>（Ver3.00以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_STRING_WIDTH_COUNT&gt;&gt;</span><SPAN>あああAAAA</SPAN></B>」などと指定すると、[全角2×3]＋[半角1×4]で「<b>10</b>（文字列の長さ）」が取得できます。<br>
+　　改行や特殊文字はカウントしません（ただし「\\」（半角￥マーク）は1とカウントします）。<br>
+<br>
+<br>
+<br>
+　<a id="STR2"></a><B>【2】.(数値)の横幅分で文字列をカットして得る (横幅は半角1、全角2)<span style="color : #cc0000;">&lt;&lt;CUT_STRING_WIDTH_COUNT=</span><span style="color : #0000ff;">(数値)</span><span style="color : #cc0000;">&gt;&gt;</span><span style="color : #0000ff;">(文字列)</span></B>（Ver3.23以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;CUT_STRING_WIDTH_COUNT=8&gt;&gt;</span><SPAN>あああAいAAA</SPAN></B>」などと指定すると、「<b>あああA</b>」が取得できます。(<b>あああA</b>=横幅「7」分。まだ半角1文字だけ入りますが、次の「い」を入れると横幅「9」になってあふれるので「い」は入りません）<br>
+　　特殊文字や改行はカウントしませんが、「\\」（半角￥マーク）は1とカウントします。<br>
+　「UTF-8」化で「キーボード入力文字列」のバイト数が調節しにくくなったため、入力された文字列を適切な長さに切り取る目的で搭載されました。<br>
+<br>
+<br>
+<br>
+　<a id="STR3"></a><b>【3】.指定バイトで文字列をカット　<span style="color : #cc0000;">&lt;&lt;CUT_STRING_<span style="color : #0000ff;">(数値1)</span>_<span style="color : #0000ff;">(数値2)</span>&gt;&gt;</span><span style="color : #0000ff;">(文字列)</span></b>　（Ver3.50以降)<br>
+　　(文字列)の(数値1)から(数値2)バイト目までを切り取って返します。<br>
+　　「&lt;&lt;CUT_STRING_5_8&gt;&gt;ABCDEGGHIJK」なら「GGH」が返され、<br>
+　　「&lt;&lt;CUT_STRING_0_2&gt;&gt;ABCDEGGHIJK」なら「AB」が返されます(1文字目の前は「0」です）。<br>
+　　→　ただしそのバイト値がUTF-8文字(ひらがななら3バイト）の途中になっていたなら、<br>
+　　　　その「直後」の文字の区切りまで返します。<br>
+　<br>
+<br>
+<b>　<a id="STR4"></a>【4】文字列のバイト数を得る　&lt;&lt;GET_STRING_BYTE_COUNT&gt;&gt;(文字列)</b> (Ver3.575以降)<br>
+　　(文字列)部分の「バイト数」の数値を文字列変数に返します。<br>
+　　その後は「変数操作」コマンドで「右辺」に↑で格納した文字列変数を指定し、数字変数に格納してご利用ください。<BR>
+　<SPAN style="font-size : 80%;">※たとえば「変数操作」コマンドの「右辺」に「1600005」と入れると、「コモンセルフ変数5」に入った文字列を「数字」に変換して処理できます。</SPAN><br>
+　　→ これは主に 文字列のカット（バイト切り取り）「&lt;&lt;CUT_STRING_?_?&gt;&gt;」と併用して<br>
+　　　　使うことを想定したものです。<br>
+　　　　「前回読み込んだ文字列のバイト数をあらかじめ得ておいて、追加部分だけ切り取る」<br>
+　　　　といった処理が可能になります。<br>
+<br>
+<br>
+<br>
+　<a id="STR5"></a><b>【5】.指定行でカット　<span style="color : #cc0000;">&lt;&lt;CUT_LINE_STRING_<span style="color : #0000ff;">(数値1)</span>_<span style="color : #0000ff;">(数値2)</span>&gt;&gt;</span><span style="color : #0000ff;">(文字列)</span></b>　（Ver3.50以降)<br>
+　　(文字列)の(数値1)行目の始まりから(数値2)行目の最後まで切り取った文字列を返します。「0」が1行目です。<br>
+　　「&lt;&lt;CUT_LINE_STRING_0_0&gt;&gt;ABC(改行)DEF」ならABCが返されます。<br>
+　　「&lt;&lt;CUT_LINE_STRING_1_2&gt;&gt;ABC(改行)DEF(改行)GHI」なら「DEF(改行)GHI」が返されます。<br>
+<br>
+<br>
+<br>
+　<a id="STR6"></a><b>【6】.指定幅で自動改行する　<span style="color : #cc0000;">&lt;&lt;AUTO_RETURN_STRING_WIDTH_COUNT=<span style="color : #0000ff;">(数値)</span>&gt;&gt;</span><span style="color : #0000ff;">(文字列)</span></b>　（Ver3.50以降)<br>
+　　指定幅(数値)を超えないように(文字列)を自動改行した文字列を返します。<br>
+　　幅は<b><span style="color : #cc0000;">半角文字=1、全角文字=2</span></b>としてカウントされます。<br>
+　　<hr>
+<P id="secret_code"><b><span style="font-size : 150%;">【イベント系】<br>
+</span></b><P id="secret_code"><br>
+　<a id="EV1"></a><B>【1】.[マップイベント名]からマップイベント番号を得る　<span style="color : #cc0000;">&lt;&lt;GET_MAPEVENT_ID_FROM_NAME&gt;&gt;</span><span style="color : #0000ff;">(イベント名)</span></B>（Ver3.00以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_MAPEVENT_ID_FROM_NAME&gt;&gt;</span><SPAN>エディ</SPAN></B>」と指定します。<BR>
+　　コマンドが実行されると、マップイベントの中に「<B><SPAN>エディ</SPAN></B>」という名前のイベントが存在すれば格納先の「文字列変数」に「<B>そのマップイベントID(同名が複数ある場合は一番大きいID）</B>」が、存在しなければ「<B>-1</B>」が文字列として格納されます。<br>
+<br>
+<br>
+<br>
+　<a id="EV2"></a><B>【2】.[マップイベントID]からマップイベント名を得る　<span style="color : #cc0000;">&lt;&lt;GET_MAPEVENT_NAME_FROM_ID&gt;&gt;</span><span style="color : #0000ff;">(イベントID)</span></B>（Ver3.00以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_MAPEVENT_NAME_FROM_ID&gt;&gt;</span><SPAN>7</SPAN></B>」などと指定します。<BR>
+　　コマンドが実行されると「<b>該当IDのマップイベント名</b>」（「<B><SPAN>ハカセ</SPAN></B>」など）が返されます。<br>
+　　該当IDのマップイベントが存在しない場合は「<B>&lt;&lt;NotFound&gt;&gt;</B>」が文字列変数に格納されます。<br>
+<br>
+<br>
+<br>
+　<a id="EV3"></a><B>【3】.[コモンイベント名]からコモンイベント番号を得る　<span style="color : #cc0000;">&lt;&lt;GET_COMMONEVENT_ID_FROM_NAME&gt;&gt;</span><span style="color : #0000ff;">(イベント名)</span>　 </B>（Ver3.00以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_COMMONEVENT_ID_FROM_NAME&gt;&gt;</span><SPAN>▲装備取得</SPAN></B>」などと指定します。<BR>
+　　コマンドが実行されると、コモンイベントの中に「<B><SPAN>▲装備取得</SPAN></B>」という名前のイベントが存在すれば格納先の「文字列変数」に「<B>21</B>」など<B>「そのコモンイベントID (同名が複数ある場合は一番大きいID）</B>」が、存在しなければ「<B><span style="color : #cc0000;">-1</span></B>」が文字列として格納されます。<br>
+<br>
+<br>
+<br>
+　<a id="EV4"></a><B>【4】.[マップイベントID]からマップイベントの画像ファイル名を得る　<span style="color : #cc0000;">&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;</span><span style="color : #0000ff;">(イベントID)</span></B>（Ver3.00以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_MAPEV_FILENAME&gt;&gt;</span><SPAN>7</SPAN></B>」など指定します。<BR>
+　　コマンドが実行されると、「<b>マップID12番の今のキャラチップの画像ファイル</b>(CharaChip/[Chara]Doctor.pngなど)」が返されます。<br>
+　　そのIDのイベントがなければ「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+　　現在表示されているのがタイル画像なら「<b>&lt;TILE&gt;15</b>」(タイル15番)のように格納されます。<br>
+<br>
+<br>
+<br>
+　<a id="EV5"></a><b>【5】.空イベント作成　<span style="color : #cc0000;">&lt;&lt;MAKE_EVENT_X=<span style="color : #0000ff;">(数値1)</span>/Y=<span style="color : #0000ff;">(数値2)</span>&gt;&gt;</span><span style="color : #0000ff;">(画像ファイル)</span></b>　（Ver3.50以降)<br>
+　　ゲーム中に新たな空のイベントを作成し、作成したイベントの「ID」を数値文字列として返します（23、など)。<br>
+　　<br>
+　・「(数値)」部分には以下の「数値」を指定します。<br>
+　　X=(数値1):設置するX座標<br>
+　　Y=(数値2):設置するY座標<br>
+　　<br>
+　・「(画像ファイル名)」には「CharaChip/aaa.png」のような画像ファイル名、<br>
+　　あるいは「&lt;TILE&gt;32」（タイルセットの32番）のようなタイル番号を指定します。<br>
+　　  ※タイル番号は32以上でなければなりません（オートタイルは設定できないため）<br>
+　　  <br>
+　・その他のオプション　&lt;&lt;&gt;&gt;内に「/TR=??」などを追加で入れると反映されます<br>
+　　<b>/TR=(数値)</b>:起動条件(1:決定キー 2:プレイヤー接触 3:イベント接触）を設定します。<br>
+　　　(「/TR=」は省略も可、その場合は決定キー起動になります)<br>
+　　<b>/HALF</b>:「設置するX・Y座標」が[精密座標](2=1マス)になります。<br>
+　　<b>/COPY=(数値)</b>:ID(数値)のイベントをコピーして生成します。<br>
+　　　　　　 &lt;&lt;DELETE_EVENT_ID&gt;&gt;で消去できなくなるので注意してください<br>
+　　<b>/EXTEND=(数値1),(数値2)</b>: 接触範囲拡張を数値で設定します、(数値1)がX拡張、(数値2)がY拡張です。<br>
+　　<b>/SHADE=(数値)</b>: 影番号を(数値)で設定します。<br>
+　　<b>/ID=(数値)</b>: 生成するイベントのIDを(数値)で設定します。すでにその番号のイベントがある場合、<br>
+　　　　　　　　　　「<b>&lt;&lt;ERROR&gt;&gt; Invalid ID</b>」が返され、イベント生成は行われません。<br>
+　　<b>/1X1SIZE</b>: 生成するイベントの当たり判定を1×1マスにします（「ゲーム基本設定」で「デフォルトの当たり判定」が「1×0.5マス」の場合だけ意味があります）。
+(Ver3.510より)<br>
+<br>
+　　オプションを全部入れると、<br>
+　　　<b>&lt;&lt;MAKE_EVENT_X=3/Y=5/TR=1/HALF/ID=10/COPY=3/EXTEND=4,2/SHADE=1/1X1SIZE&gt;&gt;CharaChip/AAA.png</b><br>
+　　のようになります。<br>
+<br>
+　　※1マップ中に作れるイベントは10000個までです。<br>
+　　※/ID=?指定なしで生成されるイベントのIDは「一番番号が若い空きID」が使われます。IDが0番からみっちり詰まってたら新たな最終ID番号が使われます。<br>
+　　※生成されるイベントの「表示優先順位」は常に「後に作った方が上」です。ID番号で負けていても、後に作ったものほど上に表示されます。<br>
+　　※処理失敗時には以下のエラーが文字列変数に返されます。<br>
+<span style="font-size : 80%;">　　　</span><b><span style="font-size : 80%;">&lt;&lt;Error&gt;&gt; Invalid ID</span></b><span style="font-size : 80%;">：/IDオプションで指定したイベントIDがすでに使用されている場合に返されます（イベントIDは「一時消去」では空きませんので注意してください。IDを空けるには後述の</span><b><span style="font-size : 80%;">&lt;&lt;DELETE_EVENT_ID&gt;&gt;</span></b><span style="font-size : 80%;">処理を行う必要があります）。</span><br>
+<span style="font-size : 80%;">　　　</span><b><span style="font-size : 80%;">&lt;&lt;Error&gt;&gt; SHADE Limit 0-255</span></b><span style="font-size : 80%;">：SHADEで指定した影番号が0～255以外になっています。0～255の範囲内で入力してください。</span><br>
+<span style="font-size : 80%;">　　　</span><b><span style="font-size : 80%;">&lt;&lt;Error&gt;&gt; Events Limit 10000</span></b><span style="font-size : 80%;">：イベント数が1万個になっているのでこれ以上生成できません。下記&lt;&lt;DELETE_EVENT_ID&gt;&gt;でイベントを削除してください。</span><br>
+<span style="font-size : 80%;">　　　</span><b><span style="font-size : 80%;">&lt;&lt;Error&gt;&gt; &lt;TILE&gt; must be &gt;= 32</span></b><span style="font-size : 80%;">：画像指定において&lt;TILE&gt;にはオートタイル（31番未満）は指定できないため、32番以上を入れてください。</span><br>
+<br>
+<br>
+<br>
+　<a id="EV6"></a><b>【6】.空イベントの削除 <span style="color : #cc0000;">&lt;&lt;DELETE_EVENT_ID&gt;&gt;</span><span style="color : #0000ff;">(イベントID)</span></b>　（Ver3.50以降)<br>
+　　指定した(イベントID)のイベントを削除します。<br>
+　　ただし対象は実質的に「空イベント」である必要があります。<br>
+　（↑のMAKE_EVENT処理で作られた、ページ1のみ、イベントコマンドが空、決定キー起動か接触起動、の4条件を満たす場合のみ）<br>
+　　削除に成功すると「<b>1 &lt;&lt;OK&gt;&gt;</b>」を返します(Ver3.550より)。<br>
+<br>
+　※処理失敗時には以下のエラーが文字列変数に返されます。<br>
+<span style="font-size : 80%;">　　</span><b><span style="font-size : 80%;">&lt;&lt;CanNotDelete&gt;&gt; Not &lt;&lt;MAKE_EVENT..&gt;&gt; Event</span></b><span style="font-size : 80%;">：対象が&lt;&lt;MAKE_EVENT&gt;&gt;で作られたイベントではないため消去できません。</span><br>
+<span style="font-size : 80%;">　　</span><b><span style="font-size : 80%;">&lt;&lt;CanNotDelete&gt;&gt; Multiple pages exist</span></b><span style="font-size : 80%;">：複数ページが存在するため消去できません（主にMAKE_EVENTのCOPY=で作られたイベントで発生）</span><br>
+<span style="font-size : 80%;">　　</span><b><span style="font-size : 80%;">&lt;&lt;CanNotDelete&gt;&gt; Event contains commands</span></b><span style="font-size : 80%;">：イベント内にコマンド処理があるため消去できません（主にMAKE_EVENTのCOPY=で作られたイベントで発生）</span><br>
+<span style="font-size : 80%;">　　</span><b><span style="font-size : 80%;">&lt;&lt;CanNotDelete&gt;&gt; Invalid trigger</span></b><span style="font-size : 80%;">：起動条件を満たしないため消去できません（並列または自動実行の場合。主にMAKE_EVENTのCOPY=で作られたイベントで発生）</span><br>
+<br>
+<br>
+<br>
+　<a id="EV7"></a><b>【7】.イベント名を変更　<span style="color : #cc0000;">&lt;&lt;SET_EVENT_NAME_ID=<span style="color : #0000ff;">(数値)</span>&gt;&gt;</span><span style="color : #0000ff;">(新イベント名)</span></b>　（Ver3.50以降)<br>
+　　イベントID「(数値)」のイベントの名前を(新イベント名)に変更します。<br>
+　　空イベントを作成した後、イベント名をセットしたい場合にご利用ください。<br>
+　　名前変更に成功すると「<b>1 &lt;&lt;OK&gt;&gt;</b>」を返します(Ver3.550より)。<br>
+　　対象が見つからない場合は文字列変数に「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+<br>
+<br>
+　<a id="EV8"></a><b>【8】.コモンイベント番号から名前を得る　<span style="color : #cc0000;">&lt;&lt;GET_COMMONEVENT_NAME_FROM_ID&gt;&gt;</span><span style="color : #0000ff;">(コモンイベントID)</span></b>　（Ver3.50以降)<br>
+　　指定した(コモンイベントID)の数値に対応する「<b>コモンイベント名</b>」を取得します。<br>
+　　（コモンイベントID）が-1以下だったり範囲外だと「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+　<hr>
+<P id="secret_code"><b><span style="font-size : 150%;">【画像系】</span></b>
+
+
+<P id="secret_code">　<a id="IMG1"></a><B>【1】.[タイル番号の数値]番のタイルファイル名を得る　<span style="color : #cc0000;">&lt;&lt;GET_TILE_FILENAME&gt;&gt;</span><span style="color : #0000ff;">(タイルセット番号)</span></B>（Ver3.00以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_TILE_FILENAME&gt;&gt;</span><SPAN>1</SPAN></B>」など指定すると、現在マップの<b>「オートタイル1番のタイル画像ファイル名</b>(MapChip/[A]WaterFall2_pipo.pngなど)<b>」</b>が取得できます。<br>
+　　番号指定は、0なら基本タイル画像、1～31がオートタイル画像です。<br>
+　　タイルセット番号が見つからない場合、文字列変数に「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+<br>
+<br>
+　<a id="IMG2"></a><B>【2】.ピクチャの画像ファイル名を得る　<span style="color : #cc0000;">&lt;&lt;GET_FILENAME_FROM_PICTURE&gt;&gt;</span><span style="color : #0000ff;">(ピクチャIDの数値)</span></B>（Ver3.00以降）<BR>
+<BR>
+　　「<B>手動入力</B>」欄を選び、「<B><span style="color : #cc0000;">&lt;&lt;GET_FILENAME_FROM_PICTURE&gt;&gt;</span><SPAN>10001</SPAN></B>」など指定すると、「<b>ピクチャID10001番に読み込まれた画像ファイル名</b>(「SystemFile/WindowBase_amania.pngなど)」が取得できます。<br>
+　　もしそれが文字列ピクチャなら、ピクチャに指定された「<b>文字列</b>」を返します。<br>
+　　当該IDのピクチャが見つからない場合、「<b>&lt;&lt;NotFound&gt;&gt;</b>」を返します。<br>
+<br>
+<BR>
+<br>
+　<b><a id="IMG3"></a>【3】.画像のX、Y座標の不透明度、RGB値を得る <span style="color : #cc0000;">&lt;&lt;GET_IMAGE_ARGB_X=<span style="color : #0000ff;">(数値1)</span>/Y=<span style="color : #0000ff;">(数値2)</span>&gt;&gt;</span><span style="color : #0000ff;">(ﾌｧｲﾙ名[Data/は不要])</span></b>　（Ver3.50以降)<br>
+　 (ファイル名)[例:CharaChip/aaa.png]で指定した画像の、X=(数値1)、Y=(数値2)座標のピクセルの<br>
+　  不透明度、RGB値を「不透明度(改行)R値(改行)G値(改行)B値」の文字列で得られます。<br>
+　  不透明度やRGB値はそれぞれ0～255の値を取ります。<br>
+　 ファイルが見つからなかった場合は「<b>&lt;&lt;NotFound&gt;&gt;</b>」を返します。<br>
+　 指定したX、Y位置が画像サイズより大きかった場合は「<b>&lt;&lt;X_Y_Over&gt;&gt; maxX=?? maxY=??</b>」が返されます。<br>
+　→　1枚絵上の「何か画像がある場所」を1マスごとに「不透明度」を取得して<br>
+　　　当たり判定に使ったり、「立ち絵のなにもない場所」を調べたりするのに使えます。<br>
+　→　これを画像全体に一気に行いたい場合は、後述の<b><span style="color : #cc0000;">LOAD_IMAGE_TO_XY(N)</span></b>の方がおすすめです。<br>
+<br>
+<br>
+　<b><a id="IMG4"></a>【4】.画像の横、縦サイズを得る <span style="color : #cc0000;">&lt;&lt;GET_IMAGE_SIZE&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/は不要])</span></b>　（Ver3.50以降)<br>
+　　(ファイル名)[例:CharaChip/aaa.png]で指定した画像のサイズを、「<b>横サイズ(改行)縦サイズ</b>」という文字列として得られます。<br>
+　 ファイルが見つからなかった場合は「<b>&lt;&lt;NotFound&gt;&gt;</b>」を返します。<br>
+<br>
+<br>
+<br>
+　<b><a id="IMG5"></a>【5】.4つのXY配列に画像を読み込む(画面全体の不透明度・RGB値を得る)</b>　（Ver3.50以降)<br>
+<br>
+　[数値呼び出しXY配列の場合]<br>
+　 <b><span style="color : #cc0000;">&lt;&lt;LOAD_IMAGE_TO_XY/A=<span style="color : #0000ff;">(配列番号1)</span>/R=<span style="color : #0000ff;">(配列番号2)</span>/G=<span style="color : #0000ff;">(配列番号3)</span>/B=<span style="color : #0000ff;">(配列番号4)</span>&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/は不要])</span></b><br>
+　　(ファイル名)[例:CharaChip/aaa.png]の画像をXY配列として読み込みます。<br>
+　　（配列番号1～4）には「XY配列の呼び出し番号」を指定しますが、何も入れなければ読み込まれません。<br>
+　　この処理により、画像全体の「アルファ値(不透明度)、R値、G値、B値」が、<br>
+　　A=?/R=?/G=?/B=?で指定した「<b>番号呼出</b>」の各XY配列に保存されます(値の範囲は0-255)。<br>
+<span style="color : #999999;">　　→　たとえばA=4のXY配列に入れた後、XY配列「4」番のX列1、Y列4の値を読み込むと、その画像の横2ピクセル目、縦5ピクセル目の不透明度が得られます。</span><br>
+　 成功時は文字列変数に「<b>1</b>」が、ファイルが見つからなかった場合は「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+<br>
+<br>
+　[名前呼び出しXY配列の場合]<br>
+　 <b><span style="color : #cc0000;">&lt;&lt;LOAD_IMAGE_TO_XYN/A=<span style="color : #0000ff;">(配列名1)</span>/R=<span style="color : #0000ff;">(配列名2)</span>/G=<span style="color : #0000ff;">(配列名3)</span>/B=<span style="color : #0000ff;">(配列名4)</span>&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/は不要])</span></b><br>
+　　「&lt;&lt;LOAD_IMAGE_TO_XY/A=?/R=?/G=?/B=?&gt;&gt;(ファイル名)」とほぼ同じですが<br>
+　　(配列名1～4)で指定した「<b>名前(文字列)呼び出し</b>」のXY配列に画像情報が保存されます。<br>
+　 成功時は文字列変数に「<b>1</b>」が、ファイルが見つからなかった場合は「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+　<b><a id="IMG6"></a>【6】.4つのXY配列(ARGB)から画像出力</b>　（Ver3.50以降)<br>
+<br>
+　[数値呼び出しXY配列の場合]<br>
+<b>　 <span style="color : #cc0000;">&lt;&lt;SAVE_PNG_FROM_XY/A=<span style="color : #0000ff;">(配列番号1)</span>/R=<span style="color : #0000ff;">(配列番号2)</span>/G=<span style="color : #0000ff;">(配列番号3)</span>/B=<span style="color : #0000ff;">(配列番号4)</span>/XSIZE=<span style="color : #0000ff;">(数値1)</span>/YSIZE=<span style="color : #0000ff;">(数値2)</span>&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/は不要])</span></b><br>
+　 (ファイル名)[例:CharaChip/aaa.png]に、<b>「番号呼出」のXY配列(配列番号1～4)番</b>に記述された<br>
+　 A、R、G、B値に従って横幅XSIZE=(数値1)ピクセル、縦幅YSIZE=(数値2)ピクセルのPNG画像を出力します<br>
+　 成功時は文字列変数に「<b>1</b>」が、ファイルが見つからなかった場合は「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+<br>
+<br>
+　[名前呼び出しXY配列の場合]<br>
+<b>　 <span style="color : #cc0000;">&lt;&lt;SAVE_PNG_FROM_XYN/A=<span style="color : #0000ff;">(配列名1)</span>/R=<span style="color : #0000ff;">(配列名2)</span>/G=<span style="color : #0000ff;">(配列名3)</span>/B=<span style="color : #0000ff;">(配列名4)</span>&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/は不要])</span></b><br>
+　　「&lt;&lt;SAVE_PNG_FROM_XY/A=?/R=?/G=?/B=?/XSIZE=??/YSIZE=??&gt;&gt;(ファイル名)」と<br>
+　　ほぼ同じですが、各(配列名1～4)で指定した<b>「名前(文字列)」のXY配列</b>の情報がPNG画像として保存されます。<br>
+　 成功時は文字列変数に「<b>1</b>」が、ファイルが見つからなかった場合は「<b>&lt;&lt;NotFound&gt;&gt;</b>」が返されます。<br>
+<br>
+<br>
+　　※ARGBのXY配列内の値は、0-255の範囲を格納してください。<br>
+　　※「暗号化されたフォルダ」内には出力できないので注意してください。<br>
+　　　<b><span style="color : #cc0000;">もしセーブフォルダ内に出力する場合は(ファイル名)を「../Save/aa.png」のように指定してください</span></b>。<br>
+　　
+<hr>
+<P><b><span style="font-size : 150%;">【サウンド系】</span></b><br>
+<br>
+　<a id="SOUND1"></a><B>【1】音声ファイルの再生時間をミリ秒で得る　<span style="color : #cc0000;">&lt;&lt;GET_SOUNDTIME&gt;&gt;</span><span style="color : #0000ff;">(ファイル名[Data/から指定])</span> </B><br>
+　（Ver2.264以降)<BR>
+<br>
+　「<b>手動入力</b>」欄に「<B><span style="color : #cc0000;">&lt;&lt;GET_SOUNDTIME&gt;&gt;</span><SPAN>Data/SE/effect.ogg</SPAN></B>」と指定すると、格納先の「文字列変数」に「<B>Data/SE/effect.ogg</B>」の「<B>再生時間（ミリ秒）</B>」の数字が文字列として格納されます。<BR>
+　たとえばeffect.oggが1.3秒の音なら、「1300」の文字列が格納されます。<br>
+　ファイルが存在しなかった場合は「<b>-1</b>」を返します。<br>
+<br>
+　その後は「変数操作」コマンドで「右辺」に「↑で格納した文字列変数」を指定し、数字変数に格納してご利用ください。<BR>
+　<SPAN style="font-size : 80%;">※たとえば「変数操作」コマンドの「右辺」に「1600005」と入れると、「コモンセルフ変数5」に入った文字列を「数字」に変換して処理できます。</SPAN><br>
+<br>
+　</P>
+<hr>
+<P><b><span style="font-size : 150%;">【経路探索】</span></b><br>
+<br>
+　<b><a id="FIND1"></a>【1】.経路を探索する <span style="color : #cc0000;">&lt;&lt;FIND_PATH_DIR<span style="color : #0000ff;">(方向を4か8で)</span>_SX=<span style="color : #0000ff;">(数値1)</span>/SY=<span style="color : #0000ff;">(数値2)</span>/EX=<span style="color : #0000ff;">(数値3)</span>/EY=<span style="color : #0000ff;">(数値4)</span>&gt;&gt;</span></b>　（Ver3.50以降)<br>
+<br>
+　 オプション付き見本:<b><span style="color : #cc0000;">&lt;&lt;FIND_PATH_DIR4_SX=1/SY=2/EX=10/EY=11/POS/TIME/EXE=10000/MOVE_EV=-2/XYN=経路探索結果配列&gt;&gt;</span></b><br>
+　　　<br>
+　   開始座標からゴール座標までの経路を探索し、文字列データとして返します。<br>
+　 経路は「<b>24266886/END</b>」のようにテンキーに対応した「向き」の数値列で返されます。<br>
+　 <b>2=下、4=左、6=右、8=上</b>なので、上の例だと「<b>全歩</b>」移動で<b>24266886</b>=「<b>下左下右右上上右</b>」に移動すると目標地点に到達します。<br>
+<br>
+　 コードの「<b>(数値)</b>」部分には以下を指定します。<br>
+　 　　DIR= DIR<b>8</b>（8方向探索）かDIR<b>4</b>（4方向探索）を指定します。<br>
+　 　　SX、SY= 開始X、Y座標<br>
+　 　　EX、EY= 終了X、Y座標<br>
+　 　他のオプションは以下の通りです<br>
+　 　 /POS:返される経路文字列を「座標」式にします。<br>
+　 　 　　　「2,4/2,5/3,5/4,5/END」といった文字列が返されます。<br>
+　　　/TIME:ミリ秒の処理時間(TIME=)や処理数(EXE=)を「経路情報」の次の行に記載します。<br>
+　　　　　　 1回の処理数は「2万」が限界なので、探索距離の限界を知るのに使えるでしょう。<br>
+　　　　　　 TIMEは0～2(ミリ秒)を返すことが多いです。<br>
+　　　　　　 ※1フレームは16.6ミリ秒なので長距離の経路探索を使いすぎると処理落ちします。<br>
+　　　/STEP: 最初の行に「24(=STEP)」のように移動予定の歩数情報が追加されます。<br>
+　　　　　　「経路情報」は次の行に記載されています。<br>
+　　　　　　先に移動予定の歩数を知っておきたい場合に。<br>
+　　　/LEN=?: ?には表示したい歩数の数値が入ります、?歩分の経路情報だけを返すようになります。<br>
+　　　　　　長距離の経路データを文字列として返すとそのたびに文字列操作の処理に負荷がかかるため、最小限の情報だけ欲しい場合にこれを指定してください。<br>
+　　　　　（経路探索自体は毎回フルで行われている点に注意して下さい）<br>
+　　　/EXE=?: ?には処理数の数値が入ります。経路探索にかける処理回数を指定します。<br>
+　　　　　　　初期値は5000で、100～200マスくらいは探索可能です。<br>
+　　　　　　　探索できない場合は数値を10000～20000などに増やしてみてください。<br>
+　　　/MOVE_EV=?: 「実行時点の各イベントの当たり判定」も考慮した経路を算出します。<br>
+　　　　　　「?」には「動かしたいイベント」のIDを指定することで、それ以外のイベントの当たり判定が考慮されます。<br>
+　　　　　(「?」が「-1」なら実行されたMapEvのID、「-2」なら主人公 になります）<br>
+　　　　　　イベントの当たり判定は、移動中や半マスずれた場所にいるときは大きめに計算されます。<br>
+　　　/XY=?: ?にはXY配列の「番号」を指定します（番号呼び出しのXY配列のみ指定できます）。<br>
+　　　　　　 経路データをXY配列に出力できます。このとき、<br>
+　　　　　　 「X列」は歩数の軸で、各X列内には [Y=0]経路X値 [Y=1]経路Y値 の2データが格納されます。<br>
+　　　　　　たとえばXY配列のX列4、Y列1には、「4」歩目の「1=次の向きのY軸差分(/POSありならY座標)」の値が入ります。<br>
+　　　/XYN=???: ???にはXY配列の「名前」を指定します。「/XY」の「名前呼び出し」版です。<br>
+<br>
+　　※この経路探索は1×1マス以上の道のみ認識します。半マスの隙間は認識しません。<br>
+　　※この経路探索は高速な代わりに、確実に最短経路を算出するものではありません。<br>
+　　　大きく遠回りするルートの最短経路だった場合、たとえそれが最短でも採用されない場合が多いです。<br>
+　　※この経路探索は「MOVE_EV」オプションが未指定だと、「マップの通行設定のみ」を見て経路を算出し、　『イベントの当たり判定は考慮されません』。<br>
+　　　そのため、マップイベントで道を塞いでいる場合でもその経路を通ろうとしてしまう場合がありますのでご注意ください。<br>
+<br>
+　　※処理失敗時の文字列変数への返り値は以下の通りです。<br>
+<span style="font-size : 80%;">　　　</span><b><span style="font-size : 80%;">&lt;&lt;NoPath&gt;&gt;</span></b><span style="font-size : 80%;">：経路（ゴール地点）が塞がれている場合にこれが返されます。</span><br>
+<span style="font-size : 80%;">　　　</span><b><span style="font-size : 80%;">&lt;&lt;NoPath/TooFar&gt;&gt;</span></b><span style="font-size : 80%;">：EXE（処理数）を使い切りましたが経路が見つからなかった場合にこれが返されます。経路が塞がれているか、あるいはEXE（処理数）不足で「遠すぎる（TooFar）」場合にもこれが返されます。</span><br>
+　　　</P>
+<hr>
+<p><b><span style="font-size : 150%;">【システム】</span></b><br>
+<br>
+<b>　<a id="SYS1"></a>【1】.ゲーム名の「メイン」を得る　<span style="color : #cc0000;">&lt;&lt;GET_TITLE&gt;&gt;</span></b>　（Ver3.50以降)<br>
+　　これだけ入れると返り値としてゲーム名の「メイン」部分を得られます。<br>
+<br>
+　<br>
+<b>　<a id="SYS2"></a>【2】.ゲーム名の「追記」を得る　<span style="color : #cc0000;">&lt;&lt;GET_TITLE_PLUS&gt;&gt;</span></b>　（Ver3.50以降)<br>
+　　これだけ入れると返り値としてゲーム名の「追記」部分を得られます。<br>
+<br>
+<br>
+<b>　<a id="SYS3"></a>【3】.DBのタイプAの項目Bが「文字列」項目なら0、「数値」項目なら1を返す</b>　（Ver3.50以降)<b><br>
+<span style="color : #cc0000;">　　 &lt;&lt;GET_ISNUMBER_CDB_ITEM/TYPE=<span style="color : #0000ff;">(数値1)</span>/ITEM=<span style="color : #0000ff;">(数値2)</span>&gt;&gt; : 可変DB<br>
+　　 &lt;&lt;GET_ISNUMBER_UDB_ITEM/TYPE=<span style="color : #0000ff;">(数値1)</span>/ITEM=<span style="color : #0000ff;">(数値2)</span>&gt;&gt; : ユーザDB<br>
+　 　&lt;&lt;GET_ISNUMBER_SDB_ITEM/TYPE=<span style="color : #0000ff;">(数値1)</span>/ITEM=<span style="color : #0000ff;">(数値2)</span>&gt;&gt; : システムDB</span></b><br>
+　 たとえば「&lt;&lt;GET_ISNUMBER_CDB_ITEM/TYPE=4/ITEM=2&gt;&gt;」と指定すると、<br>
+　 可変DBのタイプ4、項目2が数値項目なら「1」、文字列項目なら「0」、 そもそも存在しないタイプや項目なら「-1」を返します。<br>
+<span style="font-size : 80%;">　　 ※タイプ番号、項目番号を「名前」から取得したい場合は「DB操作」コマンドで得ることが可能です。</span><br>
+</p>
+<hr>
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+</BODY>
+</HTML>
