@@ -1,46 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-<HEAD>
+<head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="robots" content="index,follow">
-<META name="keywords" content="SmokingWOLF,フリーゲーム,WOLF RPGエディター,ウディタ,ツクール,RPG,制作ソフト,製作ソフト">
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@WO_LF" />
-<meta name="twitter:title" content="WOLF RPGエディター公式サイト" />
-<meta name="twitter:description" content="　スモーキングウルフが開発したゲーム開発ツール『WOLF RPGエディター』(ウディタ)を公開しているサイトです" />
-<meta name="twitter:image" content="https://silversecond.com/WolfRPGEditor/Data/image/Twitter_image.jpg" />
-<meta name="GENERATOR" content="JustSystems Homepage Builder Version 22.0.5.0 for Windows">
-<TITLE>WOLF RPGエディター公式サイト 【RPG作成フリーソフト】</TITLE><LINK rel="stylesheet" href="main.css">
-<style TYPE="text/css">
-<!--
-.mini{
-	font-size:8pt;
+<meta name="viewport" content="width=700">
+<TITLE>WOLF RPGエディター アーカイブページ</TITLE>
+<script src="./smoothscroll_up.js" type="text/javascript"></script> 
+
+<style>
+html {
+  /* スマホ時は1.2倍フォントで表示 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/* スクロールバー全体のスタイルを設定 */
-DL::-webkit-scrollbar {
-  width: 12px; /* スクロールバーの幅 */
+body {
+  background: #fafaff;
+  font-family: "Verdana","Meiryo", "メイリオ","游ゴシック", "Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 2em;
+  color:#558;
 }
 
-/* スクロールバーのトラック（背景部分）をスタイリング */
-DL::-webkit-scrollbar-track {
-  background: #E1E1fF; /* トラックの背景色 */
-  border-radius: 8px; /* 角の丸み */
+
+.TopTitle{
+  width:585px;
+  font-weight:bold;
+  font-size:16pt;
+ 
+  color: #ffffff;
+  background-color:#535365 ;
+  border-width: 0px;
+  border-color:#535365;
+  border-style:solid;
+  background: -moz-linear-gradient(left top, #4243ff, #fafaff);
+  background: -webkit-gradient(linear, left top, right bottom, from(#4243ff), to(#fafaff));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#DD4242ff', endColorstr='#FFfafaff');
+  
+  text-align:left;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  padding:4px;
 }
 
-/* スクロールバーのハンドル（動かす部分）をスタイリング */
-DL::-webkit-scrollbar-thumb {
-  background: #AAD; /* ハンドルの色 */
-  border-radius: 8px; /* 角の丸み */
+.header3{
+	color:#555588;
+	margin-bottom:16px;
 }
 
-/* ハンドルをホバーしたときのスタイリング */
-DL::-webkit-scrollbar-thumb:hover {
-  background: #559; /* ホバー時のハンドルの色 */
-  border-radius: 6px; /* 角の丸み */
+
+h1 {
+  background: #fff;
+  margin-top:35px;
+  padding: 6px 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #2233cc; /* 青系 */
+  background-image: linear-gradient(to bottom, #ffffff, #e0eaff);
+  border-radius: 4px;
+  border-left: 4px solid #3366ff;
+  display: block;
+  width:100%;
+  
 }
+
+
+
+A.dl:LINK,A.dl:VISITED{
+  color: #aEF;
+  font-size:11px;
+}
+
+A.dl:HOVER,A.dl:ACTIVE{
+  text-decoration: underline;
+  color: #7cc;
+  font-size:11px;
+}
+
+
+A.dl2:LINK,A.dl2:VISITED{
+  color: #FaF;
+  font-size:11px;
+}
+
+A.dl2:HOVER,A.dl2:ACTIVE{
+  text-decoration: underline;
+  color: #c7c;
+  font-size:11px;
+}
+
 
 
 
@@ -53,8 +99,8 @@ DL::-webkit-scrollbar-thumb:hover {
 }
 
 .ss-card {
-  width: 440px;
-  border-radius: 9px 9px 9px 9px;
+  width: 700px;
+  border-radius: 20px 20px 9px 9px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   background: #ffffff;
@@ -70,14 +116,14 @@ DL::-webkit-scrollbar-thumb:hover {
 
 .screenshot-wrapper {
   position: relative;
-  height: 110px;
+  height: 175px;
   overflow: hidden;
   cursor: pointer;
 }
 
 .screenshot-wrapper img.screenshot {
   width: 100%;
-  height: 110px;
+  height: 175px;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -110,66 +156,100 @@ DL::-webkit-scrollbar-thumb:hover {
   z-index: 3;           
   pointer-events: none;  
 }
--->
-</STYLE>
-<LINK rel="stylesheet" href="https://silversecond.net/data/flowmenu.css">
-<script src="smoothscroll.js" type="text/javascript"></script> 
-</HEAD><BODY>
-<div id="flowmenu"><iframe src="https://silversecond.net/index_menu.shtml" width="120" height="770" frameborder="0" scrolling="no"></iframe></div>
-<div id="xpos_gameB1" class="xposx"></div>
-　<BR>
-　　　<A href="https://www.silversecond.net/" target="_top">◆Silver Second</A> ＞ WOLF&nbsp;RPGエディター 公式ページ <a id="top"></a><BR>
-<IMG src="Data/image/space.gif" width="1" height="4"> 
+
+</style>
+
+
+
+
+  <style>
+    
+    /* 上部固定ナビゲーション */
+    .fixed-menu {
+      background: rgba(240, 240, 255, 0.9); /* 半透明系の淡いクール色 */
+      top: 0;
+      left:0;  /* ★＠＠＠＠ 左のフローメニューの分 アーカイブ時は0に */
+      width:calc(100%); /* ★＠＠＠＠ 左のフローメニューの分 アーカイブ時は100％に */
+      box-sizing: border-box;
+      position: fixed;
+      padding: 6px 14px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+	  display: inline-block;
+	  line-height: 1.7;
+	  flex-wrap: wrap; 
+    }
+
+    .fixed-menu a {
+      display: inline-block; /* ブロック化して折り返せるようにする */
+      white-space: nowrap;   /* 1項目内の改行は防ぐ */
+      text-decoration: none;
+      font-weight: bold;
+      color: #004466;
+      font-size: 14px;
+      padding: 2px 8px;
+      transition: all 0.2s;
+      border-radius: 6px;
+    }
+
+    .fixed-menu a:hover {
+      background-color: #a5e5c6;
+      color: #002233;
+    }
+    
+.fixed-menu A.g:LINK,.fixed-menu A.g:VISITED{color:#48c4ac;text-decoration: none;}
+.fixed-menu A.g:HOVER,.fixed-menu A.g:ACTIVE{color: #002233;text-decoration: none;}
+
+.fixed-menu A.blue:LINK,.fixed-menu A.blue:VISITED{color:#789cff;text-decoration: none; display:inline;}
+.fixed-menu A.blue:HOVER,.fixed-menu A.blue:ACTIVE{
+      background-color: #aacfff;color : #444477;text-decoration: none;display:inline;}
+
+
+A.blue:LINK,A.blue:VISITED{color:#486cff;text-decoration: underline; display:inline-block;border-radius:8px; padding:4px;}
+A.blue:HOVER,A.blue:ACTIVE{
+      background-color: #aacfff;color : #444477;text-decoration: none;display:inline-block;border-radius:8px; padding:4px;}
+
+
+  </style>
+
+
+</HEAD>
+<BODY>
+
+<a id="top"></a>
+    <!-- 上部固定メニュー -->
+  <nav class="fixed-menu"><CENTER>
+    <a href="../../" class="blue">←ホームへ</a>
+  <SMALL>WOLF RPGエディター アーカイブ</SMALL><BR>
+　　
+    <a href="#about" class="g">ウディタとは</a> <!-- <a id="about"></a>と入れた場所へ飛ぶ-->
+    <a href="#download" class="g">ダウンロード</a>
+    <a href="#help" class="g">説明書</a>
+    <a href="#releasenote" class="g">バージョンアップ履歴</a>
+    
+
+    </CENTER>
+  </nav>
+  <!-- 上部固定メニューここまで -->
+
+
+<BR><BR><BR>
+<div class="TopTitle">　 WOLF RPGエディター アーカイブページ</div>
 <BR>
-<CENTER>
-<table class="gray" cellpadding="2" cellspacing="1" width="708" align="center">
-  <TBODY>
-    <tr>
-      <td nowrap align="left" class="header" colspan="3" width="686"><B>　　WOLF RPGエディター公式サイト</B></td>
-    </TR>
-    <TR>
-      <td nowrap align="left" class="white" colspan="3" width="686"><FONT class="ten"><small><small>　ここはSmokingWOLFが開発した無料RPG作成ツール『WOLF RPGエディター』(通称ウディタ)のサイトです。</small></small></FONT><FONT size="-2"> since 2008/03/15</FONT></small></small><BR>
-      <small>　【ページ内ショートカット】　<BR>
-      　&nbsp;<A href="#download" class=green>◆ダウンロード</A>　<A href="#text" class=green>◆テキスト</A>　<A href="#play" class=green>◆作品</A>　<A href="#common" class=green>◆コモンEv集</A>　<A href="#forum2" class=green>◆フォーラム</A></small> 　　<A href="#english" class=green><B>Other Language Ver.</B></a></td>
-    </TR>
-  </TBODY>
-</table>
-<TABLE>
-  <TBODY class="ten">
-    <TR>
-      <td nowrap valign="top" align="center" width="450"><!--★カウントダウンここから★--><script type="text/javascript"><!--
-function myFunc(){
-   myD   = new Date();                              // 現在時刻 取得 
-   myYear = myD.getFullYear(); // 今年の '年'
-   myNextYear = new Date("2025/07/20 00:00");     // 目標日
-   myMsec = myNextYear.getTime() - myD.getTime(); // 目標日 と現在の差(ミリ秒)
-   if ( myMsec <= 0 ) myMsec = 0;
-   myNextDay  = Math.floor ( myMsec / (1000*60*60*24) ); // '日' を計算
-   myMsec     -= ( myNextDay * (1000*60*60*24) );       // 経過秒から '日' を引く
-   myNextHour = Math.floor ( myMsec / (1000*60*60) );    //  '時' を計算
-   myMsec     -= ( myNextHour * (1000*60*60) );         // 経過秒から '時' を引く
-   myNextMin  = Math.floor ( myMsec / (1000*60) );       //  '分'  を計算
-   myMsec     -= ( myNextMin * (1000*60) );             // 経過秒から '分' を引く
-   myNextSec  = Math.floor ( myMsec / 1000 );            //  '秒' を計算
-   myDisp = "";                                     // 文字クリア
-   myDisp += myNextDay + "日 ";   // 0日でも表示する
-   myDisp += myNextHour + ":";  // 0時間でも表示する
-   if ( myNextMin  <= 9 ) myDisp += "0"; 
-   myDisp += myNextMin + ":";     // 0分でも表示する
-   if ( myNextSec  <= 9 ) myDisp += "0";
-   myDisp += myNextSec + "";                          // 秒セット
-  document.getElementById("countdown").innerHTML = myDisp;
-}
-// --></script>
-
-<script type="text/javascript"><!--
-setInterval( "myFunc()", 1000 );
-// --></script>
+　このサイトはSmokingWOLFが開発した無料RPG作成ツール『WOLF RPGエディター』のアーカイブページです。
+<div id="woditor-status">　</div>
 
 
+<!-- ウディタとは -->
+<a id="about"></a>
+<h1>◆ WOLF RPGエディターとは</h1>
+<p>　WOLF RPGエディター（通称ウディタ）は、日本語コマンドだけでRPGを制作できる、無料のゲーム制作ツールです。</p>
 
-
-  <div class="ss-card" style="margin-top:15px;">
+  <div class="ss-card" style="margin-left:20px;">
     <div class="screenshot-wrapper" onclick="advanceScreenshot(this)">
       <img class="screenshot active" src="top_image/wolf_rpg_editor_sc01.jpg" alt="SS1">
       <img class="screenshot" src="top_image/wolf_rpg_editor_sc02.jpg" alt="SS2">
@@ -180,793 +260,88 @@ setInterval( "myFunc()", 1000 );
       <div class="screenshot-indicator"></div>
     </div>
   </div>
-       　
-<!--★ウディコン開催中モード★-->
-
-      <TABLE cellpadding="5" cellspacing="1">
-        <TBODY>
-          <TR>
-                  <TD align="center"><B><FONT size=-1>　<A href="https://www.silversecond.com/WolfRPGEditor/Contest/">第17回ウディコン開催中！<BR>
-                  <img src="https://silversecond.com/WolfRPGEditor/Contest/banner.png" width="340"></A></FONT></font></B></TD>
-          </TR>
-        </TBODY>
-      </TABLE>
-<br>
-
-
-<!--★ウディコン開催中モードここまで★-->
-
-
-<!--★ウディコン準備中モードここから★-->
-<!--
-      <table cellpadding="2" cellspacing="1">
-        <TBODY>
-          <TR>
-            <td class="white" nowrap>
-            <table border="0">
-              <TBODY>
-                <TR>
-                  <td class="white" nowrap align="center" style=" color:#434375;text-align: center;padding:8px;border:1px solid #aaaadd;border-top-left-radius:10px;border-bottom-left-radius:10px;background-color:#fafaff;"><B><FONT size=-1>第17回<a href="https://www.silversecond.com/WolfRPGEditor/Contest/">ウディコン</a>開催まで <BR>
-                  残り <FONT color="#ff5555" size="+1"><SPAN ID="countdown">??:??:??</SPAN></FONT></font></B></td>
-                  <td class="white" nowrap align="center" style=" color:#434375;text-align: center;padding:2px;border:1px solid #aaaadd;border-top-right-radius:10px;border-bottom-right-radius:10px;background-color:#fafaff;">&nbsp;<a class="red" href="https://www.silversecond.com/WolfRPGEditor/Contest/"><img border="1" src="https://silversecond.com/WolfRPGEditor/Contest/00_result_image.jpg" style="border-radius:7px;" width="230">
-<●--<img border="1" src="https://silversecond.com/WolfRPGEditor/Contest/banner_mini.gif">--●>
-                  </a></td>
-                </TR>
-              </TBODY>
-            </table>
-            </td>
-          </TR>
-        </TBODY>
-      </table>
--->
-
-<!--★ウディコン準備中モードここまで★-->
-
-<BR>
-      <table cellpadding="5" cellspacing="1">
-        <tbody>
-          <tr>
-            <td class="white" nowrap align="center" style="color:#fafaff; text-align: center; padding:3px; border:1px solid #aaaadd; border-top-left-radius: 14px; border-top-right-radius: 14px; background-color:#B3B3F5;font-size:14px;
-	width : 434px;
-"><B>最新ニュース！</B>
-      </td>
-          </tr>
-          <tr>
-            <td class="white" nowrap align="center" style="color:#434375; text-align: center; padding:8px; border:1px solid #aaaadd; border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; background-color:#fafaff;
-	width : 454px;
-">
-            <dl style="height:270px;overflow: auto;padding:0px;margin:0px;" width="100%">
-<b>【2025/05/07】</b> ウディタに新機能搭載！<br>
-            <b><a href="https://youtu.be/1t512uxOqxA" target="_blank">Ver3.60にて『タスクリスト』『合成音声』機能が搭載！(Youtube)</a></b>
-              <hr>
-              <b>【2025/03/01】 大規模更新された<span style="font-size : 150%;"><a href="Download.shtml">『ウディタ3.5』</a></span>公開！</b> <br>
-            <a href="Download.shtml"><img src="Data/image/20250301_top.jpg" width="200" border="1"></a><br>
-              <b><span style="font-size : 80%;">新機能紹介　<a href="https://ci-en.dlsite.com/creator/15966/article/1237817" target="_blank">ｾｷｭﾘﾃｨ</a>　<a href="https://ci-en.dlsite.com/creator/15966/article/1250707" target="_blank">空Ev作成/ﾌｫﾝﾄ暗号化</a>　<a href="https://ci-en.dlsite.com/creator/15966/article/1259270" target="_blank">経路探索/ｷｬﾗﾚｲﾔｰ</a><br>
-              　<a href="https://ci-en.dlsite.com/creator/15966/article/1272019" target="_blank">ﾋﾟｸﾁｬﾘﾝｸ/DBｿｰﾄ/特殊文字入力</a>　<a href="https://ci-en.dlsite.com/creator/15966/article/1283436" target="_blank">自動移動/パン/ｵｰﾄﾀｲﾙｱﾆﾒ速度</a>　<br>
-              <a href="https://ci-en.dlsite.com/creator/15966/article/1295552" target="_blank">XY配列/TXT入出力[Git用]</a>　<a href="https://ci-en.dlsite.com/creator/15966/article/1306885" target="_blank">ﾀﾌﾞｳｨﾝﾄﾞｳ/正規表現/画像生成/ﾚｲﾔｰ5</a><BR><a href="https://ci-en.dlsite.com/creator/15966/article/1332258" target="_blank">BGSﾁｬﾝﾈﾙ･ｴﾌｪｸﾄﾃﾞｨﾚｲ･ｺﾏﾝﾄﾞ折りたたみ</a></span></b><br>
-
-              <hr>
-              <font size="-1"><b>【2024/08/30】</b>　ruka様によるウディタ<span style="color : #AA0000;"><b>ブラウザ化プロジェクト</b></span>展開！<br>
-              <img src="Data/image/space.gif" width="1" height="28"><a target="_blank" href="https://ci-en.net/creator/12702"><big><big><b>【ブラウザウディタ開発Ci-enページ】</b></big></big>(ruka様)</a> <br>
-              </B><img src="Data/image/space.gif" width="1" height="24">すでに十分動くバージョンが無料DL可能！<font color="#bbf"><br>
-              (プロ用版は支援者か購入者のみ利用可)</font><BR>
-              私の方で<a target="_blank" href="https://ci-en.dlsite.com/creator/15966/article/1210707"><B>スマホアプリ化</B>(記事/年齢確認あり)</A>もできました。夢が広がります！
-              </font>
-              <hr>
-              
-              <font size="-1"><b>【2024/03/16】　ウディタ3に</b><span style="color : #660000;"><b>ピクチャのZオーダー</b>(表示優先順)</span><b>搭載！<br>
-              <img src="Data/image/space.gif" width="1" height="24"><a target="_blank" href="https://www.youtube.com/watch?v=YV2TZvAdFtw"><big><img src="Data/image/20240317Zorder_movie.jpg" width="60" border="1">【Zオーダー紹介動画】(3分)</big></a> <br>
-              </b></font>
-              
-              <hr>
-              
-              <FONT size=-1><b>【2023/11/09】 ウディタ翻訳サポートツール発売!! </b><br>
-              </font>
-              <CENTER>
-              <table border="0" style="margin:0px;padding:0px;">
-                <tbody>
-                  <tr>
-                    <td style="text-align : center;
-	vertical-align : middle;
-"><font size="-1"><b><a href="https://silversecond.booth.pm/items/5151747" target="_blank"><span style="font-size : 80%;">【BOOTH販売ページへ】</span><br>
-                    <img src="Data/image/woditor_support_tool_logo.png" border="1" style="box-shadow: 0px 0px 6px 3px rgba(255,175,110,0.6);"></a></b><br>
-                    </font></td>
-                    <td style="width : 14px;"></td>
-                    <td style="width : 70px;
-	text-align : center;
-">&nbsp;<font size="-1"><a href="https://www.youtube.com/watch?v=uQNjll780WA" target="_blank" style="line-height:9px;"><b><img src="Data/image/20231113WTST_movie.jpg" border="1" width="50"><br>
-                    <span style="font-size : 80%;">【紹介動画】</span></a></font></td>
-                  </tr>
-                </tbody>
-              </table>
-              <hr>
-              </CENTER>
-              <FONT size=-1><B>【2022/11/22】 ウディタがVer3へ大規模アップデート！</B><br>
-              <img src="Data/image/20221122top.jpg" border="0" style="width : 157px;height : 59px;"><BR>
-              <img src="Data/image/space.gif" width="1" height="24"><a target="_blank" href="https://www.youtube.com/watch?v=b_OtuNWdYDw"><BIG><B><img src="Data/image/20230805_woditor3mv.jpg" width="30" border="1">【新機能の紹介動画】</B></BIG></a> / <a href="https://silversecond.booth.pm/items/4302198" target="_blank"><B>『有料プロ版』</B></a>も同時発売！<br>
-              </font></dl>
-            </td>
-          </TR>
-        </TBODY>
-      </table>
-      <BR>
-      <br>
-      <a id="download"></a><font color=#ff4444 id="download">初めてウディタに触れる人・</font><FONT color="#ff4444" size="+2"><B>ダウンロード</B></FONT><font color=#ff4444>したい人はこちらから<BR>
-      ▼</font><BR>
-      <table class="mmgray" cellpadding="4" cellspacing="1" width="424">
-        <TBODY>
-          <TR>
-            <td align="left" class="first"><B class="fw">　- &nbsp;初めての人コーナー&nbsp; -</B></td>
-          </TR>
-          <TR>
-            <td class="white" align="center" nowrap><IMG src="Data/image/space.gif" width="1" height="18">
-
-<B>WOLF RPGエディターとは？</B><BR>
-            <table class="mmmgray" cellpadding="3" cellspacing="1">
-              <TBODY>
-                <TR>
-                  <td class="white" nowrap align="left"><FONT class="ten">○日本語ｺﾏﾝﾄﾞだけで高度なRPG開発ができる、無料のゲーム制作ツールです。<BR>
-                  ○作成したゲームは自由に配布･販売･コンテスト投稿などが可能。<BR>
-                  ○ｺﾓﾝｲﾍﾞﾝﾄを導入することで、ゲームシステムを無限に強化できます！</FONT></td>
-                </TR>
-              </TBODY>
-            </table>
-            <FONT class="fmg"><IMG src="Data/image/space.gif" width="1" height="20"></FONT><BR>
-            <A href="First.html"><font size=+1>【 どんなゲームが作れるの？ 】</font></A><BR>
-            紹介動画・ウディタの概要・その他のお話　など<BR>
-            <BR>
-            <span style="font-size: 16pt;"><A href="Download.shtml"><B>【 WOLF RPGエディター3.5のダウンロード 】</B></A></span><BR>
-            <img src="Data/image/space.gif" height=17 width=1><font class=fmmg>動作環境・利用規約はこの中に記載しております</font><BR>
-            [ 最新バージョン　Ver<B><FONT size="+1"><!--#include file="DownloadRecentVer.txt" --></FONT></B> （<!--#include file="DownloadRecentDate.txt" -->) ] <BR>
-            <BR>
-            <BR>
-            <A href="ReleaseLog.html" target="_top"><B><BIG><BIG>【バージョンアップ内容】</BIG></BIG></B></A>　新機能追加・バグ修正の履歴<B class="fmmg"><span style="font-size : 80%; line-height:9px;"><br>
-            Ver3.50: 大規模アップデート！XY配列や自動移動､空Ev生成など新機能大量追加！<BR>
-            Ver3.30: ピクチャエフェクトに「Zオーダーの変更」を追加！<BR>
-            Ver3.00: 超大規模更新！　マスク機能､ピクセル移動､Unicode対応など！</span></B><BR>
-            　　　</td>
-          </TR>
-        </TBODY>
-      </table>
-      <BR>
-      <div align="right"><A href="#top" class=green>↑上に戻る</A><BR>
-      　　　</div>
-      <HR class="line"><a id="text"></a><BR>
-      <font color=#ff4444>ウディタについて<FONT color="#ff4444" size="+2">学習</FONT>したい人はこちらから！</font><BR>
-      <FONT size="-1" class=fmmg>　　　おすすめリンク集の【講座・テキスト】もぜひ！　→</FONT><BR>
-      <FONT color="#ff4444">▼</font>
-      <FORM action="https://www.google.com/cse" id="cse-search-box">
-      <table border="0" cellpadding="6" class="mmgray" cellspacing="1" width="424">
-        <TBODY>
-          <TR>
-            <td align="left" class="text"><B class=fw>　- 解説テキスト -</B></td>
-          </TR>
-          <TR>
-            <td class="white" align="left" nowrap>&nbsp;◆<B>機能を知りたい人へ</B> &nbsp;<A href="Help/" target="_top"><FONT size="+1">【<B>公式マニュアル</B>】</FONT></A>　<font class=fmmg>[ウディタ機能一覧]</font><BR>
-            <font class=fmg>　イベントコマンドの細かい仕様や裏技を知りたいならこちら！　随時更新中！<IMG src="Data/image/space.gif" width="1" height="18"><BR>
-            <IMG src="Data/image/space.gif" width="1" height="18">　【重要】 <A href="https://www.silversecond.com/WolfRPGEditor/Help/?frame=06material.html">素材規格</A> / <A href="https://www.silversecond.com/WolfRPGEditor/Help/?frame=06specialword.html">特殊文字一覧</A> / <A href="https://www.silversecond.com/WolfRPGEditor/Help/?frame=06valueget.html">変数呼出値一覧</A> / <A href="https://www.silversecond.com/WolfRPGEditor/Help/04ev_keyinput.html#keycode">キーコード</A> / <A href="https://www.silversecond.com/WolfRPGEditor/Help/?frame=01FAQ.html">よくある質問</A></font><input type="hidden" name="cx" value="009278794628236807755:q20da1gvbbe" /><input type="hidden" name="ie" value="Shift_JIS" /> <br>
-            <table border="0"><TR><TD>◆マニュアル検索→</TD><td width="360"> <script async src="https://cse.google.com/cse.js?cx=613fca8688d3a4077">
-</script>
-<div class="gcse-searchbox-only" style="width:364;"></div></td></TR></table>
-</td>
-          </TR>
-
-          <TR>
-            <td class="white" align="left" nowrap>&nbsp;◆<B>困ったときは</B>&nbsp;<A href="Guide/" target="_top"><font size=+1>【<B>ウディタ　パーフェクトガイド</B>】</font></A><BR>
-            <FONT class="fmg" style="font-size:0.8em;">　逆引き解説集です。分からないことがあれば、まずこれを見てください！<BR>
-            　基本システムの使い方やコマンドの実例など、初心者の人には特に役に立つはずです。</FONT></td>
-          </TR>
-          <TR>
-            <td class="white" align="left" nowrap><b>&nbsp;◆おすすめ外部サイト</b><br>
-            　　<b><a href="http://yado.tk/wolf/" target="_blank"><span style="font-size : 120%;">YADOT-WOLF</span></a></b><small><FONT color="#ffaa00"><B> </B></FONT></small>　<FONT class="fmg" style="font-size:0.8em;">ウディタの初心者向け情報からマニアックな情報まで！<br>
-            　　　　　基本システム解説+改造、コマンド解説など情報量が非常に充実しています。</font></td>
-          </TR>
-          <TR>
-            <td class="white" align="left" nowrap>　ｶﾞｲﾄﾞ･ﾏﾆｭｱﾙ･講座検索<input type="hidden" name="cx" value="009278794628236807755:q20da1gvbbe" /><input type="hidden" name="ie" value="Shift_JIS" /> <INPUT type="text" name="q" size="23"> &nbsp;<input type="submit" name="sa" value="検索" /></td>
-          </TR>
-        </TBODY>
-      </table>
-      <small class=fmmg>※講座や解説サイトはいつでも募集中です、分かりやすいもの、読みやすいものは、<BR>
-      ぜひリンクさせていただきたく思います。</small></form>
-      <div align="right"><A href="#top" class=green>↑上に戻る</A><BR>
-      </div>
-      <HR class="line"><a id="common"></a><BR>
-      <FONT color="#ff4444" size="+2">作っているゲームを強化</FONT><font color=#ff4444>したい人はこちらから！<BR>
-      <BR>
-      ▼</font><BR>
-      <iframe src="https://silversecond.com/WolfRPGEditor/Parts_CommonMaterial.shtml" width="100%" height="290" allowtransparency="true" border="0" frameborder="0"></iframe><BR>
-      <div align="right"><BR>
-      <A href="#top" class=green>↑上に戻る</A></div>
-      <div align="right"></div>
-      <HR class="line"><a id="play"></a><BR>
-      <font color=#ff4444>ウディタ作品を</font><FONT color="#ff4444" size="+2">遊びたい</FONT><font color=#ff4444>人はこちらから！<BR>
-      <BR>
-      ▼</font><BR>
-      <table border="0" class="mmgray" cellpadding="6" cellspacing="1" width="424">
-        <TBODY>
-          <TR>
-            <td align="left" class="review" colspan="2"><B class=fw>　-　&nbsp;コンテスト作品　-</B></td>
-          </TR>
-          <TR>
-            <td class="white" align="left" colspan="2" nowrap><B><A href="https://www.silversecond.com/WolfRPGEditor/Contest/" target="_blank"><font size=+1>● 公式ウディタコンテスト</font> </A></B>　<font class=fmg>　毎年、夏に開催しています！</font><BR>
-            　
-            <IMG src="Data/image/space.gif" width="1" height="56"><A href="https://www.silversecond.com/WolfRPGEditor/Contest/" target="_blank"><img src="https://www.silversecond.com/WolfRPGEditor/Contest/banner.png" width="400"></a></td><A href="https://www.silversecond.com/WolfRPGEditor/Contest/" target="_blank">
-          </TR>
-          <TR>
-            <td colspan="2" align="left" class="game"><B class=fw>　-　 投稿作品コーナー　 -</B></td>
-          </TR>
-          <TR>
-            <td class="white" align="left" colspan="2" nowrap><iframe src="https://silversecond.com/WolfRPGEditor/Parts_GameList.shtml" width="100%" h　　　　　　　　　　　　　　　　　　　　　　　　　　　eight="245" allowtransparency="true" border="0" frameborder="0"></iframe>
-            
-            
-            
-            </td>
-          </TR>
-        </TBODY>
-      </table>
-      <div align="center"><br>
-        <BR>
-        <div align="right"><A href="#top" class="green">↑上に戻る</A><BR>
-        　　　</div>
-        <HR class="line"><a id="forum2"></a>
-        <table border="0" width="100%">
-          <TBODY>
-            <TR>
-              <td align="center"><BR>
-              <iframe src="https://silversecond.com/WolfRPGEditor/Parts_Forum.shtml" width="100%" height="450" allowtransparency="true" border="0" frameborder="0"></iframe>
-
-
-<!--
-            <BR>
-      <table border="1">
-        <TBODY>
-          <TR>
-                  <td align="center" width="373"><B>顔グラフィック合成器　パーツプロジェクト</B> ページは<BR>2020/3/11に終了いたしました。<BR><BR>
-                  投稿されたパーツデータは<a href="Download.html#tool">グラフィック合成器 2020/3/11版</a>に<BR>全て取り入れさせていただきました。<BR>ご協力くださった皆さま、本当にありがとうございました！</td>
-                </TR>
-        </TBODY>
-      </table>
---><BR>
-              <div align="right"><A href="#top" class="green">↑上に戻る</A><BR>
-              </div>
-              </td></TR></TBODY>
-        </table>
-        <BR>
-        <BR><HR><a id="english">　</a><!--◆英語バージョン-->
-      <BR><B><BIG>【 日本語以外のバージョン (Other Language Ver.) 】</BIG></B><BR>
-        　
-        <HR>
-        <br>
-        <br>
-        <BR>
-        <table class="mmmgray" cellpadding="2" cellspacing="1" width="395">
-          <TBODY>
-            <TR>
-              <td colspan="2" width="347" align="center"><FONT class="ten"><FONT class="fw"><B>◆<FONT class="ten"><FONT class="fw">WoditorTranslationGallery</FONT></FONT></B></FONT></FONT></td>
-            </TR>
-            <TR>
-              <td class="white" colspan="2" width="347" align="center"><BR>
-              <B><a href="https://github.com/WoditorTrans2000/WoditorTranslationGallery" target="_blank"><FONT size="+1">[WoditorTranslationGallery]<br>
-              </FONT><span>GitHub - Project page</span></a></B><BR>
-              <br>
-              GitHubにてウディタの翻訳プロジェクトを作ってくださっています！<br>
-              [言語　US / BR / PT / PL / ru / KR] <span style="font-size : 80%;">(2025-06-03時点)</span><br>
-              </td>
-            </TR>
-          </TBODY>
-        </table>
-        
-        <!--
-        <BR>
-        <BR>
-        <table class="mmmgray" cellpadding="2" cellspacing="1" width="395">
-          <TBODY>
-            <TR>
-              <td colspan="2" width="347" align="center"><FONT class="ten"><FONT class="fw"><B>◆WOLF RPG Editor - <BR>
-              Sample data included English version / <BR>
-              <FONT class="ten"><FONT class="fw">サンプルデータ込み英語版</FONT></FONT></B></FONT></FONT></td>
-            </TR>
-            <TR>
-              <td class="white" colspan="2" width="347" align="center"><BR>
-              <B><A href="https://widderune.wixsite.com/widderune/wolf-rpg-editor-english" target="_blank"><FONT size="+1">[English version 2.24Z - Download page]</FONT></A></B><BR>
-              <BR>
-              . Translation by Velella Himmel (<A href="https://twitter.com/KerokeroCoder" target="_blank">@KerokeroCoder</A>) and <BR>
-              Edited by Jeffrey Casey
-            (<a href="https://widderune.wixsite.com/widderune" target="_blank">Widderune</a>).<BR>
-              <FONT size="-2">Velella Himmel様とJeffrey Casey様が翻訳版EXEと<BR>
-              翻訳済みサンプルデータを作ってくださいました！</FONT></td>
-            </TR>
-          </TBODY>
-        </table>
-        <BR>
-        -->
-        
-        
-        
-        <!--
-      <BR> 
-      <table class="mmmgray" cellpadding="2" cellspacing="1">
-        <TBODY>
-          <TR>
-            <td colspan="2" width="347" align="center"><FONT class="ten"><FONT class="fw"><B>◆WOLF RPG Editor - English Version / <FONT class="ten"><FONT class="fw">英語版</FONT></FONT></B></FONT></FONT></td>
-          </TR>
-          <TR>
-            <td class="white" colspan="2" width="347" align="center"><BR>
-            <B>
-<A href="https://xyren.lh1.in/wolf-rpg-editor-224gen/" target="_blank"><FONT size="+1">[English version 2.24G - Download page]</FONT></A></B><BR>
-            <BR>
-            <A href="https://twitter.com/AeroWhitefox/" target="_blank">@AeroWhitefox</A> has made a translation EXE file!<BR>
-            <FONT size="-2">@AeroWhitefox様が翻訳EXEを作ってくださいました！</FONT></td>
-          </TR>
-        </TBODY>
-      </table>
-      <BR>
---><BR>
-        <table class="mmmgray" cellpadding="2" cellspacing="1">
-          <TBODY>
-            <TR>
-              <td colspan="2" width="377" align="center"><FONT class="ten"><FONT class="fw"><B>◆WOLF RPG Editor - Polish Version / <FONT class="ten"><FONT class="fw">ポーランド語版</FONT></FONT></B></FONT></FONT></td>
-            </TR>
-            <TR>
-              <td class="white" colspan="2" width="347" align="center"><BR>
-              <B><A href="http://rpgmaker.pl/wrpge/" target="_blank"><FONT size="+1">[Polskie wydanie Version 2.264 - Download page]</FONT></A></B><BR>
-              <BR>
-              <FONT size="-2">Reptile 様が翻訳EXEを作ってくださいました！</FONT></td>
-            </TR>
-          </TBODY>
-        </table>
-        <br>
-        <BR>
-        <table class="mmmgray" cellpadding="2" cellspacing="1">
-          <TBODY>
-            <TR>
-              <td colspan="2" width="377" align="center"><FONT class="ten"><FONT class="fw"><B>◆WOLF RPG Editor - Korean Version / <FONT class="ten"><FONT class="fw">韓国語版</FONT></FONT></B></FONT></FONT></td>
-            </TR>
-            <TR>
-              <td class="white" colspan="2" width="347" align="center"><BR>
-              <B><a href="https://sites.google.com/view/kamasun214/" target="_blank"><FONT size="+1">[Korean Version - Download page]</FONT></a></B><BR>
-              <FONT size="-1"><B style="color:#f55">New!</B></FONT><BR>
-              <BR>
-              <FONT size="-2">Kamasun 様が翻訳版を作ってくださいました！</FONT></td>
-            </TR>
-          </TBODY>
-        </table>
-        <BR>
-        <HR>
-        <BR>
-        <BR>
-        <table cellspacing="1" cellpadding="3">
-          <TBODY>
-            <TR class="ten">
-              <TD>
-              <CENTER>リンクフリー、許可不要です。<BR>
-              <img src="https://silversecond.net/banner/editor_banner.gif" border="0" alt="バナーです"><BR>
-              <div align="left"><FONT class="ten"><B>バナー</B>： https://www.silversecond.net/banner/editor_banner.gif<BR>
-              <B>URL</B> ： https://www.silversecond.com/WolfRPGEditor/<BR>
-              <font class=fmmg><B>サイト名 ：</B> WOLF RPGエディター公式サイト &nbsp;<B>管理者 ： </B>SmokingWOLF</FONT></font></div>
-              </CENTER>
-              </TD>
-            </TR>
-          </TBODY>
-        </table>
-        <FONT class="ten"><BR>
-        <BR>
-        </FONT>
-        <table class="mmgray" cellspacing="1" width="400">
-          <TBODY>
-            <TR>
-              <td class="white" nowrap align="center" colspan="2"><FONT class="ten"><FONT class="fmmg">Copyright(C)　<B>SmokingWOLF</B>　All rights reserved</FONT></FONT></td>
-            </TR>
-          </TBODY>
-        </table>
-        <BR>
-        <FONT class="ten"><BR>
-        <BR>
-        <BR>
-        </FONT>
-        <table cellspacing="1" cellpadding="3" class="mmmgray">
-          <TBODY class="fmg">
-            <TR class="ten">
-              <td align="center" class="white"><B>Q.ゲーム内で「WOLF RPGエディター」を使用していることを<BR>
-              示すロゴにバナー画像を使ってもいいですか？</B><BR>
-              <BR>
-              A．問題ございません！　以下にPNG形式のバナーがありますので、<BR>
-              こちらをご利用ください。でもロゴ表示は基本的に必要ありません。<BR>
-              ↓<BR>
-              無料版ウディタ用
-              <div align="center"><FONT class="ten"><A href="https://www.silversecond.net/banner/editor_banner.png">https://www.silversecond.net/banner/editor_banner.png</A></font></div>
-              <BR>
-              プロ版ウディタ用
-              <div align="center"><FONT class="ten"><A href="https://www.silversecond.net/banner/editor_pro_banner.png">https://www.silversecond.net/banner/editor_pro_banner.png</A></font></div>
-              </td>
-            </TR>
-          </TBODY>
-        </table>
-        <BR>
-        　<BR>
-      </div>
-      </td>
-      <td nowrap colspan="3" align="center" valign="top" width="200"><BR>
-      <table class="mmgray" cellpadding="6" cellspacing="1">
-        <TBODY>
-          <TR>
-            <td class="white" nowrap width="146"><iframe src="https://silversecond.net/data/woditor_Counter.shtml" width="100%" height="30" allowtransparency="true" border="0" frameborder="0" align="middle" scrolling="NO"></iframe></td>
-          </TR>
-        </TBODY>
-      </table>
-      <img src="Data/image/space.gif" width="1" height="18"><a href="https://silversecond.booth.pm/items/4302198" target="_blank" class="red"><span style="font-size:80%;line-height:10px;">有料のプロ版も発売中! [BOOTH]<BR><img src="Data/image/space.gif" width="1" height="44"><img src="Data/image/woditor_pro_logo.png" border="0" style="box-shadow: 0px 0px 6px 3px rgba(255,175,110,0.6);"></span></a><BR><SMALL class="fmmg" style="line-height:8px;margin-top:-2px;">画面最大1920x1440化など！<br>
-      ※ｳﾃﾞｨｺﾝでは使えないので注意!</SMALL><br>
-      <img src="Data/image/space.gif" width="1" height="24"> <a href="https://silversecond.booth.pm/items/5151747" target="_blank" class="red"><span style="font-size:80%;line-height:10px;">翻訳サポートツール発売! [BOOTH]<BR><img src="Data/image/space.gif" width="1" height="32"><img src="Data/image/woditor_support_tool_logo.png" border="0" style="box-shadow: 0px 0px 6px 3px rgba(255,175,110,0.6);" width="160" height="32"></span></a><BR><SMALL class="fmmg">ゲームデータから全文字列抽出＆置換!</small></SMALL>
-      <br>
-      <img src="Data/image/space.gif" width="1" height="24"> <a href="https://ci-en.net/creator/12702" target="_blank" class="red"><span style="font-size:80%;line-height:10px;">ブラウザゲーム化も可能! (ruka様より)<BR>
-      <img src="Data/image/space.gif" width="1" height="32"><img src="Data/image/boditor_banner.png" border="1" width="100"></span></a><BR>
-      　
-      <table cellspacing="1" class="mmmgray" cellpadding="2" width="180">
-        <TBODY class="fw">
-          <TR class="ten">
-            <TD class="mmmgray"><FONT class="ten"><FONT class="fw"><B>　■</B>　更新履歴　<B>■</B></FONT></FONT></TD>
-          </TR>
-          <TR class="ten">
-            <td class="white" nowrap height="105"><iframe frameborder="" width="180" height="100%" scrolling="AUTO" src="Whatnew.htm"></iframe></td>
-          </TR>
-        </TBODY>
-      </table>
-      →　<A href="information.html">◆過去のお知らせ<BR>
-      <small>(<B>文字入力が2重になる</B>問題､等)</small></A><br>
-      　　　<BR>
-      <table class="mmmgray" cellpadding="2" cellspacing="1">
-        <TBODY>
-          <TR>
-            <td colspan="2" width="185"><FONT class="ten"><FONT class="fw"><B>　■</B>　宣伝　<B>■</B></FONT></FONT></td>
-          </TR>
-          <TR>
-            <td class="white" nowrap align="center"><a target="_blank"  href="https://www.amazon.co.jp/gp/product/B076VM4ZMS/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B076VM4ZMS&linkCode=as2&tag=smokingwolf-22&linkId=deeae8bbd473d33835f0653c0048e205"><img border="1" src="https://silversecond.net/image/banner_dev_map.jpg" width="80"></a>
-</td>
-            <td class="white" nowrap><B><FONT size="-1" color="#ff0000">人気本！</FONT></B><BR>
-            <IMG src="https://silversecond.net/image/icon/space.gif" height="17" width="1"><small><A href="https://www.amazon.co.jp/gp/product/B076VM4ZMS/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B076VM4ZMS&linkCode=as2&tag=smokingwolf-22&linkId=deeae8bbd473d33835f0653c0048e205" target="_blank">【ゲーム開発者の地図】<BR>
-            　(Amazon)</A><BR><font class="close" style="font-size:10px;line-height:80%;">ウディタ作者のゲーム開発の<BR>
-            コツを記した一冊！<BR>
-            <a class="red" href="https://silversecond.net/contents/game/map_of_game_dev/#buy3" target="_blank"><B>紙版</B>もあります</A></font>
-            </small></td>
-          </TR>
-          <!--
-          <TR>
-            <TD class="white" nowrap align="center"><A target="_blank" href="https://www.amazon.co.jp/gp/product/4777516415/ref=as_li_tf_il?ie=UTF8&tag=smokingwolf-22&linkCode=as2&camp=247&creative=1211&creativeASIN=4777516415"><IMG border="1" width="60" height="84" src="https://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4777516415&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=smokingwolf-22&language=ja_JP"></a></TD>
-            <TD class="white" nowrap>
-      <small><small><A href="https://www.amazon.co.jp/gp/product/4777516415/ref=as_li_tf_il?ie=UTF8&tag=smokingwolf-22&linkCode=as2&camp=247&creative=1211&creativeASIN=4777516415" target="_blank">【WOLF RPGｴﾃﾞｨﾀｰで始める<BR>
-            &nbsp;ゲーム制作】(Amazon)</A><BR>
-            &nbsp;ウディタ作者による<BR>
-            &nbsp;初心者向けガイドブック<BR>
-            &nbsp;→ <B><A href="https://smokingwolf.blog95.fc2.com/blog-entry-284.html" target="_blank">内容の詳細</A></B></small></small>
-            <img src="Data/image/space.gif" height=11 width=1></TD>
-
-          </TR>
- --><SCRIPT language="JavaScript">
-<!--
-// ランダムに画像を表示する
-jmp = new Array();
-img = new Array();
-nam = new Array();
-txt = new Array();
-auth = new Array();
-
-// 作品名  画像  ジャンプ先のアドレス(数字は画像と対応)
-x = 0;
-
-
-jmp[x] = "https://www.amazon.co.jp/gp/product/B01FDKCKJU?&linkCode=li2&tag=sitesw-22&linkId=85516fec5d709b612b49b2997d8e87e6&language=ja_JP&ref_=as_li_ss_il";
-nam[x] = "片道勇者<BR>開発記<BR>四年の旅路";
-img[x] = "https://silversecond.net/image/banner_katamichi_kaihatsu.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ382825.html";
-nam[x] = "ｸﾞﾘｯﾄﾞﾏｯﾌﾟ<BR>タイル素材集<BR>Pro";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ383000/RJ382825_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ165626.html";
-nam[x] = "ねくらﾌｧﾝﾀｼﾞｰ<BR>ﾏｯﾌﾟﾁｯﾌﾟ<BR>素材集";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ166000/RJ165626_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ209797.html";
-nam[x] = "ねくらレトロ<BR>ﾌｭｰﾁｬｰﾏｯﾌﾟ<BR>ﾁｯﾌﾟ素材集";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ210000/RJ209797_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ177740.html";
-nam[x] = "ねくらﾌｧﾝﾀｼﾞｰ<BR>ﾏｯﾌﾟﾁｯﾌﾟ素材<BR>集EXﾀﾞﾝｼﾞｮﾝ";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ178000/RJ177740_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ231862.html";
-nam[x] = "ﾌｧﾝﾀｼﾞｰｹﾞｰﾑ<BR>UI画像素材集";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ232000/RJ231862_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ264001.html";
-nam[x] = "ねくらﾜｰﾙﾄﾞ<BR>ﾏｯﾌﾟﾁｯﾌﾟ<BR>素材集";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ265000/RJ264001_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ229392.html";
-nam[x] = "ぴぽや感情&<BR>状態ｱﾆﾒｱｲｺﾝ<BR>素材集";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ230000/RJ229392_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ240375.html";
-nam[x] = "ぴぽやｾｸｼｰ&<BR>ｷｭｰﾄｴﾌｪｸﾄ<BR>ｱﾆﾒ素材集";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ241000/RJ240375_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-
-
-
-
-jmp[x] = "https://www.dlsite.com/home/dlaf/=/t/m/link/work/aid/silsec_com/id/RJ296831.html";
-nam[x] = "RPGﾂｸｰﾙMZ<BR>[楽しんで<BR>作りたい人へ!]";
-img[x] = "//img.dlsite.jp/modpub/images2/work/doujin/RJ297000/RJ296831_img_sam_mini.jpg";
-txt[x] = "";
-x = x + 1;
-
-
-
-
-
-
-
-
-
-
-
-
-// ここまで、次にシャッフルする
-order = new Array();
-for ( i=0 ; i<x ; i++ ){ order[i] = i;}
-
-//配列の大きさに合わせて入れ替え
-for ( i=0 ; i<order.length ; i++ )
-{
-  //0～4までの乱数を作成し、変数Rndに格納する
-  var Rnd = Math.floor(Math.random()*order.length);
   
-  var str1 = order[i];    //配列colの最初の要素
-  var str2 = order[Rnd];  //配列colの乱数で決定した要素
+<p>　スクリプトを使わずに高度な処理を実現できる<strong>『イベントコマンド』</strong>と自由度の高い<strong>『データベース』</strong>機能が特徴で、プログラミング経験がなくても複雑なゲームシステムを構築することができます。<BR>
+　RPGに限らずADV・ACT・SLGなど幅広いジャンルのゲーム制作が可能です。</p>
+<p>　2008年3月の初公開以来、数千以上の作品がこのエディターを用いて制作、公開されています。</p>
 
-  //配列の各要素を入れ替える
-  order[Rnd]=str1;
-  order[i]  =str2;
-  
-}
 
-    document.write("<TR><TD class='white' colspan='2'><small class=fmg><B>その他　おすすめ本/素材集</B></small><TABLE><TR>");
-// 3つだけ表示する
-for ( i=0 ; i<3 ; i++ )
-{
-	var n = order[i];
-	
-	
-	
-	document.write("<TD width='80' style='width:80px;white-space : nowrap;line-height:100%;background: rgb(240, 240, 255);'><CENTER><a target=_blank href='" + jmp[n] + "'><img width='52' title='");
-	document.write( "' border='1' src='" + img[n] + "' >");
-	document.write("<BR><span style='font-size : 70%; line-height:7px;'>"+ nam[n] +"</SPAN></a></CENTER></TD>");
+<!-- ダウンロード -->
+<a id="download"></a>
+<h1>◆ ダウンロード</h1>
+<p>　以下から最新版のWOLF RPGエディターをダウンロードできます。<BR>
+　このツールは<B>Windows用</B>です。</p>
 
-}
-document.write("</TR></TABLE><small class='fmg'><center>※これらはｱﾌｨﾘｴｲﾄﾘﾝｸです。<BR>得た収益はｳﾃﾞｨﾀ開発にあてられます。</center></small></TD></TR>");
-//-->
-</SCRIPT>
-          <TR>
-            <td class="white" nowrap colspan="2">&nbsp;<B>【ウディタ作品は家庭用ゲーム機にも<br>
-            　移植されています！】</B><BR>
-            &nbsp;<small class=fmg>[Nintendo Switch移植] 販売ページへ</small><BR>
-            &nbsp;- <a href="https://store-jp.nintendo.com/list/software/70010000027923.html" target="_blank">◇片道勇者プラス</a><BR>
-            &nbsp;- <a href="https://store-jp.nintendo.com/list/software/70010000035383.html" target="_blank">◇Mad Father(ﾏｯﾄﾞﾌｧｰｻﾞｰ)</a><BR>
-            &nbsp;- <a href="https://store-jp.nintendo.com/list/software/70010000041496.html" target="_blank">◇LiEat(ライート)</a><BR>
-            &nbsp;- <a href="https://store-jp.nintendo.com/search/?q=%E3%82%AF%E3%83%88%E3%82%A5%E3%83%AB%E3%83%95%E7%A5%9E%E8%A9%B1RPG" target="_blank"><small>◇ｸﾄｩﾙﾌ神話RPGｼﾘｰｽﾞ</small></a><BR>
-            &nbsp;- <a href="https://store-jp.nintendo.com/list/software/70010000054130.html" target="_blank"><small>◇東方少女綺想譚</small></a><BR>
-            &nbsp;- <a href="https://store-jp.nintendo.com/list/software/70010000060689.html" target="_blank">◇ドラゴノーカ</a><BR>
-            <BR>
-            <SMALL>◆移植･開発：<a href="https://esquadra.co.jp/" target="_blank">株式会社エスカドラ</a>様<br>
-            ◆<a href="https://sils.fc2.net/blog-entry-715.html" target="_blank">ウディタ作品Switch移植についての記事</a></SMALL>
-            </td>
-          </TR>
-        </TBODY>
-      </table>
-      <BR>
-      <table class="mmmgray" cellpadding="3" cellspacing="1">
-        <TBODY class="mini">
-          <TR>
-            <td class="mmmgray" width="180"><FONT class="ten"><FONT class="fw"><B>　■</B>　おすすめリンク集　<B>■</B></FONT></FONT></td>
-          </TR>
-          <TR class="fmg">
-            <td class="white" align="left" width="180"><B><FONT color="#6666ff" class="tenp">【コンテスト】</FONT></B><BR>
-            &nbsp;<img src="Data/image/space.gif" width="1" height="19" border="0">◆<B><A href="https://www.silversecond.com/WolfRPGEditor/Contest/" target="_blank" class="bl2">公式ウディタコンテスト</A></B><BR>
-            &nbsp; &nbsp;　<A href="https://www.silversecond.com/WolfRPGEditor/Contest/" target="_blank" class="bl2"><img src="https://silversecond.com/WolfRPGEditor/Contest/banner_mini.gif" border="0"></A><BR>
-            　　公式コンテスト、毎年7～8月開催!<br>
-            <BR>
-            &nbsp;<img src="Data/image/space.gif" width="1" height="19" border="0">◆<B><A href="https://wodifes.net/" target="_blank" class="bl2">ウディフェス</A><BR>
-            　　<A href="https://wodifes.net/" target="_blank" class="bl2"><img src="https://wodifes.net/banner/wodifes_banner_04.jpg" border="1" alt="ウディフェス"></A></B><br>
-            　　非公式のお祭り､毎年2月頃開催!<BR>
-            </A><BR>
-            <hr class="line" size="1">
-            <B><FONT color="#6666ff" class=tenp>【ﾌﾞﾗｳｻﾞ＆ｽﾏﾎへ公開】</FONT></B><br>
-            &nbsp;<img src="Data/image/space.gif" width="1" height="19" border="0">◆<B><a href="https://ci-en.net/creator/12702" target="_blank" class="bl2">ブラウザウディタ</a></B><small><font color="#ffaa00"><b> ｵｽｽﾒ!</b></font></small><BR>
-            　　<a href="https://ci-en.net/creator/12702" target="_blank"><img src="Data/image/boditor_banner.png" border="1" width="83" height="31"></a><br>
-            　ウディタをブラウザゲーム化するツール！<br>
-            　動作がほぼ完全再現されており、<br>
-            　それを↓PLiCyへの投稿も可能です<br>
-            <BR>
-            　◆<B><A href="http://plicy.net/" target="_blank" class="bl2">PLiCy</A></B><BR>
-            　　<A href="http://plicy.net/" target="_blank"><img src="Data/image/plicy_logojpsmall.png" border="1" width="83" height="31"></A><BR>
-            　ブラウザ・スマートフォンで<BR>
-            　ウディタ作品を公開可能！<BR>
-            <hr class="line" size="1">
-            <B><FONT color="#6666ff" class=tenp>【ウディタ用 便利ツール】</FONT></B><BR>
-            <img src="Data/image/space.gif" width="1" height="18" border="0">&nbsp;◆<B><A href="https://alpha-stella.com/tool/wodistant/" target="_blank" class="bl2">Wodistant</A></B><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><br>
-            　<b><a href="https://alpha-stella.com/tool/wodistant/" target="_blank" class="bl2"><img src="Data/image/wodistant_banner.png" border="1" width="100"></a></b><BR>
-            　ウディタに便利な機能を<BR>
-            　外部から追加できます！<BR>
-            　<BR>
-            &nbsp;◆<B><A href="https://www.silversecond.com/WolfRPGEditor/Data/Rikka/" target="_blank" class="bl2">tkool2WOLF+</A></B><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><BR>
-            　RPGツクール2000・XP・VX･<br>
-            　MV・MZ規格の画像素材を<br>
-            　ｳﾃﾞｨﾀ用に分割/変換!<br>
-            <br>
-            &nbsp;◆<B><a href="https://subara3.gonna.jp/tool/MapChipFusionMaster/MapChipFusionMaster.html" target="_blank" class="bl2">MapChipFusionMaster</a></B><small><FONT color="#ffaa00"><B><br>
-            　 ｵｽｽﾒ!</B></FONT></small><BR>
-            　ウディタ用マップチップを<b>縦に結合</b>し<br>
-            　1つのファイルにできるツールです！<br>
-            　16、32、40、48チップ全対応<BR>
-            　　
-            <hr class="line" size="1">
-            <B><FONT color="#6666ff" class=tenp>【講座･テキスト】</FONT><BR>
-            </B><BR>
-            ◆<B><A href="http://yado.tk/wolf/" target="_blank" class="bl2">YADOT-WOLF</A></B><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><BR>
-            &nbsp;　<B>初心者</B>向け内容から<BR>
-            　 自作メニュー作成や<BR>
-            　 基本システム解説＆改造も！<BR>
-            　 情報量・更新頻度共に優良<BR>
-            <br>
-            <img src="Data/image/space.gif" width="1" height="19" border="0">◆<B><a href="https://pipoya.net/rpg/" target="_blank" class="bl2">はじめてのウディタ</a></B><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><BR>
-            &nbsp;　<B>初心者</B>向け、基本システムを<BR>
-            　 使用した親切な作成講座<BR>
-            <br>
-            　 <!--            <BR>
-            &nbsp;◆<A href="http://su-labo.sakura.ne.jp/kouza/" target="_blank" class="bl2"><B>ｳﾃﾞｨﾀ講座(Ver2用)</B></A><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><BR>
-            　 <B>超初心者</B>向けウディタ講座<BR>
-            　 これだけは必ず習得しましょう<BR>--><BR>
-            <B>&nbsp;&lt;エラーで困った人へ&gt;</B><BR>
-            &nbsp;◆<A href="http://vanzgraphica.web.fc2.com/udexita/index.html" target="_target" class="bl2"><B>エラーコレクション</B></A><BR>
-            　ウディタで起きるエラー紹介と、<BR>
-            　対処法が網羅されています。<BR>
-            <BR>
-            <hr class="line" size="1">
-            <B><FONT color="#6666ff" class=tenp>【ウディタ用素材・画像】</FONT></B>　<BR>
-            <img src="Data/image/space.gif" width="1" height="19" border="0">&nbsp;◆<A href="http://www47.atwiki.jp/woditormaterials/" target="_blank" class="bl2"><B>ウディタ支援素材集</B></A><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><BR>
-            　高クオリティの素材集です！<BR>
-            　素材集Part1は320x240用、<BR>
-            　Part2は640x480用です。<BR>
-            <BR>
-            &nbsp;◆<B><A href="http://silversecond.com/WolfRPGEditor/WolfEditorWiki/" target="_blank" class="bl2">WOLF RPGエディターWiki</A></B><BR>
-            　 ┣ <A href="http://silversecond.com/WolfRPGEditor/WolfEditorWiki/?%B2%E8%C1%FC%C1%C7%BA%E0%A4%DE%A4%C8%A4%E1" target="_blank" class="bl2">画像素材(ｷｬﾗ他)</A><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><BR>
-            　 ┣ <A href="http://silversecond.com/WolfRPGEditor/WolfEditorWiki/?%B2%E8%C1%FC%C1%C7%BA%E0%A4%DE%A4%C8%A4%E1%A3%B2" target="_blank" class="bl2">画像素材(ﾓﾝｽﾀｰ等)</A><BR>
-            　 ┣ <A href="http://silversecond.com/WolfRPGEditor/WolfEditorWiki/?%B2%BB%C0%BC%C1%C7%BA%E0%A4%DE%A4%C8%A4%E1" target="_blank" class="bl2">音楽素材(BGM/SE)</A><BR>
-            　 ┣ <A href="http://silversecond.com/WolfRPGEditor/WolfEditorWiki/?%A5%EA%A5%F3%A5%AF%BD%B8" target="_blank" class="bl2">素材･講座リンク集</A><small><FONT color="#ffaa00"><B> ｵｽｽﾒ!</B></FONT></small><BR>
-            　 ┗ <A href="http://silversecond.com/WolfRPGEditor/WolfEditorWiki/?%A5%D5%A5%A9%A1%BC%A5%E9%A5%E0%A1%A1%BC%C1%CC%E4%A5%B9%A5%EC%A4%DE%A4%C8%A4%E1" class="bl2">FAQ 質問スレまとめ</A><BR>
-            &nbsp;　　&nbsp;<A href="http://silversecond.com/WolfRPGEditor/WolfEditorWiki/" target="_blank" class="bl2"><img src="Data/image/woditor_wiki_link.gif" border="1"></A><BR>
-            　 素材・情報はWikiで入手！<BR>
-            　 素材はｳﾃﾞｨﾀ以外にも利用可<BR>
-            <BR>
-            <hr class="line" size="1">
-            <B><FONT color="#6666ff" class=tenp>【ツクール規格画像素材】</FONT></B><BR>
-            　<A href="http://www.silversecond.com/WolfRPGEditor/Data/Rikka/" target="_blank" class="bl2">tkool2WOLF+</A>でウディタ用に<BR>
-            　変換して使用してください。<BR>
-            <BR>
-            <!--            &nbsp;◆<A href="http://www25.atwiki.jp/mack_material/" target=_blank><B>MACK素材まとめサイト</B></A>
+<a href="https://github.com/smokingwolf/wolf_rpg_editor/releases" target="_blank" class="blue">
+<B><span style="font-size:24px;">【WOLF RPGエディター ダウンロードページ】</span><BR>
+（新ページを開く / GitHub内のReleasesページへ）</B></a>
 <BR>
-            　640x480解像度用の素材配布<BR>
-            　ただしツクールXP｢専用｣は<BR>
-            　規約上使えません、注意。<BR>-->&nbsp;◆<B><A href="http://wato5576.sukimakaze.com/" target="_blank" class="bl2">すきまの素材</A></B><BR>
-            　320x240解像度用の素材配布<BR>
-            　特に、SF・現代風・和風などの<BR>
-            　マップチップ素材ならここです<BR>
-            <hr class="line" size="1">
-            <B><FONT color="#6666ff" class=tenp>【コミュニティ】</FONT></B>　<BR>
-            <img src="Data/image/space.gif" width="1" height="19" border="0">&nbsp;◆<A href="http://sns.prtls.jp/rpgeditor/login.html" target="_blank" class="bl2"><B>RPGエディターSNS</B></A><BR>
-            　どちらもメンバー登録型で、<BR>
-            　外部からの閲覧も可。
-            <hr class="line" size="1">
-            <B><FONT color="#6666ff" class=tenp>【ウディタ2 素材感謝ﾘﾝｸ】</FONT></B><BR>
-            &nbsp;◆<A href="https://pipoya.net/blog/" target="_blank" class="bl2">ぴぽや</A><small>（ぴぽ様/ﾏｯﾌﾟﾁｯﾌﾟ他）</small><BR>
-            &nbsp;◆<A href="http://isaaki.web.fc2.com/" target="_blank" class="bl2">isaaki</A> <small></small><small>（いさあきえーと様/<BR>
-            　　　　　　　　顔ｸﾞﾗ合成画像）</small><BR>
-            &nbsp;◆<s>城壁</s><small>（Panop様/ｴﾌｪｸﾄ・SE）</small><BR>
-            &nbsp;◆<s>Wilderness</s><small>（Koya様・BGM）</small><BR>
-            &nbsp;◆<a href="https://taira-komori.jpn.org/" target="_blank" class="bl2">小森平の使い方</a><small>(小森平様･SE)</small><BR>
-            &nbsp;◆<A href="http://rikugame515.blog51.fc2.com/" target="_blank" class="bl2">りくがめのしま</A><small>(りくがめ様・合成器)</small><BR>
-            &nbsp;◆<S>火ねずみの宿</S><small>（ユノ様・BGM）</small><BR>
-            <BR>
-            </td>
-          </TR>
-        </TBODY>
-      </table>
-      <BR>
-      <BR>
-      <table class="mmmgray" cellpadding="3" cellspacing="1">
-        <TBODY>
-          <TR>
-            <td class="mmmgray" width="180"><FONT class="ten"><FONT class="fw"><B>　■</B>　その他の情報　<B>■</B></FONT></FONT></td>
-          </TR>
-          <TR class=fmg>
-            <td class="white" align="left">→<A href="Data/TopIllust/">◆過去のトップ絵</A><BR>
-            　ウディタのマスコットキャラ、<BR>
-            　ウルファールの資料もこちら　</td>
-          </TR>
-        </TBODY>
-      </table>
-      <BR>
-      <BR>
-      <table border="0">
-        <TBODY>
-          <TR>
-            <td class="white" nowrap width="195" height="240"><iframe src="http://silversecond.net/data/woditor_RevAccess.shtml" width="100%" height="100% allowtransparency=true" border="0" frameborder="0"></iframe></td>
-          </TR>
-        </TBODY>
-      </table>
-      <BR>
-      </td>
-    </TBODY>
-</TABLE>
-<HR class="line">
 <BR>
-<table style="background-color:#444464;border-radius: 12px;background-image : url(Data//image/2023_woditor_support.png);border:solid 2px #3333FF;" cellspacing="1" cellpadding="5" width="236" height="47"><TBODY><TR><td nowrap align="center" colspan="1" class="backblue" style="width:100%;"><A href="https://silversecond.booth.pm/items/4455722" target="_blank" class="siro" style="display:block;width:100%;height:100%;padding-top:1em;padding-bottom:0.5em;"><B style="text-shadow: 0 0 9px #4444ff, 0 0 9px #4444ff, 0 0 9px #4444ff, 0 0 9px #4444ff; text-decoration:underline;"></FONT></B></A></td></TR></TBODY></table>
-<!--
-<TABLE style="transform: scale(0.5,0.5);">
-  <TBODY>
-    <TR>
-      <td class="white" nowrap align="center" colspan="2">
-      <table style="background-color:#444464;border-radius: 12px;background-image : url(https://silversecond.net/image/2019_support_bigbanner.jpg);border:solid 2px #3333FF;" cellspacing="1" cellpadding="5" width="494" height="70"><TBODY><TR><td nowrap align="center" colspan="1" class="backblue" style="width:100%;"><A href="https://silversecond.booth.pm/items/1423684" target="_blank" class="siro" style="display:block;width:100%;height:100%;padding-top:1em;padding-bottom:0.5em;">  <B style="text-shadow: 0 0 9px #4444ff, 0 0 9px #4444ff, 0 0 9px #4444ff, 0 0 9px #4444ff; text-decoration:underline;">BOOTHにて<BR><BR><FONT size="+2">ご支援･投げ銭 受付はじめました</FONT></B></A></td></TR></TBODY></table>
-      </td>
-    </TR>
-  </TBODY>
-</TABLE>
--->　
-<HR class="line">
+→　リンク先で、必要に応じて以下をダウンロードしてください。<BR>
 <BR>
-<A href="http://www.silversecond.net/" target="_blank">【メインサイト Silver Secondへ】<BR>
-<img src="http://silversecond.net/banner/b.png" border="0"></A><BR>
-ウディタ作者のゲーム開発サイト<BR>
-　<script type="text/javascript">
-<!--
-document.write("<img src=\"//www.silversecond.net/cgi-bin/DATA_access.cgi?pg=woditor");
-document.write(parent.document.referrer+"\" border=0 width=1 height=1>");
-// -->
+<B>●フルパッケージが欲しい人：『WolfRPGEditor_(バージョン番号).zip』</B><BR>
+　初めての人向け。EXEだけでなく、サンプルゲームや素材、キャラクター合成ツールが含まれるデータです。<BR>
+<BR>
+<B>●EXEだけのミニ版が欲しい人：『WolfRPGEditor_(バージョン番号)<B><span style="color:#f66;">mini</span></B>.zip』</B><BR>
+　慣れた人向けの最小構成。これ単体でも、Editor.exeを実行すると空のゲームデータの作成が可能です。<BR>
+<BR>
+
+
+
+
+<!-- マニュアル -->
+<a id="help"></a>
+<h1>◆ マニュアル</h1>
+<p>　WOLF RPGエディターの説明書は以下より閲覧できます。<BR>
+　これはGitHub内にて保存・公開されているバックアップの説明書です。</p>
+
+<ul>
+  <li><a href="https://smokingwolf.github.io/wolf_rpg_editor/help/" class="blue"><B><span style="font-size:20px;">WOLF RPGエディター説明書 (GitHub内)</span></B></a></li>
+</ul>
+
+<p>　マニュアルには、ウィンドウの説明、各コマンドの使い方、裏技などが記されています。</p>
+
+
+<!-- 更新履歴 -->
+<a id="releasenote"></a>
+<h1>◆ バージョンアップ履歴</h1>
+　以下のリンク先にウディタ本体のバージョンアップ履歴が記載されています。<BR>
+<BR>
+<a href="ReleaseLog.html" class="blue">
+<B><span style="font-size:24px;">【バージョンアップ履歴】</span></B></a>
+
+<BR><BR><BR><BR>
+<BR><BR><BR><BR>
+<BR><BR><BR><BR>
+<center><small>Copyright &copy; SmokingWOLF</small></center>
+
+
+
+
+<script>
+  // ウディタ公式のドメインに接続し、サイト存在確認用のTXT(WODITOR_ALIVE!と書かれている)があれば存在する扱いにする
+  const statusDiv = document.getElementById('woditor-status');
+  const checkUrl = 'https://silversecond.com/WolfRPGEditor/WODITOR_SITE_ALIVE_FLAG.txt';
+
+  fetch(checkUrl, { cache: 'no-store' })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('ネットワークエラー');
+      }
+      return response.text();
+    })
+    .then(text => {
+      if (text.trim() === 'WODITOR_ALIVE!') {
+        statusDiv.innerHTML = '　<a href="https://silversecond.com/WolfRPGEditor/" target="_blank" class="blue" style="font-size:16px;"><B>現在運営中のウディタ公式ページはこちら</B></a> です！<span style="color:#ccf;">（ここはGitHub内のバックアップページです）</span>';
+      } else {
+        statusDiv.textContent = '　';
+      }
+    })
+    .catch(error => {
+      statusDiv.textContent = '　';
+      console.error('ウディタ公式サイトチェック失敗:', error);
+    });
 </script>
-<NOSCRIPT><img src="http://silversecond.net/cgi-bin/DATA_access.cgi?pg=woditor" border="0" width="1" height="1"></NOSCRIPT>
-<BR>
-<BR>
-</CENTER>
 
 
 
@@ -975,7 +350,7 @@ document.write(parent.document.referrer+"\" border=0 width=1 height=1>");
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.screenshot-wrapper').forEach(wrapper => {
     // ● 各 wrapper に独自の intervalId を持たせる
-    wrapper._intervalId = setInterval(() => advanceScreenshot(wrapper), 2000);
+    wrapper._intervalId = setInterval(() => advanceScreenshot(wrapper), 3000);
 
     // ● マウスが乗ったらタイマー停止
     wrapper.addEventListener('mouseenter', () => {
@@ -986,7 +361,7 @@ window.addEventListener('DOMContentLoaded', () => {
       // 念のため既存タイマーをクリア
       clearInterval(wrapper._intervalId);
       // 新しく再スタート
-      wrapper._intervalId = setInterval(() => advanceScreenshot(wrapper), 2000);
+      wrapper._intervalId = setInterval(() => advanceScreenshot(wrapper), 3000);
     });
 
     // ● 初回インジケーター更新
@@ -997,7 +372,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function resetScreenshotInterval() {
   clearInterval(screenshotInterval);
-  screenshotInterval = setInterval(changeAllScreenshots, 2000);
+  screenshotInterval = setInterval(changeAllScreenshots, 3000);
 }
 
 // スクリーンショットを次に切り替える関数（クリック時）
@@ -1025,7 +400,7 @@ function advanceScreenshot(wrapper) {
   // クリックや自動切り替え時にも “独自タイマー” をリスタートさせたい場合は以下を追加
   if (!wrapper.matches(':hover')) {
     clearInterval(wrapper._intervalId);
-    wrapper._intervalId = setInterval(() => advanceScreenshot(wrapper), 2000);
+    wrapper._intervalId = setInterval(() => advanceScreenshot(wrapper), 3000);
   }
   // グローバルリセットは不要なのでコメントアウト or 削除
   // resetScreenshotInterval();
@@ -1049,5 +424,6 @@ function updateIndicator(wrapper, indicator) {
 }
 
 </script>
+
 </BODY>
 </HTML>
