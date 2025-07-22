@@ -8,14 +8,19 @@
 <meta http-equiv="Content-Style-Type" content="text/css">
 
 <TITLE>WOLF RPGエディター バージョンアップ履歴 Ver3.50～</TITLE>
-<script src="./smoothscroll.js" type="text/javascript"></script> 
+<script src="smoothscroll.js" type="text/javascript"></script> 
 
 <style TYPE="text/css">
 <!--
-BODY{margin: -10px -0px 0px 0pt;}
-TABLE{line-height:115%;}
+BODY{
+	margin: -10px -0px 0px 0pt;
+}
+TABLE{
+	line-height:115%;
+}
 
-BODY{background-color : #fdfdff;
+BODY{
+	background-color : #fdfdff;
 font-family : "Meiryo UI","MS PGothic" ;
   font-size : 10pt;
   color : #434395;
@@ -24,33 +29,65 @@ font-family : "Meiryo UI","MS PGothic" ;
   
 }
 
-A:LINK,A:VISITED{color:#d6385c;text-decoration : underline;}
-A:HOVER,A:ACTIVE{color : #f6688c;text-decoration : underline;}
+A:link,A:visited{
+	color:#d6385c;text-decoration : underline;
+}
+A:hover,A:active{
+	color : #f6688c;text-decoration : underline;
+}
 
-A.red:LINK,A.red:VISITED{color:#c6385c;}
-A.red:HOVER,A.red:ACTIVE{color : #f6688c;text-decoration : underline;}
+A:link.red,A:visited.red{
+	color:#c6385c;
+}
+A:hover.red,A:active.red{
+	color : #f6688c;text-decoration : underline;
+}
 
-A.blue:LINK,A.blue:VISITED{color:#5658a6;}
-A.blue:HOVER,A.blue:ACTIVE{color : #9698e6;text-decoration : underline;}
+A:link.blue,A:visited.blue{
+	color:#5658a6;
+}
+A:hover.blue,A:active.blue{
+	color : #9698e6;text-decoration : underline;
+}
 
-A.siro:LINK,A.siro:VISITED{color:#ffffff;}
-A.siro:HOVER,A.siro:ACTIVE{color : #bbbbcf;text-decoration : underline;}
-
-
-A.green:LINK,A.green:VISITED{color:#38b68c;}
-A.green:HOVER,A.green:ACTIVE{color : #68d6ac;text-decoration : underline;}
-
-A.bl2:LINK,A.bl2:VISITED{color:#8888aa;}
-A.bl2:HOVER,A.bl2:ACTIVE{color : #aaaabb;text-decoration : underline;}
-
-
-A.glink:LINK,A.glink:VISITED{color:#ccccdf;}
-A.glink:HOVER,A.glink:ACTIVE{color : #dfdfff;text-decoration : underline;}
+A:link.siro,A:visited.siro{
+	color:#ffffff;
+}
+A:hover.siro,A:active.siro{
+	color : #bbbbcf;text-decoration : underline;
+}
 
 
-A.dl:LINK,A.dl:VISITED,A.dl:HOVER,A.dl:ACTIVE{text-decoration : underline overline;}
+A:link.green,A:visited.green{
+	color:#38b68c;
+}
+A:hover.green,A:active.green{
+	color : #68d6ac;text-decoration : underline;
+}
 
-A{text-decoration : none;}
+A:link.bl2,A:visited.bl2{
+	color:#8888aa;
+}
+A:hover.bl2,A:active.bl2{
+	color : #aaaabb;text-decoration : underline;
+}
+
+
+A:link.glink,A:visited.glink{
+	color:#ccccdf;
+}
+A:hover.glink,A:active.glink{
+	color : #dfdfff;text-decoration : underline;
+}
+
+
+A:link.dl,A:visited.dl,A:hover.dl,A:active.dl{
+	text-decoration : underline overline;
+}
+
+A{
+	text-decoration : none;
+}
 
 a img:hover{
   opacity:0.7;
@@ -81,54 +118,116 @@ SMALL.xmini{
 }
 
 
-.black{background-color:#000000;}
-.gray{background:#434395;}
-.white{background:#fdfdff;}
-.mwhite{background:#fefeff;}
-.veryusui{background:#f0f0fa;}
-.mgray{background:#6363b5;}
-.mmgray{background:#8383d5;}
-.mbgray{background:#7373f5;}
-.mmmgray{background:#b3b3d5;}
-.fullwhite{background:#ffffff;}
+.black{
+	background-color:#000000;
+}
+.gray{
+	background:#434395;
+}
+.white{
+	background:#fdfdff;
+}
+.mwhite{
+	background:#fefeff;
+}
+.veryusui{
+	background:#f0f0fa;
+}
+.mgray{
+	background:#6363b5;
+}
+.mmgray{
+	background:#8383d5;
+}
+.mbgray{
+	background:#7373f5;
+}
+.mmmgray{
+	background:#b3b3d5;
+}
+.fullwhite{
+	background:#ffffff;
+}
 
 
 /*---FONT---*/
-.fb{color:#000000;}
-.fw{color:#ffffff;}
-.fmw{color:#d2d2dd;}
-.fg{color:#434395;}
-.fmg{color:#8383a5;}
-.flink{color:#737385;}
-.fmmg{color:#a3a3e5;}
-.fmbg{color:#7373a5;}
-.fred{color:#ee4444;}
-.flred{color:#f6a8ac;}
-.f_toplink{color:#fdfdff;font-size : 1pt;}
+.fb{
+	color:#000000;
+}
+.fw{
+	color:#ffffff;
+}
+.fmw{
+	color:#d2d2dd;
+}
+.fg{
+	color:#434395;
+}
+.fmg{
+	color:#8383a5;
+}
+.flink{
+	color:#737385;
+}
+.fmmg{
+	color:#a3a3e5;
+}
+.fmbg{
+	color:#7373a5;
+}
+.fred{
+	color:#ee4444;
+}
+.flred{
+	color:#f6a8ac;
+}
+.f_toplink{
+	color:#fdfdff;font-size : 1pt;
+}
 
 .newstx1{
-color:#474760;line-height: 100%;font-size:8pt;
+	color:#474760;line-height: 100%;font-size:8pt;
 }
-.newstx2{color:#a7a7e0;line-height: 10pt;font-size:8pt;
+.newstx2{
+	color:#a7a7e0;line-height: 10pt;font-size:8pt;
 	/*float:left;*/
 	/*display: block;*/
 	margin-top:2px;
 	margin-left:5px;
-	padding-bottom:0px;}
-.newstx3{color:#9797c0;font-size:7pt;}
+	padding-bottom:0px;
+}
+.newstx3{
+	color:#9797c0;font-size:7pt;
+}
 
-A.newstxA:LINK,A.newstxA:VISITED{color:#d6385c;text-decoration : underline; font-size:10pt;line-height: 15pt;}
-A.newstxA:HOVER,A.newstxA:ACTIVE{color : #f6688c;text-decoration : underline; font-size:10pt;line-height: 15pt;}
+A:link.newstxA,A:visited.newstxA{
+	color:#d6385c;text-decoration : underline; font-size:10pt;line-height: 15pt;
+}
+A:hover.newstxA,A:active.newstxA{
+	color : #f6688c;text-decoration : underline; font-size:10pt;line-height: 15pt;
+}
 
 
-.ten{font-size:10pt;}
-.tenp{font-size:11pt;}
-.elev{font-size:12pt;}
-.plus{font-size:14pt;}
+.ten{
+	font-size:10pt;
+}
+.tenp{
+	font-size:11pt;
+}
+.elev{
+	font-size:12pt;
+}
+.plus{
+	font-size:14pt;
+}
 
 /*--線色--*/
-.line{color:#8383a5;}
-.dline{color:#60609b;}
+.line{
+	color:#8383a5;
+}
+.dline{
+	color:#60609b;
+}
 
 -->
 </STYLE>
@@ -150,13 +249,13 @@ A.newstxA:HOVER,A.newstxA:ACTIVE{color : #f6688c;text-decoration : underline; fo
       <BR>
       <div align=center><A href="./" target="_self">トップに戻る</A><BR>
         <HR size="1" noshade>
-        <A href="./old_releaselog/ReleaseLog01.html">【Ver1.00～1.09 の更新履歴（修正点281個）】</A><BR>
-        <A href="./old_releaselog/ReleaseLog02.html">【Ver1.10～1.30 の更新履歴（修正点353個）】</A><BR>
-        <A href="./old_releaselog/ReleaseLog03.html">【Ver1.31～2.10 の更新履歴（修正点345個）】</A><BR>
-        <a href="./old_releaselog/ReleaseLog04.html">【Ver2.20～2.296 の更新履歴（修正点262個）】</a>
-        <br><a href="./old_releaselog/ReleaseLog05.html">【Ver3.00～3.282 の大規模アップデート更新履歴（修正点684個）】</a>
+        <a href="old_releaselog/ReleaseLog01.html">【Ver1.00～1.09 の更新履歴（修正点281個）】</a><BR>
+        <a href="old_releaselog/ReleaseLog02.html">【Ver1.10～1.30 の更新履歴（修正点353個）】</a><BR>
+        <a href="old_releaselog/ReleaseLog03.html">【Ver1.31～2.10 の更新履歴（修正点345個）】</a><BR>
+        <a href="old_releaselog/ReleaseLog04.html">【Ver2.20～2.296 の更新履歴（修正点262個）】</a>
+        <br><a href="old_releaselog/ReleaseLog05.html">【Ver3.00～3.282 の大規模アップデート更新履歴（修正点684個）】</a>
       <br>
-        <a href="./old_releaselog/ReleaseLog06.html">【Ver3.30～3.396 の更新履歴（修正点184個）】</a>
+        <a href="old_releaselog/ReleaseLog06.html">【Ver3.30～3.396 の更新履歴（修正点184個）】</a>
       </div>
       </TD>
     </TR>
@@ -173,7 +272,7 @@ A.newstxA:HOVER,A.newstxA:ACTIVE{color : #f6688c;text-decoration : underline; fo
 <table>
   <tbody class="ten">
     <tr>
-      <td width="630"> <b><span style="font-size : 150%;">Ver3.50</span></b>(2025/01/18)<b><span style="font-size : 150%;">～Ver3.634</span></b>(2025/07/20) <b><a href="#3.50-END" class="green">【最新の修正にジャンプ】</a></b><br>
+      <td width="630"> <b><span style="font-size : 150%;">Ver3.50</span></b>(2025/01/18)<b><span style="font-size : 150%;">～Ver3.635</span></b>(2025/07/22) <b><a href="#3.50-END" class="green">【最新の修正にジャンプ】</a></b><br>
       <br>
       　<b><span style="color : #cc0000;
 	font-size : 120%;
@@ -6001,6 +6100,18 @@ A.newstxA:HOVER,A.newstxA:ACTIVE{color : #f6688c;text-decoration : underline; fo
 　「一つ戻る」回数を自動調整するように変更しました。<br>
 　（もとは「一つ戻る回数」が「30回」固定だったのが、<br>
       　　許容限界ギリギリの4000×2499のマップなら「13回」以下に減ります)<br>
+      <br>
+      <br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.635 のアップデート内容】</b></span>　2025/07/22　 <a href="#top" class="green">↑トップへ<br>
+      </a><br>
+      <b><span style="font-size : 120%;"><br>
+      【エディター部の修正】</span></b><br>
+      <br>
+●【マップ編集/不具合】<br>
+      　マップに1回書き込んで「一つ戻す」するとマップが真っ黒（空データ）になり、<br>
+　そこからさらに戻すとクラッシュするバグを修正<br>
+      →　Ver3.634で発生したバグでした。<br>
       <br>
       </td>
     </tr>
