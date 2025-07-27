@@ -272,7 +272,7 @@ A:hover.newstxA,A:active.newstxA{
 <table>
   <tbody class="ten">
     <tr>
-      <td width="630"> <b><span style="font-size : 150%;">Ver3.50</span></b>(2025/01/18)<b><span style="font-size : 150%;">～Ver3.635</span></b>(2025/07/22) <b><a href="#3.50-END" class="green">【最新の修正にジャンプ】</a></b><br>
+      <td width="630"> <b><span style="font-size : 150%;">Ver3.50</span></b>(2025/01/18)<b><span style="font-size : 150%;">～Ver3.636</span></b>(2025/07/27) <b><a href="#3.50-END" class="green">【最新の修正にジャンプ】</a></b><br>
       <br>
       　<b><span style="color : #cc0000;
 	font-size : 120%;
@@ -6112,6 +6112,38 @@ A:hover.newstxA,A:active.newstxA{
       　マップに1回書き込んで「一つ戻す」するとマップが真っ黒（空データ）になり、<br>
 　そこからさらに戻すとクラッシュするバグを修正<br>
       →　Ver3.634で発生したバグでした。<br>
+      <br>
+      <br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.636 のアップデート内容】</b></span>　2025/07/27　 <a href="#top" class="green">↑トップへ</a><br>
+      <br>
+      <b><span style="font-size : 120%;"><br>
+      【ゲーム部の修正】</span></b><br>
+<br>
+●【キー入力･選択肢/不具合】<br>
+　「キー入力禁止」の処理で方向キーを全て禁止しても、<br>
+　ゲームパッドの「POVキー（十字キー）」だけ<br>
+　選択肢中の方向受付処理が動作してしまうバグを修正<br>
+ →　「ゲーム基本設定」の「Game.exe動作バージョン調整」で<br>
+　　「旧Ver3.582時点の挙動で動作」に設定すると<br>
+　　従来の挙動に戻せます。<br>
+<br>
+●【サウンド/不具合】<br>
+　遅延などを含めて特定の手順で複数の「効果音」を再生したとき<br>
+　一部の音声が再生されなくなることがあったバグを修正<br>
+<br>
+<br>
+      <b><span style="font-size : 120%;"><br>
+      【エディター部の修正】</span></b><br>
+<br>
+●【システムデータベース/調整】<br>
+　空データとサンプルデータのシステムDBタイプ12の<br>
+　データ12 「[Sys]入力下線」を「 (×現在無効?) [Sys]入力下線」に改名。<br>
+→ どうもライブラリ側の都合で機能しなくなっているようですが、<br>
+　 いつ復旧するか分からないので枠を取っておく意味で<br>
+　 「 (×現在無効?）」表記を加えました。<br>
+<br>
+<br>
       <br>
       </td>
     </tr>
