@@ -19,8 +19,30 @@ font-family : "Meiryo UI","MS PGothic" ;
   
 }
 
-A:LINK,A:VISITED{color:#d6385c;text-decoration : underline;}
-A:HOVER,A:ACTIVE{color : #f6688c;text-decoration : underline;}
+A:link,A:visited{
+	color:#385cd6;text-decoration : underline;
+	text-shadow:0 0 8px #ACF;
+	display:inline-block;
+	padding:5px 20px 5px 20px;
+	margin:-4px;
+}
+A:hover,A:active{
+	color : #688cf6;text-decoration : underline;
+	display:inline-block;
+	background-color:#CFF;
+	border-radius:15px;
+	padding:5px 20px 5px 20px;
+	margin:-4px;
+}
+
+TD.gray{
+  height:34px;
+  border-radius:17px;
+  background: -moz-linear-gradient(left top, #4243ff, #9a9aff);
+  background: -webkit-gradient(linear, left top, right bottom, from(#4243ff), to(#9a9aff));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#DD4242ff', endColorstr='#FF9a9aff');
+  
+}
 
 A.red:LINK,A.red:VISITED{color:#c6385c;}
 A.red:HOVER,A.red:ACTIVE{color : #f6688c;text-decoration : underline;}

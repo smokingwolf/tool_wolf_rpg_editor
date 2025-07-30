@@ -30,11 +30,38 @@ font-family : "Meiryo UI","MS PGothic" ;
 }
 
 A:link,A:visited{
-	color:#d6385c;text-decoration : underline;
+	color:#385cd6;text-decoration : underline;
 }
 A:hover,A:active{
-	color : #f6688c;text-decoration : underline;
+	color : #688cf6;text-decoration : underline;
 }
+
+
+/* 新部分ここから */
+A:link,A:visited{
+	color:#385cd6;text-decoration : underline;
+	text-shadow:0 0 8px #CDF;
+	display:inline-block;
+	padding:5px 20px 5px 20px;
+	margin:-3px -15px -3px -15px;
+}
+A:hover,A:active{
+	color : #688cf6;text-decoration : underline;
+	display:inline-block;
+	background-color:#DFF;
+	border-radius:15px;
+	padding:5px 20px 5px 20px;
+	margin:-3px -15px -3px -15px;
+}
+
+TD.gray{
+  height:34px;
+  border-radius:17px;
+  background: -moz-linear-gradient(left top, #4243ff, #9a9aff);
+  background: -webkit-gradient(linear, left top, right bottom, from(#4243ff), to(#9a9aff));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr='#DD4242ff', endColorstr='#FF9a9aff');
+}
+/* 新部分ここまで */
 
 A:link.red,A:visited.red{
 	color:#c6385c;
@@ -272,7 +299,7 @@ A:hover.newstxA,A:active.newstxA{
 <table>
   <tbody class="ten">
     <tr>
-      <td width="630"> <b><span style="font-size : 150%;">Ver3.50</span></b>(2025/01/18)<b><span style="font-size : 150%;">～Ver3.636</span></b>(2025/07/27) <b><a href="#3.50-END" class="green">【最新の修正にジャンプ】</a></b><br>
+      <td width="630"> <b><span style="font-size : 150%;">Ver3.50</span></b>(2025/01/18)<b><span style="font-size : 150%;">～Ver3.637</span></b>(2025/07/29) <b><a href="#3.50-END" class="green">【最新の修正にジャンプ】</a></b><br>
       <br>
       　<b><span style="color : #cc0000;
 	font-size : 120%;
@@ -6145,6 +6172,29 @@ A:hover.newstxA,A:active.newstxA{
 <br>
 <br>
       <br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.637 のアップデート内容】</b></span>　2025/07/29　 <a href="#top" class="green">↑トップへ</a><br>
+      <br>
+      <b><span style="font-size : 120%;"><br>
+      【ゲーム部の修正】</span></b><br>
+<br>
+●【キー入力･選択肢/不具合】<br>
+　Ver3.636のみ、「キー入力禁止」の「基本入力」が<br>
+　「移動時×/キー入力◯」の場合でも<br>
+　「選択肢」中に方向キーが効かなくなってしまっていたバグ修正<br>
+<br>
+<br>
+      <b><span style="font-size : 120%;"><br>
+      【エディター部の修正】</span></b><br>
+<br>
+●【ファイル選択ウィンドウ/不具合】<br>
+　一部の音声ファイル再生時にクラッシュする可能性に対処するため、<br>
+      　エラー処理を強化してみました。<br>
+→ 音声ファイルが再生できなさそうなときは可能なら処理を停止し、<br>
+「ファイルが再生できません。<br>
+　ファイルが破損しているか、再生に非対応のフォーマットである可能性があります。<br>
+（音声ファイルを音声編集ツールで保存し直すと再生可能になる場合があります）」<br>
+ と表示されるようにしてみました。<br>
       </td>
     </tr>
     <tr>
