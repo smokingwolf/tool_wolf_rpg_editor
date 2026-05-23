@@ -135,17 +135,19 @@ size=+1>【システム変数/文字列一覧】</FONT></B><BR>
       <b><span style="color : #cc0000;">　※なお、このSys18で設定した「選択」効果音は、「キー操作」で選んだ場合のみ再生され、「マウスカーソル」で選んだ場合は音が鳴りません。</span></b><BR>
       <BR>
 <BR>
-<B>Sys20：選択肢ｶｰｿﾙ現位置(0,1,2..非選択時:-1)</B><BR>
+<B>Sys20：選択肢ｶｰｿﾙ現位置(0,1,2..選択肢非表示時:-1)</B><BR>
         　読み込み専用です。選択肢の「現在のカーソル位置」が格納されています。1つめなら「0」、2つめなら「1」……です。<br>
       　基本的に、<b>選択肢を実行したのとは別の並列イベント内でリアルタイムの選択位置を取得する</b>目的で作られています。<br>
       　選択肢が終了した後は<b>そのフレーム中だけ選択位置の値が保持され、1フレーム後には「-1」に戻ります</b>。<br>
       　（つまり、「選択肢の分岐」先で選択位置を取得したい場合は、ウェイトも入れず即座に「Sys20」を得る必要があります）<BR>
         <br>
-        　ちなみに、その他の「選択終了直後」の値は以下のようになります（これらも1フレーム後に-1に戻ります）。<br class="Apple-interchange-newline">
-        　 <span style="color: oklab(0.952614 0.000793397 -0.00253761); font-family: &quot;gg sans&quot;, &quot;Hiragino Sans&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, メイリオ, Meiryo, Osaka, &quot;MS PGothic&quot;, &quot;Noto Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: break-spaces; background-color: oklab(0.219499 0.00211129 -0.00744916); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">キャンセル時：<b>-2</b><br>
+        　ちなみに、その他の「選択終了直後（消えたのと同じフレーム中）」の値は以下のようになります（このどれでも、選択肢が消えた1フレーム後にSys20は「-1」に戻ります）。<br class="Apple-interchange-newline">
+        　 <span>キャンセル時：<b>-2</b><br>
         　 左キー分岐：<b>98</b><br>
         　 右キー分岐：<b>99</b><br>
-        　強制中断分岐: </span><b><span style="color: oklab(0.952614 0.000793397 -0.00253761); font-family: &quot;gg sans&quot;, &quot;Hiragino Sans&quot;, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, メイリオ, Meiryo, Osaka, &quot;MS PGothic&quot;, &quot;Noto Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: break-spaces; background-color: oklab(0.219499 0.00211129 -0.00744916); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">その時にカーソル合わせていた位置の選択肢の値</span></b><BR>
+        　強制中断分岐: </span><b>その時にカーソル合わせていた位置の選択肢の値</span></b><BR>
+        <br>
+        <b><span style="color : #cc0000;">　※Sys20が-1なら、選択肢ウィンドウは「非表示状態」ということになります。</span></b><br>
         <br>
         <BR>
       <B>Sys21：文字影付ける?</B><BR>
