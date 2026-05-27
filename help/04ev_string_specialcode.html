@@ -283,14 +283,17 @@ EDF</span>
 - <a href="#SYS2" class="glink"><b>2.ゲーム名の「追記」を得る　&lt;&lt;GET_TITLE_PLUS&gt;&gt;</b></a>
 <span style="display: none;" id="codeSYS2">&lt;&lt;GET_TITLE_PLUS&gt;&gt;</span>
 <button onclick="copyToClipboard('codeSYS2', this)" class="copy-button">📋 Copy</button>
-<br>
+  <br>
 - <a href="#SYS3" class="glink"><b>3.DBのタイプAの項目Bが「文字列」項目なら0、「数値」項目なら1を返す</b><b><span style="font-size : 80%;"><br>
 　　 &lt;&lt;GET_ISNUMBER_(C/U/S)DB_ITEM/TYPE=(数値1)/ITEM=(数値2)&gt;&gt;</span></b></a>
 <span style="display: none;" id="codeSYS3">&lt;&lt;GET_ISNUMBER_CDB_ITEM/TYPE=0/ITEM=1&gt;&gt;</span>
 <button onclick="copyToClipboard('codeSYS3', this)" class="copy-button">📋 Copy</button>
 <br>
-
-- <a href="#SYS4" class="glink"><b>4.XY配列の一覧を返す　&lt;&lt;GET_XY_LIST&gt;&gt;</b></a>
+- <a href="#SYS3.1" class="glink"><b>4.DBのタイプ数を返す  &lt;&lt;GET_TYPENUM_(C/U/S)DB&gt;&gt;</b></a>
+<span style="display: none;" id="codeSYS3.1">&lt;&lt;GET_TYPENUM_CDB&gt;&gt;</span>
+<button onclick="copyToClipboard('codeSYS3.1', this)" class="copy-button">📋 Copy</button>
+<br>
+- <a href="#SYS4" class="glink"><b>5.XY配列の一覧を返す　&lt;&lt;GET_XY_LIST&gt;&gt;</b></a>
 <span style="display: none;" id="codeSYS4">&lt;&lt;GET_XY_LIST&gt;&gt;</span>
 <button onclick="copyToClipboard('codeSYS4', this)" class="copy-button">📋 Copy</button>
 
@@ -300,7 +303,7 @@ EDF</span>
 
 <br>
 
-- <a href="#SYS5" class="glink"><b>5.セーブデータのキャッシュをメモリから全解放　&lt;&lt;DELETE_SAVE_CACHE&gt;&gt;</b></a>
+- <a href="#SYS5" class="glink"><b>6.セーブデータのキャッシュをメモリから全解放　&lt;&lt;DELETE_SAVE_CACHE&gt;&gt;</b></a>
 <span style="display: none;" id="codeSYS5">&lt;&lt;DELETE_SAVE_CACHE&gt;&gt;</span>
 <button onclick="copyToClipboard('codeSYS5', this)" class="copy-button">📋 Copy</button>
 
@@ -797,12 +800,24 @@ EDF</span>
 　　 &lt;&lt;GET_ISNUMBER_UDB_ITEM/TYPE=<span style="color : #0000ff;">(数値1)</span>/ITEM=<span style="color : #0000ff;">(数値2)</span>&gt;&gt; : ユーザDB<br>
 　 　&lt;&lt;GET_ISNUMBER_SDB_ITEM/TYPE=<span style="color : #0000ff;">(数値1)</span>/ITEM=<span style="color : #0000ff;">(数値2)</span>&gt;&gt; : システムDB</span></b><br>
 　 たとえば「&lt;&lt;GET_ISNUMBER_CDB_ITEM/TYPE=4/ITEM=2&gt;&gt;」と指定すると、<br>
-　 可変DBのタイプ4、項目2が数値項目なら「1」、文字列項目なら「0」、 そもそも存在しないタイプや項目なら「-1」を返します。<br>
+  　 可変DBのタイプ4、項目2が数値項目なら「1」、文字列項目なら「0」、 そもそも存在しないタイプや項目なら「-1 &lt;&lt;Error&gt;&gt;
+  Type(またはItem) Overflow: max=XX」のように返します。<br>
 <span style="font-size : 80%;">　　 ※タイプ番号、項目番号を「名前」から取得したい場合は「DB操作」コマンドで得ることが可能です。</span><br>
   <br>
   <br>
+  <br>
+<b>　<a id="SYS3.1"></a>【4】.DBのタイプ数を返す</b>
+<span style="display: none;" id="codeSYS3.1">&lt;&lt;GET_TYPENUM_CDB&gt;&gt;</span>
+<button onclick="copyToClipboard('codeSYS3.1', this)" class="copy-button">📋 Copy</button>
+  （Ver3.703以降)<b><br>
+<span style="color : #cc0000;">　　 &lt;&lt;GET_TYPENUM_CDB&gt;&gt; : 可変DB<br>
+  　　 &lt;&lt;GET_TYPENUM_UDB&gt;&gt; : ユーザDB<br>
+  　 　&lt;&lt;GET_TYPENUM_SDB&gt;&gt; : システムDB</span></b><br>
+  　 たとえば「&lt;&lt;GET_TYPENUM_CDB&gt;&gt;」と指定すると、格納先の「文字列変数」に「<B>可変DBのタイプ個数</B>」が、「<b>20</b>」のような文字列として格納されます。<br>
+  <br>
+  <br>
 <br>
-<b>　<a id="SYS4"></a>【4】.XY配列のリストを得る</b>　<b><span style="color : #cc0000;">&lt;&lt;GET_XY_LIST&gt;&gt;</span></b> / <b><span style="color : #cc0000;">&lt;&lt;GET_XYN_LIST&gt;&gt;</span></b>
+<b>　<a id="SYS4"></a>【5】.XY配列のリストを得る</b>　<b><span style="color : #cc0000;">&lt;&lt;GET_XY_LIST&gt;&gt;</span></b> / <b><span style="color : #cc0000;">&lt;&lt;GET_XYN_LIST&gt;&gt;</span></b>
 <span style="display: none;" id="codeSYS4">&lt;&lt;GET_XY_LIST&gt;&gt;</span>
 <button onclick="copyToClipboard('codeSYS4', this)" class="copy-button">📋 Copy</button>
 （Ver3.619以降)<br>
@@ -813,7 +828,7 @@ EDF</span>
 <br>
 <br>
 <br>
-<b>　<a id="SYS5"></a>【5】.セーブデータのキャッシュをメモリから全解放</b>　<b><span style="color : #cc0000;">&lt;&lt;DELETE_SAVE_CACHE&gt;&gt;</span></b>
+<b>　<a id="SYS5"></a>【6】.セーブデータのキャッシュをメモリから全解放</b>　<b><span style="color : #cc0000;">&lt;&lt;DELETE_SAVE_CACHE&gt;&gt;</span></b>
 <span style="display: none;" id="codeSYS5">&lt;&lt;DELETE_SAVE_CACHE&gt;&gt;</span>
 <button onclick="copyToClipboard('codeSYS5', this)" class="copy-button">📋 Copy</button>
 （Ver3.612以降)<br>
