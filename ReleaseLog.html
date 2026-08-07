@@ -303,8 +303,31 @@ A:hover.newstxA,A:active.newstxA{
       　※このページの更新履歴は上が新しい内容です</span><br>
       <br>
       <br>
+      <br>
       <hr size="1" noshade>
-      <span style="font-size : 120%;"><b>【Ver3.715のアップデート内容】</b></span>　2026/8/4 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <span style="font-size : 120%;"><b>【Ver3.717のアップデート内容】</b></span>　2026/8/7 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <br>
+      <br>
+      <b><span style="font-size : 120%;">【ゲーム部の修正】</span></b><br>
+<br>
+●【動作指定･自動移動/不具合】<br>
+　当たり判定0.5マスのときに無意味なジグザグ移動が発生するバグ修正<br>
+<br>
+●【デバッグウィンドウ/調整】<br>
+      　デバッグウィンドウの「システム変数・システム文字列」の更新頻度を大幅に高速化<br>
+<br>
+●【デバッグ文/調整】<br>
+　変数監視「ValWatch」機能を使ったとき、<br>
+　「16000XX（コモンセルフX）」などを指定したときに内部的に<br>
+　呼び出し値が「15YYYYXX（コモンYのセルフ変数X）」に変わっているのが<br>
+　分かりやすくなるよう修正。<br>
+→ たとえばコモンイベント3で1600002(コモンセルフ変数2)を指定したとき、<br>
+　「# 開始 変数監視=&gt; 1600002 =&gt; 15000302」と表示されるようになります。<br>
+      　※15000302=コモンイベント3のコモンセルフ変数2<br>
+      <br>
+      <br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.715～3.716のアップデート内容】</b></span>　2026/8/4 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
       <br>
       <b><span style="font-size : 120%;"><br>
       【新機能】</span></b><br>
@@ -345,13 +368,13 @@ A:hover.newstxA,A:active.newstxA{
 　途中経路に対する上記の「F2」ジャンプ機能にも対応しました。<br>
 　（Common240 line2 の行でF2を押すとコモン240の2行目に飛ぶ）<br>
 　<br>
-【古いSysS55表記】<br>
+      　【古いSysS55表記】<br>
 　Ev55  line2 -&gt; <br>
-　Ev55 Common240 line2 --&gt;[MapEv55/ｺﾓﾝ238/3行]<br>
-【新しいSysS55表記】<br>
+      　Ev55 Common240 line2<br>
+      <br>
+      　【新しいSysS55表記】(Ver3.716で再修正）<br>
 　Map7 Ev55 P1 line2 -&gt;<br>
-　Common240 line2 -&gt;<br>
-　[ｺﾓﾝ238/3行]<br>
+　Common240 line2<br>
 <br>
 　※新しい表記のどの行でもF2を押すとEditorでその行を開くことができます。<br>
 　※緑帯エラー時の表記もこれに統一されます。<br>
