@@ -303,6 +303,43 @@ A:hover.newstxA,A:active.newstxA{
       　※このページの更新履歴は上が新しい内容です</span><br>
       <br>
       <br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.719のアップデート内容】</b></span>　2026/8/14 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <br>
+      <b><span style="font-size : 120%;"><br>
+      【エディター部の修正】<br>
+      </span></b><br>
+●【プロ版･ゲームデータ作成/不具合】<br>
+　プロテクトキーありの「ChaCha20」の暗号化に限り、<br>
+      　毎回内部キーが変わってしまっていたバグを修正<br>
+      →　これにより、部分的に「.wolf」ファイルを差し替えてアップデートするという<br>
+　　パッチ方式がChaCha20だけ作れなくなっていました。<br>
+      　　このバージョンからキーが固定化されるので、パッチが作成可能になります。<br>
+      <br>
+<br>
+      <hr size="1" noshade>
+      <span style="font-size : 120%;"><b>【Ver3.718のアップデート内容】</b></span>　2026/8/11 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
+      <br>
+      <br>
+      <b><span style="font-size : 120%;">【新機能】</span></b><br>
+<br>
+●【ゲームデータ作成/新機能】<br>
+　「【ブラウザウディタ】での動作を許可する」チェックを追加。<br>
+　オンにするとBasicDataフォルダに「BrowserWoditor.dat」が作成されます。<br>
+→ このファイルがない場合、ブラウザウディタ上では動作しなくなります。<br>
+　ブラウザウディタはruka様が開発されたツールです。<br>
+      　（ ruka様の開発Ci-enページ <a href="https://ci-en.net/creator/12702" target="_blank">https://ci-en.net/creator/12702</a> ）<br>
+<br>
+<br>
+<br>
+      <b><span style="font-size : 120%;">【ゲーム部の修正】</span></b><br>
+<br>
+●【デバッグウィンドウ/不具合】<br>
+　デバッグウィンドウがあるとき、特定操作をすると<br>
+　プロセスがバッググラウンドに残り続けてしまうように<br>
+　なっていたバグの修正を試みました。<br>
+      （これにより、デバッグウィンドウの更新タイミングがまた変更されています）<br>
+      <br>
       <br>
       <hr size="1" noshade>
       <span style="font-size : 120%;"><b>【Ver3.717のアップデート内容】</b></span>　2026/8/7 <a href="#top" class="green" style="width:200px;">↑トップへ</a><br>
